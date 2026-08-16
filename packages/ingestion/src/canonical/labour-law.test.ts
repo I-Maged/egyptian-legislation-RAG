@@ -101,5 +101,6 @@ describe("canonicalizeLabourLaw", () => {
     });
 
     expect(firstChunk!.metadata.ocr_confidence).toBeNull();
+    expect(result.schema_version).toBe("1.0");
   });
 });

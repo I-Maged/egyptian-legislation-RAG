@@ -3,7 +3,7 @@ import { CanonicalCorpusSchema, type CanonicalCorpus } from "../schemas/corpus";
 export function validateCanonicalCorpus(corpus: unknown): CanonicalCorpus {
   const parsed = CanonicalCorpusSchema.parse(corpus);
 
-  const ids = new Set<string>();
+  const chunkIds = new Set<string>();
 
   for (const chunk of parsed.chunks) {
     if (chunk.document_id !== parsed.document.id) {
@@ -13,11 +13,11 @@ export function validateCanonicalCorpus(corpus: unknown): CanonicalCorpus {
       );
     }
 
-    if (ids.has(chunk.id)) {
+    if (chunkIds.has(chunk.id)) {
       throw new Error(`Duplicate chunk ID: ${chunk.id}`);
     }
 
-    ids.add(chunk.id);
+    chunkIds.add(chunk.id);
   }
 
   return parsed;
