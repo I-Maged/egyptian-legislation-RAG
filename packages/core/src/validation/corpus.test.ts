@@ -37,16 +37,21 @@ describe("validateCanonicalCorpus", () => {
         article_number: "1",
         article_title: null,
 
-        chapter: null,
-        section: null,
-        paragraph: null,
+        hierarchy: [
+          {
+            type: "chapter",
+            label: "الباب الثاني",
+            title: null,
+          },
+        ],
 
         text: "نص المادة الأولى",
         text_for_embedding: "نص المادة الأولى",
 
         provenance: {
-          source_file: "labour-law.pdf",
-          page: 1,
+          source_file: "labour-v2.3.pdf",
+          page_start: 1,
+          page_end: 1,
         },
 
         metadata: {

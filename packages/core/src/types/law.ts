@@ -16,6 +16,12 @@ export interface LawDocument {
   };
 }
 
+export interface LawHierarchyNode {
+  type: string;
+  label: string;
+  title: string | null;
+}
+
 export interface LawChunk {
   id: string;
 
@@ -28,16 +34,15 @@ export interface LawChunk {
   article_number: string;
   article_title: string | null;
 
-  chapter: string | null;
-  section: string | null;
-  paragraph: string | null;
+  hierarchy: LawHierarchyNode[];
 
   text: string;
   text_for_embedding: string;
 
   provenance: {
     source_file: string;
-    page: number | null;
+    page_start: number | null;
+    page_end: number | null;
   };
 
   metadata: {

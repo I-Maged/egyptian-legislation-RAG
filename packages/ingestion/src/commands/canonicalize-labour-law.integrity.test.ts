@@ -67,11 +67,18 @@ describe("Labour Law canonical corpus integrity", () => {
         law_number: source.lawNumber,
         year: source.year,
         article_number: source.articleNumber,
-        chapter: source.chapter,
+        // chapter: source.chapter,
+        hierarchy: [
+          {
+            type: "chapter",
+            label: source.chapter,
+            title: null,
+          },
+        ],
         text: source.text,
         text_for_embedding: source.textForEmbedding,
         provenance: {
-          page:
+          page_start:
             source.pageStart && source.pageStart > 0 ? source.pageStart : null,
         },
       })),
@@ -87,8 +94,20 @@ describe("Labour Law canonical corpus integrity", () => {
       expect(chunk.article_number.trim().length).toBeGreaterThan(0);
       expect(chunk.provenance.source_file.trim().length).toBeGreaterThan(0);
 
-      if (chunk.provenance.page !== null) {
-        expect(chunk.provenance.page).toBeGreaterThan(0);
+      if (chunk.provenance.page_start !== null) {
+        expect(chunk.provenance.page_start).toBeGreaterThan(0);
+      }
+      if (chunk.provenance.page_end !== null) {
+        expect(chunk.provenance.page_end).toBeGreaterThan(0);
+      }
+
+      if (
+        chunk.provenance.page_start !== null &&
+        chunk.provenance.page_end !== null
+      ) {
+        expect(chunk.provenance.page_end).toBeGreaterThanOrEqual(
+          chunk.provenance.page_start,
+        );
       }
 
       expect(chunk.metadata.parser_version).toBe("parser-v2.3");

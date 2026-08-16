@@ -62,9 +62,13 @@ describe("canonical corpus JSON", () => {
           article_number: "2",
           article_title: null,
 
-          chapter: "الباب الأول",
-          section: null,
-          paragraph: null,
+          hierarchy: [
+            {
+              type: "chapter",
+              label: "الباب الأول",
+              title: null,
+            },
+          ],
 
           text: "مادة (٢): نص المادة للاختبار.",
 
@@ -72,7 +76,8 @@ describe("canonical corpus JSON", () => {
 
           provenance: {
             source_file: "labour-v2.3.pdf",
-            page: 11,
+            page_start: 11,
+            page_end: 11,
           },
 
           metadata: {
@@ -94,9 +99,13 @@ describe("canonical corpus JSON", () => {
           article_number: "3",
           article_title: null,
 
-          chapter: "الباب الثاني",
-          section: null,
-          paragraph: null,
+          hierarchy: [
+            {
+              type: "chapter",
+              label: "الباب الثاني",
+              title: null,
+            },
+          ],
 
           text: "مادة (٣): نص المادة الثانية للاختبار.",
 
@@ -104,7 +113,8 @@ describe("canonical corpus JSON", () => {
 
           provenance: {
             source_file: "labour-v2.3.pdf",
-            page: 11,
+            page_start: 11,
+            page_end: 11,
           },
 
           metadata: {

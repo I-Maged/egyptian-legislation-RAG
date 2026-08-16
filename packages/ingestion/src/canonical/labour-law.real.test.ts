@@ -48,11 +48,18 @@ describe("canonicalizeLabourLaw - real parser output", () => {
         law_number: source.lawNumber,
         year: source.year,
         article_number: source.articleNumber,
-        chapter: source.chapter,
+        // chapter: source.chapter,
+        hierarchy: [
+          {
+            type: "chapter",
+            label: source.chapter,
+            title: null,
+          },
+        ],
         text: source.text,
         text_for_embedding: source.textForEmbedding,
         provenance: {
-          page:
+          page_start:
             source.pageStart && source.pageStart > 0 ? source.pageStart : null,
         },
       })),

@@ -93,11 +93,18 @@ describe("canonicalizeLabourLaw", () => {
     expect(firstChunk).toBeDefined();
     expect(firstChunk!.document_id).toBe(result.document.id);
     expect(firstChunk!.article_number).toBe("1");
-    expect(firstChunk!.chapter).toBe("مواد الإصدار");
+    expect(firstChunk!.hierarchy).toEqual([
+      {
+        type: "chapter",
+        label: "مواد الإصدار",
+        title: null,
+      },
+    ]);
 
     expect(firstChunk!.provenance).toEqual({
       source_file: "labour-law.pdf",
-      page: 5,
+      page_start: 5,
+      page_end: 5,
     });
 
     expect(firstChunk!.metadata.ocr_confidence).toBeNull();

@@ -18,6 +18,12 @@ export const LawDocumentSchema = z.object({
   }),
 });
 
+export const LawHierarchyNodeSchema = z.object({
+  type: z.string(),
+  label: z.string(),
+  title: z.string().nullable(),
+});
+
 export const LawChunkSchema = z.object({
   id: z.string(),
 
@@ -30,16 +36,15 @@ export const LawChunkSchema = z.object({
   article_number: z.string(),
   article_title: z.string().nullable(),
 
-  chapter: z.string().nullable(),
-  section: z.string().nullable(),
-  paragraph: z.string().nullable(),
+  hierarchy: z.array(LawHierarchyNodeSchema),
 
   text: z.string(),
   text_for_embedding: z.string(),
 
   provenance: z.object({
     source_file: z.string(),
-    page: z.number().int().positive().nullable(),
+    page_start: z.number().int().positive().nullable(),
+    page_end: z.number().int().positive().nullable(),
   }),
 
   metadata: z.object({

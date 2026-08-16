@@ -176,16 +176,26 @@ export function canonicalizeLabourLaw(
       article_number: parserChunk.articleNumber,
       article_title: null,
 
-      chapter: parserChunk.chapter,
-      section: null,
-      paragraph: null,
+      // chapter: parserChunk.chapter,
+      // section: null,
+      // paragraph: null,
+      hierarchy: parserChunk.chapter
+        ? [
+            {
+              type: "chapter",
+              label: parserChunk.chapter,
+              title: null,
+            },
+          ]
+        : [],
 
       text: parserChunk.text,
       text_for_embedding: parserChunk.textForEmbedding,
 
       provenance: {
         source_file: options.source_file,
-        page: normalizePageNumber(parserChunk.pageStart),
+        page_start: normalizePageNumber(parserChunk.pageStart),
+        page_end: normalizePageNumber(parserChunk.pageEnd),
       },
 
       metadata: {
