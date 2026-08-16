@@ -48,30 +48,24 @@ describe("canonicalizeLabourLaw - real parser output", () => {
     expect(new Set(ids).size).toBe(ids.length);
 
     // The canonicalizer must preserve parser content.
-    for (let i = 0; i < parserChunks.length; i++) {
-      const source = parserChunks[i];
-      const canonical = result.chunks[i];
+    expect(result.chunks).toHaveLength(parserChunks.length);
 
-      expect(canonical?.law_name).toBe(source?.lawName);
+    expect(result.chunks).toMatchObject(
+      parserChunks.map((source) => ({
+        law_name: source.lawName,
+        law_number: source.lawNumber,
+        year: source.year,
+        article_number: source.articleNumber,
+        chapter: source.chapter,
+        text: source.text,
+        text_for_embedding: source.textForEmbedding,
+        provenance: {
+          page:
+            source.pageStart && source.pageStart > 0 ? source.pageStart : null,
+        },
+      })),
+    );
 
-      expect(canonical?.law_number).toBe(source?.lawNumber);
-
-      expect(canonical?.year).toBe(source?.year);
-
-      expect(canonical?.article_number).toBe(source?.articleNumber);
-
-      expect(canonical?.chapter).toBe(source?.chapter);
-
-      expect(canonical?.text).toBe(source?.text);
-
-      expect(canonical?.text_for_embedding).toBe(source?.textForEmbedding);
-
-      expect(canonical?.provenance.page).toBe(
-        source?.pageStart !== null && source?.pageStart > 0
-          ? source?.pageStart
-          : null,
-      );
-    }
     console.dir(result, { depth: null });
   });
 });

@@ -1,0 +1,41 @@
+{
+    "schema_version": "1.0",
+    "document": {
+        "id": "lawdoc_f1fd6f6338643087",
+        "law_name": "labour_law",
+        "law_number": "148",
+        "year": "2019",
+        "jurisdiction": "EG",
+        "language": "ar",
+        "source_file": "labour-v2.3.pdf",
+        "metadata": {
+            "parser_version": "parser-v2.3",
+            "normalization_version": "parser-v2.3"
+        }
+    },
+    "chunks": [
+        {
+            "id": "lawchunk_405255130b09cdb5",
+            "document_id": "lawdoc_f1fd6f6338643087",
+            "law_name": "labour_law",
+            "law_number": "148",
+            "year": "2019",
+            "article_number": "2",
+            "article_title": null,
+            "chapter": "الباب الأول",
+            "section": null,
+            "paragraph": null,
+            "text": "مادة (٢) : ...",
+            "text_for_embedding": "مادة (٢) : ...",
+            "provenance": {
+                "source_file": "labour-v2.3.pdf",
+                "page": 11
+            },
+            "metadata": {
+                "parser_version": "parser-v2.3",
+                "normalization_version": "parser-v2.3",
+                "ocr_confidence": null
+            }
+        }
+    ]
+}
