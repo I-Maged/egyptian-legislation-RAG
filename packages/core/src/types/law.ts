@@ -9,6 +9,11 @@ export interface LawDocument {
   language: "ar";
 
   source_file: string;
+
+  metadata: {
+    parser_version: string;
+    normalization_version: string;
+  };
 }
 
 export interface LawChunk {
@@ -21,13 +26,19 @@ export interface LawChunk {
   year: string | null;
 
   article_number: string;
+  article_title: string | null;
+
   chapter: string | null;
   section: string | null;
+  paragraph: string | null;
 
   text: string;
   text_for_embedding: string;
 
-  source_page: number | null;
+  provenance: {
+    source_file: string;
+    page: number | null;
+  };
 
   metadata: {
     parser_version: string;

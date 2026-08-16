@@ -1,1 +1,2 @@
-import * from './types/law'
+export * from "./types/law";
+export * from "./schemas/law";
