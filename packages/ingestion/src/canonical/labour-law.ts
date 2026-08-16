@@ -14,7 +14,7 @@ import { LawChunkSchema, LawDocumentSchema } from "@egyptian-law/core";
  * LawChunk type. This keeps the canonical layer independent from the parser
  * implementation.
  */
-export interface ParserV23LawChunk {
+export interface LegacyParserV23LawChunk {
   law_name: string;
   law_number: string;
   year: string;
@@ -24,6 +24,82 @@ export interface ParserV23LawChunk {
   text_for_embedding: string;
   page_number: number;
   source?: "vision_ocr";
+}
+
+export interface CurrentParserV23LawChunk {
+  instrumentId: string;
+
+  lawName: string;
+  lawNumber: string;
+  year: string;
+
+  articleNumber: string;
+  articleNumberNormalized: number | null;
+  articleSuffix: string | null;
+
+  chapter: string | null;
+
+  text: string;
+  textForEmbedding: string;
+
+  pageStart: number | null;
+  pageEnd: number | null;
+  pages: number[];
+
+  sourceOrder: number;
+
+  source?: "vision_ocr";
+
+  sourceRecordIds: string[];
+  qwenRecordCount: number;
+  recoveryRecordCount: number;
+
+  needsReview: boolean;
+  reviewReasons: string[];
+}
+
+export type ParserV23LawChunk = LegacyParserV23LawChunk | CurrentParserV23LawChunk;
+
+function getChunkString(
+  chunk: ParserV23LawChunk,
+  camelCaseKey: string,
+  snakeCaseKey: string,
+): string {
+  const record = chunk as Record<string, unknown>;
+
+  const value = record[camelCaseKey] ?? record[snakeCaseKey];
+
+  if (typeof value !== "string") {
+    return "";
+  }
+
+  return value;
+}
+
+function getChunkNumber(
+  chunk: ParserV23LawChunk,
+  camelCaseKey: string,
+  snakeCaseKey: string,
+): number | null {
+  const record = chunk as Record<string, unknown>;
+
+  const value = record[camelCaseKey] ?? record[snakeCaseKey];
+
+  if (typeof value !== "number") {
+    return null;
+  }
+
+  return value;
+}
+
+function getChunkNullableString(
+  chunk: ParserV23LawChunk,
+  camelCaseKey: string,
+  snakeCaseKey: string,
+): string | null {
+  const value = getChunkString(chunk, camelCaseKey, snakeCaseKey);
+
+  return value === "" ? null : value;
 }
 
 export interface CanonicalizeOptions {
@@ -107,19 +183,23 @@ export function canonicalizeLabourLaw(
 
   const first = parserChunks[0]!;
 
+  const firstLawName = getChunkString(first, "lawName", "law_name");
+  const firstLawNumber = getChunkNullableString(first, "lawNumber", "law_number");
+  const firstYear = getChunkNullableString(first, "year", "year");
+
   const documentId = createDocumentId(
-    first.law_name,
-    first.law_number,
-    first.year,
+    firstLawName,
+    firstLawNumber,
+    firstYear,
     options.source_file,
   );
 
   const document: LawDocument = {
     id: documentId,
 
-    law_name: first.law_name,
-    law_number: first.law_number,
-    year: first.year,
+    law_name: firstLawName,
+    law_number: firstLawNumber,
+    year: firstYear,
 
     jurisdiction: "EG",
     language: "ar",
@@ -136,47 +216,56 @@ export function canonicalizeLabourLaw(
   const articleOccurrences = new Map<string, number>();
 
   const chunks: CanonicalLawChunk[] = parserChunks.map((parserChunk) => {
-    const occurrenceIndex =
-      articleOccurrences.get(parserChunk.article_number) ?? 0;
-
-    articleOccurrences.set(parserChunk.article_number, occurrenceIndex + 1);
-
-    const id = createChunkId(
-      documentId,
-      parserChunk.article_number,
-      occurrenceIndex,
+    const articleNumber = getChunkString(
+      parserChunk,
+      "articleNumber",
+      "article_number",
     );
+    const lawName = getChunkString(parserChunk, "lawName", "law_name");
+    const lawNumber = getChunkNullableString(parserChunk, "lawNumber", "law_number");
+    const year = getChunkNullableString(parserChunk, "year", "year");
+    const chapter = getChunkNullableString(parserChunk, "chapter", "chapter");
+    const text = getChunkString(parserChunk, "text", "text");
+    const textForEmbedding = getChunkString(
+      parserChunk,
+      "textForEmbedding",
+      "text_for_embedding",
+    );
+    const page = getChunkNumber(parserChunk, "pageStart", "page_number");
+
+    const occurrenceIndex = articleOccurrences.get(articleNumber) ?? 0;
+
+    articleOccurrences.set(articleNumber, occurrenceIndex + 1);
+
+    const id = createChunkId(documentId, articleNumber, occurrenceIndex);
 
     const chunk: CanonicalLawChunk = {
       id,
 
       document_id: documentId,
 
-      law_name: parserChunk.law_name,
-      law_number: parserChunk.law_number,
-      year: parserChunk.year,
+      law_name: lawName,
+      law_number: lawNumber,
+      year,
 
-      article_number: parserChunk.article_number,
+      article_number: articleNumber,
       article_title: null,
 
-      chapter: parserChunk.chapter,
+      chapter,
       section: null,
       paragraph: null,
 
-      text: parserChunk.text,
-      text_for_embedding: parserChunk.text_for_embedding,
+      text,
+      text_for_embedding: textForEmbedding,
 
       provenance: {
         source_file: options.source_file,
-        page: normalizePageNumber(parserChunk.page_number),
+        page: normalizePageNumber(page),
       },
 
       metadata: {
         parser_version: options.parser_version,
         normalization_version: options.normalization_version,
-
-        // Parser v2.3 only tells us whether vision OCR was used;
-        // it does not provide a numeric confidence score.
         ocr_confidence: null,
       },
     };
