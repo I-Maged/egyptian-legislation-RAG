@@ -133,4 +133,42 @@ describe("canonicalizeLaw", () => {
 
     await access(outputPath);
   });
+
+  it("canonicalizes the real Financial Law parser output", async () => {
+    tempDir = await mkdtemp(join(tmpdir(), "canonicalize-law-"));
+
+    const outputPath = join(tempDir, "financial-law-18-2019.json");
+
+    const inputPath = resolve(ROOT_DIR, "data/raw/financial_law_v2_3.json");
+
+    await access(inputPath);
+
+    const corpus = await canonicalizeLaw({
+      law: "financial_law",
+      inputPath,
+      outputPath,
+    });
+
+    expect(corpus.schema_version).toBe("1.0");
+
+    expect(corpus.document.law_name).toBe("financial_law");
+
+    expect(corpus.document.law_number).toBe("18");
+
+    expect(corpus.document.year).toBe("2019");
+
+    expect(corpus.chunks).toHaveLength(75);
+
+    for (const chunk of corpus.chunks) {
+      expect(chunk.document_id).toBe(corpus.document.id);
+
+      expect(chunk.text.trim().length).toBeGreaterThan(0);
+
+      expect(chunk.text_for_embedding.trim().length).toBeGreaterThan(0);
+
+      expect(chunk.provenance.source_file).toBe("financial_law.pdf");
+    }
+
+    await access(outputPath);
+  });
 });

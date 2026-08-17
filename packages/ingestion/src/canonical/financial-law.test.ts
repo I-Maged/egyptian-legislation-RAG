@@ -171,7 +171,7 @@ describe("canonicalizeFinancialLaw", () => {
     const result = canonicalizeFinancialLaw(parserChunks);
 
     expect(result.chunks[0]!.provenance).toEqual({
-      source_file: "financial_law_v2_3.json",
+      source_file: "financial_law.pdf",
       page_start: 2,
       page_end: 2,
     });

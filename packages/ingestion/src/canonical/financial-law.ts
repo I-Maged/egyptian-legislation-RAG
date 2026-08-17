@@ -43,7 +43,7 @@ function buildDocumentId(article: FinancialLawParserArticle): string {
     article.lawName,
     article.lawNumber,
     article.year,
-    "financial-law-v2.3.json",
+    "financial_law.pdf",
   ].join("|");
 
   return `lawdoc_${createHash("sha256")
@@ -110,7 +110,7 @@ export function canonicalizeFinancialLaw(
     jurisdiction: "EG",
     language: "ar",
 
-    source_file: "financial_law_v2_3.json",
+    source_file: "financial_law.pdf",
 
     metadata: {
       parser_version: "parser-v2.3",
@@ -138,7 +138,7 @@ export function canonicalizeFinancialLaw(
     source_order: article.sourceOrder ?? null,
 
     provenance: {
-      source_file: "financial_law_v2_3.json",
+      source_file: "financial_law.pdf",
       page_start: normalizePageNumber(article.pageStart),
       page_end: normalizePageNumber(article.pageEnd),
     },

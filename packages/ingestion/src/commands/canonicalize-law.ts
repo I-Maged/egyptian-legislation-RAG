@@ -1,4 +1,8 @@
 import { readFile } from "fs/promises";
+import {
+  type FinancialLawParserArticle,
+  canonicalizeFinancialLaw,
+} from "../canonical/financial-law";
 
 import {
   type ParserV23LawChunk,
@@ -70,12 +74,6 @@ export async function canonicalizeLaw(
       return corpus;
     }
 
-    // case "personal_affair_law": {
-    //   throw new Error(
-    //     "Personal Affairs canonicalization adapter is not implemented yet.",
-    //   );
-    // }
-
     case "personal_affair_law": {
       const parserOutput = parsed as PersonalAffairsParserOutput;
 
@@ -93,6 +91,28 @@ export async function canonicalizeLaw(
       }
 
       const corpus = canonicalizePersonalAffairsLaw(parserOutput);
+
+      await writeCanonicalCorpusJson(request.outputPath, corpus);
+
+      return corpus;
+    }
+
+    case "financial_law": {
+      const parserOutput = parsed as {
+        articles?: FinancialLawParserArticle[];
+      };
+
+      if (!Array.isArray(parserOutput.articles)) {
+        throw new Error(
+          "Financial Law parser output must contain an articles array.",
+        );
+      }
+
+      if (parserOutput.articles.length === 0) {
+        throw new Error("Financial Law parser output contains no articles.");
+      }
+
+      const corpus = canonicalizeFinancialLaw(parserOutput.articles);
 
       await writeCanonicalCorpusJson(request.outputPath, corpus);
 

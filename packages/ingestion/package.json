@@ -11,7 +11,12 @@
     "canonicalize:labour": "tsx src/commands/canonicalize-labour-law.ts",
     "inspect:corpus": "tsx src/commands/inspect-canonical-corpus.ts",
     "embed:labour": "tsx src/commands/embed-labour-law.ts",
-    "check:embeddings:labour": "tsx src/commands/check-labour-embeddings.ts"
+    "embed:financial": "tsx src/commands/embed-financial-law.ts",
+    "check:embeddings:labour": "tsx src/commands/check-labour-embeddings.ts",
+    "check:embeddings:financial": "tsx src/commands/check-financial-embeddings.ts",
+    "check:embeddings:personal": "tsx src/commands/check-personal-embeddings.ts",
+    "canonicalize:law": "tsx src/commands/canonicalize.ts",
+    "check:canonical": "tsx src/commands/check-canonical.ts"
   },
   "devDependencies": {
     "tsx": "^4.19.2"
