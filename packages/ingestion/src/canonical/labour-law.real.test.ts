@@ -3,8 +3,6 @@ import { resolve } from "path";
 
 import { describe, expect, it } from "vitest";
 
-import { LawChunkSchema, LawDocumentSchema } from "@egyptian-law/core";
-
 import { canonicalizeLabourLaw, type ParserV23LawChunk } from "./labour-law";
 
 describe("canonicalizeLabourLaw - real parser output", () => {
@@ -48,7 +46,7 @@ describe("canonicalizeLabourLaw - real parser output", () => {
         law_number: source.lawNumber,
         year: source.year,
         article_number: source.articleNumber,
-        // chapter: source.chapter,
+        source_order: source.sourceOrder ?? null,
         hierarchy: [
           {
             type: "chapter",
@@ -64,6 +62,7 @@ describe("canonicalizeLabourLaw - real parser output", () => {
         },
       })),
     );
+
     expect(result.schema_version).toBe("1.0");
 
     // console.dir(result, { depth: null });

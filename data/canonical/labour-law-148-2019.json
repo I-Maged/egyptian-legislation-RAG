@@ -22,6 +22,7 @@
       "year": "2019",
       "article_number": "1",
       "article_title": null,
+      "source_order": 6,
       "hierarchy": [
         {
           "type": "chapter",
@@ -50,6 +51,7 @@
       "year": "2019",
       "article_number": "2",
       "article_title": null,
+      "source_order": 11,
       "hierarchy": [
         {
           "type": "chapter",
@@ -78,6 +80,7 @@
       "year": "2019",
       "article_number": "3",
       "article_title": null,
+      "source_order": 11,
       "hierarchy": [
         {
           "type": "chapter",
@@ -106,6 +109,7 @@
       "year": "2019",
       "article_number": "4",
       "article_title": null,
+      "source_order": 11,
       "hierarchy": [
         {
           "type": "chapter",
@@ -134,6 +138,7 @@
       "year": "2019",
       "article_number": "5",
       "article_title": null,
+      "source_order": 11,
       "hierarchy": [
         {
           "type": "chapter",
@@ -162,6 +167,7 @@
       "year": "2019",
       "article_number": "6",
       "article_title": null,
+      "source_order": 12,
       "hierarchy": [
         {
           "type": "chapter",
@@ -190,6 +196,7 @@
       "year": "2019",
       "article_number": "7",
       "article_title": null,
+      "source_order": 12,
       "hierarchy": [
         {
           "type": "chapter",
@@ -218,6 +225,7 @@
       "year": "2019",
       "article_number": "8",
       "article_title": null,
+      "source_order": 13,
       "hierarchy": [
         {
           "type": "chapter",
@@ -246,6 +254,7 @@
       "year": "2019",
       "article_number": "9",
       "article_title": null,
+      "source_order": 13,
       "hierarchy": [
         {
           "type": "chapter",
@@ -274,6 +283,7 @@
       "year": "2019",
       "article_number": "10",
       "article_title": null,
+      "source_order": 13,
       "hierarchy": [
         {
           "type": "chapter",
@@ -302,6 +312,7 @@
       "year": "2019",
       "article_number": "11",
       "article_title": null,
+      "source_order": 14,
       "hierarchy": [
         {
           "type": "chapter",
@@ -330,6 +341,7 @@
       "year": "2019",
       "article_number": "12",
       "article_title": null,
+      "source_order": 14,
       "hierarchy": [
         {
           "type": "chapter",
@@ -358,6 +370,7 @@
       "year": "2019",
       "article_number": "13",
       "article_title": null,
+      "source_order": 14,
       "hierarchy": [
         {
           "type": "chapter",
@@ -386,6 +399,7 @@
       "year": "2019",
       "article_number": "14",
       "article_title": null,
+      "source_order": 14,
       "hierarchy": [
         {
           "type": "chapter",
@@ -414,6 +428,7 @@
       "year": "2019",
       "article_number": "15",
       "article_title": null,
+      "source_order": 14,
       "hierarchy": [
         {
           "type": "chapter",
@@ -442,6 +457,7 @@
       "year": "2019",
       "article_number": "16",
       "article_title": null,
+      "source_order": 15,
       "hierarchy": [
         {
           "type": "chapter",
@@ -470,6 +486,7 @@
       "year": "2019",
       "article_number": "17",
       "article_title": null,
+      "source_order": 15,
       "hierarchy": [
         {
           "type": "chapter",
@@ -498,6 +515,7 @@
       "year": "2019",
       "article_number": "18",
       "article_title": null,
+      "source_order": 16,
       "hierarchy": [
         {
           "type": "chapter",
@@ -526,6 +544,7 @@
       "year": "2019",
       "article_number": "19",
       "article_title": null,
+      "source_order": 17,
       "hierarchy": [
         {
           "type": "chapter",
@@ -554,6 +573,7 @@
       "year": "2019",
       "article_number": "20",
       "article_title": null,
+      "source_order": 17,
       "hierarchy": [
         {
           "type": "chapter",
@@ -582,6 +602,7 @@
       "year": "2019",
       "article_number": "21",
       "article_title": null,
+      "source_order": 18,
       "hierarchy": [
         {
           "type": "chapter",
@@ -610,6 +631,7 @@
       "year": "2019",
       "article_number": "22",
       "article_title": null,
+      "source_order": 19,
       "hierarchy": [
         {
           "type": "chapter",
@@ -638,6 +660,7 @@
       "year": "2019",
       "article_number": "23",
       "article_title": null,
+      "source_order": 19,
       "hierarchy": [
         {
           "type": "chapter",
@@ -666,6 +689,7 @@
       "year": "2019",
       "article_number": "24",
       "article_title": null,
+      "source_order": 20,
       "hierarchy": [
         {
           "type": "chapter",
@@ -694,6 +718,7 @@
       "year": "2019",
       "article_number": "25",
       "article_title": null,
+      "source_order": 20,
       "hierarchy": [
         {
           "type": "chapter",
@@ -722,6 +747,7 @@
       "year": "2019",
       "article_number": "26",
       "article_title": null,
+      "source_order": 21,
       "hierarchy": [
         {
           "type": "chapter",
@@ -750,6 +776,7 @@
       "year": "2019",
       "article_number": "27",
       "article_title": null,
+      "source_order": 21,
       "hierarchy": [
         {
           "type": "chapter",
@@ -778,6 +805,7 @@
       "year": "2019",
       "article_number": "28",
       "article_title": null,
+      "source_order": 21,
       "hierarchy": [
         {
           "type": "chapter",
@@ -806,6 +834,7 @@
       "year": "2019",
       "article_number": "29",
       "article_title": null,
+      "source_order": 22,
       "hierarchy": [
         {
           "type": "chapter",
@@ -834,6 +863,7 @@
       "year": "2019",
       "article_number": "30",
       "article_title": null,
+      "source_order": 22,
       "hierarchy": [
         {
           "type": "chapter",
@@ -862,6 +892,7 @@
       "year": "2019",
       "article_number": "31",
       "article_title": null,
+      "source_order": 22,
       "hierarchy": [
         {
           "type": "chapter",
@@ -890,6 +921,7 @@
       "year": "2019",
       "article_number": "32",
       "article_title": null,
+      "source_order": 22,
       "hierarchy": [
         {
           "type": "chapter",
@@ -918,6 +950,7 @@
       "year": "2019",
       "article_number": "33",
       "article_title": null,
+      "source_order": 23,
       "hierarchy": [
         {
           "type": "chapter",
@@ -946,6 +979,7 @@
       "year": "2019",
       "article_number": "34",
       "article_title": null,
+      "source_order": 23,
       "hierarchy": [
         {
           "type": "chapter",
@@ -974,6 +1008,7 @@
       "year": "2019",
       "article_number": "35",
       "article_title": null,
+      "source_order": 24,
       "hierarchy": [
         {
           "type": "chapter",
@@ -1002,6 +1037,7 @@
       "year": "2019",
       "article_number": "36",
       "article_title": null,
+      "source_order": 24,
       "hierarchy": [
         {
           "type": "chapter",
@@ -1030,6 +1066,7 @@
       "year": "2019",
       "article_number": "37",
       "article_title": null,
+      "source_order": 24,
       "hierarchy": [
         {
           "type": "chapter",
@@ -1058,6 +1095,7 @@
       "year": "2019",
       "article_number": "38",
       "article_title": null,
+      "source_order": 25,
       "hierarchy": [
         {
           "type": "chapter",
@@ -1086,6 +1124,7 @@
       "year": "2019",
       "article_number": "39",
       "article_title": null,
+      "source_order": 25,
       "hierarchy": [
         {
           "type": "chapter",
@@ -1114,6 +1153,7 @@
       "year": "2019",
       "article_number": "40",
       "article_title": null,
+      "source_order": 26,
       "hierarchy": [
         {
           "type": "chapter",
@@ -1142,6 +1182,7 @@
       "year": "2019",
       "article_number": "41",
       "article_title": null,
+      "source_order": 26,
       "hierarchy": [
         {
           "type": "chapter",
@@ -1170,6 +1211,7 @@
       "year": "2019",
       "article_number": "42",
       "article_title": null,
+      "source_order": 27,
       "hierarchy": [
         {
           "type": "chapter",
@@ -1198,6 +1240,7 @@
       "year": "2019",
       "article_number": "43",
       "article_title": null,
+      "source_order": 27,
       "hierarchy": [
         {
           "type": "chapter",
@@ -1226,6 +1269,7 @@
       "year": "2019",
       "article_number": "44",
       "article_title": null,
+      "source_order": 28,
       "hierarchy": [
         {
           "type": "chapter",
@@ -1254,6 +1298,7 @@
       "year": "2019",
       "article_number": "45",
       "article_title": null,
+      "source_order": 28,
       "hierarchy": [
         {
           "type": "chapter",
@@ -1282,6 +1327,7 @@
       "year": "2019",
       "article_number": "46",
       "article_title": null,
+      "source_order": 29,
       "hierarchy": [
         {
           "type": "chapter",
@@ -1310,6 +1356,7 @@
       "year": "2019",
       "article_number": "47",
       "article_title": null,
+      "source_order": 29,
       "hierarchy": [
         {
           "type": "chapter",
@@ -1338,6 +1385,7 @@
       "year": "2019",
       "article_number": "48",
       "article_title": null,
+      "source_order": 29,
       "hierarchy": [
         {
           "type": "chapter",
@@ -1366,6 +1414,7 @@
       "year": "2019",
       "article_number": "49",
       "article_title": null,
+      "source_order": 30,
       "hierarchy": [
         {
           "type": "chapter",
@@ -1394,6 +1443,7 @@
       "year": "2019",
       "article_number": "50",
       "article_title": null,
+      "source_order": 30,
       "hierarchy": [
         {
           "type": "chapter",
@@ -1422,6 +1472,7 @@
       "year": "2019",
       "article_number": "51",
       "article_title": null,
+      "source_order": 30,
       "hierarchy": [
         {
           "type": "chapter",
@@ -1450,6 +1501,7 @@
       "year": "2019",
       "article_number": "52",
       "article_title": null,
+      "source_order": 30,
       "hierarchy": [
         {
           "type": "chapter",
@@ -1478,6 +1530,7 @@
       "year": "2019",
       "article_number": "53",
       "article_title": null,
+      "source_order": 31,
       "hierarchy": [
         {
           "type": "chapter",
@@ -1506,6 +1559,7 @@
       "year": "2019",
       "article_number": "54",
       "article_title": null,
+      "source_order": 31,
       "hierarchy": [
         {
           "type": "chapter",
@@ -1534,6 +1588,7 @@
       "year": "2019",
       "article_number": "55",
       "article_title": null,
+      "source_order": 32,
       "hierarchy": [
         {
           "type": "chapter",
@@ -1562,6 +1617,7 @@
       "year": "2019",
       "article_number": "56",
       "article_title": null,
+      "source_order": 32,
       "hierarchy": [
         {
           "type": "chapter",
@@ -1590,6 +1646,7 @@
       "year": "2019",
       "article_number": "57",
       "article_title": null,
+      "source_order": 32,
       "hierarchy": [
         {
           "type": "chapter",
@@ -1618,6 +1675,7 @@
       "year": "2019",
       "article_number": "58",
       "article_title": null,
+      "source_order": 33,
       "hierarchy": [
         {
           "type": "chapter",
@@ -1646,6 +1704,7 @@
       "year": "2019",
       "article_number": "59",
       "article_title": null,
+      "source_order": 33,
       "hierarchy": [
         {
           "type": "chapter",
@@ -1674,6 +1733,7 @@
       "year": "2019",
       "article_number": "60",
       "article_title": null,
+      "source_order": 33,
       "hierarchy": [
         {
           "type": "chapter",
@@ -1702,6 +1762,7 @@
       "year": "2019",
       "article_number": "61",
       "article_title": null,
+      "source_order": 33,
       "hierarchy": [
         {
           "type": "chapter",
@@ -1730,6 +1791,7 @@
       "year": "2019",
       "article_number": "62",
       "article_title": null,
+      "source_order": 34,
       "hierarchy": [
         {
           "type": "chapter",
@@ -1758,6 +1820,7 @@
       "year": "2019",
       "article_number": "63",
       "article_title": null,
+      "source_order": 34,
       "hierarchy": [
         {
           "type": "chapter",
@@ -1786,6 +1849,7 @@
       "year": "2019",
       "article_number": "64",
       "article_title": null,
+      "source_order": 34,
       "hierarchy": [
         {
           "type": "chapter",
@@ -1814,6 +1878,7 @@
       "year": "2019",
       "article_number": "65",
       "article_title": null,
+      "source_order": 34,
       "hierarchy": [
         {
           "type": "chapter",
@@ -1842,6 +1907,7 @@
       "year": "2019",
       "article_number": "66",
       "article_title": null,
+      "source_order": 35,
       "hierarchy": [
         {
           "type": "chapter",
@@ -1870,6 +1936,7 @@
       "year": "2019",
       "article_number": "67",
       "article_title": null,
+      "source_order": 35,
       "hierarchy": [
         {
           "type": "chapter",
@@ -1898,6 +1965,7 @@
       "year": "2019",
       "article_number": "68",
       "article_title": null,
+      "source_order": 35,
       "hierarchy": [
         {
           "type": "chapter",
@@ -1926,6 +1994,7 @@
       "year": "2019",
       "article_number": "69",
       "article_title": null,
+      "source_order": 36,
       "hierarchy": [
         {
           "type": "chapter",
@@ -1954,6 +2023,7 @@
       "year": "2019",
       "article_number": "70",
       "article_title": null,
+      "source_order": 36,
       "hierarchy": [
         {
           "type": "chapter",
@@ -1982,6 +2052,7 @@
       "year": "2019",
       "article_number": "71",
       "article_title": null,
+      "source_order": 36,
       "hierarchy": [
         {
           "type": "chapter",
@@ -2010,6 +2081,7 @@
       "year": "2019",
       "article_number": "72",
       "article_title": null,
+      "source_order": 37,
       "hierarchy": [
         {
           "type": "chapter",
@@ -2038,6 +2110,7 @@
       "year": "2019",
       "article_number": "73",
       "article_title": null,
+      "source_order": 37,
       "hierarchy": [
         {
           "type": "chapter",
@@ -2066,6 +2139,7 @@
       "year": "2019",
       "article_number": "74",
       "article_title": null,
+      "source_order": 37,
       "hierarchy": [
         {
           "type": "chapter",
@@ -2094,6 +2168,7 @@
       "year": "2019",
       "article_number": "75",
       "article_title": null,
+      "source_order": 37,
       "hierarchy": [
         {
           "type": "chapter",
@@ -2122,6 +2197,7 @@
       "year": "2019",
       "article_number": "76",
       "article_title": null,
+      "source_order": 38,
       "hierarchy": [
         {
           "type": "chapter",
@@ -2150,6 +2226,7 @@
       "year": "2019",
       "article_number": "77",
       "article_title": null,
+      "source_order": 38,
       "hierarchy": [
         {
           "type": "chapter",
@@ -2178,6 +2255,7 @@
       "year": "2019",
       "article_number": "78",
       "article_title": null,
+      "source_order": 38,
       "hierarchy": [
         {
           "type": "chapter",
@@ -2206,6 +2284,7 @@
       "year": "2019",
       "article_number": "79",
       "article_title": null,
+      "source_order": 39,
       "hierarchy": [
         {
           "type": "chapter",
@@ -2234,6 +2313,7 @@
       "year": "2019",
       "article_number": "80",
       "article_title": null,
+      "source_order": 40,
       "hierarchy": [
         {
           "type": "chapter",
@@ -2262,6 +2342,7 @@
       "year": "2019",
       "article_number": "81",
       "article_title": null,
+      "source_order": 40,
       "hierarchy": [
         {
           "type": "chapter",
@@ -2290,6 +2371,7 @@
       "year": "2019",
       "article_number": "82",
       "article_title": null,
+      "source_order": 40,
       "hierarchy": [
         {
           "type": "chapter",
@@ -2318,6 +2400,7 @@
       "year": "2019",
       "article_number": "83",
       "article_title": null,
+      "source_order": 41,
       "hierarchy": [
         {
           "type": "chapter",
@@ -2346,6 +2429,7 @@
       "year": "2019",
       "article_number": "84",
       "article_title": null,
+      "source_order": 41,
       "hierarchy": [
         {
           "type": "chapter",
@@ -2374,6 +2458,7 @@
       "year": "2019",
       "article_number": "85",
       "article_title": null,
+      "source_order": 42,
       "hierarchy": [
         {
           "type": "chapter",
@@ -2402,6 +2487,7 @@
       "year": "2019",
       "article_number": "86",
       "article_title": null,
+      "source_order": 42,
       "hierarchy": [
         {
           "type": "chapter",
@@ -2430,6 +2516,7 @@
       "year": "2019",
       "article_number": "87",
       "article_title": null,
+      "source_order": 42,
       "hierarchy": [
         {
           "type": "chapter",
@@ -2458,6 +2545,7 @@
       "year": "2019",
       "article_number": "88",
       "article_title": null,
+      "source_order": 42,
       "hierarchy": [
         {
           "type": "chapter",
@@ -2486,6 +2574,7 @@
       "year": "2019",
       "article_number": "89",
       "article_title": null,
+      "source_order": 43,
       "hierarchy": [
         {
           "type": "chapter",
@@ -2514,6 +2603,7 @@
       "year": "2019",
       "article_number": "90",
       "article_title": null,
+      "source_order": 43,
       "hierarchy": [
         {
           "type": "chapter",
@@ -2542,6 +2632,7 @@
       "year": "2019",
       "article_number": "91",
       "article_title": null,
+      "source_order": 44,
       "hierarchy": [
         {
           "type": "chapter",
@@ -2570,6 +2661,7 @@
       "year": "2019",
       "article_number": "92",
       "article_title": null,
+      "source_order": 44,
       "hierarchy": [
         {
           "type": "chapter",
@@ -2598,6 +2690,7 @@
       "year": "2019",
       "article_number": "93",
       "article_title": null,
+      "source_order": 44,
       "hierarchy": [
         {
           "type": "chapter",
@@ -2626,6 +2719,7 @@
       "year": "2019",
       "article_number": "94",
       "article_title": null,
+      "source_order": 45,
       "hierarchy": [
         {
           "type": "chapter",
@@ -2654,6 +2748,7 @@
       "year": "2019",
       "article_number": "95",
       "article_title": null,
+      "source_order": 45,
       "hierarchy": [
         {
           "type": "chapter",
@@ -2682,6 +2777,7 @@
       "year": "2019",
       "article_number": "96",
       "article_title": null,
+      "source_order": 45,
       "hierarchy": [
         {
           "type": "chapter",
@@ -2710,6 +2806,7 @@
       "year": "2019",
       "article_number": "97",
       "article_title": null,
+      "source_order": 46,
       "hierarchy": [
         {
           "type": "chapter",
@@ -2738,6 +2835,7 @@
       "year": "2019",
       "article_number": "98",
       "article_title": null,
+      "source_order": 46,
       "hierarchy": [
         {
           "type": "chapter",
@@ -2766,6 +2864,7 @@
       "year": "2019",
       "article_number": "99",
       "article_title": null,
+      "source_order": 46,
       "hierarchy": [
         {
           "type": "chapter",
@@ -2794,6 +2893,7 @@
       "year": "2019",
       "article_number": "100",
       "article_title": null,
+      "source_order": 47,
       "hierarchy": [
         {
           "type": "chapter",
@@ -2822,6 +2922,7 @@
       "year": "2019",
       "article_number": "101",
       "article_title": null,
+      "source_order": 47,
       "hierarchy": [
         {
           "type": "chapter",
@@ -2850,6 +2951,7 @@
       "year": "2019",
       "article_number": "102",
       "article_title": null,
+      "source_order": 48,
       "hierarchy": [
         {
           "type": "chapter",
@@ -2878,6 +2980,7 @@
       "year": "2019",
       "article_number": "103",
       "article_title": null,
+      "source_order": 48,
       "hierarchy": [
         {
           "type": "chapter",
@@ -2906,6 +3009,7 @@
       "year": "2019",
       "article_number": "104",
       "article_title": null,
+      "source_order": 49,
       "hierarchy": [
         {
           "type": "chapter",
@@ -2934,6 +3038,7 @@
       "year": "2019",
       "article_number": "105",
       "article_title": null,
+      "source_order": 49,
       "hierarchy": [
         {
           "type": "chapter",
@@ -2962,6 +3067,7 @@
       "year": "2019",
       "article_number": "106",
       "article_title": null,
+      "source_order": 49,
       "hierarchy": [
         {
           "type": "chapter",
@@ -2990,6 +3096,7 @@
       "year": "2019",
       "article_number": "107",
       "article_title": null,
+      "source_order": 49,
       "hierarchy": [
         {
           "type": "chapter",
@@ -3018,6 +3125,7 @@
       "year": "2019",
       "article_number": "108",
       "article_title": null,
+      "source_order": 49,
       "hierarchy": [
         {
           "type": "chapter",
@@ -3046,6 +3154,7 @@
       "year": "2019",
       "article_number": "109",
       "article_title": null,
+      "source_order": 50,
       "hierarchy": [
         {
           "type": "chapter",
@@ -3074,6 +3183,7 @@
       "year": "2019",
       "article_number": "110",
       "article_title": null,
+      "source_order": 50,
       "hierarchy": [
         {
           "type": "chapter",
@@ -3102,6 +3212,7 @@
       "year": "2019",
       "article_number": "111",
       "article_title": null,
+      "source_order": 50,
       "hierarchy": [
         {
           "type": "chapter",
@@ -3130,6 +3241,7 @@
       "year": "2019",
       "article_number": "112",
       "article_title": null,
+      "source_order": 50,
       "hierarchy": [
         {
           "type": "chapter",
@@ -3158,6 +3270,7 @@
       "year": "2019",
       "article_number": "113",
       "article_title": null,
+      "source_order": 51,
       "hierarchy": [
         {
           "type": "chapter",
@@ -3186,6 +3299,7 @@
       "year": "2019",
       "article_number": "114",
       "article_title": null,
+      "source_order": 51,
       "hierarchy": [
         {
           "type": "chapter",
@@ -3214,6 +3328,7 @@
       "year": "2019",
       "article_number": "115",
       "article_title": null,
+      "source_order": 51,
       "hierarchy": [
         {
           "type": "chapter",
@@ -3242,6 +3357,7 @@
       "year": "2019",
       "article_number": "116",
       "article_title": null,
+      "source_order": 51,
       "hierarchy": [
         {
           "type": "chapter",
@@ -3270,6 +3386,7 @@
       "year": "2019",
       "article_number": "117",
       "article_title": null,
+      "source_order": 52,
       "hierarchy": [
         {
           "type": "chapter",
@@ -3298,6 +3415,7 @@
       "year": "2019",
       "article_number": "118",
       "article_title": null,
+      "source_order": 52,
       "hierarchy": [
         {
           "type": "chapter",
@@ -3326,6 +3444,7 @@
       "year": "2019",
       "article_number": "119",
       "article_title": null,
+      "source_order": 52,
       "hierarchy": [
         {
           "type": "chapter",
@@ -3354,6 +3473,7 @@
       "year": "2019",
       "article_number": "120",
       "article_title": null,
+      "source_order": 52,
       "hierarchy": [
         {
           "type": "chapter",
@@ -3382,6 +3502,7 @@
       "year": "2019",
       "article_number": "123",
       "article_title": null,
+      "source_order": 54,
       "hierarchy": [
         {
           "type": "chapter",
@@ -3410,6 +3531,7 @@
       "year": "2019",
       "article_number": "124",
       "article_title": null,
+      "source_order": 54,
       "hierarchy": [
         {
           "type": "chapter",
@@ -3438,6 +3560,7 @@
       "year": "2019",
       "article_number": "125",
       "article_title": null,
+      "source_order": 55,
       "hierarchy": [
         {
           "type": "chapter",
@@ -3466,6 +3589,7 @@
       "year": "2019",
       "article_number": "126",
       "article_title": null,
+      "source_order": 55,
       "hierarchy": [
         {
           "type": "chapter",
@@ -3494,6 +3618,7 @@
       "year": "2019",
       "article_number": "127",
       "article_title": null,
+      "source_order": 55,
       "hierarchy": [
         {
           "type": "chapter",
@@ -3522,6 +3647,7 @@
       "year": "2019",
       "article_number": "128",
       "article_title": null,
+      "source_order": 56,
       "hierarchy": [
         {
           "type": "chapter",
@@ -3550,6 +3676,7 @@
       "year": "2019",
       "article_number": "129",
       "article_title": null,
+      "source_order": 56,
       "hierarchy": [
         {
           "type": "chapter",
@@ -3578,6 +3705,7 @@
       "year": "2019",
       "article_number": "130",
       "article_title": null,
+      "source_order": 56,
       "hierarchy": [
         {
           "type": "chapter",
@@ -3606,6 +3734,7 @@
       "year": "2019",
       "article_number": "131",
       "article_title": null,
+      "source_order": 56,
       "hierarchy": [
         {
           "type": "chapter",
@@ -3634,6 +3763,7 @@
       "year": "2019",
       "article_number": "132",
       "article_title": null,
+      "source_order": 57,
       "hierarchy": [
         {
           "type": "chapter",
@@ -3662,6 +3792,7 @@
       "year": "2019",
       "article_number": "133",
       "article_title": null,
+      "source_order": 57,
       "hierarchy": [
         {
           "type": "chapter",
@@ -3690,6 +3821,7 @@
       "year": "2019",
       "article_number": "134",
       "article_title": null,
+      "source_order": 57,
       "hierarchy": [
         {
           "type": "chapter",
@@ -3718,6 +3850,7 @@
       "year": "2019",
       "article_number": "135",
       "article_title": null,
+      "source_order": 58,
       "hierarchy": [
         {
           "type": "chapter",
@@ -3746,6 +3879,7 @@
       "year": "2019",
       "article_number": "136",
       "article_title": null,
+      "source_order": 59,
       "hierarchy": [
         {
           "type": "chapter",
@@ -3774,6 +3908,7 @@
       "year": "2019",
       "article_number": "137",
       "article_title": null,
+      "source_order": 60,
       "hierarchy": [
         {
           "type": "chapter",
@@ -3802,6 +3937,7 @@
       "year": "2019",
       "article_number": "138",
       "article_title": null,
+      "source_order": 60,
       "hierarchy": [
         {
           "type": "chapter",
@@ -3830,6 +3966,7 @@
       "year": "2019",
       "article_number": "139",
       "article_title": null,
+      "source_order": 61,
       "hierarchy": [
         {
           "type": "chapter",
@@ -3858,6 +3995,7 @@
       "year": "2019",
       "article_number": "140",
       "article_title": null,
+      "source_order": 61,
       "hierarchy": [
         {
           "type": "chapter",
@@ -3886,6 +4024,7 @@
       "year": "2019",
       "article_number": "141",
       "article_title": null,
+      "source_order": 61,
       "hierarchy": [
         {
           "type": "chapter",
@@ -3914,6 +4053,7 @@
       "year": "2019",
       "article_number": "142",
       "article_title": null,
+      "source_order": 62,
       "hierarchy": [
         {
           "type": "chapter",
@@ -3942,6 +4082,7 @@
       "year": "2019",
       "article_number": "143",
       "article_title": null,
+      "source_order": 62,
       "hierarchy": [
         {
           "type": "chapter",
@@ -3970,6 +4111,7 @@
       "year": "2019",
       "article_number": "144",
       "article_title": null,
+      "source_order": 62,
       "hierarchy": [
         {
           "type": "chapter",
@@ -3998,6 +4140,7 @@
       "year": "2019",
       "article_number": "145",
       "article_title": null,
+      "source_order": 62,
       "hierarchy": [
         {
           "type": "chapter",
@@ -4026,6 +4169,7 @@
       "year": "2019",
       "article_number": "146",
       "article_title": null,
+      "source_order": 63,
       "hierarchy": [
         {
           "type": "chapter",
@@ -4054,6 +4198,7 @@
       "year": "2019",
       "article_number": "147",
       "article_title": null,
+      "source_order": 63,
       "hierarchy": [
         {
           "type": "chapter",
@@ -4082,6 +4227,7 @@
       "year": "2019",
       "article_number": "148",
       "article_title": null,
+      "source_order": 63,
       "hierarchy": [
         {
           "type": "chapter",
@@ -4110,6 +4256,7 @@
       "year": "2019",
       "article_number": "149",
       "article_title": null,
+      "source_order": 64,
       "hierarchy": [
         {
           "type": "chapter",
@@ -4138,6 +4285,7 @@
       "year": "2019",
       "article_number": "150",
       "article_title": null,
+      "source_order": 65,
       "hierarchy": [
         {
           "type": "chapter",
@@ -4166,6 +4314,7 @@
       "year": "2019",
       "article_number": "151",
       "article_title": null,
+      "source_order": 65,
       "hierarchy": [
         {
           "type": "chapter",
@@ -4194,6 +4343,7 @@
       "year": "2019",
       "article_number": "152",
       "article_title": null,
+      "source_order": 66,
       "hierarchy": [
         {
           "type": "chapter",
@@ -4222,6 +4372,7 @@
       "year": "2019",
       "article_number": "153",
       "article_title": null,
+      "source_order": 66,
       "hierarchy": [
         {
           "type": "chapter",
@@ -4250,6 +4401,7 @@
       "year": "2019",
       "article_number": "154",
       "article_title": null,
+      "source_order": 66,
       "hierarchy": [
         {
           "type": "chapter",
@@ -4278,6 +4430,7 @@
       "year": "2019",
       "article_number": "155",
       "article_title": null,
+      "source_order": 67,
       "hierarchy": [
         {
           "type": "chapter",
@@ -4306,6 +4459,7 @@
       "year": "2019",
       "article_number": "156",
       "article_title": null,
+      "source_order": 67,
       "hierarchy": [
         {
           "type": "chapter",
@@ -4334,6 +4488,7 @@
       "year": "2019",
       "article_number": "157",
       "article_title": null,
+      "source_order": 67,
       "hierarchy": [
         {
           "type": "chapter",
@@ -4362,6 +4517,7 @@
       "year": "2019",
       "article_number": "158",
       "article_title": null,
+      "source_order": 67,
       "hierarchy": [
         {
           "type": "chapter",
@@ -4390,6 +4546,7 @@
       "year": "2019",
       "article_number": "159",
       "article_title": null,
+      "source_order": 68,
       "hierarchy": [
         {
           "type": "chapter",
@@ -4418,6 +4575,7 @@
       "year": "2019",
       "article_number": "160",
       "article_title": null,
+      "source_order": 68,
       "hierarchy": [
         {
           "type": "chapter",
@@ -4446,6 +4604,7 @@
       "year": "2019",
       "article_number": "161",
       "article_title": null,
+      "source_order": 68,
       "hierarchy": [
         {
           "type": "chapter",
@@ -4474,6 +4633,7 @@
       "year": "2019",
       "article_number": "162",
       "article_title": null,
+      "source_order": 68,
       "hierarchy": [
         {
           "type": "chapter",
@@ -4502,6 +4662,7 @@
       "year": "2019",
       "article_number": "163",
       "article_title": null,
+      "source_order": 68,
       "hierarchy": [
         {
           "type": "chapter",
@@ -4530,6 +4691,7 @@
       "year": "2019",
       "article_number": "164",
       "article_title": null,
+      "source_order": 69,
       "hierarchy": [
         {
           "type": "chapter",
@@ -4558,6 +4720,7 @@
       "year": "2019",
       "article_number": "165",
       "article_title": null,
+      "source_order": 69,
       "hierarchy": [
         {
           "type": "chapter",
@@ -4586,6 +4749,7 @@
       "year": "2019",
       "article_number": "166",
       "article_title": null,
+      "source_order": 70,
       "hierarchy": [
         {
           "type": "chapter",
@@ -4614,6 +4778,7 @@
       "year": "2019",
       "article_number": "167",
       "article_title": null,
+      "source_order": 70,
       "hierarchy": [
         {
           "type": "chapter",
@@ -4642,6 +4807,7 @@
       "year": "2019",
       "article_number": "168",
       "article_title": null,
+      "source_order": 70,
       "hierarchy": [
         {
           "type": "chapter",
@@ -4670,6 +4836,7 @@
       "year": "2019",
       "article_number": "169",
       "article_title": null,
+      "source_order": 70,
       "hierarchy": [
         {
           "type": "chapter",
@@ -4698,6 +4865,7 @@
       "year": "2019",
       "article_number": "170",
       "article_title": null,
+      "source_order": 71,
       "hierarchy": [
         {
           "type": "chapter",
@@ -4726,6 +4894,7 @@
       "year": "2019",
       "article_number": "171",
       "article_title": null,
+      "source_order": 71,
       "hierarchy": [
         {
           "type": "chapter",
@@ -4754,6 +4923,7 @@
       "year": "2019",
       "article_number": "172",
       "article_title": null,
+      "source_order": 72,
       "hierarchy": [
         {
           "type": "chapter",
@@ -4782,6 +4952,7 @@
       "year": "2019",
       "article_number": "173",
       "article_title": null,
+      "source_order": 72,
       "hierarchy": [
         {
           "type": "chapter",
@@ -4810,6 +4981,7 @@
       "year": "2019",
       "article_number": "174",
       "article_title": null,
+      "source_order": 72,
       "hierarchy": [
         {
           "type": "chapter",
@@ -4838,6 +5010,7 @@
       "year": "2019",
       "article_number": "175",
       "article_title": null,
+      "source_order": 72,
       "hierarchy": [
         {
           "type": "chapter",
@@ -4866,6 +5039,7 @@
       "year": "2019",
       "article_number": "176",
       "article_title": null,
+      "source_order": 73,
       "hierarchy": [
         {
           "type": "chapter",
@@ -4894,6 +5068,7 @@
       "year": "2019",
       "article_number": "177",
       "article_title": null,
+      "source_order": 73,
       "hierarchy": [
         {
           "type": "chapter",
@@ -4922,6 +5097,7 @@
       "year": "2019",
       "article_number": "178",
       "article_title": null,
+      "source_order": 74,
       "hierarchy": [
         {
           "type": "chapter",
@@ -4950,6 +5126,7 @@
       "year": "2019",
       "article_number": "179",
       "article_title": null,
+      "source_order": 74,
       "hierarchy": [
         {
           "type": "chapter",
@@ -4978,6 +5155,7 @@
       "year": "2019",
       "article_number": "180",
       "article_title": null,
+      "source_order": 74,
       "hierarchy": [
         {
           "type": "chapter",
@@ -5006,6 +5184,7 @@
       "year": "2019",
       "article_number": "181",
       "article_title": null,
+      "source_order": 74,
       "hierarchy": [
         {
           "type": "chapter",
@@ -5034,6 +5213,7 @@
       "year": "2019",
       "article_number": "182",
       "article_title": null,
+      "source_order": 74,
       "hierarchy": [
         {
           "type": "chapter",
@@ -5062,6 +5242,7 @@
       "year": "2019",
       "article_number": "183",
       "article_title": null,
+      "source_order": 75,
       "hierarchy": [
         {
           "type": "chapter",
@@ -5090,6 +5271,7 @@
       "year": "2019",
       "article_number": "184",
       "article_title": null,
+      "source_order": 75,
       "hierarchy": [
         {
           "type": "chapter",
@@ -5118,6 +5300,7 @@
       "year": "2019",
       "article_number": "185",
       "article_title": null,
+      "source_order": 75,
       "hierarchy": [
         {
           "type": "chapter",
@@ -5146,6 +5329,7 @@
       "year": "2019",
       "article_number": "186",
       "article_title": null,
+      "source_order": 75,
       "hierarchy": [
         {
           "type": "chapter",
@@ -5174,6 +5358,7 @@
       "year": "2019",
       "article_number": "190",
       "article_title": null,
+      "source_order": 77,
       "hierarchy": [
         {
           "type": "chapter",
@@ -5202,6 +5387,7 @@
       "year": "2019",
       "article_number": "191",
       "article_title": null,
+      "source_order": 78,
       "hierarchy": [
         {
           "type": "chapter",
@@ -5230,6 +5416,7 @@
       "year": "2019",
       "article_number": "192",
       "article_title": null,
+      "source_order": 78,
       "hierarchy": [
         {
           "type": "chapter",
@@ -5258,6 +5445,7 @@
       "year": "2019",
       "article_number": "193",
       "article_title": null,
+      "source_order": 78,
       "hierarchy": [
         {
           "type": "chapter",
@@ -5286,6 +5474,7 @@
       "year": "2019",
       "article_number": "194",
       "article_title": null,
+      "source_order": 79,
       "hierarchy": [
         {
           "type": "chapter",
@@ -5314,6 +5503,7 @@
       "year": "2019",
       "article_number": "195",
       "article_title": null,
+      "source_order": 79,
       "hierarchy": [
         {
           "type": "chapter",
@@ -5342,6 +5532,7 @@
       "year": "2019",
       "article_number": "196",
       "article_title": null,
+      "source_order": 79,
       "hierarchy": [
         {
           "type": "chapter",
@@ -5370,6 +5561,7 @@
       "year": "2019",
       "article_number": "197",
       "article_title": null,
+      "source_order": 80,
       "hierarchy": [
         {
           "type": "chapter",
@@ -5398,6 +5590,7 @@
       "year": "2019",
       "article_number": "198",
       "article_title": null,
+      "source_order": 80,
       "hierarchy": [
         {
           "type": "chapter",
@@ -5426,6 +5619,7 @@
       "year": "2019",
       "article_number": "199",
       "article_title": null,
+      "source_order": 80,
       "hierarchy": [
         {
           "type": "chapter",
@@ -5454,6 +5648,7 @@
       "year": "2019",
       "article_number": "200",
       "article_title": null,
+      "source_order": 80,
       "hierarchy": [
         {
           "type": "chapter",
@@ -5482,6 +5677,7 @@
       "year": "2019",
       "article_number": "201",
       "article_title": null,
+      "source_order": 80,
       "hierarchy": [
         {
           "type": "chapter",
@@ -5510,6 +5706,7 @@
       "year": "2019",
       "article_number": "202",
       "article_title": null,
+      "source_order": 81,
       "hierarchy": [
         {
           "type": "chapter",
@@ -5538,6 +5735,7 @@
       "year": "2019",
       "article_number": "203",
       "article_title": null,
+      "source_order": 81,
       "hierarchy": [
         {
           "type": "chapter",
@@ -5566,6 +5764,7 @@
       "year": "2019",
       "article_number": "204",
       "article_title": null,
+      "source_order": 81,
       "hierarchy": [
         {
           "type": "chapter",
@@ -5594,6 +5793,7 @@
       "year": "2019",
       "article_number": "205",
       "article_title": null,
+      "source_order": 81,
       "hierarchy": [
         {
           "type": "chapter",
@@ -5622,6 +5822,7 @@
       "year": "2019",
       "article_number": "206",
       "article_title": null,
+      "source_order": 82,
       "hierarchy": [
         {
           "type": "chapter",
@@ -5650,6 +5851,7 @@
       "year": "2019",
       "article_number": "207",
       "article_title": null,
+      "source_order": 82,
       "hierarchy": [
         {
           "type": "chapter",
@@ -5678,6 +5880,7 @@
       "year": "2019",
       "article_number": "208",
       "article_title": null,
+      "source_order": 82,
       "hierarchy": [
         {
           "type": "chapter",
@@ -5706,6 +5909,7 @@
       "year": "2019",
       "article_number": "209",
       "article_title": null,
+      "source_order": 82,
       "hierarchy": [
         {
           "type": "chapter",
@@ -5734,6 +5938,7 @@
       "year": "2019",
       "article_number": "210",
       "article_title": null,
+      "source_order": 82,
       "hierarchy": [
         {
           "type": "chapter",
@@ -5762,6 +5967,7 @@
       "year": "2019",
       "article_number": "211",
       "article_title": null,
+      "source_order": 83,
       "hierarchy": [
         {
           "type": "chapter",
@@ -5790,6 +5996,7 @@
       "year": "2019",
       "article_number": "212",
       "article_title": null,
+      "source_order": 83,
       "hierarchy": [
         {
           "type": "chapter",
@@ -5818,6 +6025,7 @@
       "year": "2019",
       "article_number": "213",
       "article_title": null,
+      "source_order": 83,
       "hierarchy": [
         {
           "type": "chapter",
@@ -5846,6 +6054,7 @@
       "year": "2019",
       "article_number": "214",
       "article_title": null,
+      "source_order": 83,
       "hierarchy": [
         {
           "type": "chapter",
@@ -5874,6 +6083,7 @@
       "year": "2019",
       "article_number": "215",
       "article_title": null,
+      "source_order": 84,
       "hierarchy": [
         {
           "type": "chapter",
@@ -5902,6 +6112,7 @@
       "year": "2019",
       "article_number": "216",
       "article_title": null,
+      "source_order": 84,
       "hierarchy": [
         {
           "type": "chapter",
@@ -5930,6 +6141,7 @@
       "year": "2019",
       "article_number": "217",
       "article_title": null,
+      "source_order": 84,
       "hierarchy": [
         {
           "type": "chapter",
@@ -5958,6 +6170,7 @@
       "year": "2019",
       "article_number": "218",
       "article_title": null,
+      "source_order": 84,
       "hierarchy": [
         {
           "type": "chapter",
@@ -5986,6 +6199,7 @@
       "year": "2019",
       "article_number": "219",
       "article_title": null,
+      "source_order": 85,
       "hierarchy": [
         {
           "type": "chapter",
@@ -6014,6 +6228,7 @@
       "year": "2019",
       "article_number": "220",
       "article_title": null,
+      "source_order": 85,
       "hierarchy": [
         {
           "type": "chapter",
@@ -6042,6 +6257,7 @@
       "year": "2019",
       "article_number": "221",
       "article_title": null,
+      "source_order": 85,
       "hierarchy": [
         {
           "type": "chapter",
@@ -6070,6 +6286,7 @@
       "year": "2019",
       "article_number": "222",
       "article_title": null,
+      "source_order": 86,
       "hierarchy": [
         {
           "type": "chapter",
@@ -6098,6 +6315,7 @@
       "year": "2019",
       "article_number": "223",
       "article_title": null,
+      "source_order": 86,
       "hierarchy": [
         {
           "type": "chapter",
@@ -6126,6 +6344,7 @@
       "year": "2019",
       "article_number": "224",
       "article_title": null,
+      "source_order": 86,
       "hierarchy": [
         {
           "type": "chapter",
@@ -6154,6 +6373,7 @@
       "year": "2019",
       "article_number": "225",
       "article_title": null,
+      "source_order": 86,
       "hierarchy": [
         {
           "type": "chapter",
@@ -6182,6 +6402,7 @@
       "year": "2019",
       "article_number": "226",
       "article_title": null,
+      "source_order": 87,
       "hierarchy": [
         {
           "type": "chapter",
@@ -6210,6 +6431,7 @@
       "year": "2019",
       "article_number": "227",
       "article_title": null,
+      "source_order": 87,
       "hierarchy": [
         {
           "type": "chapter",
@@ -6238,6 +6460,7 @@
       "year": "2019",
       "article_number": "228",
       "article_title": null,
+      "source_order": 87,
       "hierarchy": [
         {
           "type": "chapter",
@@ -6266,6 +6489,7 @@
       "year": "2019",
       "article_number": "229",
       "article_title": null,
+      "source_order": 88,
       "hierarchy": [
         {
           "type": "chapter",
@@ -6294,6 +6518,7 @@
       "year": "2019",
       "article_number": "230",
       "article_title": null,
+      "source_order": 88,
       "hierarchy": [
         {
           "type": "chapter",
@@ -6322,6 +6547,7 @@
       "year": "2019",
       "article_number": "231",
       "article_title": null,
+      "source_order": 88,
       "hierarchy": [
         {
           "type": "chapter",
@@ -6350,6 +6576,7 @@
       "year": "2019",
       "article_number": "232",
       "article_title": null,
+      "source_order": 89,
       "hierarchy": [
         {
           "type": "chapter",
@@ -6378,6 +6605,7 @@
       "year": "2019",
       "article_number": "233",
       "article_title": null,
+      "source_order": 89,
       "hierarchy": [
         {
           "type": "chapter",
@@ -6406,6 +6634,7 @@
       "year": "2019",
       "article_number": "234",
       "article_title": null,
+      "source_order": 89,
       "hierarchy": [
         {
           "type": "chapter",
@@ -6434,6 +6663,7 @@
       "year": "2019",
       "article_number": "235",
       "article_title": null,
+      "source_order": 89,
       "hierarchy": [
         {
           "type": "chapter",
@@ -6462,6 +6692,7 @@
       "year": "2019",
       "article_number": "236",
       "article_title": null,
+      "source_order": 89,
       "hierarchy": [
         {
           "type": "chapter",
@@ -6490,6 +6721,7 @@
       "year": "2019",
       "article_number": "237",
       "article_title": null,
+      "source_order": 89,
       "hierarchy": [
         {
           "type": "chapter",
@@ -6518,6 +6750,7 @@
       "year": "2019",
       "article_number": "238",
       "article_title": null,
+      "source_order": 90,
       "hierarchy": [
         {
           "type": "chapter",
@@ -6546,6 +6779,7 @@
       "year": "2019",
       "article_number": "239",
       "article_title": null,
+      "source_order": 90,
       "hierarchy": [
         {
           "type": "chapter",
@@ -6574,6 +6808,7 @@
       "year": "2019",
       "article_number": "240",
       "article_title": null,
+      "source_order": 91,
       "hierarchy": [
         {
           "type": "chapter",
@@ -6602,6 +6837,7 @@
       "year": "2019",
       "article_number": "241",
       "article_title": null,
+      "source_order": 91,
       "hierarchy": [
         {
           "type": "chapter",
@@ -6630,6 +6866,7 @@
       "year": "2019",
       "article_number": "242",
       "article_title": null,
+      "source_order": 91,
       "hierarchy": [
         {
           "type": "chapter",
@@ -6658,6 +6895,7 @@
       "year": "2019",
       "article_number": "243",
       "article_title": null,
+      "source_order": 91,
       "hierarchy": [
         {
           "type": "chapter",
@@ -6686,6 +6924,7 @@
       "year": "2019",
       "article_number": "244",
       "article_title": null,
+      "source_order": 92,
       "hierarchy": [
         {
           "type": "chapter",
@@ -6714,6 +6953,7 @@
       "year": "2019",
       "article_number": "245",
       "article_title": null,
+      "source_order": 92,
       "hierarchy": [
         {
           "type": "chapter",
@@ -6742,6 +6982,7 @@
       "year": "2019",
       "article_number": "246",
       "article_title": null,
+      "source_order": 92,
       "hierarchy": [
         {
           "type": "chapter",
@@ -6770,6 +7011,7 @@
       "year": "2019",
       "article_number": "247",
       "article_title": null,
+      "source_order": 93,
       "hierarchy": [
         {
           "type": "chapter",
@@ -6798,6 +7040,7 @@
       "year": "2019",
       "article_number": "248",
       "article_title": null,
+      "source_order": 93,
       "hierarchy": [
         {
           "type": "chapter",
@@ -6826,6 +7069,7 @@
       "year": "2019",
       "article_number": "249",
       "article_title": null,
+      "source_order": 93,
       "hierarchy": [
         {
           "type": "chapter",
@@ -6854,6 +7098,7 @@
       "year": "2019",
       "article_number": "250",
       "article_title": null,
+      "source_order": 94,
       "hierarchy": [
         {
           "type": "chapter",
@@ -6882,6 +7127,7 @@
       "year": "2019",
       "article_number": "251",
       "article_title": null,
+      "source_order": 94,
       "hierarchy": [
         {
           "type": "chapter",
@@ -6910,6 +7156,7 @@
       "year": "2019",
       "article_number": "252",
       "article_title": null,
+      "source_order": 94,
       "hierarchy": [
         {
           "type": "chapter",
@@ -6938,6 +7185,7 @@
       "year": "2019",
       "article_number": "253",
       "article_title": null,
+      "source_order": 95,
       "hierarchy": [
         {
           "type": "chapter",
@@ -6966,6 +7214,7 @@
       "year": "2019",
       "article_number": "254",
       "article_title": null,
+      "source_order": 96,
       "hierarchy": [
         {
           "type": "chapter",
@@ -6994,6 +7243,7 @@
       "year": "2019",
       "article_number": "255",
       "article_title": null,
+      "source_order": 96,
       "hierarchy": [
         {
           "type": "chapter",
@@ -7022,6 +7272,7 @@
       "year": "2019",
       "article_number": "256",
       "article_title": null,
+      "source_order": 96,
       "hierarchy": [
         {
           "type": "chapter",
@@ -7050,6 +7301,7 @@
       "year": "2019",
       "article_number": "257",
       "article_title": null,
+      "source_order": 97,
       "hierarchy": [
         {
           "type": "chapter",
@@ -7078,6 +7330,7 @@
       "year": "2019",
       "article_number": "258",
       "article_title": null,
+      "source_order": 98,
       "hierarchy": [
         {
           "type": "chapter",
@@ -7106,6 +7359,7 @@
       "year": "2019",
       "article_number": "259",
       "article_title": null,
+      "source_order": 98,
       "hierarchy": [
         {
           "type": "chapter",
@@ -7134,6 +7388,7 @@
       "year": "2019",
       "article_number": "260",
       "article_title": null,
+      "source_order": 99,
       "hierarchy": [
         {
           "type": "chapter",
@@ -7162,6 +7417,7 @@
       "year": "2019",
       "article_number": "261",
       "article_title": null,
+      "source_order": 99,
       "hierarchy": [
         {
           "type": "chapter",
@@ -7190,6 +7446,7 @@
       "year": "2019",
       "article_number": "262",
       "article_title": null,
+      "source_order": 99,
       "hierarchy": [
         {
           "type": "chapter",
@@ -7218,6 +7475,7 @@
       "year": "2019",
       "article_number": "263",
       "article_title": null,
+      "source_order": 100,
       "hierarchy": [
         {
           "type": "chapter",
@@ -7246,6 +7504,7 @@
       "year": "2019",
       "article_number": "264",
       "article_title": null,
+      "source_order": 100,
       "hierarchy": [
         {
           "type": "chapter",
@@ -7274,6 +7533,7 @@
       "year": "2019",
       "article_number": "265",
       "article_title": null,
+      "source_order": 101,
       "hierarchy": [
         {
           "type": "chapter",
@@ -7302,6 +7562,7 @@
       "year": "2019",
       "article_number": "266",
       "article_title": null,
+      "source_order": 101,
       "hierarchy": [
         {
           "type": "chapter",
@@ -7330,6 +7591,7 @@
       "year": "2019",
       "article_number": "267",
       "article_title": null,
+      "source_order": 101,
       "hierarchy": [
         {
           "type": "chapter",
@@ -7358,6 +7620,7 @@
       "year": "2019",
       "article_number": "268",
       "article_title": null,
+      "source_order": 102,
       "hierarchy": [
         {
           "type": "chapter",
@@ -7386,6 +7649,7 @@
       "year": "2019",
       "article_number": "269",
       "article_title": null,
+      "source_order": 102,
       "hierarchy": [
         {
           "type": "chapter",
@@ -7414,6 +7678,7 @@
       "year": "2019",
       "article_number": "270",
       "article_title": null,
+      "source_order": 102,
       "hierarchy": [
         {
           "type": "chapter",
@@ -7442,6 +7707,7 @@
       "year": "2019",
       "article_number": "271",
       "article_title": null,
+      "source_order": 103,
       "hierarchy": [
         {
           "type": "chapter",
@@ -7470,6 +7736,7 @@
       "year": "2019",
       "article_number": "272",
       "article_title": null,
+      "source_order": 103,
       "hierarchy": [
         {
           "type": "chapter",
@@ -7498,6 +7765,7 @@
       "year": "2019",
       "article_number": "273",
       "article_title": null,
+      "source_order": 104,
       "hierarchy": [
         {
           "type": "chapter",
@@ -7526,6 +7794,7 @@
       "year": "2019",
       "article_number": "274",
       "article_title": null,
+      "source_order": 104,
       "hierarchy": [
         {
           "type": "chapter",
@@ -7554,6 +7823,7 @@
       "year": "2019",
       "article_number": "275",
       "article_title": null,
+      "source_order": 105,
       "hierarchy": [
         {
           "type": "chapter",
@@ -7582,6 +7852,7 @@
       "year": "2019",
       "article_number": "276",
       "article_title": null,
+      "source_order": 106,
       "hierarchy": [
         {
           "type": "chapter",
@@ -7610,6 +7881,7 @@
       "year": "2019",
       "article_number": "277",
       "article_title": null,
+      "source_order": 106,
       "hierarchy": [
         {
           "type": "chapter",
@@ -7638,6 +7910,7 @@
       "year": "2019",
       "article_number": "278",
       "article_title": null,
+      "source_order": 106,
       "hierarchy": [
         {
           "type": "chapter",
@@ -7666,6 +7939,7 @@
       "year": "2019",
       "article_number": "279",
       "article_title": null,
+      "source_order": 106,
       "hierarchy": [
         {
           "type": "chapter",
@@ -7694,6 +7968,7 @@
       "year": "2019",
       "article_number": "280",
       "article_title": null,
+      "source_order": 106,
       "hierarchy": [
         {
           "type": "chapter",
@@ -7722,6 +7997,7 @@
       "year": "2019",
       "article_number": "281",
       "article_title": null,
+      "source_order": 107,
       "hierarchy": [
         {
           "type": "chapter",
@@ -7750,6 +8026,7 @@
       "year": "2019",
       "article_number": "282",
       "article_title": null,
+      "source_order": 107,
       "hierarchy": [
         {
           "type": "chapter",
@@ -7778,6 +8055,7 @@
       "year": "2019",
       "article_number": "283",
       "article_title": null,
+      "source_order": 107,
       "hierarchy": [
         {
           "type": "chapter",
@@ -7806,6 +8084,7 @@
       "year": "2019",
       "article_number": "284",
       "article_title": null,
+      "source_order": 107,
       "hierarchy": [
         {
           "type": "chapter",
@@ -7834,6 +8113,7 @@
       "year": "2019",
       "article_number": "285",
       "article_title": null,
+      "source_order": 107,
       "hierarchy": [
         {
           "type": "chapter",
@@ -7862,6 +8142,7 @@
       "year": "2019",
       "article_number": "286",
       "article_title": null,
+      "source_order": 108,
       "hierarchy": [
         {
           "type": "chapter",
@@ -7890,6 +8171,7 @@
       "year": "2019",
       "article_number": "287",
       "article_title": null,
+      "source_order": 108,
       "hierarchy": [
         {
           "type": "chapter",
@@ -7918,6 +8200,7 @@
       "year": "2019",
       "article_number": "288",
       "article_title": null,
+      "source_order": 108,
       "hierarchy": [
         {
           "type": "chapter",
@@ -7946,6 +8229,7 @@
       "year": "2019",
       "article_number": "289",
       "article_title": null,
+      "source_order": 109,
       "hierarchy": [
         {
           "type": "chapter",
@@ -7974,6 +8258,7 @@
       "year": "2019",
       "article_number": "290",
       "article_title": null,
+      "source_order": 109,
       "hierarchy": [
         {
           "type": "chapter",
@@ -8002,6 +8287,7 @@
       "year": "2019",
       "article_number": "291",
       "article_title": null,
+      "source_order": 109,
       "hierarchy": [
         {
           "type": "chapter",
@@ -8030,6 +8316,7 @@
       "year": "2019",
       "article_number": "292",
       "article_title": null,
+      "source_order": 110,
       "hierarchy": [
         {
           "type": "chapter",
@@ -8058,6 +8345,7 @@
       "year": "2019",
       "article_number": "293",
       "article_title": null,
+      "source_order": 110,
       "hierarchy": [
         {
           "type": "chapter",
@@ -8086,6 +8374,7 @@
       "year": "2019",
       "article_number": "294",
       "article_title": null,
+      "source_order": 110,
       "hierarchy": [
         {
           "type": "chapter",
@@ -8114,6 +8403,7 @@
       "year": "2019",
       "article_number": "295",
       "article_title": null,
+      "source_order": 110,
       "hierarchy": [
         {
           "type": "chapter",
@@ -8142,6 +8432,7 @@
       "year": "2019",
       "article_number": "296",
       "article_title": null,
+      "source_order": 111,
       "hierarchy": [
         {
           "type": "chapter",
@@ -8170,6 +8461,7 @@
       "year": "2019",
       "article_number": "297",
       "article_title": null,
+      "source_order": 111,
       "hierarchy": [
         {
           "type": "chapter",
@@ -8198,6 +8490,7 @@
       "year": "2019",
       "article_number": "298",
       "article_title": null,
+      "source_order": 111,
       "hierarchy": [
         {
           "type": "chapter",

@@ -34,6 +34,8 @@ export interface LawChunk {
   article_number: string;
   article_title: string | null;
 
+  source_order: number | null;
+
   hierarchy: LawHierarchyNode[];
 
   text: string;

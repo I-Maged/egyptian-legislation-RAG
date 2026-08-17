@@ -14,10 +14,10 @@ import { writeCanonicalCorpusJson } from "../corpus/write-json";
 const ROOT_DIR = resolve(
   fileURLToPath(new URL("../../../../", import.meta.url)),
 );
-const INPUT_PATH = resolve(ROOT_DIR, "data/raw/labour-v2.3.json");
+const INPUT_PATH = resolve(ROOT_DIR, "data/raw/personal_affair_law_v2_3.json");
 const OUTPUT_PATH = resolve(
   ROOT_DIR,
-  "data/canonical/labour-law-148-2019.json",
+  "data/canonical/personal-affairs-law-25-1929.json",
 );
 
 async function main(): Promise<void> {

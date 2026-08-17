@@ -176,9 +176,8 @@ export function canonicalizeLabourLaw(
       article_number: parserChunk.articleNumber,
       article_title: null,
 
-      // chapter: parserChunk.chapter,
-      // section: null,
-      // paragraph: null,
+      source_order: parserChunk.sourceOrder ?? null,
+
       hierarchy: parserChunk.chapter
         ? [
             {

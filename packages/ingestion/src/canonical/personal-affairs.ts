@@ -162,6 +162,8 @@ export function canonicalizePersonalAffairsLaw(
       article_number: article.articleNumber,
       article_title: null,
 
+      source_order: article.sourceOrder ?? null,
+
       hierarchy: buildHierarchy(article.chapter),
 
       text: article.text,

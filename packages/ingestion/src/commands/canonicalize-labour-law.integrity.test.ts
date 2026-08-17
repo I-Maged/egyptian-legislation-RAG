@@ -67,7 +67,7 @@ describe("Labour Law canonical corpus integrity", () => {
         law_number: source.lawNumber,
         year: source.year,
         article_number: source.articleNumber,
-        // chapter: source.chapter,
+
         hierarchy: [
           {
             type: "chapter",

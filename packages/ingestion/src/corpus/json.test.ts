@@ -62,6 +62,8 @@ describe("canonical corpus JSON", () => {
           article_number: "2",
           article_title: null,
 
+          source_order: 1,
+
           hierarchy: [
             {
               type: "chapter",
@@ -98,6 +100,8 @@ describe("canonical corpus JSON", () => {
 
           article_number: "3",
           article_title: null,
+
+          source_order: 2,
 
           hierarchy: [
             {

@@ -36,6 +36,8 @@ export const LawChunkSchema = z.object({
   article_number: z.string(),
   article_title: z.string().nullable(),
 
+  source_order: z.number().int().nonnegative().nullable(),
+
   hierarchy: z.array(LawHierarchyNodeSchema),
 
   text: z.string(),

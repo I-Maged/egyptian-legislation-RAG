@@ -93,6 +93,7 @@ describe("canonicalizeLabourLaw", () => {
     expect(firstChunk).toBeDefined();
     expect(firstChunk!.document_id).toBe(result.document.id);
     expect(firstChunk!.article_number).toBe("1");
+    expect(firstChunk!.source_order).toBe(parserChunks[0]!.sourceOrder ?? null);
     expect(firstChunk!.hierarchy).toEqual([
       {
         type: "chapter",

@@ -237,5 +237,12 @@ describe("canonicalizePersonalAffairsLaw - real V2.3 output", () => {
           chunk.text_for_embedding.trim().length > 0,
       ),
     ).toBe(true);
+
+    for (let i = 0; i < parserOutput.articles.length; i++) {
+      const source = parserOutput.articles[i]!;
+      const canonical = result.chunks[i]!;
+
+      expect(canonical.source_order).toBe(source.sourceOrder ?? null);
+    }
   });
 });

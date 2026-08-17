@@ -79,6 +79,11 @@ describe("canonicalizePersonalAffairsLaw", () => {
     });
 
     expect(result.chunks).toHaveLength(1);
+
+    expect(result.chunks[0]!.source_order).toBe(
+      baseInput.articles[0]!.sourceOrder ?? null,
+    );
+
     expect(result.chunks[0]!.hierarchy).toEqual([
       {
         type: "chapter",
@@ -127,6 +132,7 @@ describe("canonicalizePersonalAffairsLaw", () => {
 
     const chunk = result.chunks[0]!;
     expect(chunk.article_number).toBe("2");
+
     expect(chunk.text).toContain("المطلقة التي تستحق النفقة");
     expect(chunk.text).toContain("لا يقع الطلاق المقترن");
     expect(chunk.text).toContain("على وزير العدل تنفيذ هذا القانون");

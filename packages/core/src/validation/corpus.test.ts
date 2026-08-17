@@ -37,6 +37,8 @@ describe("validateCanonicalCorpus", () => {
         article_number: "1",
         article_title: null,
 
+        source_order: 123,
+
         hierarchy: [
           {
             type: "chapter",
