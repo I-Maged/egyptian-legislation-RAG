@@ -10,7 +10,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "canonicalize:labour": "tsx src/commands/canonicalize-labour-law.ts",
     "inspect:corpus": "tsx src/commands/inspect-canonical-corpus.ts",
-    "embed:labour": "tsx src/commands/embed-labour-law.ts"
+    "embed:labour": "tsx src/commands/embed-labour-law.ts",
+    "check:embeddings:labour": "tsx src/commands/check-labour-embeddings.ts"
   },
   "devDependencies": {
     "tsx": "^4.19.2"
