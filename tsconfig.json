@@ -12,7 +12,28 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "outDir": "dist",
-    "rootDir": "."
+    "rootDir": ".",
+    "baseUrl": ".",
+    "paths": {
+      "@egyptian-law/core": [
+        "packages/core/src"
+      ],
+      "@egyptian-law/core/*": [
+        "packages/core/src/*"
+      ],
+      "@egyptian-law/evaluation": [
+        "packages/evaluation/src"
+      ],
+      "@egyptian-law/evaluation/*": [
+        "packages/evaluation/src/*"
+      ],
+      "@egyptian-law/ingestion": [
+        "packages/ingestion/src"
+      ],
+      "@egyptian-law/ingestion/*": [
+        "packages/ingestion/src/*"
+      ]
+    }
   },
   "include": [
     "**/*.ts"
