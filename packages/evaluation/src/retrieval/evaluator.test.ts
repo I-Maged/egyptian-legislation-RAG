@@ -35,10 +35,10 @@ const retrieve: RetrievalFunction = (query) => {
 };
 
 describe("RetrievalEvaluator", () => {
-  it("evaluates a retrieval function", () => {
+  it("evaluates a retrieval function", async () => {
     const evaluator = new RetrievalEvaluator();
 
-    const result = evaluator.evaluate(dataset, retrieve);
+    const result = await evaluator.evaluate(dataset, retrieve);
 
     expect(result.queryCount).toBe(3);
 
@@ -49,10 +49,10 @@ describe("RetrievalEvaluator", () => {
     expect(result.mrr).toBeCloseTo((1 + 1 / 2 + 1 / 3) / 3);
   });
 
-  it("supports custom metric K values", () => {
+  it("supports custom metric K values", async () => {
     const evaluator = new RetrievalEvaluator();
 
-    const result = evaluator.evaluate(dataset, retrieve, {
+    const result = await evaluator.evaluate(dataset, retrieve, {
       recallAt: [1, 2],
       precisionAt: [1, 2],
       ndcgAt: [1, 2],
@@ -65,7 +65,7 @@ describe("RetrievalEvaluator", () => {
     expect(Object.keys(result.ndcg)).toEqual(["1", "2"]);
   });
 
-  it("supports graded relevance", () => {
+  it("supports graded relevance", async () => {
     const gradedDataset: RetrievalQuery[] = [
       {
         id: "q1",
@@ -81,15 +81,19 @@ describe("RetrievalEvaluator", () => {
 
     const evaluator = new RetrievalEvaluator();
 
-    const result = evaluator.evaluate(gradedDataset, () => ["a", "b", "c"]);
+    const result = await evaluator.evaluate(gradedDataset, () => [
+      "a",
+      "b",
+      "c",
+    ]);
 
     expect(result.ndcg["5"]).toBeCloseTo(1);
   });
 
-  it("returns empty metrics for an empty dataset", () => {
+  it("returns empty metrics for an empty dataset", async () => {
     const evaluator = new RetrievalEvaluator();
 
-    const result = evaluator.evaluate([], () => []);
+    const result = await evaluator.evaluate([], () => []);
 
     expect(result.queryCount).toBe(0);
     expect(result.recall).toEqual({});
@@ -99,10 +103,10 @@ describe("RetrievalEvaluator", () => {
     expect(result.predictions).toEqual([]);
   });
 
-  it("preserves predictions", () => {
+  it("preserves predictions", async () => {
     const evaluator = new RetrievalEvaluator();
 
-    const result = evaluator.evaluate(dataset, retrieve);
+    const result = await evaluator.evaluate(dataset, retrieve);
 
     expect(result.predictions).toEqual([
       {
@@ -120,20 +124,20 @@ describe("RetrievalEvaluator", () => {
     ]);
   });
 
-  it("can disable MRR", () => {
+  it("can disable MRR", async () => {
     const evaluator = new RetrievalEvaluator();
 
-    const result = evaluator.evaluate(dataset, retrieve, {
+    const result = await evaluator.evaluate(dataset, retrieve, {
       includeMrr: false,
     });
 
     expect(result.mrr).toBe(0);
   });
 
-  it("uses binary relevance when graded relevance is absent", () => {
+  it("uses binary relevance when graded relevance is absent", async () => {
     const evaluator = new RetrievalEvaluator();
 
-    const result = evaluator.evaluate(
+    const result = await evaluator.evaluate(
       [
         {
           id: "q1",
@@ -148,5 +152,22 @@ describe("RetrievalEvaluator", () => {
     );
 
     expect(result.ndcg["1"]).toBeCloseTo(1);
+  });
+
+  it("supports an asynchronous retrieval function", async () => {
+    const evaluator = new RetrievalEvaluator();
+
+    const asyncRetrieve: RetrievalFunction = async (query) => {
+      if (query === "query one") {
+        return ["a"];
+      }
+
+      return ["x"];
+    };
+
+    const result = await evaluator.evaluate(dataset, asyncRetrieve);
+
+    expect(result.queryCount).toBe(3);
+    expect(result.recall["1"]).toBeCloseTo(1 / 3);
   });
 });

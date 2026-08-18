@@ -7,7 +7,7 @@ import {
 
 import type { RetrievalPrediction, RetrievalQuery } from "./types";
 
-export type RetrievalFunction = (query: string) => string[];
+export type RetrievalFunction = (query: string) => string[] | Promise<string[]>;
 
 export interface RetrievalEvaluationOptions {
   recallAt?: number[];
@@ -29,11 +29,11 @@ export interface RetrievalEvaluationResult {
 }
 
 export class RetrievalEvaluator {
-  evaluate(
+  async evaluate(
     dataset: RetrievalQuery[],
     retrieve: RetrievalFunction,
     options: RetrievalEvaluationOptions = {},
-  ): RetrievalEvaluationResult {
+  ): Promise<RetrievalEvaluationResult> {
     const recallAt = options.recallAt ?? [1, 3, 5, 10];
     const precisionAt = options.precisionAt ?? [1, 3, 5, 10];
     const ndcgAt = options.ndcgAt ?? [5, 10];
@@ -54,7 +54,7 @@ export class RetrievalEvaluator {
     const predictions: RetrievalPrediction[] = [];
 
     for (const example of dataset) {
-      const retrievedChunkIds = retrieve(example.query);
+      const retrievedChunkIds = await retrieve(example.query);
 
       predictions.push({
         queryId: example.id,

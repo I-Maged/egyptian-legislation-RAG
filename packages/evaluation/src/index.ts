@@ -1,3 +1,5 @@
 export * from "./retrieval/types";
 export * from "./retrieval/metrics";
 export * from "./retrieval/evaluator";
+
+export * from "./datasets/retrieval-dataset";
