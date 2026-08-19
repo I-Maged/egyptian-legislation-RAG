@@ -5,3 +5,7 @@ export * from "./retrieval/evaluator";
 export * from "./datasets/retrieval-dataset";
 
 export * from "./benchmarks/retrieval-benchmark";
+
+export * from "./benchmarks/db-retrieval";
+
+export * from "./benchmarks/db-retrieval-adapters";

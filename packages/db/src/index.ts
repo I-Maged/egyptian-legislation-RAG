@@ -1,3 +1,5 @@
+export { getChunksByIds } from "./repositories/corpus.repository";
+
 export { prisma } from "./client";
 
 export {
@@ -8,3 +10,24 @@ export {
 export type { UpsertEmbeddingInput } from "./repositories/embedding.repository";
 
 export { upsertCorpus } from "./repositories/corpus.repository";
+
+export { searchSimilarEmbeddings } from "./repositories/vector.repository";
+
+export type {
+  VectorSearchInput,
+  VectorSearchResult,
+} from "./repositories/vector.repository";
+
+export { searchBm25 } from "./repositories/bm25.repository";
+
+export type {
+  Bm25SearchInput,
+  Bm25SearchResult,
+} from "./repositories/bm25.repository";
+
+export { searchHybrid } from "./repositories/hybrid.repository";
+
+export type {
+  HybridSearchInput,
+  HybridSearchResult,
+} from "./repositories/hybrid.repository";

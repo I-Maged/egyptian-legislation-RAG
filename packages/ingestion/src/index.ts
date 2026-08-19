@@ -1,3 +1,5 @@
+export * from "./retrieval/reranker";
+
 // Re-export retrieval classes
 export { InMemoryBm25Retriever } from "./retrieval/bm25-retriever";
 export { InMemoryVectorRetriever } from "./retrieval/vector-retriever";

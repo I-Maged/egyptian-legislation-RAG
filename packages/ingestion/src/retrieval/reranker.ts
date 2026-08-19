@@ -1,7 +1,16 @@
 import type { LawChunk } from "@egyptian-law/core";
 
 import { tokenizeArabic } from "./bm25";
-import type { HybridRetrievalResult } from "./hybrid-retriever";
+// import type { HybridRetrievalResult } from "./hybrid-retriever";
+
+export interface RerankCandidate {
+  chunk: LawChunk;
+  /** * Original retrieval/fusion score. */ score: number;
+  vectorScore: number | null;
+  bm25Score: number | null;
+  vectorRank: number | null;
+  bm25Rank: number | null;
+}
 
 export interface RerankOptions {
   topK?: number;
@@ -104,9 +113,7 @@ function hasExactPhrase(query: string, text: string): boolean {
   return normalizedText.includes(normalizedQuery);
 }
 
-function normalizeScores(
-  results: HybridRetrievalResult[],
-): Map<string, number> {
+function normalizeScores(results: RerankCandidate[]): Map<string, number> {
   if (results.length === 0) {
     return new Map();
   }
@@ -125,7 +132,7 @@ function normalizeScores(
 export class BaselineReranker {
   rerank(
     query: string,
-    candidates: HybridRetrievalResult[],
+    candidates: RerankCandidate[],
     options: RerankOptions = {},
   ): RerankedResult[] {
     if (candidates.length === 0) {

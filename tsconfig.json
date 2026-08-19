@@ -10,29 +10,27 @@
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
     "esModuleInterop": true,
-    "ignoreDeprecations": "6.0",
     "skipLibCheck": true,
     "outDir": "dist",
     "rootDir": ".",
-    "baseUrl": ".",
     "paths": {
       "@egyptian-law/core": [
-        "packages/core/src"
+        "./packages/core/src"
       ],
       "@egyptian-law/core/*": [
-        "packages/core/src/*"
+        "./packages/core/src/*"
       ],
       "@egyptian-law/evaluation": [
-        "packages/evaluation/src"
+        "./packages/evaluation/src"
       ],
       "@egyptian-law/evaluation/*": [
-        "packages/evaluation/src/*"
+        "./packages/evaluation/src/*"
       ],
       "@egyptian-law/ingestion": [
-        "packages/ingestion/src"
+        "./packages/ingestion/src"
       ],
       "@egyptian-law/ingestion/*": [
-        "packages/ingestion/src/*"
+        "./packages/ingestion/src/*"
       ]
     }
   },
