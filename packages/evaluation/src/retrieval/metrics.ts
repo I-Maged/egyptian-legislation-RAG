@@ -158,16 +158,16 @@ export function precisionAtK(
 ): number {
   validateK(k);
 
-  if (k === 0) {
-    return 0;
-  }
-
   const relevant = new Set(relevantChunkIds);
   const retrieved = retrievedChunkIds.slice(0, k);
 
+  if (retrieved.length === 0) {
+    return 0;
+  }
+
   const matched = new Set(retrieved.filter((id) => relevant.has(id)));
 
-  return matched.size / Math.min(k, retrievedChunkIds.length);
+  return matched.size / retrieved.length;
 }
 
 function validateK(k: number): void {

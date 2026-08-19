@@ -1,3 +1,5 @@
+// $env:RUN_LABOUR_LAW_BENCHMARK="1"; npx vitest run packages/evaluation/src/benchmarks/labour-law-benchmark.test.ts
+
 import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 
@@ -5,12 +7,14 @@ import { describe, expect, it } from "vitest";
 
 import type { CanonicalCorpus, EmbeddingArtifact } from "@egyptian-law/core";
 
+import { OllamaEmbeddingProvider } from "@egyptian-law/ingestion";
+
+import { getChunksByIds } from "@egyptian-law/db";
+
 import {
-  InMemoryBm25Retriever,
-  InMemoryVectorRetriever,
-  HybridRetriever,
-  OllamaEmbeddingProvider,
-} from "@egyptian-law/ingestion";
+  createDbVectorRerankedRetriever,
+  createDbVectorRetriever,
+} from "./db-retrieval-adapters";
 
 import { buildLabourLawGoldDataset } from "../datasets/labour-law-gold";
 
@@ -46,7 +50,6 @@ interface DiagnosticResult {
   rank: number;
   chunkId: string;
   articleNumber: string;
-  score: number;
   relevant: boolean;
 }
 
@@ -56,13 +59,11 @@ interface QueryDiagnostics {
   goldArticles: string[];
   goldChunkIds: string[];
 
-  bm25: DiagnosticResult[];
   vector: DiagnosticResult[];
-  hybrid: DiagnosticResult[];
+  vectorReranked: DiagnosticResult[];
 
-  bm25FirstRelevantRank: number | null;
   vectorFirstRelevantRank: number | null;
-  hybridFirstRelevantRank: number | null;
+  vectorRerankedFirstRelevantRank: number | null;
 }
 
 function firstRelevantRank(results: DiagnosticResult[]): number | null {
@@ -76,7 +77,13 @@ function formatRank(rank: number | null): string {
 }
 
 describe.skipIf(!RUN_REAL_BENCHMARK)("Labour Law retrieval benchmark", () => {
-  it("evaluates BM25, vector, and hybrid retrieval on the real corpus", async () => {
+  it("evaluates DB vector retrieval and vector+rereanking on the real corpus", async () => {
+    /*
+     * ------------------------------------------------------------
+     * Load local benchmark artifacts
+     * ------------------------------------------------------------
+     */
+
     const corpus = await loadLabourLawCorpus();
 
     const embeddingArtifact = await loadLabourLawEmbeddingArtifact();
@@ -92,66 +99,56 @@ describe.skipIf(!RUN_REAL_BENCHMARK)("Labour Law retrieval benchmark", () => {
     expect(gold.items).toHaveLength(15);
 
     /*
-     * The query embedding model must match the model
-     * used to create the corpus embeddings.
+     * The query embedding model MUST match the model used to
+     * generate the stored corpus embeddings.
      */
     const embeddingProvider = new OllamaEmbeddingProvider({
       model: embeddingArtifact.model,
       dimensions: embeddingArtifact.dimensions,
     });
 
-    const bm25Retriever = new InMemoryBm25Retriever(corpus);
-
-    const vectorRetriever = new InMemoryVectorRetriever(
-      corpus,
-      embeddingArtifact,
-    );
-
-    const hybridRetriever = new HybridRetriever(corpus, embeddingArtifact);
+    /*
+     * Restrict retrieval to the Labour Law document.
+     */
+    const lawDocumentId = corpus.document.id;
 
     /*
      * ------------------------------------------------------------
-     * Normal benchmark retrieval functions
+     * DB retrieval adapters
      * ------------------------------------------------------------
+     *
+     * We intentionally compare only:
+     *
+     *   1. PostgreSQL pgvector
+     *   2. PostgreSQL pgvector + BaselineReranker
+     *
+     * BM25 and hybrid retrieval have been removed from the MVP.
      */
 
-    const bm25Retrieve = async (query: string): Promise<string[]> => {
-      return bm25Retriever
-        .search(query, {
+    const dbVectorRetrieve = createDbVectorRetriever(embeddingProvider, {
+      topK: 10,
+      lawDocumentId,
+    });
+
+    const dbVectorRerankedRetrieve = createDbVectorRerankedRetriever(
+      embeddingProvider,
+      {
+        /*
+         * Retrieve a larger candidate pool and allow the
+         * reranker to select the final 10.
+         */
+        topK: 10,
+        rerankTopK: 20,
+        lawDocumentId,
+
+        rerank: {
           topK: 10,
-        })
-        .map((result) => result.chunk.id);
-    };
-
-    const vectorRetrieve = async (query: string): Promise<string[]> => {
-      const [queryEmbedding] = await embeddingProvider.embed([query]);
-
-      if (!queryEmbedding) {
-        throw new Error("Ollama returned no query embedding.");
-      }
-
-      return vectorRetriever
-        .search(queryEmbedding, {
-          topK: 10,
-        })
-        .map((result) => result.chunk.id);
-    };
-
-    const hybridRetrieve = async (query: string): Promise<string[]> => {
-      const [queryEmbedding] = await embeddingProvider.embed([query]);
-
-      if (!queryEmbedding) {
-        throw new Error("Ollama returned no query embedding.");
-      }
-
-      return hybridRetriever
-        .search(query, queryEmbedding, {
-          topK: 10,
-          vectorTopK: 20,
-          bm25TopK: 20,
-        })
-        .map((result) => result.chunk.id);
-    };
+          phraseWeight: 0.45,
+          coverageWeight: 0.35,
+          retrievalWeight: 0.2,
+        },
+      },
+    );
 
     /*
      * ------------------------------------------------------------
@@ -162,18 +159,15 @@ describe.skipIf(!RUN_REAL_BENCHMARK)("Labour Law retrieval benchmark", () => {
     const benchmark = await runRetrievalBenchmark(gold, {
       systems: [
         {
-          name: "bm25",
-          retrieve: bm25Retrieve,
+          name: "db-vector",
+          retrieve: dbVectorRetrieve,
         },
         {
-          name: "vector",
-          retrieve: vectorRetrieve,
-        },
-        {
-          name: "hybrid",
-          retrieve: hybridRetrieve,
+          name: "db-vector-reranked",
+          retrieve: dbVectorRerankedRetrieve,
         },
       ],
+
       recallAt: [1, 3, 5, 10],
       precisionAt: [5, 10],
       ndcgAt: [5, 10],
@@ -184,7 +178,7 @@ describe.skipIf(!RUN_REAL_BENCHMARK)("Labour Law retrieval benchmark", () => {
 
     expect(benchmark.queryCount).toBe(15);
 
-    expect(benchmark.systems).toHaveLength(3);
+    expect(benchmark.systems).toHaveLength(2);
 
     for (const system of benchmark.systems) {
       const result = system.result;
@@ -198,6 +192,9 @@ describe.skipIf(!RUN_REAL_BENCHMARK)("Labour Law retrieval benchmark", () => {
       expect(Object.keys(result.ndcg)).toEqual(["5", "10"]);
 
       expect(Number.isFinite(result.mrr)).toBe(true);
+
+      expect(result.mrr).toBeGreaterThanOrEqual(0);
+      expect(result.mrr).toBeLessThanOrEqual(1);
 
       for (const value of Object.values(result.recall)) {
         expect(Number.isFinite(value)).toBe(true);
@@ -216,22 +213,84 @@ describe.skipIf(!RUN_REAL_BENCHMARK)("Labour Law retrieval benchmark", () => {
         expect(value).toBeGreaterThanOrEqual(0);
         expect(value).toBeLessThanOrEqual(1);
       }
+
+      expect(result.predictions).toHaveLength(15);
     }
+
+    /*
+     * ------------------------------------------------------------
+     * Aggregate benchmark table
+     * ------------------------------------------------------------
+     */
+
+    console.log(
+      "\n\n============================================================",
+    );
+
+    console.log("LABOUR LAW VECTOR RETRIEVAL BENCHMARK");
+
+    console.log(
+      "============================================================\n",
+    );
 
     console.table(
       benchmark.systems.map((system) => ({
         system: system.name,
+
         "R@1": system.result.recall["1"]?.toFixed(4),
+
         "R@3": system.result.recall["3"]?.toFixed(4),
+
         "R@5": system.result.recall["5"]?.toFixed(4),
+
         "R@10": system.result.recall["10"]?.toFixed(4),
+
         "P@5": system.result.precision["5"]?.toFixed(4),
+
         "P@10": system.result.precision["10"]?.toFixed(4),
+
         MRR: system.result.mrr.toFixed(4),
+
         "nDCG@5": system.result.ndcg["5"]?.toFixed(4),
+
         "nDCG@10": system.result.ndcg["10"]?.toFixed(4),
       })),
     );
+
+    /*
+     * ------------------------------------------------------------
+     * Build article lookup
+     * ------------------------------------------------------------
+     */
+
+    const allRetrievedChunkIds = [
+      ...new Set(
+        benchmark.systems.flatMap((system) =>
+          system.result.predictions.flatMap(
+            (prediction) => prediction.retrievedChunkIds,
+          ),
+        ),
+      ),
+    ];
+
+    const retrievedChunks =
+      allRetrievedChunkIds.length > 0
+        ? await getChunksByIds(allRetrievedChunkIds)
+        : [];
+
+    const corpusChunkById = new Map(
+      retrievedChunks.map((chunk) => [chunk.id, chunk]),
+    );
+
+    /*
+     * Include corpus chunks as a fallback for gold article
+     * resolution.
+     */
+    for (const chunk of corpus.chunks) {
+      if (!corpusChunkById.has(chunk.id)) {
+        corpusChunkById.set(chunk.id, chunk);
+      }
+    }
 
     /*
      * ------------------------------------------------------------
@@ -241,61 +300,56 @@ describe.skipIf(!RUN_REAL_BENCHMARK)("Labour Law retrieval benchmark", () => {
 
     const diagnostics: QueryDiagnostics[] = [];
 
+    const systemResults = new Map(
+      benchmark.systems.map((system) => [system.name, system.result]),
+    );
+
     for (const item of gold.items) {
       const goldChunkIds = new Set(item.relevantChunkIds);
 
-      const corpusChunkById = new Map(
-        corpus.chunks.map((chunk) => [chunk.id, chunk]),
-      );
+      const buildDiagnostics = (
+        retrievedChunkIds: string[],
+      ): DiagnosticResult[] => {
+        return retrievedChunkIds.map((chunkId, index): DiagnosticResult => {
+          const chunk = corpusChunkById.get(chunkId);
 
-      const bm25Results = bm25Retriever.search(item.query, {
-        topK: 10,
-      });
+          if (!chunk) {
+            throw new Error(`Benchmark retrieved unknown chunk ID: ${chunkId}`);
+          }
 
-      const [queryEmbedding] = await embeddingProvider.embed([item.query]);
+          return {
+            rank: index + 1,
+            chunkId,
+            articleNumber: chunk.article_number,
+            relevant: goldChunkIds.has(chunkId),
+          };
+        });
+      };
 
-      if (!queryEmbedding) {
-        throw new Error(`Ollama returned no query embedding for ${item.id}.`);
-      }
+      const getPrediction = (systemName: string): string[] => {
+        const result = systemResults.get(systemName);
 
-      const vectorResults = vectorRetriever.search(queryEmbedding, {
-        topK: 10,
-      });
+        if (!result) {
+          throw new Error(`Missing benchmark system: ${systemName}`);
+        }
 
-      const hybridResults = hybridRetriever.search(item.query, queryEmbedding, {
-        topK: 10,
-        vectorTopK: 20,
-        bm25TopK: 20,
-      });
+        const prediction = result.predictions.find(
+          (prediction) => prediction.queryId === item.id,
+        );
 
-      const bm25 = bm25Results.map(
-        (result, index): DiagnosticResult => ({
-          rank: index + 1,
-          chunkId: result.chunk.id,
-          articleNumber: result.chunk.article_number,
-          score: result.score,
-          relevant: goldChunkIds.has(result.chunk.id),
-        }),
-      );
+        if (!prediction) {
+          throw new Error(
+            `Missing prediction for query ${item.id} in system ${systemName}`,
+          );
+        }
 
-      const vector = vectorResults.map(
-        (result, index): DiagnosticResult => ({
-          rank: index + 1,
-          chunkId: result.chunk.id,
-          articleNumber: result.chunk.article_number,
-          score: result.score,
-          relevant: goldChunkIds.has(result.chunk.id),
-        }),
-      );
+        return prediction.retrievedChunkIds;
+      };
 
-      const hybrid = hybridResults.map(
-        (result, index): DiagnosticResult => ({
-          rank: index + 1,
-          chunkId: result.chunk.id,
-          articleNumber: result.chunk.article_number,
-          score: result.score,
-          relevant: goldChunkIds.has(result.chunk.id),
-        }),
+      const vector = buildDiagnostics(getPrediction("db-vector"));
+
+      const vectorReranked = buildDiagnostics(
+        getPrediction("db-vector-reranked"),
       );
 
       const goldArticles = [
@@ -312,22 +366,22 @@ describe.skipIf(!RUN_REAL_BENCHMARK)("Labour Law retrieval benchmark", () => {
       diagnostics.push({
         queryId: item.id,
         query: item.query,
+
         goldArticles,
         goldChunkIds: item.relevantChunkIds,
 
-        bm25,
         vector,
-        hybrid,
+        vectorReranked,
 
-        bm25FirstRelevantRank: firstRelevantRank(bm25),
         vectorFirstRelevantRank: firstRelevantRank(vector),
-        hybridFirstRelevantRank: firstRelevantRank(hybrid),
+
+        vectorRerankedFirstRelevantRank: firstRelevantRank(vectorReranked),
       });
     }
 
     /*
      * ------------------------------------------------------------
-     * Print compact diagnostic summary
+     * Compact per-query diagnostic summary
      * ------------------------------------------------------------
      */
 
@@ -335,7 +389,7 @@ describe.skipIf(!RUN_REAL_BENCHMARK)("Labour Law retrieval benchmark", () => {
       "\n\n============================================================",
     );
 
-    console.log("LABOUR LAW RETRIEVAL DIAGNOSTICS");
+    console.log("LABOUR LAW VECTOR RETRIEVAL DIAGNOSTICS");
 
     console.log(
       "============================================================\n",
@@ -348,17 +402,15 @@ describe.skipIf(!RUN_REAL_BENCHMARK)("Labour Law retrieval benchmark", () => {
 
         gold: diagnostic.goldArticles.join(", "),
 
-        BM25: formatRank(diagnostic.bm25FirstRelevantRank),
-
         Vector: formatRank(diagnostic.vectorFirstRelevantRank),
 
-        Hybrid: formatRank(diagnostic.hybridFirstRelevantRank),
+        "Vector+Rerank": formatRank(diagnostic.vectorRerankedFirstRelevantRank),
       })),
     );
 
     /*
      * ------------------------------------------------------------
-     * Print detailed rankings
+     * Detailed rankings
      * ------------------------------------------------------------
      */
 
@@ -373,37 +425,23 @@ describe.skipIf(!RUN_REAL_BENCHMARK)("Labour Law retrieval benchmark", () => {
 
       console.log(`Gold chunks: ${diagnostic.goldChunkIds.join(", ")}`);
 
-      console.log("\nBM25:");
-
-      console.table(
-        diagnostic.bm25.map((result) => ({
-          rank: result.rank,
-          article: result.articleNumber,
-          score: result.score.toFixed(6),
-          relevant: result.relevant ? "✓" : "✗",
-          chunk: result.chunkId,
-        })),
-      );
-
-      console.log("Vector:");
+      console.log("\nVector:");
 
       console.table(
         diagnostic.vector.map((result) => ({
           rank: result.rank,
           article: result.articleNumber,
-          score: result.score.toFixed(6),
           relevant: result.relevant ? "✓" : "✗",
           chunk: result.chunkId,
         })),
       );
 
-      console.log("Hybrid:");
+      console.log("Vector + Reranker:");
 
       console.table(
-        diagnostic.hybrid.map((result) => ({
+        diagnostic.vectorReranked.map((result) => ({
           rank: result.rank,
           article: result.articleNumber,
-          score: result.score.toFixed(6),
           relevant: result.relevant ? "✓" : "✗",
           chunk: result.chunkId,
         })),
@@ -416,11 +454,16 @@ describe.skipIf(!RUN_REAL_BENCHMARK)("Labour Law retrieval benchmark", () => {
      * ------------------------------------------------------------
      */
 
-    const countHits = (key: "bm25" | "vector" | "hybrid"): number => {
-      return diagnostics.filter(
-        (diagnostic) => diagnostic[`${key}FirstRelevantRank`] !== null,
-      ).length;
+    const countHits = (
+      key: "vectorFirstRelevantRank" | "vectorRerankedFirstRelevantRank",
+    ): number => {
+      return diagnostics.filter((diagnostic) => diagnostic[key] !== null)
+        .length;
     };
+
+    const vectorHits = countHits("vectorFirstRelevantRank");
+
+    const rerankedHits = countHits("vectorRerankedFirstRelevantRank");
 
     console.log(
       "\n\n============================================================",
@@ -432,19 +475,14 @@ describe.skipIf(!RUN_REAL_BENCHMARK)("Labour Law retrieval benchmark", () => {
 
     console.table([
       {
-        system: "bm25",
-        queriesWithRelevantTop10: countHits("bm25"),
-        queriesMissed: 15 - countHits("bm25"),
+        system: "db-vector",
+        queriesWithRelevantTop10: vectorHits,
+        queriesMissed: gold.items.length - vectorHits,
       },
       {
-        system: "vector",
-        queriesWithRelevantTop10: countHits("vector"),
-        queriesMissed: 15 - countHits("vector"),
-      },
-      {
-        system: "hybrid",
-        queriesWithRelevantTop10: countHits("hybrid"),
-        queriesMissed: 15 - countHits("hybrid"),
+        system: "db-vector-reranked",
+        queriesWithRelevantTop10: rerankedHits,
+        queriesMissed: gold.items.length - rerankedHits,
       },
     ]);
   }, 120_000);

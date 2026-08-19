@@ -91,6 +91,10 @@ describe("precisionAtK", () => {
   it("returns zero when nothing is relevant", () => {
     expect(precisionAtK(["x", "y"], ["a"], 2)).toBe(0);
   });
+
+  it("returns zero precision when nothing is retrieved", () => {
+    expect(precisionAtK([], ["chunk-1", "chunk-2"], 5)).toBe(0);
+  });
 });
 
 describe("dcgAtK", () => {

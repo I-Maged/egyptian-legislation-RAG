@@ -1,15 +1,19 @@
 import type { LawChunk } from "@egyptian-law/core";
 
 import { tokenizeArabic } from "./bm25";
-// import type { HybridRetrievalResult } from "./hybrid-retriever";
 
 export interface RerankCandidate {
   chunk: LawChunk;
-  /** * Original retrieval/fusion score. */ score: number;
-  vectorScore: number | null;
-  bm25Score: number | null;
-  vectorRank: number | null;
-  bm25Rank: number | null;
+
+  /**
+   * Original vector retrieval score.
+   */
+  score: number;
+
+  /**
+   * Original pgvector similarity score.
+   */
+  vectorScore: number;
 }
 
 export interface RerankOptions {
@@ -26,7 +30,7 @@ export interface RerankOptions {
   coverageWeight?: number;
 
   /**
-   * Weight applied to the original hybrid retrieval score.
+   * Weight applied to the original vector retrieval score.
    */
   retrievalWeight?: number;
 }
@@ -40,7 +44,7 @@ export interface RerankedResult {
   score: number;
 
   /**
-   * Original hybrid RRF score.
+   * Original vector retrieval score.
    */
   retrievalScore: number;
 
@@ -60,12 +64,9 @@ export interface RerankedResult {
   exactPhraseMatch: boolean;
 
   /**
-   * Original retrieval metadata.
+   * Original vector similarity score.
    */
-  vectorScore: number | null;
-  bm25Score: number | null;
-  vectorRank: number | null;
-  bm25Rank: number | null;
+  vectorScore: number;
 }
 
 const DEFAULT_PHRASE_WEIGHT = 0.45;
@@ -81,10 +82,13 @@ function countMatchedTerms(
   documentTokens: string[],
 ): number {
   const documentTerms = new Set(documentTokens);
+  const uniqueQueryTerms = new Set(queryTokens);
 
-  return new Set(queryTokens).size
-    ? [...new Set(queryTokens)].filter((term) => documentTerms.has(term)).length
-    : 0;
+  if (uniqueQueryTerms.size === 0) {
+    return 0;
+  }
+
+  return [...uniqueQueryTerms].filter((term) => documentTerms.has(term)).length;
 }
 
 function calculateTermCoverage(
@@ -159,6 +163,7 @@ export class BaselineReranker {
     });
 
     const queryTokens = tokenizeArabic(query);
+
     const normalizedRetrievalScores = normalizeScores(candidates);
 
     return candidates
@@ -189,14 +194,14 @@ export class BaselineReranker {
         return {
           chunk: candidate.chunk,
           score,
+
           retrievalScore: candidate.score,
+
           matchedTerms,
           termCoverage,
           exactPhraseMatch,
+
           vectorScore: candidate.vectorScore,
-          bm25Score: candidate.bm25Score,
-          vectorRank: candidate.vectorRank,
-          bm25Rank: candidate.bm25Rank,
         };
       })
       .sort((a, b) => {
