@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@napi-rs/canvas": "^0.1.74",
-    "ollama": "^0.5.17",
+    "ollama": "^0.5.18",
     "pdfjs-dist": "^5.4.149"
   },
   "devDependencies": {
