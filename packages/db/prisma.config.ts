@@ -14,3 +14,7 @@ export default defineConfig({
     url: env("DATABASE_URL"),
   },
 });
+
+const connectionString = `${env("DATABASE_URL")}`;
+
+console.log("DATABASE_URL:", connectionString.replace(/:[^:@]+@/, ":****@"));

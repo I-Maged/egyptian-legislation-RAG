@@ -112,11 +112,11 @@ describe("Labour Law gold dataset", () => {
     const corpus = createCorpus();
 
     corpus.chunks = corpus.chunks.filter(
-      (chunk) => chunk.article_number !== "33",
+      (chunk) => chunk.article_number !== "90",
     );
 
     expect(() => buildLabourLawGoldDataset(corpus)).toThrow(
-      /article 33.*not found/i,
+      /article 90.*not found/i,
     );
   });
 });

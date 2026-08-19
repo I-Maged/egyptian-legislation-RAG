@@ -72,3 +72,5 @@ ALTER TABLE "law_chunks" ADD CONSTRAINT "law_chunks_document_id_fkey" FOREIGN KE
 
 -- AddForeignKey
 ALTER TABLE "law_chunk_embeddings" ADD CONSTRAINT "law_chunk_embeddings_chunk_id_fkey" FOREIGN KEY ("chunk_id") REFERENCES "law_chunks" ("id") ON DELETE CASCADE ON UPDATE CASCADE;
+
+CREATE INDEX "law_chunk_embeddings_embedding_hnsw_idx" ON "law_chunk_embeddings" USING hnsw ("embedding" vector_cosine_ops);

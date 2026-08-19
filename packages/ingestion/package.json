@@ -24,7 +24,12 @@
     "check:embeddings:financial": "tsx src/commands/check-financial-embeddings.ts",
     "check:embeddings:personal": "tsx src/commands/check-personal-embeddings.ts",
     "canonicalize:law": "tsx src/commands/canonicalize.ts",
-    "check:canonical": "tsx src/commands/check-canonical.ts"
+    "check:canonical": "tsx src/commands/check-canonical.ts",
+    "import:db": "tsx src/commands/import-corpus.ts"
+  },
+  "dependencies": {
+    "@egyptian-law/core": "*",
+    "@egyptian-law/db": "*"
   },
   "devDependencies": {
     "tsx": "^4.19.2"

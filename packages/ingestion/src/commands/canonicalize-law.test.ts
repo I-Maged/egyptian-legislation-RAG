@@ -1,6 +1,3 @@
-// import { describe, expect, it } from "vitest";
-
-// import { canonicalizeLaw } from "./canonicalize-law";
 import { access, mkdtemp, rm } from "fs/promises";
 import { tmpdir } from "os";
 import { join, resolve } from "path";
