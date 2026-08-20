@@ -55,7 +55,7 @@ function buildContext(retrieved: RagRetrievalResult[]): {
     const { chunk } = result;
 
     return {
-      citationId: String(index + 1),
+      citationId: `[${index + 1}]`,
 
       chunkId: chunk.id,
 

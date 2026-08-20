@@ -1,7 +1,9 @@
 // packages/rag/src/retriever.ts
-
-// import type { EmbeddingProviderLike } from "@egyptian-law/ingestion";
 import type { PostgresVectorRetriever } from "@egyptian-law/ingestion";
+import {
+  BaselineReranker,
+  type RerankCandidate,
+} from "@egyptian-law/ingestion";
 import { EmbeddingProviderLike } from "@egyptian-law/evaluation";
 
 import type {
@@ -14,6 +16,7 @@ export class DbRagRetriever implements RagRetriever {
   constructor(
     private readonly embeddingProvider: EmbeddingProviderLike,
     private readonly vectorRetriever: PostgresVectorRetriever,
+    private readonly reranker: BaselineReranker = new BaselineReranker(),
   ) {}
 
   async retrieve(
@@ -26,6 +29,17 @@ export class DbRagRetriever implements RagRetriever {
       throw new Error("Retrieval query cannot be empty.");
     }
 
+    const topK = options.topK ?? 5;
+    const candidateTopK = options.candidateTopK ?? Math.max(topK * 4, topK);
+
+    if (!Number.isInteger(topK) || topK <= 0) {
+      throw new Error(`Invalid topK: ${topK}`);
+    }
+
+    if (!Number.isInteger(candidateTopK) || candidateTopK <= 0) {
+      throw new Error(`Invalid candidateTopK: ${candidateTopK}`);
+    }
+
     const [queryEmbedding] = await this.embeddingProvider.embed([
       normalizedQuery,
     ]);
@@ -35,14 +49,14 @@ export class DbRagRetriever implements RagRetriever {
     }
 
     /*
-     * We intentionally use vector retrieval only.
+     * Stage 1:
+     * Retrieve a larger candidate set using vector similarity.
      *
      * No BM25.
      * No hybrid retrieval.
      */
-    const results = await this.vectorRetriever.search(queryEmbedding, {
-      topK: options.candidateTopK ?? options.topK ?? 5,
-
+    const vectorResults = await this.vectorRetriever.search(queryEmbedding, {
+      topK: candidateTopK,
       ...(options.lawDocumentId !== undefined
         ? {
             lawDocumentId: options.lawDocumentId,
@@ -50,28 +64,43 @@ export class DbRagRetriever implements RagRetriever {
         : {}),
     });
 
+    if (vectorResults.length === 0) {
+      return [];
+    }
+
     /*
-     * Current PostgresVectorRetriever provides
-     * vector scores only.
-     *
-     * Until the reranking adapter is connected,
-     * the vector score is also the retrieval/rerank
-     * score.
+     * Stage 2:
+     * Rerank the vector candidates using the existing
+     * lightweight BaselineReranker.
      */
-    return results.slice(0, options.topK ?? 5).map((result) => ({
+    const candidates: RerankCandidate[] = vectorResults.map((result) => ({
+      chunk: result.chunk,
+      score: result.score,
+      vectorScore: result.score,
+    }));
+
+    const reranked = this.reranker.rerank(normalizedQuery, candidates, {
+      topK,
+    });
+
+    /*
+     * Stage 3:
+     * Convert the reranked results into the RAG retrieval contract.
+     */
+    return reranked.map((result) => ({
       chunk: result.chunk,
 
-      vectorScore: result.score,
+      vectorScore: result.vectorScore,
 
-      retrievalScore: result.score,
+      retrievalScore: result.retrievalScore,
 
       rerankScore: result.score,
 
-      matchedTerms: 0,
+      matchedTerms: result.matchedTerms,
 
-      termCoverage: 0,
+      termCoverage: result.termCoverage,
 
-      exactPhraseMatch: false,
+      exactPhraseMatch: result.exactPhraseMatch,
     }));
   }
 }
