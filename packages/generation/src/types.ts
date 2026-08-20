@@ -18,10 +18,6 @@ export interface GenerationCitation {
 
 export interface GenerationRequest {
   query: string;
-
-  /**
-   * Retrieved and reranked legal chunks supplied to the LLM.
-   */
   chunks: LawChunk[];
 
   temperature?: number;

@@ -1,3 +1,5 @@
+export { PostgresVectorRetriever } from "./retrieval/db-vector-retriever";
+
 export * from "./retrieval/reranker";
 
 // Re-export retrieval classes
@@ -7,3 +9,4 @@ export { HybridRetriever } from "./retrieval/hybrid-retriever";
 
 // Re-export embedding provider
 export { OllamaEmbeddingProvider } from "./embeddings/ollama-provider";
+export { DbVectorRetrievalResult } from "./retrieval/db-vector-retriever";

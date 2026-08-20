@@ -10,6 +10,7 @@ export function buildGenerationContext(
 ): GenerationContextChunk[] {
   return chunks.map((chunk, index) => ({
     citationId: `C${index + 1}`,
+    // citationId: `[${index + 1}]`,
     chunk,
   }));
 }

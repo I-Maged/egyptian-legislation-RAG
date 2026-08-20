@@ -4,6 +4,7 @@ import type { LawChunk } from "@egyptian-law/core";
 
 import type { GenerationProvider } from "./provider";
 import { generateAnswer } from "./generate";
+import { GenerationProviderResponse } from "./provider";
 
 function createChunk(): LawChunk {
   return {
@@ -36,9 +37,15 @@ describe("generateAnswer", () => {
     const provider: GenerationProvider = {
       model: "test-model",
 
-      generate: vi
-        .fn()
-        .mockResolvedValue("ينص القانون على ذلك في المادة الأولى. [C1]"),
+      generate: vi.fn(
+        async (): Promise<GenerationProviderResponse> => ({
+          answer: "ينص القانون على ذلك في المادة الأولى. [C1]",
+          metadata: {
+            model: "test-model",
+            durationMs: 10,
+          },
+        }),
+      ),
     };
 
     const result = await generateAnswer(provider, {
@@ -65,7 +72,13 @@ describe("generateAnswer", () => {
   it("passes generation configuration to the provider", async () => {
     const provider: GenerationProvider = {
       model: "test-model",
-      generate: vi.fn().mockResolvedValue("الإجابة [C1]"),
+      generate: vi.fn().mockResolvedValue({
+        answer: "الإجابة [C1]",
+        metadata: {
+          model: "test-model",
+          durationMs: 10,
+        },
+      }),
     };
 
     await generateAnswer(provider, {

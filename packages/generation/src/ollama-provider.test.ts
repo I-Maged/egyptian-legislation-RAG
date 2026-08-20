@@ -29,7 +29,9 @@ describe("OllamaGenerationProvider", () => {
       prompt: "ما هو قانون العمل؟",
     });
 
-    expect(result).toBe("الإجابة القانونية [C1]");
+    expect(result.answer).toBe("الإجابة القانونية [C1]");
+    expect(result.metadata.model).toBe("gemma4:cloud");
+    expect(result.metadata.durationMs).toBeGreaterThanOrEqual(0);
 
     expect(mockedChat).toHaveBeenCalledWith({
       model: "gemma4:cloud",
@@ -43,6 +45,7 @@ describe("OllamaGenerationProvider", () => {
           content: "ما هو قانون العمل؟",
         },
       ],
+      stream: false,
       options: {},
     });
   });

@@ -1,36 +1,53 @@
 import ollama from "ollama";
 
-import type { GenerationProvider, GenerationProviderRequest } from "./provider";
+import type {
+  GenerationProvider,
+  GenerationProviderRequest,
+  GenerationProviderResponse,
+} from "./provider";
 
-export interface OllamaGenerationProviderOptions {
+export interface OllamaProviderOptions {
   model: string;
 }
 
 export class OllamaGenerationProvider implements GenerationProvider {
   readonly model: string;
 
-  constructor(options: OllamaGenerationProviderOptions) {
-    if (!options.model.trim()) {
+  constructor(options: OllamaProviderOptions) {
+    const model = options.model.trim();
+
+    if (!model) {
       throw new Error("Ollama generation model cannot be empty.");
     }
 
-    this.model = options.model;
+    this.model = model;
   }
 
-  async generate(request: GenerationProviderRequest): Promise<string> {
+  async generate(
+    request: GenerationProviderRequest,
+  ): Promise<GenerationProviderResponse> {
+    const startedAt = Date.now();
+
     const response = await ollama.chat({
       model: this.model,
 
       messages: [
+        ...(request.system
+          ? [
+              {
+                role: "system" as const,
+                content: request.system,
+              },
+            ]
+          : []),
+
         {
-          role: "system",
-          content: request.system,
-        },
-        {
-          role: "user",
+          role: "user" as const,
           content: request.prompt,
         },
       ],
+
+      stream: false,
 
       options: {
         ...(request.temperature !== undefined
@@ -47,12 +64,18 @@ export class OllamaGenerationProvider implements GenerationProvider {
       },
     });
 
-    const answer = response.message.content?.trim();
+    const answer = response.message?.content?.trim();
 
     if (!answer) {
       throw new Error("Ollama generation returned an empty response.");
     }
 
-    return answer;
+    return {
+      answer,
+      metadata: {
+        model: response.model ?? this.model,
+        durationMs: Date.now() - startedAt,
+      },
+    };
   }
 }

@@ -1,5 +1,3 @@
-import type { LawChunk } from "@egyptian-law/core";
-
 import { buildCitations } from "./citations";
 import type { GenerationProvider } from "./provider";
 import { LEGAL_SYSTEM_PROMPT, buildGenerationPrompt } from "./prompt";
@@ -23,32 +21,36 @@ export async function generateAnswer(
 
   const startedAt = performance.now();
 
-  const answer = await provider.generate({
+  const providerResponse = await provider.generate({
     system: LEGAL_SYSTEM_PROMPT,
     prompt,
 
     ...(request.temperature !== undefined
-      ? {
-          temperature: request.temperature,
-        }
+      ? { temperature: request.temperature }
       : {}),
 
     ...(request.maxTokens !== undefined
-      ? {
-          maxTokens: request.maxTokens,
-        }
+      ? { maxTokens: request.maxTokens }
       : {}),
   });
+
+  if (!providerResponse || typeof providerResponse.answer !== "string") {
+    throw new Error("Generation provider returned an invalid response.");
+  }
+
+  const answer = providerResponse.answer.trim();
+
+  if (!answer) {
+    throw new Error("Generation provider returned an empty answer.");
+  }
 
   const citations = buildCitations(answer, request.chunks);
 
   return {
     answer,
-
     citations,
-
     metadata: {
-      model: provider.model,
+      model: providerResponse.metadata.model,
       contextChunkCount: request.chunks.length,
       citationCount: citations.length,
       latencyMs: performance.now() - startedAt,
@@ -56,14 +58,10 @@ export async function generateAnswer(
   };
 }
 
-/**
- * Convenience helper for callers that already have a provider
- * and want the generation stage directly.
- */
 export async function generateFromChunks(
   provider: GenerationProvider,
   query: string,
-  chunks: LawChunk[],
+  chunks: import("@egyptian-law/core").LawChunk[],
   options?: {
     temperature?: number;
     maxTokens?: number;
@@ -72,15 +70,13 @@ export async function generateFromChunks(
   return generateAnswer(provider, {
     query,
     chunks,
+
     ...(options?.temperature !== undefined
-      ? {
-          temperature: options.temperature,
-        }
+      ? { temperature: options.temperature }
       : {}),
+
     ...(options?.maxTokens !== undefined
-      ? {
-          maxTokens: options.maxTokens,
-        }
+      ? { maxTokens: options.maxTokens }
       : {}),
   });
 }
