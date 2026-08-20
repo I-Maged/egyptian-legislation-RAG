@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useRef, useState } from "react";
+import { sendChatMessage } from "@/lib/api";
 
 type Citation = {
   id: string;
@@ -23,15 +24,17 @@ type Message = {
 };
 
 function formatCitation(citation: Citation) {
-  const law = citation.lawNumber && citation.year
-    ? `${citation.lawName} رقم ${citation.lawNumber} لسنة ${citation.year}`
-    : citation.lawName;
+  const law =
+    citation.lawNumber && citation.year
+      ? `${citation.lawName} رقم ${citation.lawNumber} لسنة ${citation.year}`
+      : citation.lawName;
   const article = `المادة ${citation.articleNumber}`;
-  const pages = citation.pageStart === null
-    ? ""
-    : citation.pageEnd === null || citation.pageEnd === citation.pageStart
-      ? ` · صفحة ${citation.pageStart}`
-      : ` · الصفحات ${citation.pageStart}-${citation.pageEnd}`;
+  const pages =
+    citation.pageStart === null
+      ? ""
+      : citation.pageEnd === null || citation.pageEnd === citation.pageStart
+        ? ` · صفحة ${citation.pageStart}`
+        : ` · الصفحات ${citation.pageStart}-${citation.pageEnd}`;
 
   return `${law} · ${article}${pages}`;
 }
@@ -58,14 +61,17 @@ export default function Chat() {
     setLoading(true);
 
     try {
-      const response = await fetch("/api/chat", {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify({ query }),
-      });
+      const payload = await sendChatMessage(query);
 
-      const payload = await response.json();
-      if (!response.ok) throw new Error(payload.error ?? "حدث خطأ أثناء معالجة السؤال.");
+      setMessages((current) => [
+        ...current,
+        {
+          id: crypto.randomUUID(),
+          role: "assistant",
+          content: payload.answer,
+          citations: payload.citations,
+        },
+      ]);
 
       setMessages((current) => [
         ...current,
@@ -82,7 +88,8 @@ export default function Chat() {
         {
           id: crypto.randomUUID(),
           role: "assistant",
-          content: error instanceof Error ? error.message : "حدث خطأ غير متوقع.",
+          content:
+            error instanceof Error ? error.message : "حدث خطأ غير متوقع.",
         },
       ]);
     } finally {
@@ -108,7 +115,11 @@ export default function Chat() {
             <div className="brand-subtitle">تشريعات مصرية · RAG تجريبي</div>
           </div>
         </div>
-        <button className="new-chat" onClick={() => setMessages([])} disabled={loading}>
+        <button
+          className="new-chat"
+          onClick={() => setMessages([])}
+          disabled={loading}
+        >
           محادثة جديدة
         </button>
       </header>
@@ -118,20 +129,45 @@ export default function Chat() {
           <div className="welcome">
             <div className="welcome-icon">§</div>
             <h1>كيف يمكنني مساعدتك؟</h1>
-            <p>اسأل عن مادة أو حكم أو قاعدة واردة في التشريعات المصرية الموجودة في قاعدة المعرفة.</p>
+            <p>
+              اسأل عن مادة أو حكم أو قاعدة واردة في التشريعات المصرية الموجودة
+              في قاعدة المعرفة.
+            </p>
             <div className="suggestions">
-              <button onClick={() => setInput("ما هي شروط إنهاء عقد العمل وفقًا لقانون العمل؟")}>شروط إنهاء عقد العمل</button>
-              <button onClick={() => setInput("ما الذي ينظمه قانون العمل بشأن الإجازات؟")}>الإجازات في قانون العمل</button>
-              <button onClick={() => setInput("ما هي مدة الإخطار المطلوبة قبل إنهاء عقد العمل؟")}>مدة الإخطار</button>
+              <button
+                onClick={() =>
+                  setInput("ما هي شروط إنهاء عقد العمل وفقًا لقانون العمل؟")
+                }
+              >
+                شروط إنهاء عقد العمل
+              </button>
+              <button
+                onClick={() =>
+                  setInput("ما الذي ينظمه قانون العمل بشأن الإجازات؟")
+                }
+              >
+                الإجازات في قانون العمل
+              </button>
+              <button
+                onClick={() =>
+                  setInput("ما هي مدة الإخطار المطلوبة قبل إنهاء عقد العمل؟")
+                }
+              >
+                مدة الإخطار
+              </button>
             </div>
           </div>
         ) : (
           <div className="messages">
             {messages.map((message) => (
               <article key={message.id} className={`message ${message.role}`}>
-                <div className="avatar">{message.role === "user" ? "أنت" : "ق"}</div>
+                <div className="avatar">
+                  {message.role === "user" ? "أنت" : "ق"}
+                </div>
                 <div className="message-body">
-                  <div className="message-role">{message.role === "user" ? "أنت" : "المساعد القانوني"}</div>
+                  <div className="message-role">
+                    {message.role === "user" ? "أنت" : "المساعد القانوني"}
+                  </div>
                   <div className="message-content">{message.content}</div>
                   {message.citations && message.citations.length > 0 && (
                     <div className="sources">
@@ -152,7 +188,11 @@ export default function Chat() {
                 <div className="avatar">ق</div>
                 <div className="message-body">
                   <div className="message-role">المساعد القانوني</div>
-                  <div className="typing"><span /><span /><span /></div>
+                  <div className="typing">
+                    <span />
+                    <span />
+                    <span />
+                  </div>
                 </div>
               </article>
             )}
@@ -172,11 +212,18 @@ export default function Chat() {
             disabled={loading}
             aria-label="السؤال القانوني"
           />
-          <button type="submit" className="send" disabled={loading || !input.trim()} aria-label="إرسال">
+          <button
+            type="submit"
+            className="send"
+            disabled={loading || !input.trim()}
+            aria-label="إرسال"
+          >
             ↑
           </button>
         </div>
-        <div className="disclaimer">الإجابة تجريبية وليست استشارة قانونية ملزمة.</div>
+        <div className="disclaimer">
+          الإجابة تجريبية وليست استشارة قانونية ملزمة.
+        </div>
       </form>
     </main>
   );
