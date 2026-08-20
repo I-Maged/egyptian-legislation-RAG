@@ -1,4 +1,5 @@
 import {
+  hitRateAtK,
   meanReciprocalRank,
   ndcgAtK,
   precisionAtK,
@@ -12,6 +13,7 @@ export type RetrievalFunction = (query: string) => string[] | Promise<string[]>;
 export interface RetrievalEvaluationOptions {
   recallAt?: number[];
   precisionAt?: number[];
+  hitRateAt?: number[];
   ndcgAt?: number[];
   includeMrr?: boolean;
 }
@@ -21,6 +23,7 @@ export interface RetrievalEvaluationResult {
 
   recall: Record<string, number>;
   precision: Record<string, number>;
+  hitRate: Record<string, number>;
   ndcg: Record<string, number>;
 
   mrr: number;
@@ -35,7 +38,11 @@ export class RetrievalEvaluator {
     options: RetrievalEvaluationOptions = {},
   ): Promise<RetrievalEvaluationResult> {
     const recallAt = options.recallAt ?? [1, 3, 5, 10];
+
     const precisionAt = options.precisionAt ?? [1, 3, 5, 10];
+
+    const hitRateAt = options.hitRateAt ?? [1, 3, 5, 10];
+
     const ndcgAt = options.ndcgAt ?? [5, 10];
 
     const includeMrr = options.includeMrr ?? true;
@@ -45,6 +52,7 @@ export class RetrievalEvaluator {
         queryCount: 0,
         recall: {},
         precision: {},
+        hitRate: {},
         ndcg: {},
         mrr: 0,
         predictions: [],
@@ -90,6 +98,20 @@ export class RetrievalEvaluator {
       );
     }
 
+    const hitRate: Record<string, number> = {};
+
+    for (const k of hitRateAt) {
+      hitRate[String(k)] = average(
+        dataset.map((example, index) =>
+          hitRateAtK(
+            predictions[index]!.retrievedChunkIds,
+            example.relevantChunkIds,
+            k,
+          ),
+        ),
+      );
+    }
+
     const ndcg: Record<string, number> = {};
 
     for (const k of ndcgAt) {
@@ -119,6 +141,7 @@ export class RetrievalEvaluator {
       queryCount: dataset.length,
       recall,
       precision,
+      hitRate,
       ndcg,
       mrr,
       predictions,

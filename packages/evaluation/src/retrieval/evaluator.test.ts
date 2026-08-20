@@ -101,6 +101,7 @@ describe("RetrievalEvaluator", () => {
     expect(result.ndcg).toEqual({});
     expect(result.mrr).toBe(0);
     expect(result.predictions).toEqual([]);
+    expect(result.hitRate).toEqual({});
   });
 
   it("preserves predictions", async () => {
@@ -152,6 +153,32 @@ describe("RetrievalEvaluator", () => {
     );
 
     expect(result.ndcg["1"]).toBeCloseTo(1);
+  });
+
+  it("calculates Hit Rate / Success@K", async () => {
+    const evaluator = new RetrievalEvaluator();
+
+    const result = await evaluator.evaluate(dataset, retrieve, {
+      hitRateAt: [1, 2, 3],
+    });
+
+    /*
+     * q1: a is rank 1
+     * q2: b is rank 2
+     * q3: c is rank 3
+     *
+     * Therefore:
+     *
+     * Hit@1 = 1/3
+     * Hit@2 = 2/3
+     * Hit@3 = 3/3
+     */
+
+    expect(result.hitRate["1"]).toBeCloseTo(1 / 3);
+
+    expect(result.hitRate["2"]).toBeCloseTo(2 / 3);
+
+    expect(result.hitRate["3"]).toBeCloseTo(1);
   });
 
   it("supports an asynchronous retrieval function", async () => {

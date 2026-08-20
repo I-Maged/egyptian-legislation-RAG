@@ -175,3 +175,18 @@ function validateK(k: number): void {
     throw new Error(`Invalid k: ${k}`);
   }
 }
+export function hitRateAtK(
+  retrievedChunkIds: string[],
+  relevantChunkIds: string[],
+  k: number,
+): number {
+  if (k <= 0) {
+    return 0;
+  }
+
+  const relevant = new Set(relevantChunkIds);
+
+  return retrievedChunkIds.slice(0, k).some((chunkId) => relevant.has(chunkId))
+    ? 1
+    : 0;
+}

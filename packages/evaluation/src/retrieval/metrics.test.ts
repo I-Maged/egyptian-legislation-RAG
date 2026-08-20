@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 
 import {
   dcgAtK,
+  hitRateAtK,
   idealDcgAtK,
   meanReciprocalRank,
   ndcgAtK,
@@ -154,5 +155,23 @@ describe("ndcgAtK", () => {
 
   it("respects K", () => {
     expect(ndcgAtK(["a", "b", "c"], relevance, 1)).toBeCloseTo(1);
+  });
+});
+
+describe("hitRateAtK", () => {
+  it("returns 1 when a relevant chunk appears in top K", () => {
+    expect(hitRateAtK(["x", "a", "y"], ["a"], 3)).toBe(1);
+  });
+
+  it("returns 0 when no relevant chunk appears in top K", () => {
+    expect(hitRateAtK(["x", "y", "z"], ["a"], 3)).toBe(0);
+  });
+
+  it("does not count relevant results after K", () => {
+    expect(hitRateAtK(["x", "y", "a"], ["a"], 2)).toBe(0);
+  });
+
+  it("returns 0 for K <= 0", () => {
+    expect(hitRateAtK(["a"], ["a"], 0)).toBe(0);
   });
 });

@@ -168,8 +168,13 @@ describe.skipIf(!RUN_REAL_BENCHMARK)("Labour Law retrieval benchmark", () => {
         },
       ],
 
+      // recallAt: [1, 3, 5, 10],
+      // precisionAt: [5, 10],
+      // ndcgAt: [5, 10],
+      // includeMrr: true,
       recallAt: [1, 3, 5, 10],
       precisionAt: [5, 10],
+      hitRateAt: [1, 3, 5, 10],
       ndcgAt: [5, 10],
       includeMrr: true,
     });
@@ -193,6 +198,14 @@ describe.skipIf(!RUN_REAL_BENCHMARK)("Labour Law retrieval benchmark", () => {
 
       expect(Number.isFinite(result.mrr)).toBe(true);
 
+      expect(Object.keys(result.hitRate)).toEqual(["1", "3", "5", "10"]);
+
+      for (const value of Object.values(result.hitRate)) {
+        expect(Number.isFinite(value)).toBe(true);
+        expect(value).toBeGreaterThanOrEqual(0);
+        expect(value).toBeLessThanOrEqual(1);
+      }
+
       expect(result.mrr).toBeGreaterThanOrEqual(0);
       expect(result.mrr).toBeLessThanOrEqual(1);
 
@@ -215,6 +228,14 @@ describe.skipIf(!RUN_REAL_BENCHMARK)("Labour Law retrieval benchmark", () => {
       }
 
       expect(result.predictions).toHaveLength(15);
+
+      expect(Object.keys(result.hitRate)).toEqual(["1", "3", "5", "10"]);
+
+      for (const value of Object.values(result.hitRate)) {
+        expect(Number.isFinite(value)).toBe(true);
+        expect(value).toBeGreaterThanOrEqual(0);
+        expect(value).toBeLessThanOrEqual(1);
+      }
     }
 
     /*
@@ -238,21 +259,21 @@ describe.skipIf(!RUN_REAL_BENCHMARK)("Labour Law retrieval benchmark", () => {
         system: system.name,
 
         "R@1": system.result.recall["1"]?.toFixed(4),
-
         "R@3": system.result.recall["3"]?.toFixed(4),
-
         "R@5": system.result.recall["5"]?.toFixed(4),
-
         "R@10": system.result.recall["10"]?.toFixed(4),
 
         "P@5": system.result.precision["5"]?.toFixed(4),
-
         "P@10": system.result.precision["10"]?.toFixed(4),
+
+        "Hit@1": system.result.hitRate["1"]?.toFixed(4),
+        "Hit@3": system.result.hitRate["3"]?.toFixed(4),
+        "Hit@5": system.result.hitRate["5"]?.toFixed(4),
+        "Hit@10": system.result.hitRate["10"]?.toFixed(4),
 
         MRR: system.result.mrr.toFixed(4),
 
         "nDCG@5": system.result.ndcg["5"]?.toFixed(4),
-
         "nDCG@10": system.result.ndcg["10"]?.toFixed(4),
       })),
     );
