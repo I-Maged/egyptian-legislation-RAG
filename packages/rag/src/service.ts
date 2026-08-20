@@ -1,5 +1,3 @@
-// packages/rag/src/service.ts
-
 import type { GenerationProvider } from "@egyptian-law/generation";
 
 import type {
