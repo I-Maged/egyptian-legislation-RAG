@@ -9,3 +9,7 @@ export * from "./benchmarks/retrieval-benchmark";
 export * from "./benchmarks/db-retrieval";
 
 export * from "./benchmarks/db-retrieval-adapters";
+
+export * from "./context/evaluator";
+export * from "./context/metrics";
+export * from "./context/types";

@@ -19,6 +19,7 @@ import {
 import { buildLabourLawGoldDataset } from "../datasets/labour-law-gold";
 
 import { runRetrievalBenchmark } from "./retrieval-benchmark";
+import { runContextBenchmark } from "./context-benchmark";
 
 const RUN_REAL_BENCHMARK = process.env.RUN_LABOUR_LAW_BENCHMARK === "1";
 
@@ -168,16 +169,56 @@ describe.skipIf(!RUN_REAL_BENCHMARK)("Labour Law retrieval benchmark", () => {
         },
       ],
 
-      // recallAt: [1, 3, 5, 10],
-      // precisionAt: [5, 10],
-      // ndcgAt: [5, 10],
-      // includeMrr: true,
       recallAt: [1, 3, 5, 10],
       precisionAt: [5, 10],
       hitRateAt: [1, 3, 5, 10],
       ndcgAt: [5, 10],
       includeMrr: true,
     });
+
+    /*
+     * ------------------------------------------------------------
+     * Context evaluation
+     * ------------------------------------------------------------
+     *
+     * Reuse the exact retrieval predictions produced above.
+     * No second retrieval pass is performed.
+     */
+
+    const contextBenchmark = await runContextBenchmark(gold, {
+      systems: benchmark.systems.map((system) => ({
+        name: system.name,
+        retrievalResult: system.result,
+      })),
+    });
+
+    expect(contextBenchmark.datasetName).toBe("labour-law-retrieval-v1");
+
+    expect(contextBenchmark.queryCount).toBe(15);
+
+    expect(contextBenchmark.systems).toHaveLength(2);
+
+    for (const system of contextBenchmark.systems) {
+      const result = system.result;
+
+      expect(result.queryCount).toBe(15);
+
+      expect(Number.isFinite(result.contextRecall)).toBe(true);
+      expect(Number.isFinite(result.contextPrecision)).toBe(true);
+      expect(Number.isFinite(result.contextHitRate)).toBe(true);
+
+      expect(result.contextRecall).toBeGreaterThanOrEqual(0);
+      expect(result.contextRecall).toBeLessThanOrEqual(1);
+
+      expect(result.contextPrecision).toBeGreaterThanOrEqual(0);
+      expect(result.contextPrecision).toBeLessThanOrEqual(1);
+
+      expect(result.contextHitRate).toBeGreaterThanOrEqual(0);
+      expect(result.contextHitRate).toBeLessThanOrEqual(1);
+
+      expect(result.predictions).toHaveLength(15);
+      expect(result.perQuery).toHaveLength(15);
+    }
 
     expect(benchmark.datasetName).toBe("labour-law-retrieval-v1");
 
@@ -275,6 +316,34 @@ describe.skipIf(!RUN_REAL_BENCHMARK)("Labour Law retrieval benchmark", () => {
 
         "nDCG@5": system.result.ndcg["5"]?.toFixed(4),
         "nDCG@10": system.result.ndcg["10"]?.toFixed(4),
+      })),
+    );
+
+    /*
+     * ------------------------------------------------------------
+     * Context benchmark table
+     * ------------------------------------------------------------
+     */
+
+    console.log(
+      "\n\n============================================================",
+    );
+
+    console.log("LABOUR LAW CONTEXT EVALUATION");
+
+    console.log(
+      "============================================================\n",
+    );
+
+    console.table(
+      contextBenchmark.systems.map((system) => ({
+        system: system.name,
+
+        "C-Recall": system.result.contextRecall.toFixed(4),
+
+        "C-Precision": system.result.contextPrecision.toFixed(4),
+
+        "C-HitRate": system.result.contextHitRate.toFixed(4),
       })),
     );
 
