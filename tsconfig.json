@@ -13,6 +13,26 @@
     "skipLibCheck": true,
     "outDir": "dist",
     "rootDir": ".",
+    // "paths": {
+    //   "@egyptian-law/core": [
+    //     "./packages/core/src"
+    //   ],
+    //   "@egyptian-law/core/*": [
+    //     "./packages/core/src/*"
+    //   ],
+    //   "@egyptian-law/evaluation": [
+    //     "./packages/evaluation/src"
+    //   ],
+    //   "@egyptian-law/evaluation/*": [
+    //     "./packages/evaluation/src/*"
+    //   ],
+    //   "@egyptian-law/ingestion": [
+    //     "./packages/ingestion/src"
+    //   ],
+    //   "@egyptian-law/ingestion/*": [
+    //     "./packages/ingestion/src/*"
+    //   ]
+    // }
     "paths": {
       "@egyptian-law/core": [
         "./packages/core/src"
@@ -20,17 +40,35 @@
       "@egyptian-law/core/*": [
         "./packages/core/src/*"
       ],
+      "@egyptian-law/db": [
+        "./packages/db/src"
+      ],
+      "@egyptian-law/db/*": [
+        "./packages/db/src/*"
+      ],
       "@egyptian-law/evaluation": [
         "./packages/evaluation/src"
       ],
       "@egyptian-law/evaluation/*": [
         "./packages/evaluation/src/*"
       ],
+      "@egyptian-law/generation": [
+        "./packages/generation/src"
+      ],
+      "@egyptian-law/generation/*": [
+        "./packages/generation/src/*"
+      ],
       "@egyptian-law/ingestion": [
         "./packages/ingestion/src"
       ],
       "@egyptian-law/ingestion/*": [
         "./packages/ingestion/src/*"
+      ],
+      "@egyptian-law/rag": [
+        "./packages/rag/src"
+      ],
+      "@egyptian-law/rag/*": [
+        "./packages/rag/src/*"
       ]
     }
   },

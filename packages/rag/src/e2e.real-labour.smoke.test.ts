@@ -188,7 +188,12 @@ describe("RAG real end-to-end smoke test", () => {
     // Citations
     // ---------------------------------------------------------
 
-    expect(response.citations).toHaveLength(response.retrieved.length);
+    expect(response.citations).toHaveLength(1);
+
+    expect(response.citations[0]).toMatchObject({
+      id: "[1]",
+      chunkId: response.retrieved[0]?.chunk.id,
+    });
 
     for (const [index, citation] of response.citations.entries()) {
       const retrieved = response.retrieved[index]!;
