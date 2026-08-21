@@ -72,16 +72,6 @@ export default function Chat() {
           citations: payload.citations,
         },
       ]);
-
-      setMessages((current) => [
-        ...current,
-        {
-          id: crypto.randomUUID(),
-          role: "assistant",
-          content: payload.answer,
-          citations: payload.citations,
-        },
-      ]);
     } catch (error) {
       setMessages((current) => [
         ...current,
