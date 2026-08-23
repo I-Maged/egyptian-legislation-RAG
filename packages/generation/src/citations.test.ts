@@ -32,15 +32,15 @@ function createChunk(id: string, article: string): LawChunk {
 
 describe("citations", () => {
   it("extracts unique citation IDs", () => {
-    expect(extractCitationIds("النص [C1] والتفصيل [C2] ثم [C1].")).toEqual([
-      "C1",
-      "C2",
+    expect(extractCitationIds("النص [1] والتفصيل [2] ثم [1].")).toEqual([
+      "[1]",
+      "[2]",
     ]);
   });
 
   it("ignores malformed citation numbers", () => {
-    expect(extractCitationIds("اختبار [C0] [C-1] [CABC] [C2].")).toEqual([
-      "C2",
+    expect(extractCitationIds("اختبار [0] [-1] [ABC] [C2] [2].")).toEqual([
+      "[2]",
     ]);
   });
 
@@ -48,13 +48,13 @@ describe("citations", () => {
     const chunks = [createChunk("chunk-1", "1"), createChunk("chunk-2", "2")];
 
     const result = buildCitations(
-      "وفقًا للمادة [C1]، كما توضح المادة [C2].",
+      "وفقًا للمادة [1]، كما توضح المادة [2].",
       chunks,
     );
 
     expect(result).toEqual([
       {
-        citationId: "C1",
+        citationId: "[1]",
         chunkId: "chunk-1",
         lawName: "قانون العمل",
         lawNumber: "148",
@@ -66,7 +66,7 @@ describe("citations", () => {
         pageEnd: 6,
       },
       {
-        citationId: "C2",
+        citationId: "[2]",
         chunkId: "chunk-2",
         lawName: "قانون العمل",
         lawNumber: "148",
@@ -81,11 +81,11 @@ describe("citations", () => {
   });
 
   it("does not create citations for unavailable context", () => {
-    const result = buildCitations("هذه المعلومة [C1] وهذه [C99].", [
+    const result = buildCitations("هذه المعلومة [1] وهذه [99].", [
       createChunk("chunk-1", "1"),
     ]);
 
     expect(result).toHaveLength(1);
-    expect(result[0]?.citationId).toBe("C1");
+    expect(result[0]?.citationId).toBe("[1]");
   });
 });

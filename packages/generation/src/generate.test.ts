@@ -39,7 +39,7 @@ describe("generateAnswer", () => {
 
       generate: vi.fn(
         async (): Promise<GenerationProviderResponse> => ({
-          answer: "ينص القانون على ذلك في المادة الأولى. [C1]",
+          answer: "ينص القانون على ذلك في المادة الأولى. [1]",
           metadata: {
             model: "test-model",
             durationMs: 10,
@@ -53,12 +53,12 @@ describe("generateAnswer", () => {
       chunks: [createChunk()],
     });
 
-    expect(result.answer).toBe("ينص القانون على ذلك في المادة الأولى. [C1]");
+    expect(result.answer).toBe("ينص القانون على ذلك في المادة الأولى. [1]");
 
     expect(result.citations).toHaveLength(1);
 
     expect(result.citations[0]).toMatchObject({
-      citationId: "C1",
+      citationId: "[1]",
       chunkId: "chunk-1",
       articleNumber: "1",
     });
@@ -73,7 +73,7 @@ describe("generateAnswer", () => {
     const provider: GenerationProvider = {
       model: "test-model",
       generate: vi.fn().mockResolvedValue({
-        answer: "الإجابة [C1]",
+        answer: "الإجابة [1]",
         metadata: {
           model: "test-model",
           durationMs: 10,

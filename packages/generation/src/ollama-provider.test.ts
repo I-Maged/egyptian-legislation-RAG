@@ -16,7 +16,7 @@ describe("OllamaGenerationProvider", () => {
   it("sends system and user messages to Ollama", async () => {
     mockedChat.mockResolvedValue({
       message: {
-        content: "الإجابة القانونية [C1]",
+        content: "الإجابة القانونية [1]",
       },
     });
 
@@ -29,7 +29,7 @@ describe("OllamaGenerationProvider", () => {
       prompt: "ما هو قانون العمل؟",
     });
 
-    expect(result.answer).toBe("الإجابة القانونية [C1]");
+    expect(result.answer).toBe("الإجابة القانونية [1]");
     expect(result.metadata.model).toBe("gemma4:cloud");
     expect(result.metadata.durationMs).toBeGreaterThanOrEqual(0);
 

@@ -2,7 +2,7 @@ import type { LawChunk } from "@egyptian-law/core";
 
 import type { GenerationCitation } from "./types";
 
-const CITATION_PATTERN = /\[C(\d+)\]/g;
+const CITATION_PATTERN = /\[(\d+)\]/g;
 
 export function extractCitationIds(answer: string): string[] {
   const citationIds = new Set<string>();
@@ -11,7 +11,7 @@ export function extractCitationIds(answer: string): string[] {
     const citationNumber = Number(match[1]);
 
     if (Number.isInteger(citationNumber) && citationNumber >= 1) {
-      citationIds.add(`C${citationNumber}`);
+      citationIds.add(`[${citationNumber}]`);
     }
   }
 
@@ -43,19 +43,24 @@ export function buildCitations(
 
       if (!chunk) {
         throw new Error(
-          `Citation C${citationNumber} references an unavailable chunk.`,
+          `Citation [${citationNumber}] references an unavailable chunk.`,
         );
       }
 
       return {
-        citationId: `C${citationNumber}`,
+        citationId: `[${citationNumber}]`,
+
         chunkId: chunk.id,
+
         lawName: chunk.law_name,
         lawNumber: chunk.law_number,
         year: chunk.year,
+
         articleNumber: chunk.article_number,
         articleTitle: chunk.article_title,
+
         sourceFile: chunk.provenance.source_file,
+
         pageStart: chunk.provenance.page_start,
         pageEnd: chunk.provenance.page_end,
       };

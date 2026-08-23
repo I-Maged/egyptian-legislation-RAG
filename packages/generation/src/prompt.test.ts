@@ -34,7 +34,7 @@ describe("generation prompt", () => {
   it("contains grounding instructions", () => {
     expect(LEGAL_SYSTEM_PROMPT).toContain("لا تخترع أي معلومة قانونية");
 
-    expect(LEGAL_SYSTEM_PROMPT).toContain("[C1]");
+    expect(LEGAL_SYSTEM_PROMPT).toContain("[1]");
   });
 
   it("contains the query and legal context", () => {
@@ -44,7 +44,7 @@ describe("generation prompt", () => {
 
     expect(prompt).toContain("ما هو نطاق تطبيق القانون؟");
 
-    expect(prompt).toContain("[C1]");
+    expect(prompt).toContain("[1]");
     expect(prompt).toContain("قانون العمل");
     expect(prompt).toContain("يحدد القانون نطاق تطبيقه.");
   });

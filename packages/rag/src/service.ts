@@ -1,14 +1,13 @@
-// packages/rag/src/service.ts
-
 import type { GenerationProvider } from "@egyptian-law/generation";
+import { extractCitationIds } from "@egyptian-law/generation";
 
 import type {
+  RagCitation,
   RagRequest,
   RagResponse,
-  RagCitation,
   RagRetrievalResult,
+  RagRetriever,
 } from "./types";
-import type { RagRetriever } from "./types";
 
 export interface RagServiceOptions {
   topK?: number;
@@ -34,7 +33,9 @@ const DEFAULT_SYSTEM_PROMPT = `
 4. عند الاستناد إلى مادة قانونية، اذكر رقم المادة.
 5. لا تستخدم معلومات من خارج السياق.
 6. أجب باللغة العربية ما لم يطلب المستخدم لغة أخرى.
-7. لا تدّعي أن الإجابة تمثل استشارة قانونية ملزمة.
+7. لا تدّعي أن الإجابة تمثل استشارة قانونية ملزمة。
+8. عند الاستناد إلى مصدر، استخدم رقم المصدر كما هو ظاهر في السياق، مثل [1] أو [2].
+9. لا تستخدم صيغة [C1] أو أي صيغة أخرى.
 
 السياق القانوني سيظهر على النحو التالي:
 
@@ -92,7 +93,7 @@ function buildContext(retrieved: RagRetrievalResult[]): {
         : null;
 
       return [
-        `[${document.citationId}]`,
+        document.citationId,
         `القانون: ${document.lawName}`,
         `رقم القانون: ${document.lawNumber ?? "غير محدد"}`,
         `السنة: ${document.year ?? "غير محددة"}`,
@@ -105,7 +106,7 @@ function buildContext(retrieved: RagRetrievalResult[]): {
         .filter(Boolean)
         .join("\n");
     })
-    .join("\n\n");
+    .join("\n\n------------------------------\n\n");
 
   return {
     documents,
@@ -128,54 +129,51 @@ ${context}
 إذا كانت النصوص غير كافية، وضّح أن المعلومات المتاحة لا تكفي للإجابة.
 
 عند استخدام نص قانوني، ضع رقم المصدر بين أقواس مربعة مثل [1] أو [2].
+لا تستخدم أي صيغة أخرى لأرقام المصادر.
 `.trim();
 }
 
-// function buildCitations(retrieved: RagRetrievalResult[]): RagCitation[] {
-//   return retrieved.map((result, index) => {
-//     const { chunk } = result;
+function buildCitations(
+  answer: string,
+  retrieved: RagRetrievalResult[],
+): RagCitation[] {
+  const citationIds = extractCitationIds(answer);
 
-//     return {
-//       id: `[${index + 1}]`,
+  return citationIds.flatMap((citationId) => {
+    const match = /^\[(\d+)\]$/.exec(citationId);
 
-//       chunkId: chunk.id,
+    if (!match) {
+      return [];
+    }
 
-//       lawName: chunk.law_name,
-//       lawNumber: chunk.law_number,
-//       year: chunk.year,
+    const index = Number(match[1]) - 1;
+    const result = retrieved[index];
 
-//       articleNumber: chunk.article_number,
-//       articleTitle: chunk.article_title,
+    if (!result) {
+      return [];
+    }
 
-//       sourceFile: chunk.provenance.source_file,
-
-//       pageStart: chunk.provenance.page_start,
-//       pageEnd: chunk.provenance.page_end,
-//     };
-//   });
-// }
-
-function buildCitations(retrieved: RagRetrievalResult[]): RagCitation[] {
-  return retrieved.map((result, index) => {
     const { chunk } = result;
 
-    return {
-      id: `[${index + 1}]`,
+    return [
+      {
+        id: citationId,
 
-      chunkId: chunk.id,
+        chunkId: chunk.id,
 
-      lawName: chunk.law_name,
-      lawNumber: chunk.law_number,
-      year: chunk.year,
+        lawName: chunk.law_name,
+        lawNumber: chunk.law_number,
+        year: chunk.year,
 
-      articleNumber: chunk.article_number,
-      articleTitle: chunk.article_title,
+        articleNumber: chunk.article_number,
+        articleTitle: chunk.article_title,
 
-      sourceFile: chunk.provenance.source_file,
+        sourceFile: chunk.provenance.source_file,
 
-      pageStart: chunk.provenance.page_start,
-      pageEnd: chunk.provenance.page_end,
-    };
+        pageStart: chunk.provenance.page_start,
+        pageEnd: chunk.provenance.page_end,
+      },
+    ];
   });
 }
 
@@ -231,7 +229,7 @@ export class RagService {
     const context = buildContext(retrieved);
 
     const systemPrompt = [
-      DEFAULT_SYSTEM_PROMPT,
+      this.options.systemPrompt ?? DEFAULT_SYSTEM_PROMPT,
       request.systemInstruction?.trim(),
     ]
       .filter(Boolean)
@@ -266,7 +264,7 @@ export class RagService {
     return {
       answer,
 
-      citations: buildCitations(retrieved),
+      citations: buildCitations(answer, retrieved),
 
       retrieved,
 

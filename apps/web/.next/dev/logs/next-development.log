@@ -1,0 +1,5 @@
+{"timestamp":"00:00:13.253","source":"Server","level":"LOG","message":""}
+{"timestamp":"00:00:37.779","source":"Server","level":"LOG","message":"◇ injected env (0) from ..\\..\\.env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }"}
+{"timestamp":"00:00:37.781","source":"Server","level":"LOG","message":"DATABASE_URL: \"postgresql://postgres:****@localhost:5432/egyptian_law_rag?schema=public\""}
+{"timestamp":"00:00:56.223","source":"Server","level":"LOG","message":"◇ injected env (0) from ..\\..\\.env // tip: ⌘ custom filepath { path: '/custom/path/.env' }"}
+{"timestamp":"00:00:56.224","source":"Server","level":"LOG","message":"DATABASE_URL: \"postgresql://postgres:****@localhost:5432/egyptian_law_rag?schema=public\""}

@@ -9,8 +9,7 @@ export function buildGenerationContext(
   chunks: LawChunk[],
 ): GenerationContextChunk[] {
   return chunks.map((chunk, index) => ({
-    citationId: `C${index + 1}`,
-    // citationId: `[${index + 1}]`,
+    citationId: `[${index + 1}]`,
     chunk,
   }));
 }
@@ -38,7 +37,7 @@ export function formatGenerationContext(chunks: LawChunk[]): string {
             : `الصفحات ${chunk.provenance.page_start}-${chunk.provenance.page_end}`;
 
       return [
-        `[${citationId}]`,
+        citationId,
         `القانون: ${chunk.law_name}`,
         chunk.law_number !== null ? `رقم القانون: ${chunk.law_number}` : null,
         chunk.year !== null ? `السنة: ${chunk.year}` : null,

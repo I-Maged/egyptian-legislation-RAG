@@ -1,4 +1,3 @@
-// packages/rag/src/retriever.ts
 import type { PostgresVectorRetriever } from "@egyptian-law/ingestion";
 import {
   BaselineReranker,

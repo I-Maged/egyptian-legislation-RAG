@@ -39,13 +39,13 @@ describe("generation context", () => {
 
     expect(result).toEqual([
       {
-        citationId: "C1",
+        citationId: "[1]",
         chunk: expect.objectContaining({
           id: "chunk-1",
         }),
       },
       {
-        citationId: "C2",
+        citationId: "[2]",
         chunk: expect.objectContaining({
           id: "chunk-2",
         }),
@@ -59,8 +59,8 @@ describe("generation context", () => {
       createChunk("chunk-2"),
     ]);
 
-    expect(result).toContain("[C1]");
-    expect(result).toContain("[C2]");
+    expect(result).toContain("[1]");
+    expect(result).toContain("[2]");
     expect(result).toContain("قانون العمل");
     expect(result).toContain("المادة: 1");
     expect(result).toContain("المادة: 2");
