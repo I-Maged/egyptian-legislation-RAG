@@ -10,6 +10,8 @@ export interface ChatCitation {
   articleNumber: string;
   articleTitle: string | null;
 
+  text: string;
+
   sourceFile: string;
 
   pageStart: number | null;
