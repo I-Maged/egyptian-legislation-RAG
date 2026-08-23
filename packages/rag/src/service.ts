@@ -168,6 +168,8 @@ function buildCitations(
         articleNumber: chunk.article_number,
         articleTitle: chunk.article_title,
 
+        text: chunk.text,
+
         sourceFile: chunk.provenance.source_file,
 
         pageStart: chunk.provenance.page_start,

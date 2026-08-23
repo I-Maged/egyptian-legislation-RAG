@@ -217,6 +217,7 @@ describe("RAG end-to-end smoke test", () => {
       year: "2019",
       articleNumber: "1",
       articleTitle: null,
+      text: chunk.text,
       sourceFile: "labour-law-148-2019.pdf",
       pageStart: 10,
       pageEnd: 10,

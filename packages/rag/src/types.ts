@@ -67,6 +67,8 @@ export interface RagCitation {
   articleNumber: string;
   articleTitle: string | null;
 
+  text: string;
+
   sourceFile: string;
 
   pageStart: number | null;

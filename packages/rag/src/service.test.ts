@@ -126,6 +126,8 @@ describe("createRagService", () => {
       lawName: "قانون العمل",
     });
 
+    expect(response.citations[0].text).toBe("النص القانوني للمادة الأولى.");
+
     expect(response.context.text).toContain("النص القانوني للمادة الأولى.");
 
     expect(generationProvider.generate).toHaveBeenCalledTimes(1);

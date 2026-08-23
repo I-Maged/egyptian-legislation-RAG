@@ -3,6 +3,12 @@
 # dependencies
 /node_modules
 node_modules/
+**/.next/
+/.next
+apps/web/.next
+apps/web/.next/
+/out/
+.opencode/
 /.pnp
 .pnp.*
 .yarn/*
