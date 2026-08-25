@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { listLawDocuments } from "@egyptian-law/db";
 
-export const dynamic = "force-dynamic";
 
 export default async function LawsPage() {
   const laws = await listLawDocuments();

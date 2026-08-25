@@ -9,6 +9,10 @@ import {
   type ReactNode,
 } from "react";
 
+import { signOut } from "@/app/actions/auth";
+
+import { useUser } from "./user-provider";
+
 export type NavbarAction = {
   onClick: () => void;
   disabled?: boolean;
@@ -52,6 +56,7 @@ export function useNavbarAction(action: NavbarAction) {
 
 export default function Navbar() {
   const action = useContext(NavbarActionContext);
+  const { user } = useUser();
 
   return (
     <header className="topbar">
@@ -64,19 +69,40 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-      {action ? (
-        <button
-          className="new-chat"
-          onClick={action.onClick}
-          disabled={action.disabled}
-        >
-          محادثة جديدة
-        </button>
-      ) : (
-        <Link href="/" className="new-chat">
-          محادثة جديدة
-        </Link>
-      )}
+      <div className="nav-actions">
+        {action ? (
+          <button
+            className="new-chat"
+            onClick={action.onClick}
+            disabled={action.disabled}
+          >
+            محادثة جديدة
+          </button>
+        ) : (
+          <Link href="/" className="new-chat">
+            محادثة جديدة
+          </Link>
+        )}
+        {user ? (
+          <>
+            <span className="nav-user" title={user.email}>
+              {user.name ?? user.email}
+              <span className="nav-user-role">
+                {user.role === "ADMIN" ? "مسؤول" : "مستخدم"}
+              </span>
+            </span>
+            <form action={signOut}>
+              <button type="submit" className="auth-btn auth-btn--secondary">
+                تسجيل الخروج
+              </button>
+            </form>
+          </>
+        ) : (
+          <Link href="/sign-in" className="auth-btn">
+            تسجيل الدخول
+          </Link>
+        )}
+      </div>
     </header>
   );
 }

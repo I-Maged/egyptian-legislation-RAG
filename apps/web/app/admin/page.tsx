@@ -1,6 +1,5 @@
 import { getCorpusAnalytics } from "@egyptian-law/db";
 
-export const dynamic = "force-dynamic";
 
 export default async function AdminPage() {
   const analytics = await getCorpusAnalytics();

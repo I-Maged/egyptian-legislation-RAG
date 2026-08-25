@@ -3,7 +3,6 @@ import { getLawDocument } from "@egyptian-law/db";
 
 import { saveChunk, updateLaw } from "@/app/admin/laws/actions";
 
-export const dynamic = "force-dynamic";
 
 export default async function LawPage({
   params,
