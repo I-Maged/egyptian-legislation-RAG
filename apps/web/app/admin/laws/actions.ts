@@ -39,9 +39,7 @@ export async function createLaw(formData: FormData) {
 
   const articles = parseArticles(articlesRaw);
 
-  for (let index = 0; index < articles.length; index++) {
-    const article = articles[index];
-
+  for (const [index, article] of articles.entries()) {
     await createLawChunk(id, {
       id: crypto.randomUUID(),
       articleNumber: article.articleNumber,

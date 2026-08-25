@@ -19,6 +19,8 @@ export interface ChatCitation {
 }
 
 export interface ChatResponse {
+  conversationId?: string;
+
   answer: string;
 
   citations: ChatCitation[];
@@ -29,7 +31,10 @@ export interface ChatResponse {
   };
 }
 
-export async function sendChatMessage(query: string): Promise<ChatResponse> {
+export async function sendChatMessage(
+  query: string,
+  conversationId?: string,
+): Promise<ChatResponse> {
   const response = await fetch("/api/chat", {
     method: "POST",
 
@@ -39,6 +44,7 @@ export async function sendChatMessage(query: string): Promise<ChatResponse> {
 
     body: JSON.stringify({
       query,
+      ...(conversationId ? { conversationId } : {}),
     }),
   });
 

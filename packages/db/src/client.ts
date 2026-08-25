@@ -15,7 +15,7 @@ for (const candidate of [".env", "../../.env"]) {
 
 const connectionString = `${process.env.DATABASE_URL}`;
 
-console.log("DATABASE_URL:", connectionString.replace(/:[^:@]+@/, ":****@"));
+// console.log("DATABASE_URL:", connectionString.replace(/:[^:@]+@/, ":****@"));
 
 const adapter = new PrismaPg({ connectionString });
 const prisma = new PrismaClient({ adapter });

@@ -191,7 +191,7 @@ describe("signUp", () => {
       ),
     ).rejects.toThrow("NEXT_REDIRECT");
 
-    const createArgs = mockedCreate.mock.calls[0][0];
+    const createArgs = mockedCreate.mock.calls[0]![0];
 
     expect(createArgs.data.email).toBe("new@example.com");
     expect(createArgs.data.name).toBe("Ali");

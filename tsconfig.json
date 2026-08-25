@@ -49,6 +49,9 @@
       ],
       "@egyptian-law/rag/*": [
         "./packages/rag/src/*"
+      ],
+      "@/*": [
+        "./apps/web/*"
       ]
     }
   },

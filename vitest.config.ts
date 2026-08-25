@@ -1,6 +1,6 @@
 import { defineConfig, mergeConfig } from "vitest/config";
 
-import webConfig from "./apps/web/vitest.config.mts";
+import webConfig from "./apps/web/vitest.config";
 
 export default defineConfig({
   test: {

@@ -32,6 +32,8 @@ export type {
   HybridSearchResult,
 } from "./repositories/hybrid.repository";
 
+export * from "./repositories/conversation.repository";
+
 export * from "./repositories/law.repository";
 
 export * from "./repositories/analytics.repository";

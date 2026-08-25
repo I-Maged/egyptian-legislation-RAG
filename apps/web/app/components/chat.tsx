@@ -46,12 +46,16 @@ function MessageContent({
 
 export default function Chat() {
   const [messages, setMessages] = useState<Message[]>([]);
+  const [conversationId, setConversationId] = useState<string | null>(null);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const [activeCitation, setActiveCitation] = useState<Citation | null>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
 
-  const handleNewChat = useCallback(() => setMessages([]), []);
+  const handleNewChat = useCallback(() => {
+    setMessages([]);
+    setConversationId(null);
+  }, []);
 
   useNavbarAction({ onClick: handleNewChat, disabled: loading });
 
@@ -85,7 +89,14 @@ export default function Chat() {
     setLoading(true);
 
     try {
-      const payload = await sendChatMessage(query);
+      const payload = await sendChatMessage(
+        query,
+        conversationId ?? undefined,
+      );
+
+      if (payload.conversationId) {
+        setConversationId(payload.conversationId);
+      }
 
       setMessages((current) => [
         ...current,

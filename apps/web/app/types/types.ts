@@ -1,6 +1,7 @@
 type ChatBody = {
   query?: unknown;
   lawDocumentId?: unknown;
+  conversationId?: unknown;
 };
 
 type Citation = {

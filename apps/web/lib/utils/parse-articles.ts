@@ -17,10 +17,12 @@ export function parseArticles(raw: string): ParsedArticle[] {
         /^(?:المادة|مادة)\s+([0-9٠-٩]+)\s*[:\-]?\s*([\s\S]*)$/i,
       );
 
-      if (match) {
+      const matchedNumber = match?.[1];
+
+      if (matchedNumber) {
         return {
-          articleNumber: match[1],
-          text: match[2].trim(),
+          articleNumber: matchedNumber,
+          text: (match?.[2] ?? "").trim(),
         };
       }
 
