@@ -17,7 +17,7 @@ import type { ConversationMessage } from "@/lib/api";
 import { formatCitation, formatLawName } from "@/lib/utils/format-citation";
 
 import ConversationsSidebar from "./conversations-sidebar";
-import { useNavbarAction } from "./navbar";
+import { useNavbarAction, useNavbarSecondaryToggle } from "./navbar";
 
 function MessageContent({
   content,
@@ -84,6 +84,11 @@ export default function Chat() {
   }, []);
 
   useNavbarAction({ onClick: handleNewChat, disabled: loading });
+
+  useNavbarSecondaryToggle({
+    onClick: () => setSidebarOpen((open) => !open),
+    active: sidebarOpen,
+  });
 
   async function handleSelectConversation(id: string) {
     if (loading) return;
@@ -190,17 +195,11 @@ export default function Chat() {
   }
 
   return (
-    <div className="workspace">
-      <button
-        type="button"
-        className={`sidebar-toggle${sidebarOpen ? " sidebar-toggle--open" : ""}`}
-        aria-label={sidebarOpen ? "إغلاق السجل" : "فتح سجل المحادثات"}
-        aria-expanded={sidebarOpen}
-        onClick={() => setSidebarOpen((open) => !open)}
-      >
-        ☰
-      </button>
-
+    <div
+      className={`workspace workspace--${
+        sidebarOpen ? "sidebar-open" : "sidebar-collapsed"
+      }`}
+    >
       <div
         className={`sidebar-wrap${
           sidebarOpen ? " sidebar-wrap--open" : ""

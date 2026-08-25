@@ -18,19 +18,36 @@ export type NavbarAction = {
   disabled?: boolean;
 } | null;
 
+export type NavbarToggle = {
+  onClick: () => void;
+  active?: boolean;
+  disabled?: boolean;
+} | null;
+
 const NavbarSetterContext = createContext<(action: NavbarAction) => void>(
   () => {},
 );
 
 const NavbarActionContext = createContext<NavbarAction>(null);
 
+const NavbarToggleSetterContext = createContext<(toggle: NavbarToggle) => void>(
+  () => {},
+);
+
+const NavbarToggleContext = createContext<NavbarToggle>(null);
+
 export function NavbarProvider({ children }: { children: ReactNode }) {
   const [action, setAction] = useState<NavbarAction>(null);
+  const [toggle, setToggle] = useState<NavbarToggle>(null);
 
   return (
     <NavbarActionContext.Provider value={action}>
       <NavbarSetterContext.Provider value={setAction}>
-        {children}
+        <NavbarToggleContext.Provider value={toggle}>
+          <NavbarToggleSetterContext.Provider value={setToggle}>
+            {children}
+          </NavbarToggleSetterContext.Provider>
+        </NavbarToggleContext.Provider>
       </NavbarSetterContext.Provider>
     </NavbarActionContext.Provider>
   );
@@ -54,8 +71,28 @@ export function useNavbarAction(action: NavbarAction) {
   }, [setAction, onClick, disabled]);
 }
 
+/**
+ * Lets a page register a secondary toggle button (e.g. conversations sidebar).
+ * Pass null to hide the button.
+ */
+export function useNavbarSecondaryToggle(toggle: NavbarToggle) {
+  const setToggle = useContext(NavbarToggleSetterContext);
+  const onClick = toggle?.onClick;
+  const active = toggle?.active;
+  const disabled = toggle?.disabled;
+
+  useEffect(() => {
+    if (!onClick) return;
+
+    setToggle({ onClick, active, disabled });
+
+    return () => setToggle(null);
+  }, [setToggle, onClick, active, disabled]);
+}
+
 export default function Navbar() {
   const action = useContext(NavbarActionContext);
+  const secondaryToggle = useContext(NavbarToggleContext);
   const { user } = useUser();
 
   return (
@@ -70,6 +107,19 @@ export default function Navbar() {
         </div>
       </div>
       <div className="nav-actions">
+        {secondaryToggle && (
+          <button
+            type="button"
+            className={`sidebar-nav-toggle${
+              secondaryToggle.active ? " sidebar-nav-toggle--active" : ""
+            }`}
+            aria-expanded={secondaryToggle.active ?? false}
+            onClick={secondaryToggle.onClick}
+            disabled={secondaryToggle.disabled}
+          >
+            المحادثات
+          </button>
+        )}
         {action ? (
           <button
             className="new-chat"

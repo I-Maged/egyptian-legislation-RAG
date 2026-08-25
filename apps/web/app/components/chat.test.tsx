@@ -347,3 +347,41 @@ describe("Chat conversation history", () => {
     });
   });
 });
+
+describe("Chat sidebar toggle", () => {
+  beforeEach(() => {
+    mockedSendChatMessage.mockReset();
+    mockedFetchConversation.mockReset();
+    mockedFetchConversations.mockReset().mockResolvedValue([]);
+  });
+
+  it("collapses and expands the sidebar via the navbar button", async () => {
+    const user = userEvent.setup();
+
+    render(
+      <UserProvider initialUser={signedInUser}>
+        <NavbarProvider>
+          <Navbar />
+          <Chat />
+        </NavbarProvider>
+      </UserProvider>,
+    );
+
+    const workspace = document.querySelector(".workspace") as Element;
+
+    expect(workspace).toHaveClass("workspace--sidebar-collapsed");
+
+    await user.click(screen.getByRole("button", { name: "المحادثات" }));
+
+    expect(workspace).toHaveClass("workspace--sidebar-open");
+
+    const navToggle = screen.getByRole("button", { name: "المحادثات" });
+
+    expect(navToggle).toHaveAttribute("aria-expanded", "true");
+    expect(navToggle).toHaveClass("sidebar-nav-toggle--active");
+
+    await user.click(navToggle);
+
+    expect(workspace).toHaveClass("workspace--sidebar-collapsed");
+  });
+});
