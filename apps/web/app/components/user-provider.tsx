@@ -1,5 +1,6 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import {
   createContext,
   useContext,
@@ -32,6 +33,7 @@ export function UserProvider({
 }) {
   const [user, setUser] = useState<SessionUser | null>(initialUser);
   const [isLoading, setIsLoading] = useState(initialUser === null);
+  const pathname = usePathname();
 
   useEffect(() => {
     if (initialUser) {
@@ -57,8 +59,10 @@ export function UserProvider({
     return () => {
       cancelled = true;
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    // Re-sync the session on every soft navigation (e.g. after sign-in/out
+    // redirects) since this provider lives in the root layout and never
+    // remounts.
+  }, [pathname, initialUser]);
 
   const value = useMemo(
     () => ({ user, setUser, isLoading }),
