@@ -7,26 +7,14 @@ export default async function LawsPage() {
   const laws = await listLawDocuments();
 
   return (
-    <main style={{ padding: 32 }}>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-        }}
-      >
+    <main className="admin-main">
+      <div className="admin-header-row">
         <h1>Laws</h1>
 
         <Link href="/admin/laws/new">+ Add Law</Link>
       </div>
 
-      <table
-        style={{
-          width: "100%",
-          marginTop: 24,
-          borderCollapse: "collapse",
-        }}
-      >
+      <table className="data-table data-table--laws">
         <thead>
           <tr>
             <th align="left">Law</th>

@@ -1,9 +1,7 @@
-import { notFound, redirect } from "next/navigation";
-import {
-  getLawDocument,
-  updateLawDocument,
-  updateLawChunk,
-} from "@egyptian-law/db";
+import { notFound } from "next/navigation";
+import { getLawDocument } from "@egyptian-law/db";
+
+import { saveChunk, updateLaw } from "@/app/admin/laws/actions";
 
 export const dynamic = "force-dynamic";
 
@@ -20,41 +18,11 @@ export default async function LawPage({
     notFound();
   }
 
-  async function updateLaw(formData: FormData) {
-    "use server";
-
-    const lawName = String(formData.get("lawName") ?? "").trim();
-
-    const lawNumber = String(formData.get("lawNumber") ?? "").trim();
-
-    const year = String(formData.get("year") ?? "").trim();
-
-    const sourceFile = String(formData.get("sourceFile") ?? "").trim();
-
-    await updateLawDocument(id, {
-      lawName,
-      lawNumber: lawNumber || null,
-      year: year || null,
-      sourceFile,
-      jurisdiction: "EG",
-      language: "ar",
-    });
-
-    redirect(`/admin/laws/${id}`);
-  }
-
   return (
-    <main style={{ padding: 32 }}>
+    <main className="admin-main">
       <h1>{law.lawName}</h1>
 
-      <form
-        action={updateLaw}
-        style={{
-          display: "grid",
-          gap: 12,
-          maxWidth: 800,
-        }}
-      >
+      <form action={updateLaw.bind(null, id)} className="law-form">
         <label>
           Law name
           <input name="lawName" defaultValue={law.lawName} required />
@@ -78,17 +46,11 @@ export default async function LawPage({
         <button type="submit">Save law</button>
       </form>
 
-      <hr style={{ margin: "32px 0" }} />
+      <hr className="admin-divider" />
 
       <h2>Articles ({law.chunks.length})</h2>
 
-      <div
-        style={{
-          display: "grid",
-          gap: 20,
-          marginTop: 20,
-        }}
-      >
+      <div className="articles-list">
         {law.chunks.map((chunk) => (
           <ArticleEditor key={chunk.id} chunk={chunk} />
         ))}
@@ -97,40 +59,17 @@ export default async function LawPage({
   );
 }
 
-async function ArticleEditor({
+function ArticleEditor({
   chunk,
 }: {
   chunk: NonNullable<
     Awaited<ReturnType<typeof getLawDocument>>
   >["chunks"][number];
 }) {
-  async function saveChunk(formData: FormData) {
-    "use server";
-
-    const articleNumber = String(formData.get("articleNumber") ?? "").trim();
-
-    const articleTitle = String(formData.get("articleTitle") ?? "").trim();
-
-    const text = String(formData.get("text") ?? "").trim();
-
-    await updateLawChunk(chunk.id, {
-      articleNumber,
-      articleTitle: articleTitle || null,
-      text,
-      textForEmbedding: text,
-    });
-
-    redirect(`/admin/laws/${chunk.documentId}`);
-  }
-
   return (
     <form
-      action={saveChunk}
-      style={{
-        border: "1px solid #ddd",
-        padding: 16,
-        borderRadius: 8,
-      }}
+      action={saveChunk.bind(null, chunk.id, chunk.documentId)}
+      className="article-editor"
     >
       <label>
         Article
@@ -148,17 +87,13 @@ async function ArticleEditor({
           name="text"
           defaultValue={chunk.text}
           rows={10}
-          style={{
-            width: "100%",
-            direction: "rtl",
-            marginTop: 8,
-          }}
+          className="article-textarea"
         />
       </label>
 
       <button type="submit">Save article</button>
 
-      <div style={{ marginTop: 8 }}>
+      <div className="article-editor-meta">
         {chunk.embedding ? (
           <small>Embedded: {chunk.embedding.model}</small>
         ) : (

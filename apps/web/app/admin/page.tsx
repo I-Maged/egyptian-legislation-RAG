@@ -6,20 +6,12 @@ export default async function AdminPage() {
   const analytics = await getCorpusAnalytics();
 
   return (
-    <main style={{ padding: 32 }}>
+    <main className="admin-main">
       <h1>Egyptian Law — Admin</h1>
 
       <p>Minimal HITL dashboard for corpus management.</p>
 
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(4, 1fr)",
-          gap: 16,
-          marginTop: 24,
-          marginBottom: 32,
-        }}
-      >
+      <div className="stats-grid">
         <Stat label="Laws" value={analytics.lawCount} />
 
         <Stat label="Articles" value={analytics.chunkCount} />
@@ -31,13 +23,7 @@ export default async function AdminPage() {
 
       <h2>Corpus</h2>
 
-      <table
-        style={{
-          width: "100%",
-          borderCollapse: "collapse",
-          marginTop: 16,
-        }}
-      >
+      <table className="data-table">
         <thead>
           <tr>
             <th align="left">Law</th>
@@ -64,24 +50,10 @@ export default async function AdminPage() {
 
 function Stat({ label, value }: { label: string; value: number }) {
   return (
-    <div
-      style={{
-        border: "1px solid #ddd",
-        padding: 20,
-        borderRadius: 8,
-      }}
-    >
-      <div style={{ fontSize: 13, opacity: 0.7 }}>{label}</div>
+    <div className="stat-card">
+      <div className="stat-label">{label}</div>
 
-      <div
-        style={{
-          fontSize: 32,
-          fontWeight: 700,
-          marginTop: 8,
-        }}
-      >
-        {value}
-      </div>
+      <div className="stat-value">{value}</div>
     </div>
   );
 }

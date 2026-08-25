@@ -1,44 +1,10 @@
 "use client";
 
-import { FormEvent, useEffect, useRef, useState } from "react";
+import { FormEvent, useCallback, useEffect, useRef, useState } from "react";
 import { sendChatMessage } from "@/lib/api";
+import { formatCitation, formatLawName } from "@/lib/utils/format-citation";
 
-type Citation = {
-  id: string;
-  chunkId: string;
-  lawName: string;
-  lawNumber: string | null;
-  year: string | null;
-  articleNumber: string;
-  articleTitle: string | null;
-  text: string;
-  sourceFile: string;
-  pageStart: number | null;
-  pageEnd: number | null;
-};
-
-type Message = {
-  id: string;
-  role: "user" | "assistant";
-  content: string;
-  citations?: Citation[];
-};
-
-function formatCitation(citation: Citation) {
-  const law =
-    citation.lawNumber && citation.year
-      ? `${citation.lawName} رقم ${citation.lawNumber} لسنة ${citation.year}`
-      : citation.lawName;
-  const article = `المادة ${citation.articleNumber}`;
-  const pages =
-    citation.pageStart === null
-      ? ""
-      : citation.pageEnd === null || citation.pageEnd === citation.pageStart
-        ? ` · صفحة ${citation.pageStart}`
-        : ` · الصفحات ${citation.pageStart}-${citation.pageEnd}`;
-
-  return `${law} · ${article}${pages}`;
-}
+import { useNavbarAction } from "./navbar";
 
 function MessageContent({
   content,
@@ -56,8 +22,9 @@ function MessageContent({
   return (
     <div className="message-content">
       {content.split(/(\[\d+\])/g).map((part, index) => {
-        const citation =
-          /^\[\d+\]$/.test(part) ? citationMap.get(part) : undefined;
+        const citation = /^\[\d+\]$/.test(part)
+          ? citationMap.get(part)
+          : undefined;
 
         if (!citation) return part;
 
@@ -83,6 +50,10 @@ export default function Chat() {
   const [loading, setLoading] = useState(false);
   const [activeCitation, setActiveCitation] = useState<Citation | null>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
+
+  const handleNewChat = useCallback(() => setMessages([]), []);
+
+  useNavbarAction({ onClick: handleNewChat, disabled: loading });
 
   useEffect(() => {
     if (!activeCitation) return;
@@ -150,23 +121,6 @@ export default function Chat() {
 
   return (
     <main className="shell">
-      <header className="topbar">
-        <div className="brand">
-          <div className="brand-mark">ق</div>
-          <div>
-            <div className="brand-title">المساعد القانوني المصري</div>
-            <div className="brand-subtitle">تشريعات مصرية · RAG تجريبي</div>
-          </div>
-        </div>
-        <button
-          className="new-chat"
-          onClick={() => setMessages([])}
-          disabled={loading}
-        >
-          محادثة جديدة
-        </button>
-      </header>
-
       <section className="chat-area">
         {messages.length === 0 ? (
           <div className="welcome">
@@ -302,11 +256,7 @@ export default function Chat() {
             <dl className="citation-meta">
               <div>
                 <dt>القانون</dt>
-                <dd>
-                  {activeCitation.lawNumber && activeCitation.year
-                    ? `${activeCitation.lawName} رقم ${activeCitation.lawNumber} لسنة ${activeCitation.year}`
-                    : activeCitation.lawName}
-                </dd>
+                <dd>{formatLawName(activeCitation)}</dd>
               </div>
               {activeCitation.articleTitle && (
                 <div>

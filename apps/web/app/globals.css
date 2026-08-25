@@ -1,18 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
+
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 html,
 body {
-  margin: 0;
   min-height: 100%;
 }
 
 body {
   background: #f7f7f8;
   color: #1f2937;
-  font-family: Arial, "Noto Sans Arabic", sans-serif;
+  /* font-family: Arial, "Noto Sans Arabic", sans-serif; */
+  font-family: "Tajawal", "Noto Sans Arabic", sans-serif;
 }
 
 button,
@@ -25,7 +28,7 @@ button {
 }
 
 .shell {
-  min-height: 100vh;
+  min-height: calc(100vh - 64px);
   display: flex;
   flex-direction: column;
 }
@@ -476,4 +479,103 @@ button {
     padding-left: 10px;
     padding-right: 10px;
   }
+}
+
+/* ===== Admin ===== */
+
+.admin-main {
+  padding: 32px;
+}
+
+.admin-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 24px;
+  margin-bottom: 32px;
+}
+
+.stat-card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.stat-label {
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+.stat-value {
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+.data-table--laws {
+  margin-top: 24px;
+}
+
+.law-form {
+  display: grid;
+  gap: 12px;
+  max-width: 800px;
+}
+
+.law-form--new {
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.form-input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+}
+
+.form-textarea {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  direction: rtl;
+}
+
+.admin-divider {
+  margin: 32px 0;
+}
+
+.articles-list {
+  display: grid;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.article-editor {
+  border: 1px solid #ddd;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.article-textarea {
+  width: 100%;
+  direction: rtl;
+  margin-top: 8px;
+}
+
+.article-editor-meta {
+  margin-top: 8px;
 }

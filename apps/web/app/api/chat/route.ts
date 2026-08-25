@@ -6,11 +6,6 @@ import { getRagService } from "@egyptian-law/rag";
 
 export const runtime = "nodejs";
 
-type ChatBody = {
-  query?: unknown;
-  lawDocumentId?: unknown;
-};
-
 export async function POST(request: Request) {
   try {
     const body = (await request.json()) as ChatBody;
