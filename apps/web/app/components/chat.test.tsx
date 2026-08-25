@@ -1,18 +1,45 @@
-import { render, screen, fireEvent } from "@testing-library/react";
+import {
+  render,
+  screen,
+  fireEvent,
+  waitFor,
+  within,
+} from "@testing-library/react";
 
 import userEvent from "@testing-library/user-event";
 
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
-import { sendChatMessage } from "@/lib/api";
+import {
+  fetchConversation,
+  fetchConversations,
+  sendChatMessage,
+} from "@/lib/api";
+import type { SessionUser } from "@/lib/auth/types";
 
 import Chat from "./chat";
+import NavbarDefault, { NavbarProvider } from "./navbar";
+import { UserProvider } from "./user-provider";
+
+const Navbar = NavbarDefault;
 
 vi.mock("@/lib/api", () => ({
   sendChatMessage: vi.fn(),
+  fetchConversation: vi.fn(),
+  fetchConversations: vi.fn(),
+  deleteConversation: vi.fn(),
 }));
 
 const mockedSendChatMessage = vi.mocked(sendChatMessage);
+const mockedFetchConversation = vi.mocked(fetchConversation);
+const mockedFetchConversations = vi.mocked(fetchConversations);
+
+const signedInUser: SessionUser = {
+  id: "user-1",
+  email: "ali@example.com",
+  name: "علي",
+  role: "USER",
+};
 
 const citation = {
   id: "[1]",
@@ -63,6 +90,8 @@ async function askQuestion(question: string) {
 describe("Chat citation modal", () => {
   beforeEach(() => {
     mockedSendChatMessage.mockReset();
+    mockedFetchConversation.mockReset();
+    mockedFetchConversations.mockReset().mockResolvedValue([]);
   });
 
   it("does not render the modal initially", () => {
@@ -183,5 +212,138 @@ describe("Chat citation modal", () => {
     fireEvent.click(overlay as Element);
 
     expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
+  });
+});
+
+describe("Chat conversation history", () => {
+  const sidebarConversations = [
+    {
+      id: "conv-9",
+      title: "سؤال سابق",
+      messageCount: 2,
+      createdAt: "2026-08-01T10:00:00.000Z",
+      updatedAt: "2026-08-02T10:00:00.000Z",
+    },
+  ];
+
+  function renderWithHistory() {
+    return render(
+      <UserProvider initialUser={signedInUser}>
+        <NavbarProvider>
+          <Navbar />
+          <Chat />
+        </NavbarProvider>
+      </UserProvider>,
+    );
+  }
+
+  beforeEach(() => {
+    mockedSendChatMessage.mockReset();
+    mockedFetchConversation.mockReset();
+    mockedFetchConversations.mockReset();
+  });
+
+  it("loads and displays both user and assistant messages when a conversation is clicked", async () => {
+    mockedFetchConversations.mockResolvedValue(sidebarConversations);
+
+    mockedFetchConversation.mockResolvedValue({
+      id: "conv-9",
+      title: "سؤال سابق",
+      messages: [
+        {
+          id: "msg-1",
+          role: "USER" as const,
+          content: "ما هي مدة الإخطار؟",
+          createdAt: "2026-08-01T10:00:00.000Z",
+        },
+        {
+          id: "msg-2",
+          role: "ASSISTANT" as const,
+          content: "المادة [1] تحدد المدة.",
+          createdAt: "2026-08-01T10:00:05.000Z",
+        },
+      ],
+    });
+
+    const user = userEvent.setup();
+
+    renderWithHistory();
+
+    await user.click(await screen.findByText("سؤال سابق"));
+
+    expect(mockedFetchConversation).toHaveBeenCalledWith("conv-9");
+
+    expect(await screen.findByText("ما هي مدة الإخطار؟")).toBeInTheDocument();
+
+    expect(screen.getByText("المادة [1] تحدد المدة.")).toBeInTheDocument();
+  });
+
+  it("resets the active selection when starting a new chat", async () => {
+    mockedFetchConversations.mockResolvedValue(sidebarConversations);
+
+    mockedFetchConversation.mockResolvedValue({
+      id: "conv-9",
+      title: "سؤال سابق",
+      messages: [
+        {
+          id: "msg-1",
+          role: "USER" as const,
+          content: "رسالة قديمة",
+          createdAt: "2026-08-01T10:00:00.000Z",
+        },
+      ],
+    });
+
+    const user = userEvent.setup();
+
+    renderWithHistory();
+
+    await user.click(await screen.findByText("سؤال سابق"));
+
+    expect(await screen.findByText("رسالة قديمة")).toBeInTheDocument();
+
+    await user.click(screen.getByRole("button", { name: "محادثة جديدة" }));
+
+    await waitFor(() => {
+      expect(screen.queryByText("رسالة قديمة")).not.toBeInTheDocument();
+    });
+
+    const list = screen.getByRole("list");
+
+    const activeItem = within(list)
+      .getAllByRole("button", { name: /سؤال سابق/ })
+      .find((button) => button.classList.contains("sidebar-item"));
+
+    expect(activeItem).toBeDefined();
+
+    expect(activeItem).not.toHaveClass("sidebar-item--active");
+  });
+
+  it("refreshes the sidebar list after the first exchange of a new chat", async () => {
+    mockedFetchConversations.mockResolvedValue([]);
+
+    mockedSendChatMessage.mockResolvedValue({
+      conversationId: "conv-new",
+      answer: "إجابة.",
+      citations: [],
+      generation: { model: "test-model", durationMs: 10 },
+    });
+
+    renderWithHistory();
+
+    await askQuestion("سؤال أول");
+
+    await screen.findByText("إجابة.");
+
+    await waitFor(() => {
+      expect(mockedSendChatMessage).toHaveBeenCalledWith(
+        "سؤال أول",
+        undefined,
+      );
+    });
+
+    await waitFor(() => {
+      expect(mockedFetchConversations).toHaveBeenCalledTimes(2);
+    });
   });
 });

@@ -1,9 +1,22 @@
 "use client";
 
-import { FormEvent, useCallback, useEffect, useRef, useState } from "react";
-import { sendChatMessage } from "@/lib/api";
+import {
+  FormEvent,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
+
+import {
+  fetchConversation,
+  sendChatMessage,
+} from "@/lib/api";
+import type { ConversationMessage } from "@/lib/api";
+
 import { formatCitation, formatLawName } from "@/lib/utils/format-citation";
 
+import ConversationsSidebar from "./conversations-sidebar";
 import { useNavbarAction } from "./navbar";
 
 function MessageContent({
@@ -44,9 +57,20 @@ function MessageContent({
   );
 }
 
+function toLocalMessages(messages: ConversationMessage[]): Message[] {
+  return messages.map((message) => ({
+    id: message.id,
+    role: message.role === "USER" ? "user" : "assistant",
+    content: message.content,
+  }));
+}
+
 export default function Chat() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [conversationId, setConversationId] = useState<string | null>(null);
+  const [refreshKey, setRefreshKey] = useState(0);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [historyError, setHistoryError] = useState<string | null>(null);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const [activeCitation, setActiveCitation] = useState<Citation | null>(null);
@@ -55,9 +79,40 @@ export default function Chat() {
   const handleNewChat = useCallback(() => {
     setMessages([]);
     setConversationId(null);
+    setHistoryError(null);
+    setSidebarOpen(false);
   }, []);
 
   useNavbarAction({ onClick: handleNewChat, disabled: loading });
+
+  async function handleSelectConversation(id: string) {
+    if (loading) return;
+
+    setHistoryError(null);
+    setLoading(true);
+
+    try {
+      const detail = await fetchConversation(id);
+
+      setConversationId(detail.id);
+      setMessages(toLocalMessages(detail.messages));
+      setSidebarOpen(false);
+    } catch (error) {
+      setHistoryError(
+        error instanceof Error ? error.message : "تعذر تحميل المحادثة.",
+      );
+    } finally {
+      setLoading(false);
+      inputRef.current?.focus();
+    }
+  }
+
+  function handleDeleteConversation(id: string) {
+    if (id === conversationId) {
+      setMessages([]);
+      setConversationId(null);
+    }
+  }
 
   useEffect(() => {
     if (!activeCitation) return;
@@ -95,6 +150,10 @@ export default function Chat() {
       );
 
       if (payload.conversationId) {
+        if (!conversationId) {
+          setRefreshKey((key) => key + 1);
+        }
+
         setConversationId(payload.conversationId);
       }
 
@@ -131,8 +190,47 @@ export default function Chat() {
   }
 
   return (
-    <main className="shell">
-      <section className="chat-area">
+    <div className="workspace">
+      <button
+        type="button"
+        className={`sidebar-toggle${sidebarOpen ? " sidebar-toggle--open" : ""}`}
+        aria-label={sidebarOpen ? "إغلاق السجل" : "فتح سجل المحادثات"}
+        aria-expanded={sidebarOpen}
+        onClick={() => setSidebarOpen((open) => !open)}
+      >
+        ☰
+      </button>
+
+      <div
+        className={`sidebar-wrap${
+          sidebarOpen ? " sidebar-wrap--open" : ""
+        }`}
+      >
+        <ConversationsSidebar
+          activeId={conversationId}
+          onSelect={(id) => void handleSelectConversation(id)}
+          onDeleted={handleDeleteConversation}
+          refreshKey={refreshKey}
+        />
+      </div>
+
+      {sidebarOpen && (
+        <div
+          className="sidebar-backdrop"
+          onClick={() => setSidebarOpen(false)}
+        />
+      )}
+
+      <main className="shell">
+        {historyError && (
+          <div className="history-error" role="alert">
+            {historyError}
+            <button type="button" onClick={() => setHistoryError(null)}>
+              ×
+            </button>
+          </div>
+        )}
+        <section className="chat-area">
         {messages.length === 0 ? (
           <div className="welcome">
             <div className="welcome-icon">§</div>
@@ -299,6 +397,7 @@ export default function Chat() {
           </div>
         </div>
       )}
-    </main>
+      </main>
+    </div>
   );
 }

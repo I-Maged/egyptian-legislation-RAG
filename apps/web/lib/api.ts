@@ -58,3 +58,79 @@ export async function sendChatMessage(
 
   return data as ChatResponse;
 }
+
+export interface ConversationSummary {
+  id: string;
+
+  title: string | null;
+
+  messageCount: number;
+
+  createdAt: string;
+
+  updatedAt: string;
+}
+
+export interface ConversationMessage {
+  id: string;
+
+  role: "USER" | "ASSISTANT";
+
+  content: string;
+
+  createdAt: string;
+}
+
+export interface ConversationDetail {
+  id: string;
+
+  title: string | null;
+
+  messages: ConversationMessage[];
+}
+
+export async function fetchConversations(): Promise<ConversationSummary[]> {
+  const response = await fetch("/api/conversations");
+
+  if (!response.ok) {
+    throw new Error("تعذر تحميل المحادثات.");
+  }
+
+  const data = (await response.json()) as {
+    conversations?: ConversationSummary[];
+  };
+
+  return data.conversations ?? [];
+}
+
+export async function fetchConversation(
+  id: string,
+): Promise<ConversationDetail> {
+  const response = await fetch(`/api/conversations/${id}`);
+
+  if (response.status === 404) {
+    throw new Error("المحادثة غير موجودة.");
+  }
+
+  if (!response.ok) {
+    throw new Error("تعذر تحميل المحادثة.");
+  }
+
+  const data = (await response.json()) as { conversation?: ConversationDetail };
+
+  if (!data.conversation) {
+    throw new Error("تعذر تحميل المحادثة.");
+  }
+
+  return data.conversation;
+}
+
+export async function deleteConversation(id: string): Promise<void> {
+  const response = await fetch(`/api/conversations/${id}`, {
+    method: "DELETE",
+  });
+
+  if (!response.ok && response.status !== 204) {
+    throw new Error("تعذر حذف المحادثة.");
+  }
+}
