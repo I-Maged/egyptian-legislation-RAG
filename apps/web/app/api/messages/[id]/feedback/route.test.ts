@@ -27,6 +27,14 @@ const mockedRemoveFeedback = vi.mocked(removeFeedback);
 
 const user = { id: "user-1", email: "u@example.com", name: null, role: "USER" as const };
 
+const assistantMessage = {
+  id: "msg-1",
+  conversationId: "conv-1",
+  role: "ASSISTANT" as const,
+  content: "إجابة",
+  createdAt: new Date(),
+};
+
 function context(id: string) {
   return { params: Promise.resolve({ id }) };
 }
@@ -63,7 +71,7 @@ describe("POST /api/messages/[id]/feedback", () => {
   });
 
   it("rejects invalid feedback types", async () => {
-    mockedFindMessage.mockResolvedValue({ id: "msg-1" });
+    mockedFindMessage.mockResolvedValue(assistantMessage);
 
     const response = await POST(jsonRequest({ type: "NEUTRAL" }), context("msg-1"));
 
@@ -72,7 +80,7 @@ describe("POST /api/messages/[id]/feedback", () => {
   });
 
   it("stores positive feedback without a comment", async () => {
-    mockedFindMessage.mockResolvedValue({ id: "msg-1" });
+    mockedFindMessage.mockResolvedValue(assistantMessage);
     mockedUpsertFeedback.mockResolvedValue({
       id: "fb-1",
       userId: "user-1",
@@ -97,7 +105,7 @@ describe("POST /api/messages/[id]/feedback", () => {
   });
 
   it("trims and stores negative feedback with a comment", async () => {
-    mockedFindMessage.mockResolvedValue({ id: "msg-1" });
+    mockedFindMessage.mockResolvedValue(assistantMessage);
     mockedUpsertFeedback.mockResolvedValue({
       id: "fb-1",
       userId: "user-1",

@@ -39,3 +39,5 @@ export * from "./repositories/law.repository";
 export * from "./repositories/analytics.repository";
 
 export * from "./repositories/feedback.repository";
+
+export * from "./repositories/admin-stats.repository";
