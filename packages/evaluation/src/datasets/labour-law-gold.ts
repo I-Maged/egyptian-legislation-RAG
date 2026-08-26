@@ -110,6 +110,275 @@ export const labourLawGoldDraft: LabourLawGoldDraft[] = [
     query: "ما العقوبات المقررة لمخالفة أحكام قانون العمل؟",
     relevantArticleNumbers: ["288", "289"],
   },
+
+  {
+    id: "labour-016",
+    query: "من هو العامل وفقاً لتعريفات قانون العمل؟",
+    relevantArticleNumbers: ["1"],
+  },
+  {
+    id: "labour-017",
+    query: "كيف يعرّف قانون العمل صاحب العمل؟",
+    relevantArticleNumbers: ["1"],
+  },
+  {
+    id: "labour-018",
+    query: "ما المقصود بالأجر الأساسي في قانون العمل؟",
+    relevantArticleNumbers: ["1"],
+  },
+  {
+    id: "labour-019",
+    query: "ما المقصود بالعمل المؤقت؟",
+    relevantArticleNumbers: ["1"],
+  },
+  {
+    id: "labour-020",
+    query: "ما المقصود بالعامل غير المنتظم؟",
+    relevantArticleNumbers: ["1"],
+  },
+  {
+    id: "labour-021",
+    query: "كيف تُحسب السنة والشهر في تطبيق أحكام قانون العمل؟",
+    relevantArticleNumbers: ["2"],
+  },
+  {
+    id: "labour-022",
+    query: "ما طبيعة قانون العمل بالنسبة إلى القوانين المنظمة لعلاقات العمل؟",
+    relevantArticleNumbers: ["3"],
+  },
+  {
+    id: "labour-023",
+    query: "ما الأفعال المحظورة عند تشغيل العامل وفقاً لقانون العمل؟",
+    relevantArticleNumbers: ["4"],
+  },
+  {
+    id: "labour-024",
+    query: "ما أسباب التمييز المحظور في التدريب أو التوظيف أو ظروف العمل؟",
+    relevantArticleNumbers: ["5"],
+  },
+  {
+    id: "labour-025",
+    query: "متى يُعد الشرط أو الاتفاق المخالف لقانون العمل باطلاً؟",
+    relevantArticleNumbers: ["6"],
+  },
+  {
+    id: "labour-026",
+    query: "هل تُعفى الدعاوى العمالية من الرسوم والمصاريف القضائية؟",
+    relevantArticleNumbers: ["7"],
+  },
+  {
+    id: "labour-027",
+    query: "ما الامتياز المقرر للمبالغ المستحقة للعامل؟",
+    relevantArticleNumbers: ["8"],
+  },
+  {
+    id: "labour-028",
+    query:
+      "هل تنقضي الالتزامات المستحقة للعامل بحل المنشأة أو تصفيتها أو إفلاسها؟",
+    relevantArticleNumbers: ["9"],
+  },
+  {
+    id: "labour-029",
+    query:
+      "كيف تكون مسؤولية أصحاب العمل المتعددين عن الالتزامات الناشئة عن قانون العمل؟",
+    relevantArticleNumbers: ["10"],
+  },
+  {
+    id: "labour-030",
+    query:
+      "هل يؤدي انتقال ملكية المنشأة أو إدماجها إلى إنهاء عقود عمل العاملين بها؟",
+    relevantArticleNumbers: ["11"],
+  },
+  {
+    id: "labour-031",
+    query: "ما الحد الأدنى للعلاوة السنوية الدورية للعامل؟",
+    relevantArticleNumbers: ["12"],
+  },
+  {
+    id: "labour-032",
+    query: "على من تسري أحكام باب التدريب والتشغيل؟",
+    relevantArticleNumbers: ["16"],
+  },
+  {
+    id: "labour-033",
+    query: "ما دور الجهة الإدارية المختصة في التوجيه المهني لراغبي التدريب؟",
+    relevantArticleNumbers: ["17"],
+  },
+  {
+    id: "labour-034",
+    query: "ما أبرز اختصاصات صندوق تمويل التدريب والتأهيل؟",
+    relevantArticleNumbers: ["20"],
+  },
+  {
+    id: "labour-035",
+    query:
+      "ما نسبة مساهمة المنشآت التي يعمل بها ثلاثون عاملاً فأكثر في موارد صندوق تمويل التدريب والتأهيل؟",
+    relevantArticleNumbers: ["21"],
+  },
+  {
+    id: "labour-036",
+    query:
+      "ما الأشكال القانونية التي يجوز أن تتخذها الجهة التي تزاول عمليات التدريب؟",
+    relevantArticleNumbers: ["22"],
+  },
+  {
+    id: "labour-037",
+    query:
+      "هل يلزم الحصول على ترخيص من الوزارة المختصة لمزاولة عمليات التدريب؟",
+    relevantArticleNumbers: ["23"],
+  },
+  {
+    id: "labour-038",
+    query:
+      "ما البيانات التي يجب أن تتضمنها البرامج التدريبية المقدمة لاعتمادها؟",
+    relevantArticleNumbers: ["24"],
+  },
+  {
+    id: "labour-039",
+    query: "ما شرط مزاولة المدربين لأعمال التدريب؟",
+    relevantArticleNumbers: ["25"],
+  },
+  {
+    id: "labour-040",
+    query: "ما الشهادة التي تلتزم جهة التدريب بمنحها للمتدرب؟",
+    relevantArticleNumbers: ["26"],
+  },
+  {
+    id: "labour-041",
+    query: "متى يلزم الحصول على ترخيص لمزاولة مهنة أو حرفة؟",
+    relevantArticleNumbers: ["27"],
+  },
+  {
+    id: "labour-042",
+    query: "ما الحد الأدنى لسن المتدرج؟",
+    relevantArticleNumbers: ["28"],
+  },
+  {
+    id: "labour-043",
+    query: "ما البيانات الأساسية التي يجب أن يتضمنها اتفاق التدرج؟",
+    relevantArticleNumbers: ["29"],
+  },
+  {
+    id: "labour-044",
+    query: "متى يجوز لصاحب العمل أو المتدرج إنهاء اتفاق التدرج؟",
+    relevantArticleNumbers: ["30"],
+  },
+  {
+    id: "labour-045",
+    query:
+      "ما الأحكام التي تسري على المتدرجين بشأن الإجازات وساعات العمل وفترات الراحة؟",
+    relevantArticleNumbers: ["31"],
+  },
+  {
+    id: "labour-046",
+    query:
+      "ما البيانات التي يجب على راغب العمل تقديمها عند طلب قيد اسمه لدى الجهة الإدارية المختصة؟",
+    relevantArticleNumbers: ["33"],
+  },
+  {
+    id: "labour-047",
+    query:
+      "ما المستندات الإضافية المطلوبة من راغب العمل الذي يمارس مهنة أو حرفة محددة بقرار من الوزير؟",
+    relevantArticleNumbers: ["34"],
+  },
+  {
+    id: "labour-048",
+    query:
+      "خلال كم يوماً تلتزم المنشأة بإعادة شهادة قيد العامل إلى الجهة الإدارية المختصة؟",
+    relevantArticleNumbers: ["35"],
+  },
+  {
+    id: "labour-049",
+    query:
+      "خلال كم يوماً يجب على المنشأة إرسال بيان تفصيلي بعدد العمال وبياناتهم إلى الجهة الإدارية المختصة؟",
+    relevantArticleNumbers: ["36"],
+  },
+  {
+    id: "labour-050",
+    query:
+      "ما السجل الذي تلتزم المنشأة بإمساكه لقيد الأشخاص ذوي الإعاقة والأقزام؟",
+    relevantArticleNumbers: ["37"],
+  },
+  {
+    id: "labour-051",
+    query:
+      "خلال كم يوماً يجب على المنشأة موافاة الوزارة بالبيانات اللازمة لقواعد بيانات العمالة عند طلبها؟",
+    relevantArticleNumbers: ["38"],
+  },
+  {
+    id: "labour-052",
+    query: "ما الأعمال والوظائف المستثناة من أحكام فصل سياسات التشغيل؟",
+    relevantArticleNumbers: ["39"],
+  },
+  {
+    id: "labour-053",
+    query: "ما الجهات التي يجوز لها إلحاق المصريين بالعمل في الداخل أو الخارج؟",
+    relevantArticleNumbers: ["40"],
+  },
+  {
+    id: "labour-054",
+    query:
+      "هل يجوز للجهات التي تلحق العمالة بالعمل تقاضي مبالغ مالية من العامل مقابل إلحاقه بالعمل؟",
+    relevantArticleNumbers: ["43"],
+  },
+  {
+    id: "labour-055",
+    query: "هل يجوز للمنشأة تشغيل عمال عن طريق متعهد أو مقاول توريد عمال؟",
+    relevantArticleNumbers: ["45"],
+  },
+  {
+    id: "labour-056",
+    query:
+      "ما التزام صاحب العمل أو وكالة التشغيل الخاصة عند الإعلان عن وظيفة شاغرة؟",
+    relevantArticleNumbers: ["47"],
+  },
+  {
+    id: "labour-057",
+    query:
+      "كل كم مدة يجب على الجهات التي تزاول عمليات التشغيل موافاة الوزارة ببيانات ونتائج أعمالها؟",
+    relevantArticleNumbers: ["51"],
+  },
+  {
+    id: "labour-058",
+    query: "هل يجوز ممارسة إلحاق المصريين بالعمل إلكترونياً دون ترخيص؟",
+    relevantArticleNumbers: ["52"],
+  },
+  {
+    id: "labour-059",
+    query:
+      "هل يضمن قانون العمل المساواة في الأجر بين الذكور والإناث عن العمل ذي القيمة المتساوية؟",
+    relevantArticleNumbers: ["53"],
+  },
+  {
+    id: "labour-060",
+    query: "ما مدة إجازة الوضع المقررة للعاملة؟",
+    relevantArticleNumbers: ["54"],
+  },
+  {
+    id: "labour-061",
+    query: "ما حق العاملة في العودة إلى العمل بعد انتهاء إجازة الوضع؟",
+    relevantArticleNumbers: ["55"],
+  },
+  {
+    id: "labour-062",
+    query: "ما مدة فترتي الرضاعة الإضافيتين المقررتين للعاملة المرضعة؟",
+    relevantArticleNumbers: ["56"],
+  },
+  {
+    id: "labour-063",
+    query: "ما الحد الأقصى لمدة الإجازة دون أجر لرعاية طفل العاملة؟",
+    relevantArticleNumbers: ["57"],
+  },
+  {
+    id: "labour-064",
+    query: "متى يجوز للعاملة إنهاء عقد العمل بسبب الزواج أو الحمل أو الإنجاب؟",
+    relevantArticleNumbers: ["58"],
+  },
+  {
+    id: "labour-065",
+    query: "ما الحد الأقصى لساعات تشغيل الطفل يومياً؟",
+    relevantArticleNumbers: ["65"],
+  },
 ];
 
 export function buildLabourLawGoldDataset(
