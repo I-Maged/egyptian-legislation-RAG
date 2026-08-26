@@ -21,6 +21,8 @@ export interface ChatCitation {
 export interface ChatResponse {
   conversationId?: string;
 
+  messageId?: string;
+
   answer: string;
 
   citations: ChatCitation[];
@@ -29,6 +31,47 @@ export interface ChatResponse {
     model: string;
     durationMs: number;
   };
+}
+
+export type FeedbackTypeValue = "POSITIVE" | "NEGATIVE";
+
+export async function sendFeedback(
+  messageId: string,
+  type: FeedbackTypeValue,
+  comment?: string,
+): Promise<void> {
+  const response = await fetch(`/api/messages/${messageId}/feedback`, {
+    method: "POST",
+
+    headers: {
+      "Content-Type": "application/json",
+    },
+
+    body: JSON.stringify({
+      type,
+      ...(comment ? { comment } : {}),
+    }),
+  });
+
+  if (!response.ok) {
+    const data = (await response.json().catch(() => null)) as
+      | { error?: string }
+      | null;
+
+    throw new Error(data?.error ?? "تعذر حفظ التقييم.");
+  }
+}
+
+export async function removeFeedbackRequest(
+  messageId: string,
+): Promise<void> {
+  const response = await fetch(`/api/messages/${messageId}/feedback`, {
+    method: "DELETE",
+  });
+
+  if (!response.ok && response.status !== 204) {
+    throw new Error("تعذر إزالة التقييم.");
+  }
 }
 
 export async function sendChatMessage(
@@ -79,6 +122,8 @@ export interface ConversationMessage {
   content: string;
 
   createdAt: string;
+
+  myFeedback?: FeedbackTypeValue | null;
 }
 
 export interface ConversationDetail {

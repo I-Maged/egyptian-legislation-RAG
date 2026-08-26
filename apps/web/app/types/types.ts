@@ -18,9 +18,13 @@ type Citation = {
   pageEnd: number | null;
 };
 
+type MessageFeedbackType = "POSITIVE" | "NEGATIVE";
+
 type Message = {
   id: string;
   role: "user" | "assistant";
   content: string;
   citations?: Citation[];
+  persistedId?: string;
+  feedback?: MessageFeedbackType | null;
 };

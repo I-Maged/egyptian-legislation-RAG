@@ -1,8 +1,11 @@
-import { getCorpusAnalytics } from "@egyptian-law/db";
+import { getCorpusAnalytics, getFeedbackStats } from "@egyptian-law/db";
 
 
 export default async function AdminPage() {
-  const analytics = await getCorpusAnalytics();
+  const [analytics, feedback] = await Promise.all([
+    getCorpusAnalytics(),
+    getFeedbackStats(),
+  ]);
 
   return (
     <main className="admin-main">
@@ -18,6 +21,16 @@ export default async function AdminPage() {
         <Stat label="Embeddings" value={analytics.embeddingCount} />
 
         <Stat label="Unembedded" value={analytics.unembeddedChunks} />
+      </div>
+
+      <h2>Feedback</h2>
+
+      <div className="stats-grid">
+        <Stat label="Total feedback" value={feedback.total} />
+
+        <Stat label="Positive" value={feedback.positive} />
+
+        <Stat label="Negative" value={feedback.negative} />
       </div>
 
       <h2>Corpus</h2>

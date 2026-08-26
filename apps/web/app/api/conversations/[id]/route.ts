@@ -1,6 +1,10 @@
 import { NextResponse } from "next/server";
 
-import { deleteConversation, getConversationForUser } from "@egyptian-law/db";
+import {
+  getConversationForUser,
+  getFeedbackForMessages,
+  deleteConversation,
+} from "@egyptian-law/db";
 
 import { getCurrentUser } from "@/lib/auth/session";
 
@@ -29,6 +33,15 @@ export async function GET(_request: Request, context: RouteContext) {
     );
   }
 
+  const feedbacks = await getFeedbackForMessages(
+    conversation.messages.map((message) => message.id),
+    user.id,
+  );
+
+  const feedbackByMessageId = new Map(
+    feedbacks.map((feedback) => [feedback.messageId, feedback.type]),
+  );
+
   return NextResponse.json({
     conversation: {
       id: conversation.id,
@@ -40,6 +53,9 @@ export async function GET(_request: Request, context: RouteContext) {
         role: message.role,
         content: message.content,
         createdAt: message.createdAt,
+        ...(message.role === "ASSISTANT"
+          ? { myFeedback: feedbackByMessageId.get(message.id) ?? null }
+          : {}),
       })),
     },
   });

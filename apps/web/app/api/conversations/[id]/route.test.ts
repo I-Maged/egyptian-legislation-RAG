@@ -7,6 +7,7 @@ vi.mock("@/lib/auth/session", () => ({
 
 vi.mock("@egyptian-law/db", () => ({
   getConversationForUser: vi.fn(),
+  getFeedbackForMessages: vi.fn(),
   deleteConversation: vi.fn(),
 }));
 
@@ -14,12 +15,14 @@ import { getCurrentUser } from "@/lib/auth/session";
 import {
   deleteConversation,
   getConversationForUser,
+  getFeedbackForMessages,
 } from "@egyptian-law/db";
 
 import { DELETE, GET } from "./route";
 
 const mockedGetCurrentUser = vi.mocked(getCurrentUser);
 const mockedGetConversationForUser = vi.mocked(getConversationForUser);
+const mockedGetFeedbackForMessages = vi.mocked(getFeedbackForMessages);
 const mockedDeleteConversation = vi.mocked(deleteConversation);
 
 const user = { id: "user-1", email: "u@example.com", name: null, role: "USER" as const };
@@ -48,6 +51,7 @@ function context(id: string) {
 beforeEach(() => {
   vi.clearAllMocks();
   mockedGetCurrentUser.mockResolvedValue(user);
+  mockedGetFeedbackForMessages.mockResolvedValue([]);
 });
 
 describe("GET /api/conversations/[id]", () => {
