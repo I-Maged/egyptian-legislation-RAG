@@ -1,4 +1,4 @@
-// npm run benchmark-comparison --workspace @egyptian-law/evaluation
+// npm run labour-law-benchmark-comparison --workspace @egyptian-law/evaluation
 
 import { readFile } from "fs/promises";
 import { resolve } from "path";

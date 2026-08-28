@@ -12,7 +12,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "benchmark-comparison": "cd ../.. && set RUN_LABOUR_LAW_BENCHMARK=1&& vitest run packages/evaluation/src/benchmarks/benchmark-comparison.test.ts"
+    "labour-law-benchmark-comparison": "cd ../.. && set RUN_LABOUR_LAW_BENCHMARK=1&& vitest run packages/evaluation/src/benchmarks/labour-law-benchmark-comparison.test.ts",
+    "financial-law-benchmark-comparison": "cd ../.. && set RUN_FINANCIAL_LAW_BENCHMARK=1&& vitest run packages/evaluation/src/benchmarks/financial-law-benchmark-comparison.test.ts",
+    "personal-affairs-law-benchmark-comparison": "cd ../.. && set RUN_PERSONAL_AFFAIRS_LAW_BENCHMARK=1&& vitest run packages/evaluation/src/benchmarks/personal-law-benchmark-comparison.test.ts"
   },
   "keywords": [],
   "author": "",
