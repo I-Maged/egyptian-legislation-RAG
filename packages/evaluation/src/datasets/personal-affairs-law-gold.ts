@@ -15,256 +15,260 @@ export interface PersonalAffairsLawGoldDraft {
 export const personalAffairsLawGoldDraft: PersonalAffairsLawGoldDraft[] = [
   {
     id: "personal-001",
-    query: "منذ متى تعتبر نفقة المطلقة دينًا؟",
+    query: "متى تعتبر نفقة المطلقة دينًا؟",
     relevantArticleNumbers: ["2"],
   },
   {
     id: "personal-002",
     query: "كم مرة يقع الطلاق المقترن بعدد لفظ أو إشارة؟",
-    relevantArticleNumbers: ["2"],
+    relevantArticleNumbers: ["3"],
   },
   {
     id: "personal-003",
-    query: "من هو المسؤول عن تنفيذ هذا القانون ومتى يبدأ العمل به؟",
-    relevantArticleNumbers: ["2"],
-  },
-  {
-    id: "personal-004",
     query: "متى يستحق الإرث؟",
     relevantArticleNumbers: ["2"],
   },
   {
-    id: "personal-005",
+    id: "personal-004",
     query: "ما هي طرق انعقاد الوصية؟",
     relevantArticleNumbers: ["2"],
   },
   {
-    id: "personal-006",
-    query: "كيف تنعقد الوصية إذا كان الموصي عاجزًا عن العبارة والكتابة؟",
-    relevantArticleNumbers: ["2"],
-  },
-  {
-    id: "personal-007",
-    query: "تحت أي شروط تُسمع دعوى الوصية أو الرجوع عنها عند الإنكار؟",
-    relevantArticleNumbers: ["2"],
-  },
-  {
-    id: "personal-008",
-    query: "ما الجرائم الواردة في البند الأول التي تؤدي إلى سلب الولاية؟",
-    relevantArticleNumbers: ["2"],
-  },
-  {
-    id: "personal-009",
-    query: "ماذا يترتب على سلب الولاية بالنسبة إلى الصغير؟",
-    relevantArticleNumbers: ["2"],
-  },
-  {
-    id: "personal-010",
+    id: "personal-005",
     query: "ماذا يلغي نص المادة 2 بشأن الكتاب الأول من قانون المحاكم الحسبية؟",
     relevantArticleNumbers: ["2"],
   },
   {
-    id: "personal-011",
+    id: "personal-006",
     query: "متى يجوز للولي مباشرة حق من حقوق الولاية؟",
     relevantArticleNumbers: ["2"],
   },
   {
-    id: "personal-012",
-    query: "ما السن المطلوب لاكتساب أهلية التقاضي في مسائل الأحوال الشخصية؟",
-    relevantArticleNumbers: ["2"],
-  },
-  {
-    id: "personal-013",
-    query: "من ينوب عن من عديم الأهلية أو ناقصها في إجراءات التقاضي؟",
-    relevantArticleNumbers: ["2"],
-  },
-  {
-    id: "personal-014",
-    query: "كم مهلة الموثق لإعلان المطلقة بشخصها عن وقوع الطلاق؟",
-    relevantArticleNumbers: ["2"],
-  },
-  {
-    id: "personal-015",
-    query: 'ما الحالة التي وُصفت بها المادة 3 في النص "ملغاة"؟',
-    relevantArticleNumbers: ["3"],
-  },
-  {
-    id: "personal-016",
-    query:
-      "عندما يموت اثنان ولا يعلم أيهما مات أولاً فكيف يُفصل في استحقاق أحدهما لتركة الآخر؟",
-    relevantArticleNumbers: ["3"],
-  },
-  {
-    id: "personal-017",
-    query: "ما الشرطان المذكوران في صحة الوصية؟",
-    relevantArticleNumbers: ["3"],
-  },
-  {
-    id: "personal-018",
-    query: "اذكر حالة واحدة من الحالات التي يجوز فيها ثلب أو وقف حقوق الولاية",
-    relevantArticleNumbers: ["3"],
-  },
-  {
-    id: "personal-019",
-    query: "متى لا يدخل مال القاصر في الولاية؟",
-    relevantArticleNumbers: ["3"],
-  },
-  {
-    id: "personal-020",
-    query:
-      "ماذا يحدث إذا رفعت دعوى مسائل الأحوال الشخصية أمام المحكمة الجزئية بغير توقيع محامٍ؟",
-    relevantArticleNumbers: ["3"],
-  },
-  {
-    id: "personal-021",
-    query: "اذكر اثنين من البيانات التي يجب أن يتضمنها إعلان وقوع الطلاق.",
-    relevantArticleNumbers: ["3"],
-  },
-  {
-    id: "personal-022",
-    query:
-      "من تخطره النيابة العامة بموعد جرد أموال المعني بالحماية ومتى يجوز دعوة الصغير الذي أتم خمسة عشر سنة للحضور؟",
-    relevantArticleNumbers: ["3"],
-  },
-  {
-    id: "personal-023",
+    id: "personal-007",
     query:
       "ما الإجراءات التي يتخذها القاضي إذا امتنع الزوج عن الإنفاق وكان له مال ظاهر؟",
     relevantArticleNumbers: ["4"],
   },
   {
-    id: "personal-024",
-    query: "ما ترتيب الوفاء من التركة؟",
-    relevantArticleNumbers: ["4"],
-  },
-  {
-    id: "personal-025",
-    query: "متى تصح الوصية المضافة أو المعلقة بالشروط؟",
-    relevantArticleNumbers: ["4", "3"],
-  },
-  {
-    id: "personal-026",
-    query: "ما حكم الشرط الصحيح الذي تقترن به الوصية؟",
-    relevantArticleNumbers: ["4"],
-  },
-  {
-    id: "personal-027",
-    query: "ما الاختصاصات الأساسية للولي في رعاية أموال القاصر؟",
-    relevantArticleNumbers: ["4"],
-  },
-  {
-    id: "personal-028",
-    query:
-      "كم المدة القصوى لتقديم تقرير الاختصاصي الاجتماعي التي تحددها المحكمة أثناء تهيئة الدعوى؟",
-    relevantArticleNumbers: ["4"],
-  },
-  {
-    id: "personal-029",
+    id: "personal-008",
     query:
       "أي قانون تطبق قواعده وإجراءاته على الإعلان بوقوع الطلاق فيما عدا ما تقدم؟",
     relevantArticleNumbers: ["4"],
   },
   {
-    id: "personal-030",
-    query:
-      "اذكر مكانين من الأماكن التي يجوز للمحكمة اختيارها لرؤية الصغير إذا لم يتفق الحاضنان.",
-    relevantArticleNumbers: ["4"],
-  },
-  {
-    id: "personal-031",
+    id: "personal-009",
     query: "من الذي يتولى إجراءات الجرد؟",
-    relevantArticleNumbers: ["4"],
+    relevantArticleNumbers: ["20", "21", "43"],
   },
   {
-    id: "personal-032",
+    id: "personal-010",
     query:
       "في حالة غياب الزوج هل يختلف تطبيق أحكام التنفيذ إذا كان له مال ظاهر؟",
     relevantArticleNumbers: ["5"],
   },
   {
-    id: "personal-033",
+    id: "personal-011",
     query: "خلال كم يوم يجب توثيق إشهاد الطلاق لدى الموثق؟",
     relevantArticleNumbers: ["5"],
   },
   {
-    id: "personal-034",
+    id: "personal-012",
     query:
       "متى تترتب آثار الطلاق من حيث الميراث والحقوق المالية إذا أخفى الزوج وقوع الطلاق عن زوجته؟",
     relevantArticleNumbers: ["5"],
   },
   {
-    id: "personal-035",
+    id: "personal-013",
     query: "هل يمنع قتل المورث عمدًا استحقاق الإرث عن القاتل؟",
     relevantArticleNumbers: ["5"],
   },
   {
-    id: "personal-036",
+    id: "personal-014",
     query: "متى يجوز وصية المحجور عليه للسفه أو الغفلة بإذن المجلس الحسبي؟",
     relevantArticleNumbers: ["5"],
   },
   {
-    id: "personal-037",
+    id: "personal-015",
     query: "متى يجوز للولي التبرع بمال القاصر؟",
     relevantArticleNumbers: ["5"],
   },
   {
-    id: "personal-038",
+    id: "personal-016",
     query:
-      "في أي حالات يجوز للمحكمة نظر مسائل الأحوال الشخصية في غرفة المشورة؟",
-    relevantArticleNumbers: ["5"],
+      "ما المدة اللازمة للحكم بموت المفقود إذا كان على ظهر سفينة غرقت أو في طائرة سقطت؟",
+    relevantArticleNumbers: ["21"],
   },
   {
-    id: "personal-039",
+    id: "personal-017",
     query:
       "ماذا يفعل الموثق إذا لم تحضر المطلقة لاستلام نسخة إشهاد الطلاق خلال المدة المقررة؟",
     relevantArticleNumbers: ["5"],
   },
   {
-    id: "personal-040",
-    query: "ما الحد الأدنى لمدة الرؤية الأسبوعية ومواعيدها؟",
-    relevantArticleNumbers: ["5"],
+    id: "personal-018",
+    query: "ما أثر غياب الزوج على سماع دعوى نسب الولد؟",
+    relevantArticleNumbers: ["15"],
   },
   {
-    id: "personal-041",
+    id: "personal-019",
     query: "كم نسخة يحرر بها محضر جرد الأموال؟",
     relevantArticleNumbers: ["5"],
   },
   {
-    id: "personal-042",
+    id: "personal-020",
     query: "تحت أي شرط يمكن للزوج أن يرجع زوجته بعد تطليقها لعدم الإنفاق؟",
     relevantArticleNumbers: ["6"],
   },
   {
-    id: "personal-043",
+    id: "personal-021",
     query:
       "ما نوع الطلاق الذي يوقعه القاضي إذا ثبت الضرر الذي ألحقه الزوج بزوجته؟",
     relevantArticleNumbers: ["6"],
   },
   {
-    id: "personal-044",
+    id: "personal-022",
     query: "هل يورث المسلم وغير المسلم بعضهما بعضًا؟",
     relevantArticleNumbers: ["6"],
   },
   {
+    id: "personal-023",
+    query:
+      "ما الواجبات الإدارية التي تترتب على النائب أو الوصي عند انتهاء الوصاية؟",
+    relevantArticleNumbers: ["50"],
+  },
+  {
+    id: "personal-024",
+    query:
+      "ما الحد الأقصى للمدة التي يُحكم بعدها بموت المفقود في الحالات العامة؟",
+    relevantArticleNumbers: ["21"],
+  },
+  {
+    id: "personal-025",
+    query:
+      "ماذا يحدث إذا صدر حكم بموت المفقود أو نشر قرار رئاسي باعتباره ميتًا؟",
+    relevantArticleNumbers: ["22"],
+  },
+  {
+    id: "personal-026",
+    query:
+      "ما المدة التي يبدأ منها سريان حكم القانون المشار إليه في حساب السنة المتعلقة ببعض دعاوى الأحوال الشخصية؟",
+    relevantArticleNumbers: ["13"],
+  },
+  {
+    id: "personal-027",
+    query: "متى يجوز لزوجة المحكوم عليه بعقوبة سالبة للحرية طلب التطليق عليه؟",
+    relevantArticleNumbers: ["14"],
+  },
+  {
+    id: "personal-028",
+    query:
+      "ما مدة العقوبة التي يترتب عليها حق الزوجة في طلب التطليق وفقاً للنص؟",
+    relevantArticleNumbers: ["14"],
+  },
+  {
+    id: "personal-029",
+    query: "متى لا تُسمع دعوى النسب عند إنكار الزوج؟",
+    relevantArticleNumbers: ["15"],
+  },
+  {
+    id: "personal-030",
+    query: "ما أثر غياب الزوج على سماع دعوى نسب الولد؟",
+    relevantArticleNumbers: ["15"],
+  },
+  {
+    id: "personal-031",
+    query: "كيف تُقدر نفقة الزوجة بحسب حالة الزوج؟",
+    relevantArticleNumbers: ["16"],
+  },
+  {
+    id: "personal-032",
+    query: "ما الحد الأدنى لنفقة الزوجة في حالة عسر الزوج؟",
+    relevantArticleNumbers: ["16"],
+  },
+  {
+    id: "personal-033",
+    query:
+      "خلال كم مدة يجب على القاضي عرض النفقة المؤقتة عند توافر سبب استحقاقها؟",
+    relevantArticleNumbers: ["16"],
+  },
+  {
+    id: "personal-034",
+    query: "ما المدة التي لا تُسمع بعدها دعوى النفقة من تاريخ الطلاق؟",
+    relevantArticleNumbers: ["17"],
+  },
+  {
+    id: "personal-035",
+    query: "متى تستحق المطلقة المدخول بها في زواج صحيح متعة الطلاق؟",
+    relevantArticleNumbers: ["17"],
+  },
+  {
+    id: "personal-036",
+    query: "ما الحد الأقصى لمدة المتعة التي تستحقها المطلقة وفقاً للنص؟",
+    relevantArticleNumbers: ["17"],
+  },
+  {
+    id: "personal-037",
+    query:
+      "ما المدة التي لا يجوز تنفيذ حكم النفقة عن مدة تتجاوزها من تاريخ الطلاق؟",
+    relevantArticleNumbers: ["18"],
+  },
+  {
+    id: "personal-038",
+    query: "على من تستمر نفقة الأولاد حتى زواج البنت أو اكتساب الابن؟",
+    relevantArticleNumbers: ["18"],
+  },
+  {
+    id: "personal-039",
+    query: "كيف يُحسم الخلاف بين الزوجين في مقدار المهر؟",
+    relevantArticleNumbers: ["19"],
+  },
+  {
+    id: "personal-040",
+    query: "ما حكم اختلاف أحد الزوجين مع ورثة الزوج الآخر بشأن مقدار المهر؟",
+    relevantArticleNumbers: ["19"],
+  },
+  {
+    id: "personal-041",
+    query: "متى ينتهي حق حضانة النساء للصغير والصغيرة؟",
+    relevantArticleNumbers: ["20"],
+  },
+  {
+    id: "personal-042",
+    query:
+      "إلى أي سن يجوز للقاضي إبقاء الصغيرة في يد الحاضنة إذا اقتضت مصلحتها ذلك؟",
+    relevantArticleNumbers: ["20"],
+  },
+  {
+    id: "personal-043",
+    query: "ما حق كل من الأبوين والأجداد في رؤية الصغير أو الصغيرة؟",
+    relevantArticleNumbers: ["20"],
+  },
+  {
+    id: "personal-044",
+    query: "متى يُحكم بموت المفقود إذا غلب عليه الهلاك؟",
+    relevantArticleNumbers: ["21"],
+  },
+  {
     id: "personal-045",
-    query: "اذكر شرطين يجب توافرهما في الموصي له.",
-    relevantArticleNumbers: ["6"],
+    query:
+      "ما المدة اللازمة للحكم بموت المفقود إذا كان على ظهر سفينة غرقت أو في طائرة سقطت؟",
+    relevantArticleNumbers: ["21"],
   },
   {
     id: "personal-046",
-    query: "من الذي تُقدر المحكمة نفقة الصغير عليه؟",
-    relevantArticleNumbers: ["6"],
+    query:
+      "ما الآثار المترتبة على الحكم بموت المفقود بالنسبة إلى زوجته وتركته؟",
+    relevantArticleNumbers: ["22"],
   },
   {
     id: "personal-047",
-    query: "هل يجوز للولي رهن عقار القاصر لادين على نفسه؟",
-    relevantArticleNumbers: ["6"],
+    query: "متى تُقسم تركة المفقود المحكوم بموته؟",
+    relevantArticleNumbers: ["22"],
   },
   {
     id: "personal-048",
-    query:
-      "متى يجوز للنيابة العامة رفع الدعوى ابتداءً في مسائل الأحوال الشخصية؟",
-    relevantArticleNumbers: ["6"],
+    query: "متى يجوز للزوجة طلب التفريق بسبب عيب في الزوج؟",
+    relevantArticleNumbers: ["9"],
   },
   {
     id: "personal-049",
@@ -273,8 +277,8 @@ export const personalAffairsLawGoldDraft: PersonalAffairsLawGoldDraft[] = [
   },
   {
     id: "personal-050",
-    query: "أين ينفذ حكم الصادر برؤية الصغير؟",
-    relevantArticleNumbers: ["6"],
+    query: "متى يستعان بأهل الخبرة في دعاوى الفسخ المتعلقة بعيوب الزواج؟",
+    relevantArticleNumbers: ["11"],
   },
   {
     id: "personal-051",
@@ -288,18 +292,18 @@ export const personalAffairsLawGoldDraft: PersonalAffairsLawGoldDraft[] = [
   },
   {
     id: "personal-053",
-    query: "من هم أصحاب الفروض الذين يبدأ بهم التوريث؟",
-    relevantArticleNumbers: ["8"],
+    query: "في أي حالة يثبت للآب فرض السدس؟",
+    relevantArticleNumbers: ["9", "21"],
   },
   {
     id: "personal-054",
-    query: "متى تبطل وصية وجهة معينة مستقبلية؟",
-    relevantArticleNumbers: ["8"],
+    query: "ما نوع الطلاق في الفرقة بالعيب؟",
+    relevantArticleNumbers: ["10"],
   },
   {
     id: "personal-055",
-    query: "متى لا تقبل دعوى الوقف أو الاستحقاق فيه؟",
-    relevantArticleNumbers: ["8"],
+    query: "ماذا يقترح الحكمان إذا كانت الإساءة كلها من جانب الزوج؟",
+    relevantArticleNumbers: ["10"],
   },
   {
     id: "personal-056",
@@ -319,71 +323,129 @@ export const personalAffairsLawGoldDraft: PersonalAffairsLawGoldDraft[] = [
       "هل يؤثر امتناع أحد الزوجين عن حضور مجلس التحكيم على سير عمل الحكمين إذا تم إخطارهما؟",
     relevantArticleNumbers: ["9"],
   },
+
   {
-    id: "personal-059",
-    query: "في أي حالة يثبت للآب فرض السدس؟",
-    relevantArticleNumbers: ["9", "21"],
+    id: "personal--59",
+    query:
+      "هل يؤثر علم الزوجة بالعيب قبل الزواج أو رضاها به بعد العقد في حقها في طلب التفريق؟",
+    relevantArticleNumbers: ["9"],
   },
   {
     id: "personal-060",
-    query: "اذكر ثلاثة أنواع من الدعاوى التي تختص بها المحكمة الجزئية.",
-    relevantArticleNumbers: ["9"],
-  },
-  {
-    id: "personal-061",
-    query: "خلال كم يوم يجب على الموثق إخطار الزوجات بزواج الزوج الجديد؟",
-    relevantArticleNumbers: ["9"],
-  },
-  {
-    id: "personal-062",
-    query: "ما نوع الطلاق في الفرقة بالعيب؟",
+    query: "ما نوع الطلاق الناتج عن التفريق بسبب العيب؟",
     relevantArticleNumbers: ["10"],
   },
   {
-    id: "personal-063",
+    id: "personal-061",
     query: "ماذا يقترح الحكمان إذا كانت الإساءة كلها من جانب الزوج؟",
     relevantArticleNumbers: ["10"],
   },
   {
-    id: "personal-064",
-    query: "ما حصة أولاد الأم الواحدة والاثنتين فأكثر؟",
+    id: "personal-062",
+    query: "ماذا يقترح الحكمان إذا كانت الإساءة كلها من جانب الزوجة؟",
     relevantArticleNumbers: ["10"],
   },
   {
-    id: "personal-065",
-    query: "متى يستعان بأهل الخبرة في دعاوى الفسخ المتعلقة بعيوب الزواج؟",
+    id: "personal-063",
+    query: "بمن تستعين المحكمة للتحقق من العيوب التي يُطلب فسخ الزواج بسببها؟",
     relevantArticleNumbers: ["11"],
   },
   {
-    id: "personal-066",
+    id: "personal-064",
     query:
-      "ما الواجبات الإدارية التي تترتب على النائب أو الوصي عند انتهاء الوصاية؟",
-    relevantArticleNumbers: ["50"],
+      "ما المدة التي يبدأ منها سريان حكم القانون المشار إليه في حساب السنة المتعلقة ببعض دعاوى الأحوال الشخصية؟",
+    relevantArticleNumbers: ["13"],
+  },
+  {
+    id: "personal-065",
+    query: "متى يجوز لزوجة المحكوم عليه بعقوبة سالبة للحرية طلب التطليق عليه؟",
+    relevantArticleNumbers: ["14"],
+  },
+  {
+    id: "personal-066",
+    query: "كيف تُقدر نفقة الزوجة بحسب حالة الزوج؟",
+    relevantArticleNumbers: ["16"],
   },
   {
     id: "personal-067",
     query:
-      "ما الحد الأقصى للمدة التي يُحكم بعدها بموت المفقود في الحالات العامة؟",
-    relevantArticleNumbers: ["21"],
+      "ماذا يجوز للزوجة أن تطلب إذا امتنع زوجها عن الإنفاق ولم يكن له مال ظاهر؟",
+    relevantArticleNumbers: ["4"],
   },
   {
     id: "personal-068",
-    query:
-      "ماذا يحدث إذا صدر حكم بموت المفقود أو نشر قرار رئاسي باعتباره ميتًا؟",
-    relevantArticleNumbers: ["22"],
+    query: "كيف يتصرف القاضي إذا كان الزوج غائباً وله مال ظاهر؟",
+    relevantArticleNumbers: ["5"],
   },
   {
     id: "personal-069",
-    query:
-      "متى تُعتبر الوصية لقيوم محصورة نافذة إذا بُلغ بعضهم بوفاة الموصي وكان بعضهم غير أهل للوصية وقت الوفاة؟",
-    relevantArticleNumbers: ["31"],
+    query: "متى يجوز للقاضي تطليق الزوج الغائب الذي لا يُسهل الوصول إليه؟",
+    relevantArticleNumbers: ["5"],
   },
   {
     id: "personal-070",
-    query:
-      "متى يُحكم بسلب الولاية أو وقفها أو الحد منها ثم لا تعود إلا بعد أسباب جديدة؟",
-    relevantArticleNumbers: ["23"],
+    query: "هل يكون الطلاق لعدم الإنفاق طلاقاً رجعياً أم بائناً؟",
+    relevantArticleNumbers: ["6"],
   },
+
+  //
+  // {
+  //   id: "personal-002",
+  //   query: "ما حكم الطلاق الصادر من السكران أو المكره؟",
+  //   relevantArticleNumbers: ["1"],
+  // },
+  // {
+  //   id: "personal-007",
+  //   query:
+  //     "ما الإجراء الذي يجوز للقاضي اتخاذه إذا امتنع الزوج عن الإنفاق وكانت له أموال ظاهرة؟",
+  //   relevantArticleNumbers: ["4"],
+  // },
+  // {
+  //   id: "personal-008",
+  //   query:
+  //     "ماذا يجوز للزوجة أن تطلب إذا امتنع زوجها عن الإنفاق ولم يكن له مال ظاهر؟",
+  //   relevantArticleNumbers: ["4"],
+  // },
+  // {
+  //   id: "personal-009",
+  //   query: "كيف يتصرف القاضي إذا كان الزوج غائباً وله مال ظاهر؟",
+  //   relevantArticleNumbers: ["5"],
+  // },
+  // {
+  //   id: "personal-010",
+  //   query: "متى يجوز للقاضي تطليق الزوج الغائب الذي لا يُسهل الوصول إليه؟",
+  //   relevantArticleNumbers: ["5"],
+  // },
+  // {
+  //   id: "personal-011",
+  //   query: "هل يكون الطلاق لعدم الإنفاق طلاقاً رجعياً أم بائناً؟",
+  //   relevantArticleNumbers: ["6"],
+  // },
+  // {
+  //   id: "personal-012",
+  //   query: "متى يجوز للزوج مراجعة زوجته بعد التطليق لعدم الإنفاق؟",
+  //   relevantArticleNumbers: ["6"],
+  // },
+  // {
+  //   id: "personal-013",
+  //   query: "ما شروط الحكمين في دعاوى التفريق بين الزوجين؟",
+  //   relevantArticleNumbers: ["7"],
+  // },
+  // {
+  //   id: "personal-014",
+  //   query: "من أي جهة يُفضل اختيار الحكَمين عند نظر النزاع الزوجي؟",
+  //   relevantArticleNumbers: ["7"],
+  // },
+  // {
+  //   id: "personal-015",
+  //   query: "متى لا تعود الزوجة إلى الزوج الأول إذا ظهر المفقود؟",
+  //   relevantArticleNumbers: ["8"],
+  // },
+  // {
+  //   id: "personal-016",
+  //   query: "متى يجوز للزوجة طلب التفريق بسبب عيب في الزوج؟",
+  //   relevantArticleNumbers: ["9"],
+  // },
 ];
 
 export function buildPersonalAffairsLawGoldDataset(
