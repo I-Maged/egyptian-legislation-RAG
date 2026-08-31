@@ -387,65 +387,6 @@ export const personalAffairsLawGoldDraft: PersonalAffairsLawGoldDraft[] = [
     query: "هل يكون الطلاق لعدم الإنفاق طلاقاً رجعياً أم بائناً؟",
     relevantArticleNumbers: ["6"],
   },
-
-  //
-  // {
-  //   id: "personal-002",
-  //   query: "ما حكم الطلاق الصادر من السكران أو المكره؟",
-  //   relevantArticleNumbers: ["1"],
-  // },
-  // {
-  //   id: "personal-007",
-  //   query:
-  //     "ما الإجراء الذي يجوز للقاضي اتخاذه إذا امتنع الزوج عن الإنفاق وكانت له أموال ظاهرة؟",
-  //   relevantArticleNumbers: ["4"],
-  // },
-  // {
-  //   id: "personal-008",
-  //   query:
-  //     "ماذا يجوز للزوجة أن تطلب إذا امتنع زوجها عن الإنفاق ولم يكن له مال ظاهر؟",
-  //   relevantArticleNumbers: ["4"],
-  // },
-  // {
-  //   id: "personal-009",
-  //   query: "كيف يتصرف القاضي إذا كان الزوج غائباً وله مال ظاهر؟",
-  //   relevantArticleNumbers: ["5"],
-  // },
-  // {
-  //   id: "personal-010",
-  //   query: "متى يجوز للقاضي تطليق الزوج الغائب الذي لا يُسهل الوصول إليه؟",
-  //   relevantArticleNumbers: ["5"],
-  // },
-  // {
-  //   id: "personal-011",
-  //   query: "هل يكون الطلاق لعدم الإنفاق طلاقاً رجعياً أم بائناً؟",
-  //   relevantArticleNumbers: ["6"],
-  // },
-  // {
-  //   id: "personal-012",
-  //   query: "متى يجوز للزوج مراجعة زوجته بعد التطليق لعدم الإنفاق؟",
-  //   relevantArticleNumbers: ["6"],
-  // },
-  // {
-  //   id: "personal-013",
-  //   query: "ما شروط الحكمين في دعاوى التفريق بين الزوجين؟",
-  //   relevantArticleNumbers: ["7"],
-  // },
-  // {
-  //   id: "personal-014",
-  //   query: "من أي جهة يُفضل اختيار الحكَمين عند نظر النزاع الزوجي؟",
-  //   relevantArticleNumbers: ["7"],
-  // },
-  // {
-  //   id: "personal-015",
-  //   query: "متى لا تعود الزوجة إلى الزوج الأول إذا ظهر المفقود؟",
-  //   relevantArticleNumbers: ["8"],
-  // },
-  // {
-  //   id: "personal-016",
-  //   query: "متى يجوز للزوجة طلب التفريق بسبب عيب في الزوج؟",
-  //   relevantArticleNumbers: ["9"],
-  // },
 ];
 
 export function buildPersonalAffairsLawGoldDataset(
