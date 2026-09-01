@@ -13,7 +13,9 @@
     "recover": "npm run build && node dist/index.js",
     "test": "vitest",
     "ragas:dataset": "tsx packages/evaluation/src/ragas/export-labour.ts",
-    "ragas:evaluate": "python evaluation/ragas/run.py"
+    "ragas:evaluate": "python evaluation/ragas/run.py",
+    "ragas:diagnose-faithfulness": "python evaluation/ragas/faithfulness-diagnostic.py",
+    "ragas:inspect-faithfulness": "python evaluation/ragas/inspect-faithfulness.py"
   },
   "dependencies": {
     "@napi-rs/canvas": "^0.1.74",
