@@ -1,0 +1,329 @@
+{
+  "metadata": {
+    "parserVersion": "3.1.0",
+    "inputFile": "personal_affair_law_qwen_output.json",
+    "pdfFile": "personal-src.pdf",
+    "generatedAt": "2026-09-01T22:01:24.914Z",
+    "recordCountOriginal": 390,
+    "recordCountRecovery": 0,
+    "recordCountMerged": 390,
+    "instrumentId": "personal-law-25-1920",
+    "mode": "qwen+pdf"
+  },
+  "metadataResolved": {
+    "lawName": "personal_affairs",
+    "lawNumber": "25",
+    "year": "1920"
+  },
+  "instruments": [
+    {
+      "id": "personal-law-25-1920",
+      "lawName": "personal_affairs",
+      "lawNumber": "25",
+      "year": "1920",
+      "kind": "law",
+      "title": "القانون رقم 25 لسنة 1920 بأحكام النفقة وبعض مسائل الأحوال الشخصية",
+      "startPage": 1,
+      "endPage": 3
+    }
+  ],
+  "articles": [
+    {
+      "instrumentId": "personal-law-25-1920",
+      "lawName": "personal_affairs",
+      "lawNumber": "25",
+      "year": "1920",
+      "articleNumber": "2",
+      "articleNumberNormalized": 2,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 2\nالمطلقة التي تستحق النفقة تعتبر نفقتها دينا كما في المادة السابقة من تاريخ الطلاق",
+      "textForEmbedding": "مادة 2\nالمطلقة التي تستحق النفقة تعتبر نفقتها دينا كما في المادة السابقة من تاريخ الطلاق",
+      "pageStart": 2,
+      "pageEnd": 2,
+      "pages": [
+        2
+      ],
+      "sourceOrder": 0,
+      "source": "vision_ocr",
+      "sourceRecordIds": [
+        "qwen:0:2:2"
+      ],
+      "qwenRecordCount": 1,
+      "recoveryRecordCount": 0,
+      "needsReview": false,
+      "reviewReasons": []
+    },
+    {
+      "instrumentId": "personal-law-25-1920",
+      "lawName": "personal_affairs",
+      "lawNumber": "25",
+      "year": "1920",
+      "articleNumber": "3",
+      "articleNumberNormalized": 3,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 3\nملغاة\nالقسم الثاني\nفي العجز عن النفقة",
+      "textForEmbedding": "مادة 3\nملغاة\nالقسم الثاني\nفي العجز عن النفقة",
+      "pageStart": 2,
+      "pageEnd": 2,
+      "pages": [
+        2
+      ],
+      "sourceOrder": 1,
+      "source": "vision_ocr",
+      "sourceRecordIds": [
+        "qwen:1:2:3"
+      ],
+      "qwenRecordCount": 1,
+      "recoveryRecordCount": 0,
+      "needsReview": false,
+      "reviewReasons": []
+    },
+    {
+      "instrumentId": "personal-law-25-1920",
+      "lawName": "personal_affairs",
+      "lawNumber": "25",
+      "year": "1920",
+      "articleNumber": "4",
+      "articleNumberNormalized": 4,
+      "articleSuffix": null,
+      "chapter": "القسم الثاني",
+      "text": "مادة 4\nاذا امتنع الزوج عن الانفاق علي زوجته فان كان له مال ظاهر فان كان له مال ظاهر نفذ الحكم عليه بالنفقة في ماله فان لم يكن له مال ظاهر ولم يقل له ميسر او موسر ولكن اسر علي عدم الانفاق طلق عليه القاضي في الحال ، وان ادعي الزوج فان لم يثبته طلق عليه حالا وان يثبت انه امهلة مدة لا تزيد علي شهر ، فان لم ينفق طلق عليه بعد ذلك",
+      "textForEmbedding": "مادة 4\nاذا امتنع الزوج عن الانفاق علي زوجته فان كان له مال ظاهر فان كان له مال ظاهر نفذ الحكم عليه بالنفقة في ماله فان لم يكن له مال ظاهر ولم يقل له ميسر او موسر ولكن اسر علي عدم الانفاق طلق عليه القاضي في الحال ، وان ادعي الزوج فان لم يثبته طلق عليه حالا وان يثبت انه امهلة مدة لا تزيد علي شهر ، فان لم ينفق طلق عليه بعد ذلك",
+      "pageStart": 2,
+      "pageEnd": 2,
+      "pages": [
+        2
+      ],
+      "sourceOrder": 2,
+      "source": "vision_ocr",
+      "sourceRecordIds": [
+        "qwen:2:2:4"
+      ],
+      "qwenRecordCount": 1,
+      "recoveryRecordCount": 0,
+      "needsReview": false,
+      "reviewReasons": []
+    },
+    {
+      "instrumentId": "personal-law-25-1920",
+      "lawName": "personal_affairs",
+      "lawNumber": "25",
+      "year": "1920",
+      "articleNumber": "5",
+      "articleNumberNormalized": 5,
+      "articleSuffix": null,
+      "chapter": "القسم الثاني",
+      "text": "مادة 5\nاذا كان الزوج غايبا غيبة غير فان كان له مال ظاهر فان كان له مال ظاهر نفذ الحكم عليه بالنفقة في ماله ، وان لم يكن له مال ظاهر اعذر عليه القاضي بالطرق المعروفة وضرب له اجلا ، فان لم يرسل ما نتفق منه زوجته علي نفسها او لن يحضر للاتفاق عليها طلق عليه القاضي بعد مضي الاجل\nفان كان بعيد الغيبة لا يسهل الوصول اليه، ان كان مجهول المحل او كان مفقودا و ثبت لا مال له تفق منه الزوجة طلق عليه القاضي وتشري احكام هذه المادة علي المسجون الذي يعسر بالنفقة",
+      "textForEmbedding": "مادة 5\nاذا كان الزوج غايبا غيبة غير فان كان له مال ظاهر فان كان له مال ظاهر نفذ الحكم عليه بالنفقة في ماله ، وان لم يكن له مال ظاهر اعذر عليه القاضي بالطرق المعروفة وضرب له اجلا ، فان لم يرسل ما نتفق منه زوجته علي نفسها او لن يحضر للاتفاق عليها طلق عليه القاضي بعد مضي الاجل\nفان كان بعيد الغيبة لا يسهل الوصول اليه، ان كان مجهول المحل او كان مفقودا و ثبت لا مال له تفق منه الزوجة طلق عليه القاضي وتشري احكام هذه المادة علي المسجون الذي يعسر بالنفقة",
+      "pageStart": 2,
+      "pageEnd": 2,
+      "pages": [
+        2
+      ],
+      "sourceOrder": 3,
+      "source": "vision_ocr",
+      "sourceRecordIds": [
+        "qwen:3:2:5"
+      ],
+      "qwenRecordCount": 1,
+      "recoveryRecordCount": 0,
+      "needsReview": false,
+      "reviewReasons": []
+    },
+    {
+      "instrumentId": "personal-law-25-1920",
+      "lawName": "personal_affairs",
+      "lawNumber": "25",
+      "year": "1920",
+      "articleNumber": "6",
+      "articleNumberNormalized": 6,
+      "articleSuffix": null,
+      "chapter": "القسم الثاني",
+      "text": "مادة6\nتطلق القاضي لعدم الانفاق بقع رجعتها وللزوج ان يرجع زوجته اذا ثبت يساره واستعد للاتفاق في اثناء العدة فان لم يثبت يساره ولم يستعد للاتفاق لم تصح الرجعة .\nالباب الثاني\nفي المفقود",
+      "textForEmbedding": "مادة6\nتطلق القاضي لعدم الانفاق بقع رجعتها وللزوج ان يرجع زوجته اذا ثبت يساره واستعد للاتفاق في اثناء العدة فان لم يثبت يساره ولم يستعد للاتفاق لم تصح الرجعة .\nالباب الثاني\nفي المفقود",
+      "pageStart": 2,
+      "pageEnd": 2,
+      "pages": [
+        2
+      ],
+      "sourceOrder": 4,
+      "source": "vision_ocr",
+      "sourceRecordIds": [
+        "qwen:4:2:6"
+      ],
+      "qwenRecordCount": 1,
+      "recoveryRecordCount": 0,
+      "needsReview": false,
+      "reviewReasons": []
+    },
+    {
+      "instrumentId": "personal-law-25-1920",
+      "lawName": "personal_affairs",
+      "lawNumber": "25",
+      "year": "1920",
+      "articleNumber": "8",
+      "articleNumberNormalized": 8,
+      "articleSuffix": null,
+      "chapter": "الباب الثاني",
+      "text": "مادة 8\nاذا جاء المفقود او لم يتبين انه حي فيزوجته له ، ما لم يتمتع الثاني بها غير عالم بحياة الاول فان تمتع بها الثاني غير عالم بحياته كانت للثاني ما لم يكن عقدة في عدة وفاء الاول .\nالباب الثالث\nفي التفريق للعيب",
+      "textForEmbedding": "مادة 8\nاذا جاء المفقود او لم يتبين انه حي فيزوجته له ، ما لم يتمتع الثاني بها غير عالم بحياة الاول فان تمتع بها الثاني غير عالم بحياته كانت للثاني ما لم يكن عقدة في عدة وفاء الاول .\nالباب الثالث\nفي التفريق للعيب",
+      "pageStart": 2,
+      "pageEnd": 2,
+      "pages": [
+        2
+      ],
+      "sourceOrder": 5,
+      "source": "vision_ocr",
+      "sourceRecordIds": [
+        "qwen:5:2:8"
+      ],
+      "qwenRecordCount": 1,
+      "recoveryRecordCount": 0,
+      "needsReview": false,
+      "reviewReasons": []
+    },
+    {
+      "instrumentId": "personal-law-25-1920",
+      "lawName": "personal_affairs",
+      "lawNumber": "25",
+      "year": "1920",
+      "articleNumber": "9",
+      "articleNumberNormalized": 9,
+      "articleSuffix": null,
+      "chapter": "الباب الثالث",
+      "text": "مادة 9\nللزوجة ان تطلب التفريق بينها وبين زوجها اذا وجدت به عيبا مستحقما لا يمكن البرء منه او يمكن البرء منه بعد زمن طويل .\nولا يمكنها المقام معه الا يدبر كالجذام والجذام والبرص سواء كان ذلكلعيب بالزوج سواء كان تزوجته عالمة بالعيب او حدث العيب بعد العقد ورضيت به صراحة او دلالو بعد طلاق باين .",
+      "textForEmbedding": "مادة 9\nللزوجة ان تطلب التفريق بينها وبين زوجها اذا وجدت به عيبا مستحقما لا يمكن البرء منه او يمكن البرء منه بعد زمن طويل .\nولا يمكنها المقام معه الا يدبر كالجذام والجذام والبرص سواء كان ذلكلعيب بالزوج سواء كان تزوجته عالمة بالعيب او حدث العيب بعد العقد ورضيت به صراحة او دلالو بعد طلاق باين .",
+      "pageStart": 2,
+      "pageEnd": 2,
+      "pages": [
+        2
+      ],
+      "sourceOrder": 6,
+      "source": "vision_ocr",
+      "sourceRecordIds": [
+        "qwen:6:2:9"
+      ],
+      "qwenRecordCount": 1,
+      "recoveryRecordCount": 0,
+      "needsReview": false,
+      "reviewReasons": []
+    },
+    {
+      "instrumentId": "personal-law-25-1920",
+      "lawName": "personal_affairs",
+      "lawNumber": "25",
+      "year": "1920",
+      "articleNumber": "10",
+      "articleNumberNormalized": 10,
+      "articleSuffix": null,
+      "chapter": "الباب الثالث",
+      "text": "مادة 10\nالفرقة بالعيب طلاق باين .",
+      "textForEmbedding": "مادة 10\nالفرقة بالعيب طلاق باين .",
+      "pageStart": 3,
+      "pageEnd": 3,
+      "pages": [
+        3
+      ],
+      "sourceOrder": 7,
+      "source": "vision_ocr",
+      "sourceRecordIds": [
+        "qwen:7:3:10"
+      ],
+      "qwenRecordCount": 1,
+      "recoveryRecordCount": 0,
+      "needsReview": false,
+      "reviewReasons": []
+    },
+    {
+      "instrumentId": "personal-law-25-1920",
+      "lawName": "personal_affairs",
+      "lawNumber": "25",
+      "year": "1920",
+      "articleNumber": "11",
+      "articleNumberNormalized": 11,
+      "articleSuffix": null,
+      "chapter": "الباب الثالث",
+      "text": "مادة 11\nيستعان باهل الخبرة في العيوب التي يطلب فسخ الزواج من اجلها .\nالباب الرابع\nفي احكام متفرقة",
+      "textForEmbedding": "مادة 11\nيستعان باهل الخبرة في العيوب التي يطلب فسخ الزواج من اجلها .\nالباب الرابع\nفي احكام متفرقة",
+      "pageStart": 3,
+      "pageEnd": 3,
+      "pages": [
+        3
+      ],
+      "sourceOrder": 8,
+      "source": "vision_ocr",
+      "sourceRecordIds": [
+        "qwen:8:3:11"
+      ],
+      "qwenRecordCount": 1,
+      "recoveryRecordCount": 0,
+      "needsReview": false,
+      "reviewReasons": []
+    },
+    {
+      "instrumentId": "personal-law-25-1920",
+      "lawName": "personal_affairs",
+      "lawNumber": "25",
+      "year": "1920",
+      "articleNumber": "13",
+      "articleNumberNormalized": 13,
+      "articleSuffix": null,
+      "chapter": "الباب الرابع",
+      "text": "مادة 13\nعلي وزير الحقانية تنفيذ هذا القانون ويسري العمل به من تاريخ نشرة في الجريدة الرسمية .\nمرسوم بقانون رقم 25 لسنة 1929\nخاص ببعض احكام الاحوال الشخصية المعدل بالقانون رقم 100 لسنة 1985\n1- الطلاق",
+      "textForEmbedding": "مادة 13\nعلي وزير الحقانية تنفيذ هذا القانون ويسري العمل به من تاريخ نشرة في الجريدة الرسمية .\nمرسوم بقانون رقم 25 لسنة 1929\nخاص ببعض احكام الاحوال الشخصية المعدل بالقانون رقم 100 لسنة 1985\n1- الطلاق",
+      "pageStart": 3,
+      "pageEnd": 3,
+      "pages": [
+        3
+      ],
+      "sourceOrder": 9,
+      "source": "vision_ocr",
+      "sourceRecordIds": [
+        "qwen:9:3:13"
+      ],
+      "qwenRecordCount": 1,
+      "recoveryRecordCount": 0,
+      "needsReview": false,
+      "reviewReasons": []
+    }
+  ],
+  "coverage": {
+    "pdfPageCount": 66,
+    "articleAnchorCount": 410,
+    "qwenRecordCount": 390,
+    "pdfOnlyArticleCount": 0,
+    "missingArticleNumbers": [
+      {
+        "instrumentId": "personal-law-25-1920",
+        "articleNumbers": [
+          "1",
+          "7",
+          "12"
+        ]
+      }
+    ],
+    "suspiciousArticleCount": 0
+  },
+  "validation": {
+    "issues": [
+      {
+        "severity": "warning",
+        "code": "MISSING_ARTICLES",
+        "message": "Missing expected article numbers: 1, 7, 12",
+        "instrumentId": "personal-law-25-1920"
+      }
+    ],
+    "summary": {
+      "errors": 0,
+      "warnings": 6,
+      "infos": 12,
+      "articleCount": 384,
+      "qwenRecordCount": 390,
+      "recoveryRecordCount": 0,
+      "suspiciousMergeCount": 0,
+      "missingArticleNumberCount": 42
+    }
+  }
+}

@@ -15,7 +15,8 @@
     "ragas:dataset": "tsx packages/evaluation/src/ragas/export-labour.ts",
     "ragas:evaluate": "python evaluation/ragas/run.py",
     "ragas:diagnose-faithfulness": "python evaluation/ragas/faithfulness-diagnostic.py",
-    "ragas:inspect-faithfulness": "python evaluation/ragas/inspect-faithfulness.py"
+    "ragas:inspect-faithfulness": "python evaluation/ragas/inspect-faithfulness.py",
+    "parse:law": "tsx packages/ingestion/src/parser/index.ts"
   },
   "dependencies": {
     "@napi-rs/canvas": "^0.1.74",

@@ -1,109 +1,242 @@
 import fs from "node:fs";
 import path from "node:path";
-import { readPdfPages } from "./coverage/pdf.js";
-import { buildCoverage } from "./coverage/map.js";
-import { readJsonArray, writeJson } from "./io/json.js";
-import { inferMetadata, makeInstrumentId } from "./parser/metadata.js";
-import { mergeOCR } from "./parser/merge.js";
-import { buildArticles } from "./parser/articles.js";
-import { findSequenceGaps } from "./parser/gaps.js";
-import { validateArticles } from "./parser/validator.js";
-import { ParserOutput, QwenOCRRecord } from "./types.js";
+import {
+  buildArticlesFromPdf,
+  findArticleAnchors,
+  readPdfPages,
+} from "./pdf.js";
+import { getProfile } from "./profiles.js";
+import {
+  buildArticlesFromQwen,
+  mergeRecoveryRecords,
+  parseInputFile,
+  parseRecoveryFile,
+  readLegacyParserOutput,
+  reassignIdentities,
+} from "./qwen.js";
+import { validateArticles } from "./validate.js";
+import type { ParsedArticle, ParserOutput, ValidationIssue } from "./types.js";
 
-import { fileURLToPath } from "node:url";
+interface Args {
+  pdf: string;
+  qwen?: string | undefined;
+  recovery?: string | undefined;
+  output: string;
+  profile?: string | undefined;
+  splitOutputDir?: string | undefined;
+  legacyRaw: boolean;
+}
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const projectRoot = path.resolve(__dirname, "..");
+function parseArgs(argv: string[]): Args {
+  const get = (name: string): string | undefined => {
+    const i = argv.indexOf(name);
+    return i >= 0 ? argv[i + 1] : undefined;
+  };
+  const has = (name: string): boolean => argv.includes(name);
+  const pdf = get("--pdf");
+  const output = get("--output");
+  if (!pdf || !output)
+    throw new Error(
+      "Usage: tsx src/parser/index.ts --pdf <pdf> --output <json> [--qwen <qwen-json>] [--recovery <recovery-json>] [--profile labour|financial|personal] [--split-output-dir <dir>] [--legacy-raw]",
+    );
+  return {
+    pdf: path.resolve(pdf),
+    qwen: get("--qwen") ? path.resolve(get("--qwen")!) : undefined,
+    recovery: get("--recovery") ? path.resolve(get("--recovery")!) : undefined,
+    output: path.resolve(output),
+    profile: get("--profile"),
+    splitOutputDir: get("--split-output-dir")
+      ? path.resolve(get("--split-output-dir")!)
+      : undefined,
+    legacyRaw: has("--legacy-raw"),
+  };
+}
+
+function addIssue(issues: ValidationIssue[], issue: ValidationIssue) {
+  issues.push(issue);
+}
 
 async function main() {
-  const input =
-      process.argv[2] !== undefined
-        ? path.resolve(process.cwd(), process.argv[2])
-        : path.join(projectRoot, "input", "procedure_law_qwen_output.json"),
-    output =
-      process.argv[3] !== undefined
-        ? path.resolve(process.cwd(), process.argv[3])
-        : path.join(projectRoot, "output", "procedure_law_v2_3.json"),
-    pdf = process.argv[4]
-      ? path.resolve(process.cwd(), process.argv[4])
-      : path.join(projectRoot, "input", "procedure_law.pdf"),
-    recovery = process.argv[5];
-  const original = readJsonArray<QwenOCRRecord>(input),
-    recovered = recovery ? readJsonArray<QwenOCRRecord>(recovery) : [];
-  let pages = null,
-    pdfFile: string | null = null;
-  if (pdf) {
-    if (!fs.existsSync(pdf)) throw new Error(`PDF not found: ${pdf}`);
-    pages = await readPdfPages(pdf);
-    pdfFile = path.basename(pdf);
+  const args = parseArgs(process.argv.slice(2));
+  if (!fs.existsSync(args.pdf)) throw new Error(`PDF not found: ${args.pdf}`);
+  if (args.recovery && !args.qwen)
+    throw new Error(
+      "--recovery requires --qwen; recovery records supplement the Qwen stream.",
+    );
+
+  const profile = getProfile(args.pdf, args.profile);
+  const pages = await readPdfPages(args.pdf);
+  const anchors = findArticleAnchors(pages);
+
+  let articles: ParsedArticle[] = [];
+  let originalCount = 0;
+  let recoveryCount = 0;
+  let inputKind: "qwen" | "legacy-adapted" | "legacy-raw" | "pdf-only" =
+    "pdf-only";
+  const extraIssues: ValidationIssue[] = [];
+
+  if (args.qwen) {
+    if (!fs.existsSync(args.qwen))
+      throw new Error(`Qwen JSON not found: ${args.qwen}`);
+
+    if (args.legacyRaw) {
+      articles = readLegacyParserOutput(args.qwen, profile);
+      originalCount = articles.length;
+      inputKind = "legacy-raw";
+      addIssue(extraIssues, {
+        severity: "error",
+        code: "LEGACY_INPUT",
+        message:
+          "Legacy Parser V2/V2.3 output was imported explicitly. Article boundaries were already produced by the old parser and cannot be reconstructed from this file; use the original Qwen record JSON for the authoritative V3 run.",
+      });
+    } else {
+      const parsed = parseInputFile(args.qwen, profile);
+      originalCount = parsed.originalCount;
+      inputKind = parsed.kind === "legacy-adapted" ? "legacy-adapted" : "qwen";
+
+      if (parsed.articles) {
+        if (args.recovery) {
+          throw new Error(
+            "--recovery cannot be combined with a legacy Parser V2/V2.3 input. Use the original Qwen JSON when recovery records are required.",
+          );
+        }
+        articles = parsed.articles;
+        addIssue(extraIssues, {
+          severity: "warning",
+          code: "LEGACY_INPUT_ADAPTED",
+          message:
+            "Parser V2/V2.3 output was detected and safely adapted because this profile has a single instrument with unique, ordered article numbers. Article text was preserved; no article-boundary reconstruction was attempted.",
+        });
+      } else {
+        let records = parsed.records;
+
+        if (args.recovery) {
+          if (!fs.existsSync(args.recovery))
+            throw new Error(`Recovery JSON not found: ${args.recovery}`);
+          const recovery = parseRecoveryFile(args.recovery, records.length);
+          recoveryCount = recovery.length;
+          records = mergeRecoveryRecords(records, recovery);
+        }
+
+        const identities = reassignIdentities(records, profile);
+        articles = buildArticlesFromQwen(records, profile, identities);
+      }
+    }
+  } else {
+    articles = buildArticlesFromPdf(pages, profile, anchors);
   }
-  const meta = inferMetadata([...original, ...recovered]),
-    id = makeInstrumentId(meta),
-    merged = mergeOCR(original, recovered),
-    articles = buildArticles(merged, meta, id),
-    gaps = findSequenceGaps(articles),
-    cov = buildCoverage(pages, merged, gaps);
-  for (const g of gaps)
-    g.recoveryPages = cov.recoveryQueue
-      .filter((t) =>
-        t.expectedArticles.some((n) => g.missingArticles.includes(n)),
-      )
-      .map((t) => t.pageNumber);
-  const issues = validateArticles(articles, cov.recoveryQueue.length);
+
+  const issues = [
+    ...extraIssues,
+    ...validateArticles(articles, profile.identities, anchors),
+  ];
+  const missing = issues.filter((x) => x.code === "MISSING_ARTICLES");
   const result: ParserOutput = {
     metadata: {
-      parserVersion: "2.3.0",
-      inputFile: path.basename(input),
+      parserVersion: "3.1.0",
+      inputFile: args.qwen ? path.basename(args.qwen) : null,
+      pdfFile: path.basename(args.pdf),
       generatedAt: new Date().toISOString(),
-      recordCountOriginal: original.length,
-      recordCountRecovery: recovered.length,
-      recordCountMerged: merged.length,
-      instrumentId: id,
+      recordCountOriginal: originalCount,
+      recordCountRecovery: recoveryCount,
+      recordCountMerged: originalCount + recoveryCount,
+      instrumentId:
+        profile.identities.length === 1 ? profile.identities[0]!.id : null,
+      mode: args.qwen ? "qwen+pdf" : "pdf-only",
     },
-    metadataResolved: meta,
+    metadataResolved:
+      profile.identities.length === 1
+        ? {
+            lawName: profile.identities[0]!.lawName,
+            lawNumber: profile.identities[0]!.lawNumber,
+            year: profile.identities[0]!.year,
+          }
+        : { lawName: null, lawNumber: null, year: null },
+    instruments: profile.identities,
     articles,
     coverage: {
-      pdfFile,
-      pdfPageCount: pages?.length ?? null,
-      pages: cov.pages,
-      recoveryQueue: cov.recoveryQueue,
-      articleSequenceGaps: gaps,
+      pdfPageCount: pages.length,
+      articleAnchorCount: anchors.length,
+      qwenRecordCount: originalCount,
+      pdfOnlyArticleCount: args.qwen ? 0 : articles.length,
+      missingArticleNumbers: missing.map((x) => ({
+        instrumentId: x.instrumentId!,
+        articleNumbers: x.message
+          .replace(/^Missing expected article numbers: /, "")
+          .split(", "),
+      })),
+      suspiciousArticleCount: articles.filter((a) => a.needsReview).length,
     },
     validation: {
-      inputFile: path.basename(input),
-      recordCount: merged.length,
-      articleCount: articles.length,
       issues,
       summary: {
         errors: issues.filter((x) => x.severity === "error").length,
         warnings: issues.filter((x) => x.severity === "warning").length,
         infos: issues.filter((x) => x.severity === "info").length,
-        duplicateArticleNumbers: issues.filter(
-          (x) => x.code === "DUPLICATE_ARTICLE_NUMBER",
+        articleCount: articles.length,
+        qwenRecordCount: originalCount,
+        recoveryRecordCount: recoveryCount,
+        suspiciousMergeCount: articles.filter((a) =>
+          a.reviewReasons.some((r) => r.startsWith("Non-contiguous")),
         ).length,
-        sequenceGapCount: gaps.length,
-        recoveryTaskCount: cov.recoveryQueue.length,
-        recoveredRecordCount: recovered.length,
-        longArticleCount: articles.filter((a) => a.text.length > 5000).length,
-        multiPageArticleCount: articles.filter((a) => a.pages.length > 1)
-          .length,
-        articlesFromRecovery: articles.filter((a) => a.recoveryRecordCount > 0)
-          .length,
+        missingArticleNumberCount: missing.reduce(
+          (n, x) => n + x.message.split(", ").length,
+          0,
+        ),
       },
     },
   };
-  writeJson(output, result);
+
+  if (anchors.length === 0 && args.qwen) {
+    // Already emitted by validateArticles. Keep this branch intentionally empty:
+    // Qwen-first mode must remain usable when the PDF text layer is structurally poor.
+  }
+
+  fs.mkdirSync(path.dirname(args.output), { recursive: true });
+  fs.writeFileSync(args.output, JSON.stringify(result, null, 2), "utf8");
+
+  if (args.splitOutputDir && profile.identities.length > 1) {
+    fs.mkdirSync(args.splitOutputDir, { recursive: true });
+    for (const identity of profile.identities) {
+      const subset: ParserOutput = {
+        ...result,
+        metadataResolved: {
+          lawName: identity.lawName,
+          lawNumber: identity.lawNumber,
+          year: identity.year,
+        },
+        metadata: { ...result.metadata, instrumentId: identity.id },
+        instruments: [identity],
+        articles: result.articles.filter((a) => a.instrumentId === identity.id),
+        coverage: {
+          ...result.coverage,
+          missingArticleNumbers: result.coverage.missingArticleNumbers.filter(
+            (x) => x.instrumentId === identity.id,
+          ),
+        },
+        validation: {
+          ...result.validation,
+          issues: result.validation.issues.filter(
+            (x) => !x.instrumentId || x.instrumentId === identity.id,
+          ),
+        },
+      };
+      fs.writeFileSync(
+        path.join(args.splitOutputDir, `${identity.id}.json`),
+        JSON.stringify(subset, null, 2),
+        "utf8",
+      );
+    }
+  }
+
   console.log(
-    `Parser V2.3\nOriginal records: ${original.length}\nRecovery records: ${recovered.length}\nMerged records: ${merged.length}\nArticles: ${articles.length}\nSequence gaps: ${gaps.length}\nRecovery queue: ${cov.recoveryQueue.length}`,
+    `Parser V3\nProfile: ${profile.displayName}\nInput mode: ${inputKind}\nPDF pages: ${pages.length}\nPDF article anchors: ${anchors.length}\nQwen records: ${originalCount}\nRecovery records: ${recoveryCount}\nArticles: ${articles.length}\nErrors: ${result.validation.summary.errors}\nWarnings: ${result.validation.summary.warnings}\nOutput: ${args.output}`,
   );
-  for (const t of cov.recoveryQueue)
-    console.log(
-      `  recovery page ${t.pageNumber} [${t.priority}] expected=[${t.expectedArticles.join(", ")}] evidence=${t.evidence}`,
-    );
-  console.log(`Output: ${output}`);
+  for (const x of result.coverage.missingArticleNumbers)
+    console.log(`Missing [${x.instrumentId}]: ${x.articleNumbers.join(", ")}`);
 }
-main().catch((e) => {
-  console.error(e instanceof Error ? e.message : e);
+
+main().catch((error) => {
+  console.error(error instanceof Error ? error.message : error);
   process.exit(1);
 });

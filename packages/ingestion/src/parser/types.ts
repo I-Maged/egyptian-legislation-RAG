@@ -1,4 +1,8 @@
-export type SourceType = "vision_ocr" | "vision_ocr_recovery";
+export type SourceType =
+  | "vision_ocr"
+  | "vision_ocr_recovery"
+  | "pdf_text_recovery";
+
 export interface QwenOCRRecord {
   law_name?: string | null;
   law_number?: string | null;
@@ -11,58 +15,47 @@ export interface QwenOCRRecord {
   source?: string | null;
   record_id?: string | null;
 }
-export interface LawMetadata {
-  lawName: string | null;
-  lawNumber: string | null;
-  year: string | null;
+
+export interface LawIdentity {
+  id: string;
+  lawName: string;
+  lawNumber: string;
+  year: string;
+  kind: "law" | "decree_law" | "ministerial_decision";
+  title: string;
+  startPage: number;
+  endPage: number;
+  startMarkerOrdinal?: number;
+  startAfter?: {
+    page: number;
+    articleNumber: string;
+    occurrenceOnPage?: number;
+  };
 }
-export interface PDFPageInfo {
+
+export interface LawProfile {
+  id: string;
+  displayName: string;
+  sourceFilePattern: RegExp;
+  defaultIdentity: LawIdentity;
+  identities: LawIdentity[];
+}
+
+export interface PdfPage {
   pageNumber: number;
   text: string;
-  textLength: number;
-  isLikelyBlank: boolean;
-  hasArticleMarker: boolean;
-  articleNumbers: number[];
-  isLikelyFrontMatter: boolean;
-  isLikelyEndMatter: boolean;
+  lines: string[];
 }
-export type CoverageStatus =
-  | "ocr_present"
-  | "no_article_but_source_text"
-  | "likely_front_matter"
-  | "likely_end_matter"
-  | "recovery_candidate"
-  | "pdf_blank_or_unreadable";
-export interface PageCoverage {
-  pdfPage: number;
-  status: CoverageStatus;
-  qwenRecordCount: number;
-  qwenArticleNumbers: string[];
-  qwenTextLength: number;
-  sourceTextLength: number;
-  sourceArticleNumbers: number[];
-  likelyArticleBearing: boolean;
-  recoveryReason: string | null;
-}
-export interface RecoveryTask {
+
+export interface ArticleAnchor {
   pageNumber: number;
-  priority: "high" | "medium" | "low";
-  reason: string;
-  expectedArticles: number[];
-  neighborArticles: { previous: number | null; next: number | null };
-  evidence:
-    | "article_gap_between_pages"
-    | "pdf_article_marker"
-    | "qwen_missing_page";
+  lineIndex: number;
+  ordinalOnPage: number;
+  rawLabel: string;
+  articleNumber: string;
+  suffix: string | null;
 }
-export interface ArticleGap {
-  fromArticle: number;
-  toArticle: number;
-  missingArticles: number[];
-  previousPage: number | null;
-  nextPage: number | null;
-  recoveryPages: number[];
-}
+
 export interface ParsedArticle {
   instrumentId: string;
   lawName: string;
@@ -85,50 +78,57 @@ export interface ParsedArticle {
   needsReview: boolean;
   reviewReasons: string[];
 }
+
 export interface ValidationIssue {
   severity: "error" | "warning" | "info";
   code: string;
   message: string;
   articleNumber?: string;
   pageNumber?: number;
+  instrumentId?: string;
 }
-export interface CoverageReport {
-  pdfFile: string | null;
-  pdfPageCount: number | null;
-  pages: PageCoverage[];
-  recoveryQueue: RecoveryTask[];
-  articleSequenceGaps: ArticleGap[];
-}
-export interface ParseReport {
-  inputFile: string;
-  recordCount: number;
-  articleCount: number;
-  issues: ValidationIssue[];
-  summary: {
-    errors: number;
-    warnings: number;
-    infos: number;
-    duplicateArticleNumbers: number;
-    sequenceGapCount: number;
-    recoveryTaskCount: number;
-    recoveredRecordCount: number;
-    longArticleCount: number;
-    multiPageArticleCount: number;
-    articlesFromRecovery: number;
-  };
-}
+
 export interface ParserOutput {
   metadata: {
     parserVersion: string;
-    inputFile: string;
+    inputFile: string | null;
+    pdfFile: string;
     generatedAt: string;
     recordCountOriginal: number;
     recordCountRecovery: number;
     recordCountMerged: number;
-    instrumentId: string;
+    instrumentId: string | null;
+    mode: "qwen+pdf" | "pdf-only";
   };
-  metadataResolved: LawMetadata;
+  metadataResolved: {
+    lawName: string | null;
+    lawNumber: string | null;
+    year: string | null;
+  };
+  instruments: LawIdentity[];
   articles: ParsedArticle[];
-  coverage: CoverageReport;
-  validation: ParseReport;
+  coverage: {
+    pdfPageCount: number;
+    articleAnchorCount: number;
+    qwenRecordCount: number;
+    pdfOnlyArticleCount: number;
+    missingArticleNumbers: Array<{
+      instrumentId: string;
+      articleNumbers: string[];
+    }>;
+    suspiciousArticleCount: number;
+  };
+  validation: {
+    issues: ValidationIssue[];
+    summary: {
+      errors: number;
+      warnings: number;
+      infos: number;
+      articleCount: number;
+      qwenRecordCount: number;
+      recoveryRecordCount: number;
+      suspiciousMergeCount: number;
+      missingArticleNumberCount: number;
+    };
+  };
 }
