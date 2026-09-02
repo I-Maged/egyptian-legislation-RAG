@@ -1,12 +1,13 @@
 {
   "metadata": {
-    "parserVersion": "3.1.0",
+    "parserVersion": "3.3.0",
     "inputFile": "personal_affair_law_qwen_output.json",
     "pdfFile": "personal-src.pdf",
-    "generatedAt": "2026-09-01T22:01:24.914Z",
+    "generatedAt": "2026-09-02T20:23:36.350Z",
     "recordCountOriginal": 390,
-    "recordCountRecovery": 0,
-    "recordCountMerged": 390,
+    "recordCountRecovery": 50,
+    "recordCountMerged": 440,
+    "pdfRecoveryArticleCount": 0,
     "instrumentId": "personal-law-25-1920",
     "mode": "qwen+pdf"
   },
@@ -33,6 +34,36 @@
       "lawName": "personal_affairs",
       "lawNumber": "25",
       "year": "1920",
+      "articleNumber": "1",
+      "articleNumberNormalized": 1,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 1:\nتجب النفقة للزوجة علي زوجها من تاريخ العقد الصحيح اذا سلمت نفسها الية ولو حكما حتي لو كانت موسرة او مختلفة معه في الدين.\nولا يمنع مرض الزوجة من استحقاقها للنفقة.\nوتشمل النفقة الغذاء والكسوة والسكن ومصاريف العلاج وغير ذلك بما يقتضي به الشرع.\nولا تجب النفقة للزوجة اذا ارتدت او امتنعت مختارة عن تسليم نفسها دون حق او اضطرت الي ذلك بسبب ليس من قبل الزوج او خرجت دون اذن زوجها.\nولا يعتبر سبب لسقوط نفقة الزوجة خروجها من مسكن الزوجية دون اذن زوجها في الاحوال التي يباح فيها ذلك بحكم الشرع مما ورد به نص او جري به عرف او قضت به ضرورة.\nولا خروجها للعمل المشروع ما لم يظهر ان استعمالها لهذا الحق المشروط مشوب باساءة استعمال الحق او مناف لمصلحة الاسرة وطلب منها الزوج الامتناع عنه.\n\nوتعتبر نفقة الزوجة دينا علي الزوج من تاريخ امتناعه عن الانفاق مع وجوبه، ولا تسقط الا بالاداء او الابراء.\nولا تسمع دعوي النفقة عن مدة ماضية لاكثر من سنة نهايتها تاريخ رفع الدعوي.\nولا يقبل من الزوج التمسك بالمقاصة بين نفقة الزوجة وبين دين له عليها الا فيما يزيد علي ما يفي بحاجتها الضرورية، ويكون لدين نفقة الزوجة امتياز علي جميع اموال الزوج، ويتقدم في مرتبته علي ديون النفقة الاخري.",
+      "textForEmbedding": "مادة 1:\nتجب النفقة للزوجة علي زوجها من تاريخ العقد الصحيح اذا سلمت نفسها الية ولو حكما حتي لو كانت موسرة او مختلفة معه في الدين.\nولا يمنع مرض الزوجة من استحقاقها للنفقة.\nوتشمل النفقة الغذاء والكسوة والسكن ومصاريف العلاج وغير ذلك بما يقتضي به الشرع.\nولا تجب النفقة للزوجة اذا ارتدت او امتنعت مختارة عن تسليم نفسها دون حق او اضطرت الي ذلك بسبب ليس من قبل الزوج او خرجت دون اذن زوجها.\nولا يعتبر سبب لسقوط نفقة الزوجة خروجها من مسكن الزوجية دون اذن زوجها في الاحوال التي يباح فيها ذلك بحكم الشرع مما ورد به نص او جري به عرف او قضت به ضرورة.\nولا خروجها للعمل المشروع ما لم يظهر ان استعمالها لهذا الحق المشروط مشوب باساءة استعمال الحق او مناف لمصلحة الاسرة وطلب منها الزوج الامتناع عنه.\n\nوتعتبر نفقة الزوجة دينا علي الزوج من تاريخ امتناعه عن الانفاق مع وجوبه، ولا تسقط الا بالاداء او الابراء.\nولا تسمع دعوي النفقة عن مدة ماضية لاكثر من سنة نهايتها تاريخ رفع الدعوي.\nولا يقبل من الزوج التمسك بالمقاصة بين نفقة الزوجة وبين دين له عليها الا فيما يزيد علي ما يفي بحاجتها الضرورية، ويكون لدين نفقة الزوجة امتياز علي جميع اموال الزوج، ويتقدم في مرتبته علي ديون النفقة الاخري.",
+      "pageStart": 1,
+      "pageEnd": 2,
+      "pages": [
+        1,
+        2
+      ],
+      "sourceOrder": 0,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:1:article-1:page-1",
+        "personal:pdf-vision:1:article-1:page-2"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 2,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "personal-law-25-1920",
+      "lawName": "personal_affairs",
+      "lawNumber": "25",
+      "year": "1920",
       "articleNumber": "2",
       "articleNumberNormalized": 2,
       "articleSuffix": null,
@@ -44,7 +75,7 @@
       "pages": [
         2
       ],
-      "sourceOrder": 0,
+      "sourceOrder": 2,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:0:2:2"
@@ -70,7 +101,7 @@
       "pages": [
         2
       ],
-      "sourceOrder": 1,
+      "sourceOrder": 3,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:1:2:3"
@@ -96,7 +127,7 @@
       "pages": [
         2
       ],
-      "sourceOrder": 2,
+      "sourceOrder": 4,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:2:2:4"
@@ -122,7 +153,7 @@
       "pages": [
         2
       ],
-      "sourceOrder": 3,
+      "sourceOrder": 5,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:3:2:5"
@@ -148,7 +179,7 @@
       "pages": [
         2
       ],
-      "sourceOrder": 4,
+      "sourceOrder": 6,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:4:2:6"
@@ -157,6 +188,34 @@
       "recoveryRecordCount": 0,
       "needsReview": false,
       "reviewReasons": []
+    },
+    {
+      "instrumentId": "personal-law-25-1920",
+      "lawName": "personal_affairs",
+      "lawNumber": "25",
+      "year": "1920",
+      "articleNumber": "7",
+      "articleNumberNormalized": 7,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 7:\nملغاة",
+      "textForEmbedding": "مادة 7:\nملغاة",
+      "pageStart": 2,
+      "pageEnd": 2,
+      "pages": [
+        2
+      ],
+      "sourceOrder": 7,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:1:article-7:page-2"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
     },
     {
       "instrumentId": "personal-law-25-1920",
@@ -174,7 +233,7 @@
       "pages": [
         2
       ],
-      "sourceOrder": 5,
+      "sourceOrder": 8,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:5:2:8"
@@ -200,7 +259,7 @@
       "pages": [
         2
       ],
-      "sourceOrder": 6,
+      "sourceOrder": 9,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:6:2:9"
@@ -226,7 +285,7 @@
       "pages": [
         3
       ],
-      "sourceOrder": 7,
+      "sourceOrder": 10,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:7:3:10"
@@ -252,7 +311,7 @@
       "pages": [
         3
       ],
-      "sourceOrder": 8,
+      "sourceOrder": 11,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:8:3:11"
@@ -261,6 +320,34 @@
       "recoveryRecordCount": 0,
       "needsReview": false,
       "reviewReasons": []
+    },
+    {
+      "instrumentId": "personal-law-25-1920",
+      "lawName": "personal_affairs",
+      "lawNumber": "25",
+      "year": "1920",
+      "articleNumber": "12",
+      "articleNumberNormalized": 12,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 12:\nملغاة",
+      "textForEmbedding": "مادة 12:\nملغاة",
+      "pageStart": 3,
+      "pageEnd": 3,
+      "pages": [
+        3
+      ],
+      "sourceOrder": 12,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:1:article-12:page-3"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
     },
     {
       "instrumentId": "personal-law-25-1920",
@@ -278,7 +365,7 @@
       "pages": [
         3
       ],
-      "sourceOrder": 9,
+      "sourceOrder": 13,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:9:3:13"
@@ -294,36 +381,43 @@
     "articleAnchorCount": 410,
     "qwenRecordCount": 390,
     "pdfOnlyArticleCount": 0,
-    "missingArticleNumbers": [
-      {
-        "instrumentId": "personal-law-25-1920",
-        "articleNumbers": [
-          "1",
-          "7",
-          "12"
-        ]
-      }
-    ],
-    "suspiciousArticleCount": 0
+    "pdfRecoveredArticleCount": 0,
+    "missingArticleNumbers": [],
+    "suspiciousArticleCount": 45
   },
   "validation": {
     "issues": [
       {
         "severity": "warning",
-        "code": "MISSING_ARTICLES",
-        "message": "Missing expected article numbers: 1, 7, 12",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "1",
+        "instrumentId": "personal-law-25-1920"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "7",
+        "instrumentId": "personal-law-25-1920"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "12",
         "instrumentId": "personal-law-25-1920"
       }
     ],
     "summary": {
       "errors": 0,
-      "warnings": 6,
+      "warnings": 45,
       "infos": 12,
-      "articleCount": 384,
+      "articleCount": 426,
       "qwenRecordCount": 390,
-      "recoveryRecordCount": 0,
+      "recoveryRecordCount": 50,
       "suspiciousMergeCount": 0,
-      "missingArticleNumberCount": 42
+      "missingArticleNumberCount": 0
     }
   }
 }

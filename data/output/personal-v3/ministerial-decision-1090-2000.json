@@ -1,12 +1,13 @@
 {
   "metadata": {
-    "parserVersion": "3.1.0",
+    "parserVersion": "3.3.0",
     "inputFile": "personal_affair_law_qwen_output.json",
     "pdfFile": "personal-src.pdf",
-    "generatedAt": "2026-09-01T22:01:24.914Z",
+    "generatedAt": "2026-09-02T20:23:36.350Z",
     "recordCountOriginal": 390,
-    "recordCountRecovery": 0,
-    "recordCountMerged": 390,
+    "recordCountRecovery": 50,
+    "recordCountMerged": 440,
+    "pdfRecoveryArticleCount": 0,
     "instrumentId": "ministerial-decision-1090-2000",
     "mode": "qwen+pdf"
   },
@@ -49,7 +50,7 @@
       "pages": [
         65
       ],
-      "sourceOrder": 387,
+      "sourceOrder": 434,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:387:65:1"
@@ -75,7 +76,7 @@
       "pages": [
         65
       ],
-      "sourceOrder": 388,
+      "sourceOrder": 435,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:388:65:2"
@@ -101,7 +102,7 @@
       "pages": [
         66
       ],
-      "sourceOrder": 389,
+      "sourceOrder": 436,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:389:66:3"
@@ -117,20 +118,21 @@
     "articleAnchorCount": 410,
     "qwenRecordCount": 390,
     "pdfOnlyArticleCount": 0,
+    "pdfRecoveredArticleCount": 0,
     "missingArticleNumbers": [],
-    "suspiciousArticleCount": 0
+    "suspiciousArticleCount": 45
   },
   "validation": {
     "issues": [],
     "summary": {
       "errors": 0,
-      "warnings": 6,
+      "warnings": 45,
       "infos": 12,
-      "articleCount": 384,
+      "articleCount": 426,
       "qwenRecordCount": 390,
-      "recoveryRecordCount": 0,
+      "recoveryRecordCount": 50,
       "suspiciousMergeCount": 0,
-      "missingArticleNumberCount": 42
+      "missingArticleNumberCount": 0
     }
   }
 }

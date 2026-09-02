@@ -1,12 +1,13 @@
 {
   "metadata": {
-    "parserVersion": "3.1.0",
+    "parserVersion": "3.3.0",
     "inputFile": "personal_affair_law_qwen_output.json",
     "pdfFile": "personal-src.pdf",
-    "generatedAt": "2026-09-01T22:01:24.914Z",
+    "generatedAt": "2026-09-02T20:23:36.350Z",
     "recordCountOriginal": 390,
-    "recordCountRecovery": 0,
-    "recordCountMerged": 390,
+    "recordCountRecovery": 50,
+    "recordCountMerged": 440,
+    "pdfRecoveryArticleCount": 0,
     "instrumentId": "ministerial-decision-1088-2000",
     "mode": "qwen+pdf"
   },
@@ -49,7 +50,7 @@
       "pages": [
         60
       ],
-      "sourceOrder": 361,
+      "sourceOrder": 397,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:361:60:1"
@@ -75,7 +76,7 @@
       "pages": [
         60
       ],
-      "sourceOrder": 362,
+      "sourceOrder": 398,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:362:60:2"
@@ -101,7 +102,7 @@
       "pages": [
         60
       ],
-      "sourceOrder": 363,
+      "sourceOrder": 399,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:363:60:3"
@@ -127,7 +128,7 @@
       "pages": [
         60
       ],
-      "sourceOrder": 364,
+      "sourceOrder": 400,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:364:60:4"
@@ -153,7 +154,7 @@
       "pages": [
         60
       ],
-      "sourceOrder": 365,
+      "sourceOrder": 401,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:365:60:5"
@@ -179,7 +180,7 @@
       "pages": [
         60
       ],
-      "sourceOrder": 366,
+      "sourceOrder": 402,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:366:60:6"
@@ -205,7 +206,7 @@
       "pages": [
         60
       ],
-      "sourceOrder": 367,
+      "sourceOrder": 403,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:367:60:7"
@@ -231,7 +232,7 @@
       "pages": [
         61
       ],
-      "sourceOrder": 368,
+      "sourceOrder": 404,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:368:61:8"
@@ -240,6 +241,34 @@
       "recoveryRecordCount": 0,
       "needsReview": false,
       "reviewReasons": []
+    },
+    {
+      "instrumentId": "ministerial-decision-1088-2000",
+      "lawName": "personal_affairs",
+      "lawNumber": "1088",
+      "year": "2000",
+      "articleNumber": "9",
+      "articleNumberNormalized": 9,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 9:\nيرفق بمحضر الجرد مذكرة من الخبير تتضمن - بحسب الاحوال - نوع واوصاف واوزان وعيار الاشياء والاموال التي عهد بها اليه وقيمة كل منها، ويثبت مضمون ما اشتملت عليه المذكرة في المحضر.",
+      "textForEmbedding": "مادة 9:\nيرفق بمحضر الجرد مذكرة من الخبير تتضمن - بحسب الاحوال - نوع واوصاف واوزان وعيار الاشياء والاموال التي عهد بها اليه وقيمة كل منها، ويثبت مضمون ما اشتملت عليه المذكرة في المحضر.",
+      "pageStart": 61,
+      "pageEnd": 61,
+      "pages": [
+        61
+      ],
+      "sourceOrder": 405,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:1088-2000:article-9:page-61"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
     },
     {
       "instrumentId": "ministerial-decision-1088-2000",
@@ -257,7 +286,7 @@
       "pages": [
         61
       ],
-      "sourceOrder": 369,
+      "sourceOrder": 406,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:369:61:10"
@@ -283,7 +312,7 @@
       "pages": [
         61
       ],
-      "sourceOrder": 370,
+      "sourceOrder": 407,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:370:61:11"
@@ -309,7 +338,7 @@
       "pages": [
         61
       ],
-      "sourceOrder": 371,
+      "sourceOrder": 408,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:371:61:12"
@@ -335,7 +364,7 @@
       "pages": [
         61
       ],
-      "sourceOrder": 372,
+      "sourceOrder": 409,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:372:61:13"
@@ -361,7 +390,7 @@
       "pages": [
         61
       ],
-      "sourceOrder": 373,
+      "sourceOrder": 410,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:373:61:14"
@@ -387,7 +416,7 @@
       "pages": [
         61
       ],
-      "sourceOrder": 374,
+      "sourceOrder": 411,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:374:61:15"
@@ -413,7 +442,7 @@
       "pages": [
         61
       ],
-      "sourceOrder": 375,
+      "sourceOrder": 412,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:375:61:16"
@@ -439,7 +468,7 @@
       "pages": [
         61
       ],
-      "sourceOrder": 376,
+      "sourceOrder": 413,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:376:61:17"
@@ -465,7 +494,7 @@
       "pages": [
         61
       ],
-      "sourceOrder": 377,
+      "sourceOrder": 414,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:377:61:18"
@@ -491,7 +520,7 @@
       "pages": [
         62
       ],
-      "sourceOrder": 378,
+      "sourceOrder": 415,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:378:62:19"
@@ -517,7 +546,7 @@
       "pages": [
         62
       ],
-      "sourceOrder": 379,
+      "sourceOrder": 416,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:379:62:20"
@@ -543,7 +572,7 @@
       "pages": [
         62
       ],
-      "sourceOrder": 380,
+      "sourceOrder": 417,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:380:62:21"
@@ -569,7 +598,7 @@
       "pages": [
         62
       ],
-      "sourceOrder": 381,
+      "sourceOrder": 418,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:381:62:22"
@@ -595,7 +624,7 @@
       "pages": [
         62
       ],
-      "sourceOrder": 382,
+      "sourceOrder": 419,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:382:62:23"
@@ -611,34 +640,29 @@
     "articleAnchorCount": 410,
     "qwenRecordCount": 390,
     "pdfOnlyArticleCount": 0,
-    "missingArticleNumbers": [
-      {
-        "instrumentId": "ministerial-decision-1088-2000",
-        "articleNumbers": [
-          "9"
-        ]
-      }
-    ],
-    "suspiciousArticleCount": 0
+    "pdfRecoveredArticleCount": 0,
+    "missingArticleNumbers": [],
+    "suspiciousArticleCount": 45
   },
   "validation": {
     "issues": [
       {
         "severity": "warning",
-        "code": "MISSING_ARTICLES",
-        "message": "Missing expected article numbers: 9",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "9",
         "instrumentId": "ministerial-decision-1088-2000"
       }
     ],
     "summary": {
       "errors": 0,
-      "warnings": 6,
+      "warnings": 45,
       "infos": 12,
-      "articleCount": 384,
+      "articleCount": 426,
       "qwenRecordCount": 390,
-      "recoveryRecordCount": 0,
+      "recoveryRecordCount": 50,
       "suspiciousMergeCount": 0,
-      "missingArticleNumberCount": 42
+      "missingArticleNumberCount": 0
     }
   }
 }

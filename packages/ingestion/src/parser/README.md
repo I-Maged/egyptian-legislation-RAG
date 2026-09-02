@@ -1,6 +1,6 @@
-# Parser V3.2
+# Parser V3.3
 
-Parser V3.2 is **Qwen-first with PDF structural validation**.
+Parser V3.3 is **Qwen-first with PDF structural validation**.
 
 ## Design rules
 
@@ -60,9 +60,9 @@ For example, this is **wrong** as `--qwen`:
 --qwen ./data/raw/labour-v2.3.json
 ```
 
-That file contains Parser V2.3 article objects (`articleNumber`, `pageStart`, `sourceRecordIds`). It is not the original Qwen record array (`article_number`, `page_number`, `text`). V3.2 detects this automatically.
+That file contains Parser V2.3 article objects (`articleNumber`, `pageStart`, `sourceRecordIds`). It is not the original Qwen record array (`article_number`, `page_number`, `text`). V3.3 detects this automatically.
 
-For a **single-instrument** legacy file such as the current Financial V2.3 output, V3.2 performs a safety check and can adapt it without attempting to reconstruct boundaries. The authoritative profile then replaces stale law metadata. The output is labeled `legacy-adapted` and receives a warning.
+For a **single-instrument** legacy file such as the current Financial V2.3 output, V3.3 performs a safety check and can adapt it without attempting to reconstruct boundaries. The authoritative profile then replaces stale law metadata. The output is labeled `legacy-adapted` and receives a warning.
 
 For a legacy file with repeated article numbers/merged boundaries, such as the old Personal Affairs V2.3 artifact, automatic adaptation is rejected. Use the original Qwen input instead. `--legacy-raw` remains available for explicit diagnostic-only inspection.
 
@@ -78,7 +78,7 @@ PDF-only articles are marked `pdf_text_recovery` and `needsReview=true`; do not 
 
 ## Profile-aware missing-article recovery
 
-When running with an original Qwen record stream, V3.2 checks expected article coverage after Qwen reconstruction. Profiles may opt into PDF recovery.
+When running with an original Qwen record stream, V3.3 checks expected article coverage after Qwen reconstruction. Profiles may opt into PDF recovery.
 
 For Labour, recovery is enabled because the PDF text/marker extraction has been validated sufficiently for the current missing-article case:
 
@@ -118,3 +118,29 @@ The dedicated ingestion Vitest config limits the run to `packages/ingestion/src/
 Financial Law 6/2022 uses the safely-adapted V2/V2.3 corpus as its base because the available legacy extraction contains 75 one-to-one ordered articles (2-78). The parser now permits an explicit `--recovery` OCR stream to supplement that adapted corpus. This is intentionally separate from automatic PDF text recovery: the Financial PDF text layer is not trusted for automatic article extraction.
 
 Use `input/financial_law_recovered_articles.json` as the checked-in recovery stream for Articles 1, 36 and 47. The records are page-scoped and Article 1 is represented by two contiguous records so the final article retains pages 1-2. Recovered records remain provenance-visible and should be reviewed before indexing.
+
+### Personal Affairs targeted recovery
+
+The Personal Affairs PDF is a multi-instrument compilation. Its original Qwen stream contains 390 records, but the baseline V3 reconstruction reports missing articles for six instrument ranges. Recovery is therefore supplied explicitly rather than enabling automatic PDF text recovery.
+
+Use the checked-in recovery stream:
+
+```bash
+npm run parse:law -- --profile personal \
+  --pdf ./data/pdf/personal-src.pdf \
+  --qwen ./data/input/personal_affair_law_qwen_output.json \
+  --recovery ./data/input/personal_affair_law_recovered_articles.json \
+  --output ./output/personal-bundle-v3.json \
+  --split-output-dir ./output/personal-v3
+```
+
+The recovery stream covers the missing articles from:
+
+- Law 25/1920: Articles 1, 7, 12
+- Decree-Law 118/1952: Articles 8-13
+- Decree-Law 119/1952: Articles 8-13, 15, 16, 18-21, 29-39
+- Law 1/2000: Article 47
+- Ministerial Decision 1088/2000: Article 9
+- Ministerial Decision 1089/2000: Articles 2-9
+
+Recovered records remain `vision_ocr_recovery` and are marked `needsReview=true`. Article 1 of Law 25/1920 is represented by two page-scoped recovery records so the final article retains pages 1-2. The recovery stream also repairs three known corrupted Qwen records by replacing the targeted same-page/article record and restoring the missing continuation: Article 7 of Decree-Law 118/1952, Article 28 of Decree-Law 119/1952, and Article 1 of Ministerial Decision 1089/2000. Article 9 of Decision 1089/2000 is represented by two page-scoped recovery records across pages 63-64. When an explicit recovery record targets the same page and article as an existing Qwen record, the recovery record takes precedence. The PDF itself remains disabled as an automatic recovery source for the Personal Affairs profile.

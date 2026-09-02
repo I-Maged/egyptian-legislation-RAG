@@ -1,12 +1,13 @@
 {
   "metadata": {
-    "parserVersion": "3.1.0",
+    "parserVersion": "3.3.0",
     "inputFile": "personal_affair_law_qwen_output.json",
     "pdfFile": "personal-src.pdf",
-    "generatedAt": "2026-09-01T22:01:24.914Z",
+    "generatedAt": "2026-09-02T20:23:36.350Z",
     "recordCountOriginal": 390,
-    "recordCountRecovery": 0,
-    "recordCountMerged": 390,
+    "recordCountRecovery": 50,
+    "recordCountMerged": 440,
+    "pdfRecoveryArticleCount": 0,
     "instrumentId": "wills-law-71-1946",
     "mode": "qwen+pdf"
   },
@@ -50,7 +51,7 @@
       "pages": [
         15
       ],
-      "sourceOrder": 94,
+      "sourceOrder": 98,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:94:15:1"
@@ -76,7 +77,7 @@
       "pages": [
         15
       ],
-      "sourceOrder": 95,
+      "sourceOrder": 99,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:95:15:2"
@@ -102,7 +103,7 @@
       "pages": [
         16
       ],
-      "sourceOrder": 96,
+      "sourceOrder": 100,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:96:16:1"
@@ -128,7 +129,7 @@
       "pages": [
         16
       ],
-      "sourceOrder": 97,
+      "sourceOrder": 101,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:97:16:2"
@@ -154,7 +155,7 @@
       "pages": [
         16
       ],
-      "sourceOrder": 98,
+      "sourceOrder": 102,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:98:16:3"
@@ -180,7 +181,7 @@
       "pages": [
         16
       ],
-      "sourceOrder": 99,
+      "sourceOrder": 103,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:99:16:4"
@@ -206,7 +207,7 @@
       "pages": [
         16
       ],
-      "sourceOrder": 100,
+      "sourceOrder": 104,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:100:16:5"
@@ -232,7 +233,7 @@
       "pages": [
         16
       ],
-      "sourceOrder": 101,
+      "sourceOrder": 105,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:101:16:6"
@@ -258,7 +259,7 @@
       "pages": [
         17
       ],
-      "sourceOrder": 102,
+      "sourceOrder": 106,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:102:17:20"
@@ -284,7 +285,7 @@
       "pages": [
         17
       ],
-      "sourceOrder": 103,
+      "sourceOrder": 107,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:103:17:7"
@@ -310,7 +311,7 @@
       "pages": [
         17
       ],
-      "sourceOrder": 104,
+      "sourceOrder": 108,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:104:17:8"
@@ -336,7 +337,7 @@
       "pages": [
         17
       ],
-      "sourceOrder": 105,
+      "sourceOrder": 109,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:105:17:9"
@@ -362,7 +363,7 @@
       "pages": [
         17
       ],
-      "sourceOrder": 106,
+      "sourceOrder": 110,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:106:17:10"
@@ -388,7 +389,7 @@
       "pages": [
         17
       ],
-      "sourceOrder": 107,
+      "sourceOrder": 111,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:107:17:11"
@@ -414,7 +415,7 @@
       "pages": [
         17
       ],
-      "sourceOrder": 108,
+      "sourceOrder": 112,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:108:17:12"
@@ -440,7 +441,7 @@
       "pages": [
         17
       ],
-      "sourceOrder": 109,
+      "sourceOrder": 113,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:109:17:13"
@@ -466,7 +467,7 @@
       "pages": [
         17
       ],
-      "sourceOrder": 110,
+      "sourceOrder": 114,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:110:17:14"
@@ -492,7 +493,7 @@
       "pages": [
         17
       ],
-      "sourceOrder": 111,
+      "sourceOrder": 115,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:111:17:15"
@@ -518,7 +519,7 @@
       "pages": [
         18
       ],
-      "sourceOrder": 112,
+      "sourceOrder": 116,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:112:18:16"
@@ -544,7 +545,7 @@
       "pages": [
         18
       ],
-      "sourceOrder": 113,
+      "sourceOrder": 117,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:113:18:17"
@@ -570,7 +571,7 @@
       "pages": [
         18
       ],
-      "sourceOrder": 114,
+      "sourceOrder": 118,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:114:18:18"
@@ -596,7 +597,7 @@
       "pages": [
         18
       ],
-      "sourceOrder": 115,
+      "sourceOrder": 119,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:115:18:19"
@@ -622,7 +623,7 @@
       "pages": [
         18
       ],
-      "sourceOrder": 116,
+      "sourceOrder": 120,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:116:18:20"
@@ -648,7 +649,7 @@
       "pages": [
         18
       ],
-      "sourceOrder": 117,
+      "sourceOrder": 121,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:117:18:21"
@@ -674,7 +675,7 @@
       "pages": [
         18
       ],
-      "sourceOrder": 118,
+      "sourceOrder": 122,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:118:18:22"
@@ -700,7 +701,7 @@
       "pages": [
         19
       ],
-      "sourceOrder": 119,
+      "sourceOrder": 123,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:119:19:23"
@@ -726,7 +727,7 @@
       "pages": [
         19
       ],
-      "sourceOrder": 120,
+      "sourceOrder": 124,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:120:19:24"
@@ -752,7 +753,7 @@
       "pages": [
         19
       ],
-      "sourceOrder": 121,
+      "sourceOrder": 125,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:121:19:25"
@@ -778,7 +779,7 @@
       "pages": [
         19
       ],
-      "sourceOrder": 122,
+      "sourceOrder": 126,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:122:19:26"
@@ -804,7 +805,7 @@
       "pages": [
         19
       ],
-      "sourceOrder": 123,
+      "sourceOrder": 127,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:123:19:27"
@@ -830,7 +831,7 @@
       "pages": [
         19
       ],
-      "sourceOrder": 124,
+      "sourceOrder": 128,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:124:19:28"
@@ -856,7 +857,7 @@
       "pages": [
         20
       ],
-      "sourceOrder": 125,
+      "sourceOrder": 129,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:125:20:29"
@@ -882,7 +883,7 @@
       "pages": [
         20
       ],
-      "sourceOrder": 126,
+      "sourceOrder": 130,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:126:20:30"
@@ -908,7 +909,7 @@
       "pages": [
         20
       ],
-      "sourceOrder": 127,
+      "sourceOrder": 131,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:127:20:31"
@@ -934,7 +935,7 @@
       "pages": [
         20
       ],
-      "sourceOrder": 128,
+      "sourceOrder": 132,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:128:20:32"
@@ -960,7 +961,7 @@
       "pages": [
         20
       ],
-      "sourceOrder": 129,
+      "sourceOrder": 133,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:129:20:33"
@@ -986,7 +987,7 @@
       "pages": [
         20
       ],
-      "sourceOrder": 130,
+      "sourceOrder": 134,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:130:20:34"
@@ -1012,7 +1013,7 @@
       "pages": [
         20
       ],
-      "sourceOrder": 131,
+      "sourceOrder": 135,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:131:20:35"
@@ -1038,7 +1039,7 @@
       "pages": [
         21
       ],
-      "sourceOrder": 132,
+      "sourceOrder": 136,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:132:21:36"
@@ -1064,7 +1065,7 @@
       "pages": [
         21
       ],
-      "sourceOrder": 133,
+      "sourceOrder": 137,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:133:21:37"
@@ -1090,7 +1091,7 @@
       "pages": [
         21
       ],
-      "sourceOrder": 134,
+      "sourceOrder": 138,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:134:21:38"
@@ -1116,7 +1117,7 @@
       "pages": [
         21
       ],
-      "sourceOrder": 135,
+      "sourceOrder": 139,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:135:21:39"
@@ -1142,7 +1143,7 @@
       "pages": [
         21
       ],
-      "sourceOrder": 136,
+      "sourceOrder": 140,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:136:21:40"
@@ -1168,7 +1169,7 @@
       "pages": [
         21
       ],
-      "sourceOrder": 137,
+      "sourceOrder": 141,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:137:21:41"
@@ -1194,7 +1195,7 @@
       "pages": [
         21
       ],
-      "sourceOrder": 138,
+      "sourceOrder": 142,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:138:21:42"
@@ -1220,7 +1221,7 @@
       "pages": [
         21
       ],
-      "sourceOrder": 139,
+      "sourceOrder": 143,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:139:21:43"
@@ -1246,7 +1247,7 @@
       "pages": [
         22
       ],
-      "sourceOrder": 140,
+      "sourceOrder": 144,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:140:22:44"
@@ -1272,7 +1273,7 @@
       "pages": [
         22
       ],
-      "sourceOrder": 141,
+      "sourceOrder": 145,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:141:22:45"
@@ -1298,7 +1299,7 @@
       "pages": [
         22
       ],
-      "sourceOrder": 142,
+      "sourceOrder": 146,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:142:22:46"
@@ -1324,7 +1325,7 @@
       "pages": [
         22
       ],
-      "sourceOrder": 143,
+      "sourceOrder": 147,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:143:22:47"
@@ -1350,7 +1351,7 @@
       "pages": [
         22
       ],
-      "sourceOrder": 144,
+      "sourceOrder": 148,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:144:22:48"
@@ -1376,7 +1377,7 @@
       "pages": [
         22
       ],
-      "sourceOrder": 145,
+      "sourceOrder": 149,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:145:22:49"
@@ -1402,7 +1403,7 @@
       "pages": [
         22
       ],
-      "sourceOrder": 146,
+      "sourceOrder": 150,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:146:22:50"
@@ -1428,7 +1429,7 @@
       "pages": [
         23
       ],
-      "sourceOrder": 147,
+      "sourceOrder": 151,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:147:23:51"
@@ -1454,7 +1455,7 @@
       "pages": [
         23
       ],
-      "sourceOrder": 148,
+      "sourceOrder": 152,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:148:23:52"
@@ -1480,7 +1481,7 @@
       "pages": [
         23
       ],
-      "sourceOrder": 149,
+      "sourceOrder": 153,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:149:23:53"
@@ -1506,7 +1507,7 @@
       "pages": [
         23
       ],
-      "sourceOrder": 150,
+      "sourceOrder": 154,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:150:23:54"
@@ -1532,7 +1533,7 @@
       "pages": [
         23
       ],
-      "sourceOrder": 151,
+      "sourceOrder": 155,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:151:23:55"
@@ -1558,7 +1559,7 @@
       "pages": [
         23
       ],
-      "sourceOrder": 152,
+      "sourceOrder": 156,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:152:23:56"
@@ -1584,7 +1585,7 @@
       "pages": [
         24
       ],
-      "sourceOrder": 153,
+      "sourceOrder": 157,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:153:24:57"
@@ -1610,7 +1611,7 @@
       "pages": [
         24
       ],
-      "sourceOrder": 154,
+      "sourceOrder": 158,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:154:24:58"
@@ -1636,7 +1637,7 @@
       "pages": [
         24
       ],
-      "sourceOrder": 155,
+      "sourceOrder": 159,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:155:24:59"
@@ -1662,7 +1663,7 @@
       "pages": [
         24
       ],
-      "sourceOrder": 156,
+      "sourceOrder": 160,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:156:24:60"
@@ -1688,7 +1689,7 @@
       "pages": [
         24
       ],
-      "sourceOrder": 157,
+      "sourceOrder": 161,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:157:24:61"
@@ -1714,7 +1715,7 @@
       "pages": [
         24
       ],
-      "sourceOrder": 158,
+      "sourceOrder": 162,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:158:24:62"
@@ -1740,7 +1741,7 @@
       "pages": [
         24
       ],
-      "sourceOrder": 159,
+      "sourceOrder": 163,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:159:24:63"
@@ -1766,7 +1767,7 @@
       "pages": [
         24
       ],
-      "sourceOrder": 160,
+      "sourceOrder": 164,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:160:24:64"
@@ -1792,7 +1793,7 @@
       "pages": [
         24
       ],
-      "sourceOrder": 161,
+      "sourceOrder": 165,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:161:24:65"
@@ -1818,7 +1819,7 @@
       "pages": [
         25
       ],
-      "sourceOrder": 162,
+      "sourceOrder": 166,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:162:25:66"
@@ -1844,7 +1845,7 @@
       "pages": [
         25
       ],
-      "sourceOrder": 163,
+      "sourceOrder": 167,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:163:25:67"
@@ -1870,7 +1871,7 @@
       "pages": [
         25
       ],
-      "sourceOrder": 164,
+      "sourceOrder": 168,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:164:25:68"
@@ -1896,7 +1897,7 @@
       "pages": [
         25
       ],
-      "sourceOrder": 165,
+      "sourceOrder": 169,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:165:25:69"
@@ -1922,7 +1923,7 @@
       "pages": [
         25
       ],
-      "sourceOrder": 166,
+      "sourceOrder": 170,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:166:25:70"
@@ -1948,7 +1949,7 @@
       "pages": [
         26
       ],
-      "sourceOrder": 167,
+      "sourceOrder": 171,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:167:26:71"
@@ -1974,7 +1975,7 @@
       "pages": [
         26
       ],
-      "sourceOrder": 168,
+      "sourceOrder": 172,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:168:26:72"
@@ -2000,7 +2001,7 @@
       "pages": [
         26
       ],
-      "sourceOrder": 169,
+      "sourceOrder": 173,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:169:26:73"
@@ -2026,7 +2027,7 @@
       "pages": [
         26
       ],
-      "sourceOrder": 170,
+      "sourceOrder": 174,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:170:26:74"
@@ -2052,7 +2053,7 @@
       "pages": [
         26
       ],
-      "sourceOrder": 171,
+      "sourceOrder": 175,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:171:26:75"
@@ -2078,7 +2079,7 @@
       "pages": [
         26
       ],
-      "sourceOrder": 172,
+      "sourceOrder": 176,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:172:26:76"
@@ -2104,7 +2105,7 @@
       "pages": [
         26
       ],
-      "sourceOrder": 173,
+      "sourceOrder": 177,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:173:26:77"
@@ -2130,7 +2131,7 @@
       "pages": [
         27
       ],
-      "sourceOrder": 174,
+      "sourceOrder": 178,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:174:27:78"
@@ -2156,7 +2157,7 @@
       "pages": [
         27
       ],
-      "sourceOrder": 175,
+      "sourceOrder": 179,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:175:27:79"
@@ -2182,7 +2183,7 @@
       "pages": [
         27
       ],
-      "sourceOrder": 176,
+      "sourceOrder": 180,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:176:27:80"
@@ -2208,7 +2209,7 @@
       "pages": [
         27
       ],
-      "sourceOrder": 177,
+      "sourceOrder": 181,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:177:27:81"
@@ -2234,7 +2235,7 @@
       "pages": [
         27
       ],
-      "sourceOrder": 178,
+      "sourceOrder": 182,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:178:27:82"
@@ -2250,8 +2251,9 @@
     "articleAnchorCount": 410,
     "qwenRecordCount": 390,
     "pdfOnlyArticleCount": 0,
+    "pdfRecoveredArticleCount": 0,
     "missingArticleNumbers": [],
-    "suspiciousArticleCount": 0
+    "suspiciousArticleCount": 45
   },
   "validation": {
     "issues": [
@@ -2279,13 +2281,13 @@
     ],
     "summary": {
       "errors": 0,
-      "warnings": 6,
+      "warnings": 45,
       "infos": 12,
-      "articleCount": 384,
+      "articleCount": 426,
       "qwenRecordCount": 390,
-      "recoveryRecordCount": 0,
+      "recoveryRecordCount": 50,
       "suspiciousMergeCount": 0,
-      "missingArticleNumberCount": 42
+      "missingArticleNumberCount": 0
     }
   }
 }

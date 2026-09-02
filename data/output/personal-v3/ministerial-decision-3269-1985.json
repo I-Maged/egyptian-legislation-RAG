@@ -1,12 +1,13 @@
 {
   "metadata": {
-    "parserVersion": "3.1.0",
+    "parserVersion": "3.3.0",
     "inputFile": "personal_affair_law_qwen_output.json",
     "pdfFile": "personal-src.pdf",
-    "generatedAt": "2026-09-01T22:01:24.914Z",
+    "generatedAt": "2026-09-02T20:23:36.350Z",
     "recordCountOriginal": 390,
-    "recordCountRecovery": 0,
-    "recordCountMerged": 390,
+    "recordCountRecovery": 50,
+    "recordCountMerged": 440,
+    "pdfRecoveryArticleCount": 0,
     "instrumentId": "ministerial-decision-3269-1985",
     "mode": "qwen+pdf"
   },
@@ -49,7 +50,7 @@
       "pages": [
         56
       ],
-      "sourceOrder": 337,
+      "sourceOrder": 373,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:337:56:1"
@@ -75,7 +76,7 @@
       "pages": [
         56
       ],
-      "sourceOrder": 338,
+      "sourceOrder": 374,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:338:56:2"
@@ -101,7 +102,7 @@
       "pages": [
         56
       ],
-      "sourceOrder": 339,
+      "sourceOrder": 375,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:339:56:3"
@@ -127,7 +128,7 @@
       "pages": [
         56
       ],
-      "sourceOrder": 340,
+      "sourceOrder": 376,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:340:56:4"
@@ -153,7 +154,7 @@
       "pages": [
         56
       ],
-      "sourceOrder": 341,
+      "sourceOrder": 377,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:341:56:5"
@@ -179,7 +180,7 @@
       "pages": [
         57
       ],
-      "sourceOrder": 342,
+      "sourceOrder": 378,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:342:57:4"
@@ -205,7 +206,7 @@
       "pages": [
         57
       ],
-      "sourceOrder": 343,
+      "sourceOrder": 379,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:343:57:5"
@@ -231,7 +232,7 @@
       "pages": [
         57
       ],
-      "sourceOrder": 344,
+      "sourceOrder": 380,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:344:57:6"
@@ -257,7 +258,7 @@
       "pages": [
         57
       ],
-      "sourceOrder": 345,
+      "sourceOrder": 381,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:345:57:7"
@@ -283,7 +284,7 @@
       "pages": [
         57
       ],
-      "sourceOrder": 346,
+      "sourceOrder": 382,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:346:57:8"
@@ -309,7 +310,7 @@
       "pages": [
         57
       ],
-      "sourceOrder": 347,
+      "sourceOrder": 383,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:347:57:9"
@@ -335,7 +336,7 @@
       "pages": [
         57
       ],
-      "sourceOrder": 348,
+      "sourceOrder": 384,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:348:57:10"
@@ -361,7 +362,7 @@
       "pages": [
         57
       ],
-      "sourceOrder": 349,
+      "sourceOrder": 385,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:349:57:11"
@@ -377,8 +378,9 @@
     "articleAnchorCount": 410,
     "qwenRecordCount": 390,
     "pdfOnlyArticleCount": 0,
+    "pdfRecoveredArticleCount": 0,
     "missingArticleNumbers": [],
-    "suspiciousArticleCount": 0
+    "suspiciousArticleCount": 45
   },
   "validation": {
     "issues": [
@@ -399,13 +401,13 @@
     ],
     "summary": {
       "errors": 0,
-      "warnings": 6,
+      "warnings": 45,
       "infos": 12,
-      "articleCount": 384,
+      "articleCount": 426,
       "qwenRecordCount": 390,
-      "recoveryRecordCount": 0,
+      "recoveryRecordCount": 50,
       "suspiciousMergeCount": 0,
-      "missingArticleNumberCount": 42
+      "missingArticleNumberCount": 0
     }
   }
 }

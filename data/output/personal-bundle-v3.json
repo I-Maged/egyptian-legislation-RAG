@@ -1,12 +1,13 @@
 {
   "metadata": {
-    "parserVersion": "3.1.0",
+    "parserVersion": "3.3.0",
     "inputFile": "personal_affair_law_qwen_output.json",
     "pdfFile": "personal-src.pdf",
-    "generatedAt": "2026-09-01T22:01:24.914Z",
+    "generatedAt": "2026-09-02T20:23:36.350Z",
     "recordCountOriginal": 390,
-    "recordCountRecovery": 0,
-    "recordCountMerged": 390,
+    "recordCountRecovery": 50,
+    "recordCountMerged": 440,
+    "pdfRecoveryArticleCount": 0,
     "instrumentId": null,
     "mode": "qwen+pdf"
   },
@@ -230,6 +231,36 @@
       "lawName": "personal_affairs",
       "lawNumber": "25",
       "year": "1920",
+      "articleNumber": "1",
+      "articleNumberNormalized": 1,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 1:\nتجب النفقة للزوجة علي زوجها من تاريخ العقد الصحيح اذا سلمت نفسها الية ولو حكما حتي لو كانت موسرة او مختلفة معه في الدين.\nولا يمنع مرض الزوجة من استحقاقها للنفقة.\nوتشمل النفقة الغذاء والكسوة والسكن ومصاريف العلاج وغير ذلك بما يقتضي به الشرع.\nولا تجب النفقة للزوجة اذا ارتدت او امتنعت مختارة عن تسليم نفسها دون حق او اضطرت الي ذلك بسبب ليس من قبل الزوج او خرجت دون اذن زوجها.\nولا يعتبر سبب لسقوط نفقة الزوجة خروجها من مسكن الزوجية دون اذن زوجها في الاحوال التي يباح فيها ذلك بحكم الشرع مما ورد به نص او جري به عرف او قضت به ضرورة.\nولا خروجها للعمل المشروع ما لم يظهر ان استعمالها لهذا الحق المشروط مشوب باساءة استعمال الحق او مناف لمصلحة الاسرة وطلب منها الزوج الامتناع عنه.\n\nوتعتبر نفقة الزوجة دينا علي الزوج من تاريخ امتناعه عن الانفاق مع وجوبه، ولا تسقط الا بالاداء او الابراء.\nولا تسمع دعوي النفقة عن مدة ماضية لاكثر من سنة نهايتها تاريخ رفع الدعوي.\nولا يقبل من الزوج التمسك بالمقاصة بين نفقة الزوجة وبين دين له عليها الا فيما يزيد علي ما يفي بحاجتها الضرورية، ويكون لدين نفقة الزوجة امتياز علي جميع اموال الزوج، ويتقدم في مرتبته علي ديون النفقة الاخري.",
+      "textForEmbedding": "مادة 1:\nتجب النفقة للزوجة علي زوجها من تاريخ العقد الصحيح اذا سلمت نفسها الية ولو حكما حتي لو كانت موسرة او مختلفة معه في الدين.\nولا يمنع مرض الزوجة من استحقاقها للنفقة.\nوتشمل النفقة الغذاء والكسوة والسكن ومصاريف العلاج وغير ذلك بما يقتضي به الشرع.\nولا تجب النفقة للزوجة اذا ارتدت او امتنعت مختارة عن تسليم نفسها دون حق او اضطرت الي ذلك بسبب ليس من قبل الزوج او خرجت دون اذن زوجها.\nولا يعتبر سبب لسقوط نفقة الزوجة خروجها من مسكن الزوجية دون اذن زوجها في الاحوال التي يباح فيها ذلك بحكم الشرع مما ورد به نص او جري به عرف او قضت به ضرورة.\nولا خروجها للعمل المشروع ما لم يظهر ان استعمالها لهذا الحق المشروط مشوب باساءة استعمال الحق او مناف لمصلحة الاسرة وطلب منها الزوج الامتناع عنه.\n\nوتعتبر نفقة الزوجة دينا علي الزوج من تاريخ امتناعه عن الانفاق مع وجوبه، ولا تسقط الا بالاداء او الابراء.\nولا تسمع دعوي النفقة عن مدة ماضية لاكثر من سنة نهايتها تاريخ رفع الدعوي.\nولا يقبل من الزوج التمسك بالمقاصة بين نفقة الزوجة وبين دين له عليها الا فيما يزيد علي ما يفي بحاجتها الضرورية، ويكون لدين نفقة الزوجة امتياز علي جميع اموال الزوج، ويتقدم في مرتبته علي ديون النفقة الاخري.",
+      "pageStart": 1,
+      "pageEnd": 2,
+      "pages": [
+        1,
+        2
+      ],
+      "sourceOrder": 0,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:1:article-1:page-1",
+        "personal:pdf-vision:1:article-1:page-2"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 2,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "personal-law-25-1920",
+      "lawName": "personal_affairs",
+      "lawNumber": "25",
+      "year": "1920",
       "articleNumber": "2",
       "articleNumberNormalized": 2,
       "articleSuffix": null,
@@ -241,7 +272,7 @@
       "pages": [
         2
       ],
-      "sourceOrder": 0,
+      "sourceOrder": 2,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:0:2:2"
@@ -267,7 +298,7 @@
       "pages": [
         2
       ],
-      "sourceOrder": 1,
+      "sourceOrder": 3,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:1:2:3"
@@ -293,7 +324,7 @@
       "pages": [
         2
       ],
-      "sourceOrder": 2,
+      "sourceOrder": 4,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:2:2:4"
@@ -319,7 +350,7 @@
       "pages": [
         2
       ],
-      "sourceOrder": 3,
+      "sourceOrder": 5,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:3:2:5"
@@ -345,7 +376,7 @@
       "pages": [
         2
       ],
-      "sourceOrder": 4,
+      "sourceOrder": 6,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:4:2:6"
@@ -354,6 +385,34 @@
       "recoveryRecordCount": 0,
       "needsReview": false,
       "reviewReasons": []
+    },
+    {
+      "instrumentId": "personal-law-25-1920",
+      "lawName": "personal_affairs",
+      "lawNumber": "25",
+      "year": "1920",
+      "articleNumber": "7",
+      "articleNumberNormalized": 7,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 7:\nملغاة",
+      "textForEmbedding": "مادة 7:\nملغاة",
+      "pageStart": 2,
+      "pageEnd": 2,
+      "pages": [
+        2
+      ],
+      "sourceOrder": 7,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:1:article-7:page-2"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
     },
     {
       "instrumentId": "personal-law-25-1920",
@@ -371,7 +430,7 @@
       "pages": [
         2
       ],
-      "sourceOrder": 5,
+      "sourceOrder": 8,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:5:2:8"
@@ -397,7 +456,7 @@
       "pages": [
         2
       ],
-      "sourceOrder": 6,
+      "sourceOrder": 9,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:6:2:9"
@@ -423,7 +482,7 @@
       "pages": [
         3
       ],
-      "sourceOrder": 7,
+      "sourceOrder": 10,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:7:3:10"
@@ -449,7 +508,7 @@
       "pages": [
         3
       ],
-      "sourceOrder": 8,
+      "sourceOrder": 11,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:8:3:11"
@@ -458,6 +517,34 @@
       "recoveryRecordCount": 0,
       "needsReview": false,
       "reviewReasons": []
+    },
+    {
+      "instrumentId": "personal-law-25-1920",
+      "lawName": "personal_affairs",
+      "lawNumber": "25",
+      "year": "1920",
+      "articleNumber": "12",
+      "articleNumberNormalized": 12,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 12:\nملغاة",
+      "textForEmbedding": "مادة 12:\nملغاة",
+      "pageStart": 3,
+      "pageEnd": 3,
+      "pages": [
+        3
+      ],
+      "sourceOrder": 12,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:1:article-12:page-3"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
     },
     {
       "instrumentId": "personal-law-25-1920",
@@ -475,7 +562,7 @@
       "pages": [
         3
       ],
-      "sourceOrder": 9,
+      "sourceOrder": 13,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:9:3:13"
@@ -501,7 +588,7 @@
       "pages": [
         3
       ],
-      "sourceOrder": 10,
+      "sourceOrder": 14,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:10:3:1"
@@ -527,7 +614,7 @@
       "pages": [
         3
       ],
-      "sourceOrder": 11,
+      "sourceOrder": 15,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:11:3:2"
@@ -553,7 +640,7 @@
       "pages": [
         3
       ],
-      "sourceOrder": 12,
+      "sourceOrder": 16,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:12:3:3"
@@ -579,7 +666,7 @@
       "pages": [
         3
       ],
-      "sourceOrder": 13,
+      "sourceOrder": 17,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:13:3:4"
@@ -605,7 +692,7 @@
       "pages": [
         3
       ],
-      "sourceOrder": 14,
+      "sourceOrder": 18,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:14:3:5",
@@ -632,7 +719,7 @@
       "pages": [
         4
       ],
-      "sourceOrder": 16,
+      "sourceOrder": 20,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:16:4:6"
@@ -658,7 +745,7 @@
       "pages": [
         4
       ],
-      "sourceOrder": 17,
+      "sourceOrder": 21,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:17:4:7"
@@ -684,7 +771,7 @@
       "pages": [
         4
       ],
-      "sourceOrder": 18,
+      "sourceOrder": 22,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:18:4:8"
@@ -710,7 +797,7 @@
       "pages": [
         4
       ],
-      "sourceOrder": 19,
+      "sourceOrder": 23,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:19:4:9"
@@ -736,7 +823,7 @@
       "pages": [
         4
       ],
-      "sourceOrder": 20,
+      "sourceOrder": 24,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:20:4:10"
@@ -763,7 +850,7 @@
         4,
         5
       ],
-      "sourceOrder": 21,
+      "sourceOrder": 25,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:21:4:11",
@@ -791,7 +878,7 @@
       "pages": [
         5
       ],
-      "sourceOrder": 24,
+      "sourceOrder": 28,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:24:5:12"
@@ -817,7 +904,7 @@
       "pages": [
         5
       ],
-      "sourceOrder": 25,
+      "sourceOrder": 29,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:25:5:13"
@@ -843,7 +930,7 @@
       "pages": [
         5
       ],
-      "sourceOrder": 26,
+      "sourceOrder": 30,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:26:5:14"
@@ -869,7 +956,7 @@
       "pages": [
         5
       ],
-      "sourceOrder": 27,
+      "sourceOrder": 31,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:27:5:15"
@@ -895,7 +982,7 @@
       "pages": [
         5
       ],
-      "sourceOrder": 28,
+      "sourceOrder": 32,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:28:5:16"
@@ -921,7 +1008,7 @@
       "pages": [
         6
       ],
-      "sourceOrder": 29,
+      "sourceOrder": 33,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:29:6:17"
@@ -947,7 +1034,7 @@
       "pages": [
         6
       ],
-      "sourceOrder": 30,
+      "sourceOrder": 34,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:30:6:18"
@@ -973,7 +1060,7 @@
       "pages": [
         6
       ],
-      "sourceOrder": 31,
+      "sourceOrder": 35,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:31:6:17"
@@ -999,7 +1086,7 @@
       "pages": [
         6
       ],
-      "sourceOrder": 32,
+      "sourceOrder": 36,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:32:6:18",
@@ -1026,7 +1113,7 @@
       "pages": [
         6
       ],
-      "sourceOrder": 34,
+      "sourceOrder": 38,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:34:6:19"
@@ -1052,7 +1139,7 @@
       "pages": [
         7
       ],
-      "sourceOrder": 35,
+      "sourceOrder": 39,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:35:7:20"
@@ -1078,7 +1165,7 @@
       "pages": [
         7
       ],
-      "sourceOrder": 36,
+      "sourceOrder": 40,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:36:7:21"
@@ -1104,7 +1191,7 @@
       "pages": [
         7
       ],
-      "sourceOrder": 37,
+      "sourceOrder": 41,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:37:7:22"
@@ -1130,7 +1217,7 @@
       "pages": [
         8
       ],
-      "sourceOrder": 38,
+      "sourceOrder": 42,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:38:8:23",
@@ -1157,7 +1244,7 @@
       "pages": [
         8
       ],
-      "sourceOrder": 40,
+      "sourceOrder": 44,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:40:8:24"
@@ -1183,7 +1270,7 @@
       "pages": [
         8
       ],
-      "sourceOrder": 41,
+      "sourceOrder": 45,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:41:8:25"
@@ -1209,7 +1296,7 @@
       "pages": [
         8
       ],
-      "sourceOrder": 42,
+      "sourceOrder": 46,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:42:8:1"
@@ -1235,7 +1322,7 @@
       "pages": [
         8
       ],
-      "sourceOrder": 43,
+      "sourceOrder": 47,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:43:8:2"
@@ -1261,7 +1348,7 @@
       "pages": [
         8
       ],
-      "sourceOrder": 44,
+      "sourceOrder": 48,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:44:8:1"
@@ -1287,7 +1374,7 @@
       "pages": [
         8
       ],
-      "sourceOrder": 45,
+      "sourceOrder": 49,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:45:8:2"
@@ -1313,7 +1400,7 @@
       "pages": [
         8
       ],
-      "sourceOrder": 46,
+      "sourceOrder": 50,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:46:8:3"
@@ -1339,7 +1426,7 @@
       "pages": [
         9
       ],
-      "sourceOrder": 47,
+      "sourceOrder": 51,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:47:9:4"
@@ -1365,7 +1452,7 @@
       "pages": [
         9
       ],
-      "sourceOrder": 48,
+      "sourceOrder": 52,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:48:9:5"
@@ -1391,7 +1478,7 @@
       "pages": [
         9
       ],
-      "sourceOrder": 49,
+      "sourceOrder": 53,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:49:9:6"
@@ -1417,7 +1504,7 @@
       "pages": [
         9
       ],
-      "sourceOrder": 50,
+      "sourceOrder": 54,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:50:9:7"
@@ -1443,7 +1530,7 @@
       "pages": [
         9
       ],
-      "sourceOrder": 51,
+      "sourceOrder": 55,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:51:9:8"
@@ -1469,7 +1556,7 @@
       "pages": [
         9
       ],
-      "sourceOrder": 52,
+      "sourceOrder": 56,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:52:9:9"
@@ -1495,7 +1582,7 @@
       "pages": [
         9
       ],
-      "sourceOrder": 53,
+      "sourceOrder": 57,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:53:9:10"
@@ -1521,7 +1608,7 @@
       "pages": [
         10
       ],
-      "sourceOrder": 54,
+      "sourceOrder": 58,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:54:10:11"
@@ -1547,7 +1634,7 @@
       "pages": [
         10
       ],
-      "sourceOrder": 55,
+      "sourceOrder": 59,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:55:10:12"
@@ -1573,7 +1660,7 @@
       "pages": [
         10
       ],
-      "sourceOrder": 56,
+      "sourceOrder": 60,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:56:10:13"
@@ -1599,7 +1686,7 @@
       "pages": [
         10
       ],
-      "sourceOrder": 57,
+      "sourceOrder": 61,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:57:10:14"
@@ -1625,7 +1712,7 @@
       "pages": [
         10
       ],
-      "sourceOrder": 58,
+      "sourceOrder": 62,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:58:10:15"
@@ -1651,7 +1738,7 @@
       "pages": [
         10
       ],
-      "sourceOrder": 59,
+      "sourceOrder": 63,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:59:10:16"
@@ -1677,7 +1764,7 @@
       "pages": [
         10
       ],
-      "sourceOrder": 60,
+      "sourceOrder": 64,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:60:10:17"
@@ -1703,7 +1790,7 @@
       "pages": [
         11
       ],
-      "sourceOrder": 61,
+      "sourceOrder": 65,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:61:11:18"
@@ -1729,7 +1816,7 @@
       "pages": [
         11
       ],
-      "sourceOrder": 62,
+      "sourceOrder": 66,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:62:11:19"
@@ -1755,7 +1842,7 @@
       "pages": [
         11
       ],
-      "sourceOrder": 63,
+      "sourceOrder": 67,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:63:11:20"
@@ -1781,7 +1868,7 @@
       "pages": [
         11
       ],
-      "sourceOrder": 64,
+      "sourceOrder": 68,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:64:11:21"
@@ -1807,7 +1894,7 @@
       "pages": [
         11
       ],
-      "sourceOrder": 65,
+      "sourceOrder": 69,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:65:11:22"
@@ -1833,7 +1920,7 @@
       "pages": [
         11
       ],
-      "sourceOrder": 66,
+      "sourceOrder": 70,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:66:11:23"
@@ -1859,7 +1946,7 @@
       "pages": [
         11
       ],
-      "sourceOrder": 67,
+      "sourceOrder": 71,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:67:11:24"
@@ -1885,7 +1972,7 @@
       "pages": [
         11
       ],
-      "sourceOrder": 68,
+      "sourceOrder": 72,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:68:11:25"
@@ -1911,7 +1998,7 @@
       "pages": [
         11
       ],
-      "sourceOrder": 69,
+      "sourceOrder": 73,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:69:11:26"
@@ -1937,7 +2024,7 @@
       "pages": [
         12
       ],
-      "sourceOrder": 70,
+      "sourceOrder": 74,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:70:12:27"
@@ -1963,7 +2050,7 @@
       "pages": [
         12
       ],
-      "sourceOrder": 71,
+      "sourceOrder": 75,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:71:12:28"
@@ -1989,7 +2076,7 @@
       "pages": [
         12
       ],
-      "sourceOrder": 72,
+      "sourceOrder": 76,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:72:12:29"
@@ -2015,7 +2102,7 @@
       "pages": [
         12
       ],
-      "sourceOrder": 73,
+      "sourceOrder": 77,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:73:12:30"
@@ -2041,7 +2128,7 @@
       "pages": [
         12
       ],
-      "sourceOrder": 74,
+      "sourceOrder": 78,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:74:12:31"
@@ -2067,7 +2154,7 @@
       "pages": [
         13
       ],
-      "sourceOrder": 75,
+      "sourceOrder": 79,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:75:13:32"
@@ -2093,7 +2180,7 @@
       "pages": [
         13
       ],
-      "sourceOrder": 76,
+      "sourceOrder": 80,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:76:13:33"
@@ -2119,7 +2206,7 @@
       "pages": [
         13
       ],
-      "sourceOrder": 77,
+      "sourceOrder": 81,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:77:13:34"
@@ -2145,7 +2232,7 @@
       "pages": [
         13
       ],
-      "sourceOrder": 78,
+      "sourceOrder": 82,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:78:13:35"
@@ -2171,7 +2258,7 @@
       "pages": [
         13
       ],
-      "sourceOrder": 79,
+      "sourceOrder": 83,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:79:13:36"
@@ -2197,7 +2284,7 @@
       "pages": [
         13
       ],
-      "sourceOrder": 80,
+      "sourceOrder": 84,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:80:13:37"
@@ -2223,7 +2310,7 @@
       "pages": [
         13
       ],
-      "sourceOrder": 81,
+      "sourceOrder": 85,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:81:13:38"
@@ -2249,7 +2336,7 @@
       "pages": [
         13
       ],
-      "sourceOrder": 82,
+      "sourceOrder": 86,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:82:13:39"
@@ -2275,7 +2362,7 @@
       "pages": [
         14
       ],
-      "sourceOrder": 83,
+      "sourceOrder": 87,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:83:14:40"
@@ -2301,7 +2388,7 @@
       "pages": [
         14
       ],
-      "sourceOrder": 84,
+      "sourceOrder": 88,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:84:14:41"
@@ -2327,7 +2414,7 @@
       "pages": [
         14
       ],
-      "sourceOrder": 85,
+      "sourceOrder": 89,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:85:14:42"
@@ -2353,7 +2440,7 @@
       "pages": [
         14
       ],
-      "sourceOrder": 86,
+      "sourceOrder": 90,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:86:14:43"
@@ -2379,7 +2466,7 @@
       "pages": [
         14
       ],
-      "sourceOrder": 87,
+      "sourceOrder": 91,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:87:14:44"
@@ -2405,7 +2492,7 @@
       "pages": [
         14
       ],
-      "sourceOrder": 88,
+      "sourceOrder": 92,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:88:14:45"
@@ -2431,7 +2518,7 @@
       "pages": [
         14
       ],
-      "sourceOrder": 89,
+      "sourceOrder": 93,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:89:14:46"
@@ -2457,7 +2544,7 @@
       "pages": [
         15
       ],
-      "sourceOrder": 90,
+      "sourceOrder": 94,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:90:15:47"
@@ -2483,7 +2570,7 @@
       "pages": [
         15
       ],
-      "sourceOrder": 91,
+      "sourceOrder": 95,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:91:15:48"
@@ -2509,7 +2596,7 @@
       "pages": [
         15
       ],
-      "sourceOrder": 92,
+      "sourceOrder": 96,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:92:15:1"
@@ -2535,7 +2622,7 @@
       "pages": [
         15
       ],
-      "sourceOrder": 93,
+      "sourceOrder": 97,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:93:15:2"
@@ -2561,7 +2648,7 @@
       "pages": [
         15
       ],
-      "sourceOrder": 94,
+      "sourceOrder": 98,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:94:15:1"
@@ -2587,7 +2674,7 @@
       "pages": [
         15
       ],
-      "sourceOrder": 95,
+      "sourceOrder": 99,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:95:15:2"
@@ -2613,7 +2700,7 @@
       "pages": [
         16
       ],
-      "sourceOrder": 96,
+      "sourceOrder": 100,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:96:16:1"
@@ -2639,7 +2726,7 @@
       "pages": [
         16
       ],
-      "sourceOrder": 97,
+      "sourceOrder": 101,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:97:16:2"
@@ -2665,7 +2752,7 @@
       "pages": [
         16
       ],
-      "sourceOrder": 98,
+      "sourceOrder": 102,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:98:16:3"
@@ -2691,7 +2778,7 @@
       "pages": [
         16
       ],
-      "sourceOrder": 99,
+      "sourceOrder": 103,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:99:16:4"
@@ -2717,7 +2804,7 @@
       "pages": [
         16
       ],
-      "sourceOrder": 100,
+      "sourceOrder": 104,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:100:16:5"
@@ -2743,7 +2830,7 @@
       "pages": [
         16
       ],
-      "sourceOrder": 101,
+      "sourceOrder": 105,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:101:16:6"
@@ -2769,7 +2856,7 @@
       "pages": [
         17
       ],
-      "sourceOrder": 102,
+      "sourceOrder": 106,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:102:17:20"
@@ -2795,7 +2882,7 @@
       "pages": [
         17
       ],
-      "sourceOrder": 103,
+      "sourceOrder": 107,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:103:17:7"
@@ -2821,7 +2908,7 @@
       "pages": [
         17
       ],
-      "sourceOrder": 104,
+      "sourceOrder": 108,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:104:17:8"
@@ -2847,7 +2934,7 @@
       "pages": [
         17
       ],
-      "sourceOrder": 105,
+      "sourceOrder": 109,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:105:17:9"
@@ -2873,7 +2960,7 @@
       "pages": [
         17
       ],
-      "sourceOrder": 106,
+      "sourceOrder": 110,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:106:17:10"
@@ -2899,7 +2986,7 @@
       "pages": [
         17
       ],
-      "sourceOrder": 107,
+      "sourceOrder": 111,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:107:17:11"
@@ -2925,7 +3012,7 @@
       "pages": [
         17
       ],
-      "sourceOrder": 108,
+      "sourceOrder": 112,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:108:17:12"
@@ -2951,7 +3038,7 @@
       "pages": [
         17
       ],
-      "sourceOrder": 109,
+      "sourceOrder": 113,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:109:17:13"
@@ -2977,7 +3064,7 @@
       "pages": [
         17
       ],
-      "sourceOrder": 110,
+      "sourceOrder": 114,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:110:17:14"
@@ -3003,7 +3090,7 @@
       "pages": [
         17
       ],
-      "sourceOrder": 111,
+      "sourceOrder": 115,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:111:17:15"
@@ -3029,7 +3116,7 @@
       "pages": [
         18
       ],
-      "sourceOrder": 112,
+      "sourceOrder": 116,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:112:18:16"
@@ -3055,7 +3142,7 @@
       "pages": [
         18
       ],
-      "sourceOrder": 113,
+      "sourceOrder": 117,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:113:18:17"
@@ -3081,7 +3168,7 @@
       "pages": [
         18
       ],
-      "sourceOrder": 114,
+      "sourceOrder": 118,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:114:18:18"
@@ -3107,7 +3194,7 @@
       "pages": [
         18
       ],
-      "sourceOrder": 115,
+      "sourceOrder": 119,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:115:18:19"
@@ -3133,7 +3220,7 @@
       "pages": [
         18
       ],
-      "sourceOrder": 116,
+      "sourceOrder": 120,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:116:18:20"
@@ -3159,7 +3246,7 @@
       "pages": [
         18
       ],
-      "sourceOrder": 117,
+      "sourceOrder": 121,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:117:18:21"
@@ -3185,7 +3272,7 @@
       "pages": [
         18
       ],
-      "sourceOrder": 118,
+      "sourceOrder": 122,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:118:18:22"
@@ -3211,7 +3298,7 @@
       "pages": [
         19
       ],
-      "sourceOrder": 119,
+      "sourceOrder": 123,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:119:19:23"
@@ -3237,7 +3324,7 @@
       "pages": [
         19
       ],
-      "sourceOrder": 120,
+      "sourceOrder": 124,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:120:19:24"
@@ -3263,7 +3350,7 @@
       "pages": [
         19
       ],
-      "sourceOrder": 121,
+      "sourceOrder": 125,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:121:19:25"
@@ -3289,7 +3376,7 @@
       "pages": [
         19
       ],
-      "sourceOrder": 122,
+      "sourceOrder": 126,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:122:19:26"
@@ -3315,7 +3402,7 @@
       "pages": [
         19
       ],
-      "sourceOrder": 123,
+      "sourceOrder": 127,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:123:19:27"
@@ -3341,7 +3428,7 @@
       "pages": [
         19
       ],
-      "sourceOrder": 124,
+      "sourceOrder": 128,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:124:19:28"
@@ -3367,7 +3454,7 @@
       "pages": [
         20
       ],
-      "sourceOrder": 125,
+      "sourceOrder": 129,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:125:20:29"
@@ -3393,7 +3480,7 @@
       "pages": [
         20
       ],
-      "sourceOrder": 126,
+      "sourceOrder": 130,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:126:20:30"
@@ -3419,7 +3506,7 @@
       "pages": [
         20
       ],
-      "sourceOrder": 127,
+      "sourceOrder": 131,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:127:20:31"
@@ -3445,7 +3532,7 @@
       "pages": [
         20
       ],
-      "sourceOrder": 128,
+      "sourceOrder": 132,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:128:20:32"
@@ -3471,7 +3558,7 @@
       "pages": [
         20
       ],
-      "sourceOrder": 129,
+      "sourceOrder": 133,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:129:20:33"
@@ -3497,7 +3584,7 @@
       "pages": [
         20
       ],
-      "sourceOrder": 130,
+      "sourceOrder": 134,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:130:20:34"
@@ -3523,7 +3610,7 @@
       "pages": [
         20
       ],
-      "sourceOrder": 131,
+      "sourceOrder": 135,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:131:20:35"
@@ -3549,7 +3636,7 @@
       "pages": [
         21
       ],
-      "sourceOrder": 132,
+      "sourceOrder": 136,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:132:21:36"
@@ -3575,7 +3662,7 @@
       "pages": [
         21
       ],
-      "sourceOrder": 133,
+      "sourceOrder": 137,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:133:21:37"
@@ -3601,7 +3688,7 @@
       "pages": [
         21
       ],
-      "sourceOrder": 134,
+      "sourceOrder": 138,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:134:21:38"
@@ -3627,7 +3714,7 @@
       "pages": [
         21
       ],
-      "sourceOrder": 135,
+      "sourceOrder": 139,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:135:21:39"
@@ -3653,7 +3740,7 @@
       "pages": [
         21
       ],
-      "sourceOrder": 136,
+      "sourceOrder": 140,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:136:21:40"
@@ -3679,7 +3766,7 @@
       "pages": [
         21
       ],
-      "sourceOrder": 137,
+      "sourceOrder": 141,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:137:21:41"
@@ -3705,7 +3792,7 @@
       "pages": [
         21
       ],
-      "sourceOrder": 138,
+      "sourceOrder": 142,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:138:21:42"
@@ -3731,7 +3818,7 @@
       "pages": [
         21
       ],
-      "sourceOrder": 139,
+      "sourceOrder": 143,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:139:21:43"
@@ -3757,7 +3844,7 @@
       "pages": [
         22
       ],
-      "sourceOrder": 140,
+      "sourceOrder": 144,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:140:22:44"
@@ -3783,7 +3870,7 @@
       "pages": [
         22
       ],
-      "sourceOrder": 141,
+      "sourceOrder": 145,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:141:22:45"
@@ -3809,7 +3896,7 @@
       "pages": [
         22
       ],
-      "sourceOrder": 142,
+      "sourceOrder": 146,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:142:22:46"
@@ -3835,7 +3922,7 @@
       "pages": [
         22
       ],
-      "sourceOrder": 143,
+      "sourceOrder": 147,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:143:22:47"
@@ -3861,7 +3948,7 @@
       "pages": [
         22
       ],
-      "sourceOrder": 144,
+      "sourceOrder": 148,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:144:22:48"
@@ -3887,7 +3974,7 @@
       "pages": [
         22
       ],
-      "sourceOrder": 145,
+      "sourceOrder": 149,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:145:22:49"
@@ -3913,7 +4000,7 @@
       "pages": [
         22
       ],
-      "sourceOrder": 146,
+      "sourceOrder": 150,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:146:22:50"
@@ -3939,7 +4026,7 @@
       "pages": [
         23
       ],
-      "sourceOrder": 147,
+      "sourceOrder": 151,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:147:23:51"
@@ -3965,7 +4052,7 @@
       "pages": [
         23
       ],
-      "sourceOrder": 148,
+      "sourceOrder": 152,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:148:23:52"
@@ -3991,7 +4078,7 @@
       "pages": [
         23
       ],
-      "sourceOrder": 149,
+      "sourceOrder": 153,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:149:23:53"
@@ -4017,7 +4104,7 @@
       "pages": [
         23
       ],
-      "sourceOrder": 150,
+      "sourceOrder": 154,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:150:23:54"
@@ -4043,7 +4130,7 @@
       "pages": [
         23
       ],
-      "sourceOrder": 151,
+      "sourceOrder": 155,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:151:23:55"
@@ -4069,7 +4156,7 @@
       "pages": [
         23
       ],
-      "sourceOrder": 152,
+      "sourceOrder": 156,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:152:23:56"
@@ -4095,7 +4182,7 @@
       "pages": [
         24
       ],
-      "sourceOrder": 153,
+      "sourceOrder": 157,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:153:24:57"
@@ -4121,7 +4208,7 @@
       "pages": [
         24
       ],
-      "sourceOrder": 154,
+      "sourceOrder": 158,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:154:24:58"
@@ -4147,7 +4234,7 @@
       "pages": [
         24
       ],
-      "sourceOrder": 155,
+      "sourceOrder": 159,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:155:24:59"
@@ -4173,7 +4260,7 @@
       "pages": [
         24
       ],
-      "sourceOrder": 156,
+      "sourceOrder": 160,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:156:24:60"
@@ -4199,7 +4286,7 @@
       "pages": [
         24
       ],
-      "sourceOrder": 157,
+      "sourceOrder": 161,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:157:24:61"
@@ -4225,7 +4312,7 @@
       "pages": [
         24
       ],
-      "sourceOrder": 158,
+      "sourceOrder": 162,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:158:24:62"
@@ -4251,7 +4338,7 @@
       "pages": [
         24
       ],
-      "sourceOrder": 159,
+      "sourceOrder": 163,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:159:24:63"
@@ -4277,7 +4364,7 @@
       "pages": [
         24
       ],
-      "sourceOrder": 160,
+      "sourceOrder": 164,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:160:24:64"
@@ -4303,7 +4390,7 @@
       "pages": [
         24
       ],
-      "sourceOrder": 161,
+      "sourceOrder": 165,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:161:24:65"
@@ -4329,7 +4416,7 @@
       "pages": [
         25
       ],
-      "sourceOrder": 162,
+      "sourceOrder": 166,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:162:25:66"
@@ -4355,7 +4442,7 @@
       "pages": [
         25
       ],
-      "sourceOrder": 163,
+      "sourceOrder": 167,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:163:25:67"
@@ -4381,7 +4468,7 @@
       "pages": [
         25
       ],
-      "sourceOrder": 164,
+      "sourceOrder": 168,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:164:25:68"
@@ -4407,7 +4494,7 @@
       "pages": [
         25
       ],
-      "sourceOrder": 165,
+      "sourceOrder": 169,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:165:25:69"
@@ -4433,7 +4520,7 @@
       "pages": [
         25
       ],
-      "sourceOrder": 166,
+      "sourceOrder": 170,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:166:25:70"
@@ -4459,7 +4546,7 @@
       "pages": [
         26
       ],
-      "sourceOrder": 167,
+      "sourceOrder": 171,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:167:26:71"
@@ -4485,7 +4572,7 @@
       "pages": [
         26
       ],
-      "sourceOrder": 168,
+      "sourceOrder": 172,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:168:26:72"
@@ -4511,7 +4598,7 @@
       "pages": [
         26
       ],
-      "sourceOrder": 169,
+      "sourceOrder": 173,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:169:26:73"
@@ -4537,7 +4624,7 @@
       "pages": [
         26
       ],
-      "sourceOrder": 170,
+      "sourceOrder": 174,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:170:26:74"
@@ -4563,7 +4650,7 @@
       "pages": [
         26
       ],
-      "sourceOrder": 171,
+      "sourceOrder": 175,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:171:26:75"
@@ -4589,7 +4676,7 @@
       "pages": [
         26
       ],
-      "sourceOrder": 172,
+      "sourceOrder": 176,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:172:26:76"
@@ -4615,7 +4702,7 @@
       "pages": [
         26
       ],
-      "sourceOrder": 173,
+      "sourceOrder": 177,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:173:26:77"
@@ -4641,7 +4728,7 @@
       "pages": [
         27
       ],
-      "sourceOrder": 174,
+      "sourceOrder": 178,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:174:27:78"
@@ -4667,7 +4754,7 @@
       "pages": [
         27
       ],
-      "sourceOrder": 175,
+      "sourceOrder": 179,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:175:27:79"
@@ -4693,7 +4780,7 @@
       "pages": [
         27
       ],
-      "sourceOrder": 176,
+      "sourceOrder": 180,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:176:27:80"
@@ -4719,7 +4806,7 @@
       "pages": [
         27
       ],
-      "sourceOrder": 177,
+      "sourceOrder": 181,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:177:27:81"
@@ -4745,7 +4832,7 @@
       "pages": [
         27
       ],
-      "sourceOrder": 178,
+      "sourceOrder": 182,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:178:27:82"
@@ -4771,7 +4858,7 @@
       "pages": [
         27
       ],
-      "sourceOrder": 179,
+      "sourceOrder": 183,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:179:27:1"
@@ -4797,7 +4884,7 @@
       "pages": [
         28
       ],
-      "sourceOrder": 180,
+      "sourceOrder": 184,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:180:28:2"
@@ -4823,7 +4910,7 @@
       "pages": [
         28
       ],
-      "sourceOrder": 181,
+      "sourceOrder": 185,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:181:28:3"
@@ -4849,7 +4936,7 @@
       "pages": [
         28
       ],
-      "sourceOrder": 182,
+      "sourceOrder": 186,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:182:28:4"
@@ -4875,7 +4962,7 @@
       "pages": [
         28
       ],
-      "sourceOrder": 183,
+      "sourceOrder": 187,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:183:28:5"
@@ -4901,7 +4988,7 @@
       "pages": [
         28
       ],
-      "sourceOrder": 184,
+      "sourceOrder": 188,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:184:28:6"
@@ -4919,23 +5006,195 @@
       "articleNumber": "7",
       "articleNumberNormalized": 7,
       "articleSuffix": null,
-      "chapter": "الفصل السابع في تراحم الوصايا .",
-      "text": "مادة 7 :\nوعلي القانون رقم 26 لسنة 1951 باضافة كتاب رابع الي قانون المرافعات المدنية والتجارية في الاجراءات المتعلقة بمسايل الاحوال الشخصية .\nوبناء علي ما عرضة وزير العدل :\nرسم بم هو ات",
-      "textForEmbedding": "مادة 7 :\nوعلي القانون رقم 26 لسنة 1951 باضافة كتاب رابع الي قانون المرافعات المدنية والتجارية في الاجراءات المتعلقة بمسايل الاحوال الشخصية .\nوبناء علي ما عرضة وزير العدل :\nرسم بم هو ات",
+      "chapter": null,
+      "text": "مادة 7:\n\nاذا وقعت الجريمة علي صغير او منه مما يوجب او يجيز سلب الولاية جاز لسلطة التحقيق او الحكم ان تعهد بالصغير الي شخص موتمن يتعهد بملاحظته والمحافظة عليه او الي معهد خيري معترف به من وزارة الشيون الاجتماعية حتي يفصل في الجريمة او في شان الولاية.",
+      "textForEmbedding": "مادة 7:\n\nاذا وقعت الجريمة علي صغير او منه مما يوجب او يجيز سلب الولاية جاز لسلطة التحقيق او الحكم ان تعهد بالصغير الي شخص موتمن يتعهد بملاحظته والمحافظة عليه او الي معهد خيري معترف به من وزارة الشيون الاجتماعية حتي يفصل في الجريمة او في شان الولاية.",
       "pageStart": 28,
-      "pageEnd": 28,
+      "pageEnd": 29,
       "pages": [
-        28
+        28,
+        29
       ],
-      "sourceOrder": 185,
-      "source": "vision_ocr",
+      "sourceOrder": 189,
+      "source": "vision_ocr_recovery",
       "sourceRecordIds": [
-        "qwen:185:28:7"
+        "personal:pdf-vision:118-1952:article-7:page-28",
+        "personal:pdf-vision:118-1952:article-7:page-29"
       ],
-      "qwenRecordCount": 1,
-      "recoveryRecordCount": 0,
-      "needsReview": false,
-      "reviewReasons": []
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 2,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "guardianship-person-decree-118-1952",
+      "lawName": "guardianship",
+      "lawNumber": "118",
+      "year": "1952",
+      "articleNumber": "8",
+      "articleNumberNormalized": 8,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 8:\nيجوز للمحكمة الجنايية حين تقضي بالعقوبة علي الولي في الحالات المنصوص عليها في المادة الثانية وفي البنود الاربعة الاولي من المادة الثالثة ان تحكم ايضا بسلب الولاية او الحد منها، اما ما يترتب علي ذلك من تدابير واثار فتحكم فيه المحكمة المختصة بناء علي طلب النيابة او ذي الشان وفقا لاحكام هذا القانون ولقانون المرافعات المدنية والتجارية.",
+      "textForEmbedding": "مادة 8:\nيجوز للمحكمة الجنايية حين تقضي بالعقوبة علي الولي في الحالات المنصوص عليها في المادة الثانية وفي البنود الاربعة الاولي من المادة الثالثة ان تحكم ايضا بسلب الولاية او الحد منها، اما ما يترتب علي ذلك من تدابير واثار فتحكم فيه المحكمة المختصة بناء علي طلب النيابة او ذي الشان وفقا لاحكام هذا القانون ولقانون المرافعات المدنية والتجارية.",
+      "pageStart": 29,
+      "pageEnd": 29,
+      "pages": [
+        29
+      ],
+      "sourceOrder": 191,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:118-1952:article-8:page-29"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "guardianship-person-decree-118-1952",
+      "lawName": "guardianship",
+      "lawNumber": "118",
+      "year": "1952",
+      "articleNumber": "9",
+      "articleNumberNormalized": 9,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 9:\nفي الاحوال المنصوص عليها في البندين 4، 5 من المادة 3 يجوز للمحكمة بدلا من الحكم بسلب الولاية او وقفها ان تعهد الي وزارة الشيون الاجتماعية بالاشراف علي تربية الصغير او تعليمه اذا رات في ذلك مصلحة له، وللوزارة المذكورة ان تفوض في ذلك احد المعاهد او الموسسات الاجتماعية المعدة لهذا الغرض.\nواذا لم تتحقق الفايدة من هذا الاشراف لسبب يرجع الي الولي جاز رفع الامر للمحكمة للنظر في سلب ولايته او وقفها.",
+      "textForEmbedding": "مادة 9:\nفي الاحوال المنصوص عليها في البندين 4، 5 من المادة 3 يجوز للمحكمة بدلا من الحكم بسلب الولاية او وقفها ان تعهد الي وزارة الشيون الاجتماعية بالاشراف علي تربية الصغير او تعليمه اذا رات في ذلك مصلحة له، وللوزارة المذكورة ان تفوض في ذلك احد المعاهد او الموسسات الاجتماعية المعدة لهذا الغرض.\nواذا لم تتحقق الفايدة من هذا الاشراف لسبب يرجع الي الولي جاز رفع الامر للمحكمة للنظر في سلب ولايته او وقفها.",
+      "pageStart": 29,
+      "pageEnd": 29,
+      "pages": [
+        29
+      ],
+      "sourceOrder": 192,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:118-1952:article-9:page-29"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "guardianship-person-decree-118-1952",
+      "lawName": "guardianship",
+      "lawNumber": "118",
+      "year": "1952",
+      "articleNumber": "10",
+      "articleNumberNormalized": 10,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 10:\nيترتب علي سلب الولاية علي النفس سقوطها عن المال ولا يجوز ان يقام الولي الذي حكم بسلب ولايته وصيا او مشرفا او قيما كما لا يجوز ان يختار وصيا.",
+      "textForEmbedding": "مادة 10:\nيترتب علي سلب الولاية علي النفس سقوطها عن المال ولا يجوز ان يقام الولي الذي حكم بسلب ولايته وصيا او مشرفا او قيما كما لا يجوز ان يختار وصيا.",
+      "pageStart": 29,
+      "pageEnd": 29,
+      "pages": [
+        29
+      ],
+      "sourceOrder": 193,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:118-1952:article-10:page-29"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "guardianship-person-decree-118-1952",
+      "lawName": "guardianship",
+      "lawNumber": "118",
+      "year": "1952",
+      "articleNumber": "11",
+      "articleNumberNormalized": 11,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 11:\nيجوز للاولياء الذين سلبت ولايتهم وفقا للبندين اثنين او ثلاثة من المادة الثانية او سلبت ولايتهم او بعض حقوقهم فيها وفقا للبند واحد او اثنين او الثلاثة من المادة الثالثة ان يطلبوا استرداد الحقوق التي سلبت منهم اذا رد اعتبارهم.\nويجوز لهم ذلك ايضا في الاحوال المنصوص عليها في البندين 4، 5 من المادة الثانية اذا انقضت ثلاث سنوات من تاريخ صدور الحكم بسلب الولاية.",
+      "textForEmbedding": "مادة 11:\nيجوز للاولياء الذين سلبت ولايتهم وفقا للبندين اثنين او ثلاثة من المادة الثانية او سلبت ولايتهم او بعض حقوقهم فيها وفقا للبند واحد او اثنين او الثلاثة من المادة الثالثة ان يطلبوا استرداد الحقوق التي سلبت منهم اذا رد اعتبارهم.\nويجوز لهم ذلك ايضا في الاحوال المنصوص عليها في البندين 4، 5 من المادة الثانية اذا انقضت ثلاث سنوات من تاريخ صدور الحكم بسلب الولاية.",
+      "pageStart": 29,
+      "pageEnd": 29,
+      "pages": [
+        29
+      ],
+      "sourceOrder": 194,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:118-1952:article-11:page-29"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "guardianship-person-decree-118-1952",
+      "lawName": "guardianship",
+      "lawNumber": "118",
+      "year": "1952",
+      "articleNumber": "12",
+      "articleNumberNormalized": 12,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 12:\nيقصد بالولي في تطبيق هذا القانون الاب والجد والام والوصي وكل شخص ضم اليه الصغير بقرار او حكم من جهة اختصاصه.",
+      "textForEmbedding": "مادة 12:\nيقصد بالولي في تطبيق هذا القانون الاب والجد والام والوصي وكل شخص ضم اليه الصغير بقرار او حكم من جهة اختصاصه.",
+      "pageStart": 29,
+      "pageEnd": 29,
+      "pages": [
+        29
+      ],
+      "sourceOrder": 195,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:118-1952:article-12:page-29"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "guardianship-person-decree-118-1952",
+      "lawName": "guardianship",
+      "lawNumber": "118",
+      "year": "1952",
+      "articleNumber": "13",
+      "articleNumberNormalized": 13,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 13:\nعلي وزيري العدل والشيون الاجتماعية تنفيذ هذا القانون كلا منهما فيما يخصه ويعمل به من تاريخ نشره في الجريدة الرسمية.",
+      "textForEmbedding": "مادة 13:\nعلي وزيري العدل والشيون الاجتماعية تنفيذ هذا القانون كلا منهما فيما يخصه ويعمل به من تاريخ نشره في الجريدة الرسمية.",
+      "pageStart": 29,
+      "pageEnd": 29,
+      "pages": [
+        29
+      ],
+      "sourceOrder": 196,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:118-1952:article-13:page-29"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
     },
     {
       "instrumentId": "guardianship-property-decree-119-1952",
@@ -4953,7 +5212,7 @@
       "pages": [
         30
       ],
-      "sourceOrder": 186,
+      "sourceOrder": 197,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:186:30:1"
@@ -4979,7 +5238,7 @@
       "pages": [
         30
       ],
-      "sourceOrder": 187,
+      "sourceOrder": 198,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:187:30:2"
@@ -5005,7 +5264,7 @@
       "pages": [
         30
       ],
-      "sourceOrder": 188,
+      "sourceOrder": 199,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:188:30:3"
@@ -5031,7 +5290,7 @@
       "pages": [
         30
       ],
-      "sourceOrder": 189,
+      "sourceOrder": 200,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:189:30:1"
@@ -5057,7 +5316,7 @@
       "pages": [
         30
       ],
-      "sourceOrder": 190,
+      "sourceOrder": 201,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:190:30:2"
@@ -5083,7 +5342,7 @@
       "pages": [
         30
       ],
-      "sourceOrder": 191,
+      "sourceOrder": 202,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:191:30:3"
@@ -5109,7 +5368,7 @@
       "pages": [
         30
       ],
-      "sourceOrder": 192,
+      "sourceOrder": 203,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:192:30:4"
@@ -5135,7 +5394,7 @@
       "pages": [
         30
       ],
-      "sourceOrder": 193,
+      "sourceOrder": 204,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:193:30:5"
@@ -5161,7 +5420,7 @@
       "pages": [
         30
       ],
-      "sourceOrder": 194,
+      "sourceOrder": 205,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:194:30:6"
@@ -5187,7 +5446,7 @@
       "pages": [
         30
       ],
-      "sourceOrder": 195,
+      "sourceOrder": 206,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:195:30:7"
@@ -5196,6 +5455,174 @@
       "recoveryRecordCount": 0,
       "needsReview": false,
       "reviewReasons": []
+    },
+    {
+      "instrumentId": "guardianship-property-decree-119-1952",
+      "lawName": "guardianship",
+      "lawNumber": "119",
+      "year": "1952",
+      "articleNumber": "8",
+      "articleNumberNormalized": 8,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 8:\nاذا كان مورث القاصر قد اوصي بان لا يتصرف وليه في المال المورث فلا يجوز للولي ان يتصرف فيه الا باذن المحكمة وتحت اشرافها.",
+      "textForEmbedding": "مادة 8:\nاذا كان مورث القاصر قد اوصي بان لا يتصرف وليه في المال المورث فلا يجوز للولي ان يتصرف فيه الا باذن المحكمة وتحت اشرافها.",
+      "pageStart": 31,
+      "pageEnd": 31,
+      "pages": [
+        31
+      ],
+      "sourceOrder": 207,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:119-1952:article-8:page-31"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "guardianship-property-decree-119-1952",
+      "lawName": "guardianship",
+      "lawNumber": "119",
+      "year": "1952",
+      "articleNumber": "9",
+      "articleNumberNormalized": 9,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 9:\nلا يجوز للولي اقراض مال الصغير ولا اقتراضه الا باذن المحكمة.",
+      "textForEmbedding": "مادة 9:\nلا يجوز للولي اقراض مال الصغير ولا اقتراضه الا باذن المحكمة.",
+      "pageStart": 31,
+      "pageEnd": 31,
+      "pages": [
+        31
+      ],
+      "sourceOrder": 208,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:119-1952:article-9:page-31"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "guardianship-property-decree-119-1952",
+      "lawName": "guardianship",
+      "lawNumber": "119",
+      "year": "1952",
+      "articleNumber": "10",
+      "articleNumberNormalized": 10,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 10:\nلا يجوز للولي بغير اذن المحكمة تاجير عقار القاصر لمدة تمتد الي ما بعد سن الرشد بسنة.",
+      "textForEmbedding": "مادة 10:\nلا يجوز للولي بغير اذن المحكمة تاجير عقار القاصر لمدة تمتد الي ما بعد سن الرشد بسنة.",
+      "pageStart": 31,
+      "pageEnd": 31,
+      "pages": [
+        31
+      ],
+      "sourceOrder": 209,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:119-1952:article-10:page-31"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "guardianship-property-decree-119-1952",
+      "lawName": "guardianship",
+      "lawNumber": "119",
+      "year": "1952",
+      "articleNumber": "11",
+      "articleNumberNormalized": 11,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 11:\nلا يجوز للولي ان يستمر في تجارة الت للقاصر الا باذن من المحكمة وفي حدود هذا الاذن.",
+      "textForEmbedding": "مادة 11:\nلا يجوز للولي ان يستمر في تجارة الت للقاصر الا باذن من المحكمة وفي حدود هذا الاذن.",
+      "pageStart": 31,
+      "pageEnd": 31,
+      "pages": [
+        31
+      ],
+      "sourceOrder": 210,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:119-1952:article-11:page-31"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "guardianship-property-decree-119-1952",
+      "lawName": "guardianship",
+      "lawNumber": "119",
+      "year": "1952",
+      "articleNumber": "12",
+      "articleNumberNormalized": 12,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 12:\nلا يجوز للولي ان يقبل هبة او وصية للصغير محملة بالتزامات معينة الا باذن المحكمة.",
+      "textForEmbedding": "مادة 12:\nلا يجوز للولي ان يقبل هبة او وصية للصغير محملة بالتزامات معينة الا باذن المحكمة.",
+      "pageStart": 31,
+      "pageEnd": 31,
+      "pages": [
+        31
+      ],
+      "sourceOrder": 211,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:119-1952:article-12:page-31"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "guardianship-property-decree-119-1952",
+      "lawName": "guardianship",
+      "lawNumber": "119",
+      "year": "1952",
+      "articleNumber": "13",
+      "articleNumberNormalized": 13,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 13:\nلا تسري القيود المنصوص عليها في هذا القانون علي ما ال القاصر من مال بطريق التبرع من ابيه صريحا كان التبرع او مستترا ولا يلزم الاب بتقديم حساب عن هذا المال.",
+      "textForEmbedding": "مادة 13:\nلا تسري القيود المنصوص عليها في هذا القانون علي ما ال القاصر من مال بطريق التبرع من ابيه صريحا كان التبرع او مستترا ولا يلزم الاب بتقديم حساب عن هذا المال.",
+      "pageStart": 31,
+      "pageEnd": 31,
+      "pages": [
+        31
+      ],
+      "sourceOrder": 212,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:119-1952:article-13:page-31"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
     },
     {
       "instrumentId": "guardianship-property-decree-119-1952",
@@ -5213,7 +5640,7 @@
       "pages": [
         31
       ],
-      "sourceOrder": 196,
+      "sourceOrder": 213,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:196:31:14"
@@ -5222,6 +5649,62 @@
       "recoveryRecordCount": 0,
       "needsReview": false,
       "reviewReasons": []
+    },
+    {
+      "instrumentId": "guardianship-property-decree-119-1952",
+      "lawName": "guardianship",
+      "lawNumber": "119",
+      "year": "1952",
+      "articleNumber": "15",
+      "articleNumberNormalized": 15,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 15:\nلا يجوز للجد بغير اذن المحكمة التصرف في مال القاصر ولا الصلح عليه ولا التنازل عن التامينات او اضعافها.",
+      "textForEmbedding": "مادة 15:\nلا يجوز للجد بغير اذن المحكمة التصرف في مال القاصر ولا الصلح عليه ولا التنازل عن التامينات او اضعافها.",
+      "pageStart": 31,
+      "pageEnd": 31,
+      "pages": [
+        31
+      ],
+      "sourceOrder": 214,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:119-1952:article-15:page-31"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "guardianship-property-decree-119-1952",
+      "lawName": "guardianship",
+      "lawNumber": "119",
+      "year": "1952",
+      "articleNumber": "16",
+      "articleNumberNormalized": 16,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 16:\nعلي الولي ان يحرر قايمة بما يكون للقاصر من مال او ما يوول اليه وان يودع هذه القايمة قلم كتاب المحكمة التي يقع بدايرتها موطنه في مدي شهرين من بدء الولاية او من ايلولة هذا المال الي الصغير.\nويجوز للمحكمة اعتبار عدم تقديم هذه القايمة او التاخير في تقديمها تعريضا لمال القاصر للخطر.",
+      "textForEmbedding": "مادة 16:\nعلي الولي ان يحرر قايمة بما يكون للقاصر من مال او ما يوول اليه وان يودع هذه القايمة قلم كتاب المحكمة التي يقع بدايرتها موطنه في مدي شهرين من بدء الولاية او من ايلولة هذا المال الي الصغير.\nويجوز للمحكمة اعتبار عدم تقديم هذه القايمة او التاخير في تقديمها تعريضا لمال القاصر للخطر.",
+      "pageStart": 31,
+      "pageEnd": 31,
+      "pages": [
+        31
+      ],
+      "sourceOrder": 215,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:119-1952:article-16:page-31"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
     },
     {
       "instrumentId": "guardianship-property-decree-119-1952",
@@ -5239,7 +5722,7 @@
       "pages": [
         31
       ],
-      "sourceOrder": 197,
+      "sourceOrder": 216,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:197:31:17"
@@ -5248,6 +5731,118 @@
       "recoveryRecordCount": 0,
       "needsReview": false,
       "reviewReasons": []
+    },
+    {
+      "instrumentId": "guardianship-property-decree-119-1952",
+      "lawName": "guardianship",
+      "lawNumber": "119",
+      "year": "1952",
+      "articleNumber": "18",
+      "articleNumberNormalized": 18,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 18:\nتنتهي الولاية ببلوغ القاصر احدي وعشرين سنة ما لم تحكم المحكمة قبل بلوغه هذه السن باستمرار الولاية عليه.",
+      "textForEmbedding": "مادة 18:\nتنتهي الولاية ببلوغ القاصر احدي وعشرين سنة ما لم تحكم المحكمة قبل بلوغه هذه السن باستمرار الولاية عليه.",
+      "pageStart": 31,
+      "pageEnd": 31,
+      "pages": [
+        31
+      ],
+      "sourceOrder": 217,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:119-1952:article-18:page-31"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "guardianship-property-decree-119-1952",
+      "lawName": "guardianship",
+      "lawNumber": "119",
+      "year": "1952",
+      "articleNumber": "19",
+      "articleNumberNormalized": 19,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 19:\nاذا انتهت الولاية علي شخص فلا تعود الا اذا قام به سبب من اسباب الحجر.",
+      "textForEmbedding": "مادة 19:\nاذا انتهت الولاية علي شخص فلا تعود الا اذا قام به سبب من اسباب الحجر.",
+      "pageStart": 31,
+      "pageEnd": 31,
+      "pages": [
+        31
+      ],
+      "sourceOrder": 218,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:119-1952:article-19:page-31"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "guardianship-property-decree-119-1952",
+      "lawName": "guardianship",
+      "lawNumber": "119",
+      "year": "1952",
+      "articleNumber": "20",
+      "articleNumberNormalized": 20,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 20:\nاذا اصبحت اموال القاصر في خطر بسبب سوء تصرف الولي او لاي سبب اخر فللمحكمة ان تسلب ولايته او تحد منها.",
+      "textForEmbedding": "مادة 20:\nاذا اصبحت اموال القاصر في خطر بسبب سوء تصرف الولي او لاي سبب اخر فللمحكمة ان تسلب ولايته او تحد منها.",
+      "pageStart": 31,
+      "pageEnd": 31,
+      "pages": [
+        31
+      ],
+      "sourceOrder": 219,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:119-1952:article-20:page-31"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "guardianship-property-decree-119-1952",
+      "lawName": "guardianship",
+      "lawNumber": "119",
+      "year": "1952",
+      "articleNumber": "21",
+      "articleNumberNormalized": 21,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 21:\nتحكم المحكمة بوقف الولاية اذا اعتبر الولي غايبا او اعتقل تنفيذا لحكم بعقوبة جناية او بالحبس مدة تزيد علي سنة.",
+      "textForEmbedding": "مادة 21:\nتحكم المحكمة بوقف الولاية اذا اعتبر الولي غايبا او اعتقل تنفيذا لحكم بعقوبة جناية او بالحبس مدة تزيد علي سنة.",
+      "pageStart": 31,
+      "pageEnd": 31,
+      "pages": [
+        31
+      ],
+      "sourceOrder": 220,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:119-1952:article-21:page-31"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
     },
     {
       "instrumentId": "guardianship-property-decree-119-1952",
@@ -5265,7 +5860,7 @@
       "pages": [
         31
       ],
-      "sourceOrder": 198,
+      "sourceOrder": 221,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:198:31:22"
@@ -5291,7 +5886,7 @@
       "pages": [
         32
       ],
-      "sourceOrder": 199,
+      "sourceOrder": 222,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:199:32:23"
@@ -5317,7 +5912,7 @@
       "pages": [
         32
       ],
-      "sourceOrder": 200,
+      "sourceOrder": 223,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:200:32:24"
@@ -5343,7 +5938,7 @@
       "pages": [
         32
       ],
-      "sourceOrder": 201,
+      "sourceOrder": 224,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:201:32:25"
@@ -5369,7 +5964,7 @@
       "pages": [
         32
       ],
-      "sourceOrder": 202,
+      "sourceOrder": 225,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:202:32:26"
@@ -5395,7 +5990,7 @@
       "pages": [
         32
       ],
-      "sourceOrder": 203,
+      "sourceOrder": 226,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:203:32:27"
@@ -5413,23 +6008,335 @@
       "articleNumber": "28",
       "articleNumberNormalized": 28,
       "articleSuffix": null,
-      "chapter": "الفصل الثاني في الوصية",
-      "text": "مادة 28 :\nيجوز للاب ان يكون وصيا مختارا لولده القاصر او للحمل المستكين ويجوز ذلك للمتبرع في حالة المنصوص عليه\nفي المادة 3 .\nويشترط ان يثبت الاختيار بورقة رسميه او عرفية مصدق علي توقيع الاب او المتبرع فيها او المكتوب بخطة وموقعة\nبامضايه .\nاولا . جميع التصرفات التي من شانها نق حق من الحقوق العينية العقارية او الاصليه او التبعيه او نقله او تغييره او زواله وكذلك جميع تصرفات المقررة لحق من الحقوق المذكورة .\nثانيا . التصرف في المنقولات او الحقوق الشخصية او الاوراق المالية فيما عدما يدخل في اعمال الادارة .\nثالثا . الصلح والتحكيم فيما قل عن ماية جنيه مما يتصل باعمال الادارة .\nرابعا . حوالة الحقوق والديون وبدل الحواله .\nخامسا . استثمار الاموال وتصفيتها.\nسادسا . اقراض المال واقراضه .\nسابعا . ايجار عقار القاصر لمدة اثر من ثلاث سنوات في الاراضي الزراعية ولمدة اكثر من سنة في المباني .\nثامنا . ايجار القاصر لمدة تمدد الي ما ما بعد بلوغه سن الرشد لاكثر من سنة .\nتاسعا . قبول التبرعات المقترنة بشروط او رفضها .\nعاشرا . الانفاق من مال القاصر علي من تجب عليه نفقتهم الا اذا كانت النفقة مقضيا بها وبحكم واجب النفاذ .\nحادي عشر . اقواء الاحتياطيات بالالتزامات التي تكون علي التركة او علي القاصر .\nثاني عشر . رفع الدعاوي الي ما يكون في تاخير رفعه ضرر بالغ بالقاصر او ضياع حق له .\nثالث عشر . التنازل عن الحقوق والدعاوي وفقو الاحكام القابلة للطعون العادية والعادية والتنازل عن هذه الطعون بعد رفعا ورفع الطعون غير العادية في الاحكام .\nرابع عشر . التنازل عن التامينات وضماناتها .\nخامس عشر : ايجار الوسل اموال القاصر لنفسه او لزوجه او لاحد اقاربه الي الدرجة الرابعة او لمن يكون الوصي نايبا عنه .\nسادس عشر . ما يصرف من تربيخ القاصر .\nسابع عشر . تعليق القاصر اذا احتاج للنفقه والانفاق اللازم لمباشرة القاصر مهنة معينة .",
-      "textForEmbedding": "مادة 28 :\nيجوز للاب ان يكون وصيا مختارا لولده القاصر او للحمل المستكين ويجوز ذلك للمتبرع في حالة المنصوص عليه\nفي المادة 3 .\nويشترط ان يثبت الاختيار بورقة رسميه او عرفية مصدق علي توقيع الاب او المتبرع فيها او المكتوب بخطة وموقعة\nبامضايه .\nاولا . جميع التصرفات التي من شانها نق حق من الحقوق العينية العقارية او الاصليه او التبعيه او نقله او تغييره او زواله وكذلك جميع تصرفات المقررة لحق من الحقوق المذكورة .\nثانيا . التصرف في المنقولات او الحقوق الشخصية او الاوراق المالية فيما عدما يدخل في اعمال الادارة .\nثالثا . الصلح والتحكيم فيما قل عن ماية جنيه مما يتصل باعمال الادارة .\nرابعا . حوالة الحقوق والديون وبدل الحواله .\nخامسا . استثمار الاموال وتصفيتها.\nسادسا . اقراض المال واقراضه .\nسابعا . ايجار عقار القاصر لمدة اثر من ثلاث سنوات في الاراضي الزراعية ولمدة اكثر من سنة في المباني .\nثامنا . ايجار القاصر لمدة تمدد الي ما ما بعد بلوغه سن الرشد لاكثر من سنة .\nتاسعا . قبول التبرعات المقترنة بشروط او رفضها .\nعاشرا . الانفاق من مال القاصر علي من تجب عليه نفقتهم الا اذا كانت النفقة مقضيا بها وبحكم واجب النفاذ .\nحادي عشر . اقواء الاحتياطيات بالالتزامات التي تكون علي التركة او علي القاصر .\nثاني عشر . رفع الدعاوي الي ما يكون في تاخير رفعه ضرر بالغ بالقاصر او ضياع حق له .\nثالث عشر . التنازل عن الحقوق والدعاوي وفقو الاحكام القابلة للطعون العادية والعادية والتنازل عن هذه الطعون بعد رفعا ورفع الطعون غير العادية في الاحكام .\nرابع عشر . التنازل عن التامينات وضماناتها .\nخامس عشر : ايجار الوسل اموال القاصر لنفسه او لزوجه او لاحد اقاربه الي الدرجة الرابعة او لمن يكون الوصي نايبا عنه .\nسادس عشر . ما يصرف من تربيخ القاصر .\nسابع عشر . تعليق القاصر اذا احتاج للنفقه والانفاق اللازم لمباشرة القاصر مهنة معينة .",
+      "chapter": null,
+      "text": "مادة 28:\nيجوز للاب ان يكون وصيا مختارا لولده القاصر او للحمل المستكن ويجوز ذلك للمتبرع في الحالة المنصوص عليها في المادة 3.\nويشترط ان يثبت الاختيار بورقة رسمية او عرفية مصدق علي توقيع الاب او المتبرع فيها او المكتوبة بخطه وموقعة بامضايه.\n\nويجوز للاب والمتبرع بطريق الوصية في اي وقت ان يعدلا عن اختيارهما وتعرض الوصاية علي المحكمة لتثبيتها.",
+      "textForEmbedding": "مادة 28:\nيجوز للاب ان يكون وصيا مختارا لولده القاصر او للحمل المستكن ويجوز ذلك للمتبرع في الحالة المنصوص عليها في المادة 3.\nويشترط ان يثبت الاختيار بورقة رسمية او عرفية مصدق علي توقيع الاب او المتبرع فيها او المكتوبة بخطه وموقعة بامضايه.\n\nويجوز للاب والمتبرع بطريق الوصية في اي وقت ان يعدلا عن اختيارهما وتعرض الوصاية علي المحكمة لتثبيتها.",
       "pageStart": 32,
-      "pageEnd": 32,
+      "pageEnd": 33,
       "pages": [
-        32
+        32,
+        33
       ],
-      "sourceOrder": 204,
-      "source": "vision_ocr",
+      "sourceOrder": 227,
+      "source": "vision_ocr_recovery",
       "sourceRecordIds": [
-        "qwen:204:32:28"
+        "personal:pdf-vision:119-1952:article-28:page-32",
+        "personal:pdf-vision:119-1952:article-28:page-33"
       ],
-      "qwenRecordCount": 1,
-      "recoveryRecordCount": 0,
-      "needsReview": false,
-      "reviewReasons": []
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 2,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "guardianship-property-decree-119-1952",
+      "lawName": "guardianship",
+      "lawNumber": "119",
+      "year": "1952",
+      "articleNumber": "29",
+      "articleNumberNormalized": 29,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 29:\nاذا لم يكن للقاصر او للحمل المستكن وصي مختار تعين المحكمة وصيا ويبقي الحمل المستكن وصيا علي المولود ما لم تعين المحكمة غيره.",
+      "textForEmbedding": "مادة 29:\nاذا لم يكن للقاصر او للحمل المستكن وصي مختار تعين المحكمة وصيا ويبقي الحمل المستكن وصيا علي المولود ما لم تعين المحكمة غيره.",
+      "pageStart": 33,
+      "pageEnd": 33,
+      "pages": [
+        33
+      ],
+      "sourceOrder": 229,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:119-1952:article-29:page-33"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "guardianship-property-decree-119-1952",
+      "lawName": "guardianship",
+      "lawNumber": "119",
+      "year": "1952",
+      "articleNumber": "30",
+      "articleNumberNormalized": 30,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 30:\nيجوز عند الضرورة تعيين اكثر من وصي واحد وفي هذه الحالة لا يجوز لاحدهم الانفراد الا اذا كانت المحكمة قد بينت اختصاصا لكل منهم في قرار تعيينه او في قرار لاحق، ومع ذلك لكل من الاوصياء اتخاذ الاجراءات الضرورية او المستعجلة او المتمخضة لنفع القاصر.\nوعند الاختلاف بين الاوصياء يرفع الامر الي المحكمة لتامر بما يتبع.",
+      "textForEmbedding": "مادة 30:\nيجوز عند الضرورة تعيين اكثر من وصي واحد وفي هذه الحالة لا يجوز لاحدهم الانفراد الا اذا كانت المحكمة قد بينت اختصاصا لكل منهم في قرار تعيينه او في قرار لاحق، ومع ذلك لكل من الاوصياء اتخاذ الاجراءات الضرورية او المستعجلة او المتمخضة لنفع القاصر.\nوعند الاختلاف بين الاوصياء يرفع الامر الي المحكمة لتامر بما يتبع.",
+      "pageStart": 33,
+      "pageEnd": 33,
+      "pages": [
+        33
+      ],
+      "sourceOrder": 230,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:119-1952:article-30:page-33"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "guardianship-property-decree-119-1952",
+      "lawName": "guardianship",
+      "lawNumber": "119",
+      "year": "1952",
+      "articleNumber": "31",
+      "articleNumberNormalized": 31,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 31:\nا - اذا تعرضت مصلحة القاصر مع مصلحة الولي او مصلحة قاصر اخر مشمول بولايته.\nب - اذا تعارضت مصلحة القاصر مع مصلحة الولي او زوجته او احد اصوله او فروعه مع من يملكه الوصي.\nج - ابرام عقد من عقود المعارضة او تعديله او فسخه او ابطاله او الغاوه بين القاصر وبين الوصي او احد من المذكورين في البند.\nد - اذا ال الي القاصر مال بطريق التبرع وشرط المتبرع الا يتولي الولي ادارة المال.\nه - اذا استلزمت الظروف دراية خاصة لاداء بعض الاعمال.\nو - اذا كان الولي غير اهل لمباشرة حق من حقوق الولاية.",
+      "textForEmbedding": "مادة 31:\nا - اذا تعرضت مصلحة القاصر مع مصلحة الولي او مصلحة قاصر اخر مشمول بولايته.\nب - اذا تعارضت مصلحة القاصر مع مصلحة الولي او زوجته او احد اصوله او فروعه مع من يملكه الوصي.\nج - ابرام عقد من عقود المعارضة او تعديله او فسخه او ابطاله او الغاوه بين القاصر وبين الوصي او احد من المذكورين في البند.\nد - اذا ال الي القاصر مال بطريق التبرع وشرط المتبرع الا يتولي الولي ادارة المال.\nه - اذا استلزمت الظروف دراية خاصة لاداء بعض الاعمال.\nو - اذا كان الولي غير اهل لمباشرة حق من حقوق الولاية.",
+      "pageStart": 33,
+      "pageEnd": 33,
+      "pages": [
+        33
+      ],
+      "sourceOrder": 231,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:119-1952:article-31:page-33"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "guardianship-property-decree-119-1952",
+      "lawName": "guardianship",
+      "lawNumber": "119",
+      "year": "1952",
+      "articleNumber": "32",
+      "articleNumberNormalized": 32,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 32:\nتقيم المحكمة وصيا موقتا اذا حكم بوقف الولاية ولم يكن القاصر ولي اخر وكذلك اذا وقف الوصي او حالت ظروف موقتة دون ادايه لواجباته.",
+      "textForEmbedding": "مادة 32:\nتقيم المحكمة وصيا موقتا اذا حكم بوقف الولاية ولم يكن القاصر ولي اخر وكذلك اذا وقف الوصي او حالت ظروف موقتة دون ادايه لواجباته.",
+      "pageStart": 33,
+      "pageEnd": 33,
+      "pages": [
+        33
+      ],
+      "sourceOrder": 232,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:119-1952:article-32:page-33"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "guardianship-property-decree-119-1952",
+      "lawName": "guardianship",
+      "lawNumber": "119",
+      "year": "1952",
+      "articleNumber": "33",
+      "articleNumberNormalized": 33,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 33:\nيجوز للمحكمة ان تقيم وصي خصومة ولو لم يكن للقاصر مال.",
+      "textForEmbedding": "مادة 33:\nيجوز للمحكمة ان تقيم وصي خصومة ولو لم يكن للقاصر مال.",
+      "pageStart": 33,
+      "pageEnd": 33,
+      "pages": [
+        33
+      ],
+      "sourceOrder": 233,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:119-1952:article-33:page-33"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "guardianship-property-decree-119-1952",
+      "lawName": "guardianship",
+      "lawNumber": "119",
+      "year": "1952",
+      "articleNumber": "34",
+      "articleNumberNormalized": 34,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 34:\nتسري علي الوصي الخاص والوصي الموقت ووصي الخصومة احكام الوصاية الواردة في هذا القانون مع مراعاة ما تقتضيه طبيعة مهمة كل منهم.",
+      "textForEmbedding": "مادة 34:\nتسري علي الوصي الخاص والوصي الموقت ووصي الخصومة احكام الوصاية الواردة في هذا القانون مع مراعاة ما تقتضيه طبيعة مهمة كل منهم.",
+      "pageStart": 33,
+      "pageEnd": 33,
+      "pages": [
+        33
+      ],
+      "sourceOrder": 234,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:119-1952:article-34:page-33"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "guardianship-property-decree-119-1952",
+      "lawName": "guardianship",
+      "lawNumber": "119",
+      "year": "1952",
+      "articleNumber": "35",
+      "articleNumberNormalized": 35,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 35:\nتنتهي مهمة الوصي الخاص والوصي الموقت بانتهاء العمل الذي اقيم لمباشرته او المدة التي اقتضت بها تعيينه.",
+      "textForEmbedding": "مادة 35:\nتنتهي مهمة الوصي الخاص والوصي الموقت بانتهاء العمل الذي اقيم لمباشرته او المدة التي اقتضت بها تعيينه.",
+      "pageStart": 33,
+      "pageEnd": 33,
+      "pages": [
+        33
+      ],
+      "sourceOrder": 235,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:119-1952:article-35:page-33"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "guardianship-property-decree-119-1952",
+      "lawName": "guardianship",
+      "lawNumber": "119",
+      "year": "1952",
+      "articleNumber": "36",
+      "articleNumberNormalized": 36,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 36:\nيتسلم الوصي اموال القاصر ويقوم علي رعايتها وعليه ان يبذل في ذلك من العناية ما يطلب من الوكيل الماجور وفقا لاحكام القانون المدني.",
+      "textForEmbedding": "مادة 36:\nيتسلم الوصي اموال القاصر ويقوم علي رعايتها وعليه ان يبذل في ذلك من العناية ما يطلب من الوكيل الماجور وفقا لاحكام القانون المدني.",
+      "pageStart": 33,
+      "pageEnd": 33,
+      "pages": [
+        33
+      ],
+      "sourceOrder": 236,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:119-1952:article-36:page-33"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "guardianship-property-decree-119-1952",
+      "lawName": "guardianship",
+      "lawNumber": "119",
+      "year": "1952",
+      "articleNumber": "37",
+      "articleNumberNormalized": 37,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 37:\nللمحكمة ان تلزم الوصي بتقديم تامينات بالقيمة التي تراها وتكون مصروفات تقديم هذه التامينات علي حساب القاصر.",
+      "textForEmbedding": "مادة 37:\nللمحكمة ان تلزم الوصي بتقديم تامينات بالقيمة التي تراها وتكون مصروفات تقديم هذه التامينات علي حساب القاصر.",
+      "pageStart": 33,
+      "pageEnd": 33,
+      "pages": [
+        33
+      ],
+      "sourceOrder": 237,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:119-1952:article-37:page-33"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "guardianship-property-decree-119-1952",
+      "lawName": "guardianship",
+      "lawNumber": "119",
+      "year": "1952",
+      "articleNumber": "38",
+      "articleNumberNormalized": 38,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 38:\nلا يجوز للوصي التبرع بمال القاصر الا لاداء واجب انساني او عايلي او باذن من المحكمة.",
+      "textForEmbedding": "مادة 38:\nلا يجوز للوصي التبرع بمال القاصر الا لاداء واجب انساني او عايلي او باذن من المحكمة.",
+      "pageStart": 33,
+      "pageEnd": 33,
+      "pages": [
+        33
+      ],
+      "sourceOrder": 238,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:119-1952:article-38:page-33"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "guardianship-property-decree-119-1952",
+      "lawName": "guardianship",
+      "lawNumber": "119",
+      "year": "1952",
+      "articleNumber": "39",
+      "articleNumberNormalized": 39,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 39:\nلا يجوز للوصي مباشرة التصرفات الاتية الا باذن من المحكمة:\nاولا: جميع التصرفات التي من شانها انشاء حق من الحقوق العينية العقارية الاصلية او التبعية او نقله او تغييره او زواله، وكذلك جميع التصرفات المقررة لحق من الحقوق المذكورة.\nثانيا: التصرف في المنقولات او الحقوق الشخصية او الاوراق المالية فيما عدا ما يدخل في اعمال الادارة.\nثالثا: الصلح والتحكيم الا فيما قل عن ماية جنيه مما يتصل باعمال الادارة.\nرابعا: حوالة الحقوق والديون وقبول الحوالة.\nخامسا: استثمار الاموال وتصفيتها.\nسادسا: اقتراض المال واقراضه.\nسابعا: ايجار عقار القاصر لمدة اكثر من ثلاث سنوات في الاراضي الزراعية ولمدة اكثر من سنة في المباني.\nثامنا: ايجار عقار القاصر لمدة تمتد الي ما بعد بلوغه سن الرشد لاكثر من سنة.\nتاسعا: قبول التبرعات المقترنة بشرط او رفضها.\nعاشرا: الانفاق من مال القاصر علي من تجب عليه نفقتهم الا اذا كانت النفقة مقضيا بها بحكم واجب النفاذ.\nحادي عشر: الوفاء الاختياري بالالتزامات التي تكون علي التركة او علي القاصر.\nثاني عشر: رفع الدعاوي الا ما يكون في تاخير رفعه ضرر بالقاصر او ضياع حق له.\nثالث عشر: التنازل عن الحقوق والدعاوي وقبول الاحكام القابلة للطعون العادية والتنازل عن هذه الطعون بعد رفعها ورفع الطعون غير العادية في الاحكام.\nرابع عشر: التنازل عن التامينات واضعافها.\nخامس عشر: ايجار الوصي اموال القاصر لنفسه او لزوجه او لاحد اقاربهما الي الدرجة الرابعة او لمن يكون الوصي نايبا عنه.\nسادس عشر: ما يصرف في تزويج القاصر.\nسابع عشر: تعليم القاصر اذا احتاج للنفقة والانفاق اللازم لمباشرة القاصر مهنة معينة.",
+      "textForEmbedding": "مادة 39:\nلا يجوز للوصي مباشرة التصرفات الاتية الا باذن من المحكمة:\nاولا: جميع التصرفات التي من شانها انشاء حق من الحقوق العينية العقارية الاصلية او التبعية او نقله او تغييره او زواله، وكذلك جميع التصرفات المقررة لحق من الحقوق المذكورة.\nثانيا: التصرف في المنقولات او الحقوق الشخصية او الاوراق المالية فيما عدا ما يدخل في اعمال الادارة.\nثالثا: الصلح والتحكيم الا فيما قل عن ماية جنيه مما يتصل باعمال الادارة.\nرابعا: حوالة الحقوق والديون وقبول الحوالة.\nخامسا: استثمار الاموال وتصفيتها.\nسادسا: اقتراض المال واقراضه.\nسابعا: ايجار عقار القاصر لمدة اكثر من ثلاث سنوات في الاراضي الزراعية ولمدة اكثر من سنة في المباني.\nثامنا: ايجار عقار القاصر لمدة تمتد الي ما بعد بلوغه سن الرشد لاكثر من سنة.\nتاسعا: قبول التبرعات المقترنة بشرط او رفضها.\nعاشرا: الانفاق من مال القاصر علي من تجب عليه نفقتهم الا اذا كانت النفقة مقضيا بها بحكم واجب النفاذ.\nحادي عشر: الوفاء الاختياري بالالتزامات التي تكون علي التركة او علي القاصر.\nثاني عشر: رفع الدعاوي الا ما يكون في تاخير رفعه ضرر بالقاصر او ضياع حق له.\nثالث عشر: التنازل عن الحقوق والدعاوي وقبول الاحكام القابلة للطعون العادية والتنازل عن هذه الطعون بعد رفعها ورفع الطعون غير العادية في الاحكام.\nرابع عشر: التنازل عن التامينات واضعافها.\nخامس عشر: ايجار الوصي اموال القاصر لنفسه او لزوجه او لاحد اقاربهما الي الدرجة الرابعة او لمن يكون الوصي نايبا عنه.\nسادس عشر: ما يصرف في تزويج القاصر.\nسابع عشر: تعليم القاصر اذا احتاج للنفقة والانفاق اللازم لمباشرة القاصر مهنة معينة.",
+      "pageStart": 34,
+      "pageEnd": 34,
+      "pages": [
+        34
+      ],
+      "sourceOrder": 239,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:119-1952:article-39:page-34"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
     },
     {
       "instrumentId": "guardianship-property-decree-119-1952",
@@ -5447,7 +6354,7 @@
       "pages": [
         34
       ],
-      "sourceOrder": 205,
+      "sourceOrder": 240,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:205:34:40"
@@ -5473,7 +6380,7 @@
       "pages": [
         34
       ],
-      "sourceOrder": 206,
+      "sourceOrder": 241,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:206:34:41"
@@ -5499,7 +6406,7 @@
       "pages": [
         34
       ],
-      "sourceOrder": 207,
+      "sourceOrder": 242,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:207:34:42"
@@ -5525,7 +6432,7 @@
       "pages": [
         34
       ],
-      "sourceOrder": 208,
+      "sourceOrder": 243,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:208:34:43"
@@ -5551,7 +6458,7 @@
       "pages": [
         35
       ],
-      "sourceOrder": 209,
+      "sourceOrder": 244,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:209:35:44"
@@ -5577,7 +6484,7 @@
       "pages": [
         35
       ],
-      "sourceOrder": 210,
+      "sourceOrder": 245,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:210:35:45"
@@ -5603,7 +6510,7 @@
       "pages": [
         35
       ],
-      "sourceOrder": 211,
+      "sourceOrder": 246,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:211:35:46"
@@ -5629,7 +6536,7 @@
       "pages": [
         35
       ],
-      "sourceOrder": 212,
+      "sourceOrder": 247,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:212:35:47"
@@ -5655,7 +6562,7 @@
       "pages": [
         35
       ],
-      "sourceOrder": 213,
+      "sourceOrder": 248,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:213:35:48"
@@ -5681,7 +6588,7 @@
       "pages": [
         35
       ],
-      "sourceOrder": 214,
+      "sourceOrder": 249,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:214:35:49"
@@ -5707,7 +6614,7 @@
       "pages": [
         35
       ],
-      "sourceOrder": 215,
+      "sourceOrder": 250,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:215:35:50"
@@ -5733,7 +6640,7 @@
       "pages": [
         35
       ],
-      "sourceOrder": 216,
+      "sourceOrder": 251,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:216:35:51"
@@ -5759,7 +6666,7 @@
       "pages": [
         36
       ],
-      "sourceOrder": 217,
+      "sourceOrder": 252,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:217:36:52"
@@ -5785,7 +6692,7 @@
       "pages": [
         36
       ],
-      "sourceOrder": 218,
+      "sourceOrder": 253,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:218:36:53"
@@ -5811,7 +6718,7 @@
       "pages": [
         36
       ],
-      "sourceOrder": 219,
+      "sourceOrder": 254,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:219:36:54"
@@ -5837,7 +6744,7 @@
       "pages": [
         36
       ],
-      "sourceOrder": 220,
+      "sourceOrder": 255,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:220:36:55"
@@ -5863,7 +6770,7 @@
       "pages": [
         36
       ],
-      "sourceOrder": 221,
+      "sourceOrder": 256,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:221:36:56"
@@ -5889,7 +6796,7 @@
       "pages": [
         36
       ],
-      "sourceOrder": 222,
+      "sourceOrder": 257,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:222:36:57"
@@ -5915,7 +6822,7 @@
       "pages": [
         36
       ],
-      "sourceOrder": 223,
+      "sourceOrder": 258,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:223:36:58"
@@ -5941,7 +6848,7 @@
       "pages": [
         36
       ],
-      "sourceOrder": 224,
+      "sourceOrder": 259,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:224:36:59"
@@ -5967,7 +6874,7 @@
       "pages": [
         36
       ],
-      "sourceOrder": 225,
+      "sourceOrder": 260,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:225:36:60"
@@ -5993,7 +6900,7 @@
       "pages": [
         36
       ],
-      "sourceOrder": 226,
+      "sourceOrder": 261,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:226:36:61"
@@ -6019,7 +6926,7 @@
       "pages": [
         37
       ],
-      "sourceOrder": 227,
+      "sourceOrder": 262,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:227:37:62"
@@ -6045,7 +6952,7 @@
       "pages": [
         37
       ],
-      "sourceOrder": 228,
+      "sourceOrder": 263,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:228:37:63"
@@ -6071,7 +6978,7 @@
       "pages": [
         37
       ],
-      "sourceOrder": 229,
+      "sourceOrder": 264,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:229:37:64"
@@ -6097,7 +7004,7 @@
       "pages": [
         37
       ],
-      "sourceOrder": 230,
+      "sourceOrder": 265,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:230:37:65"
@@ -6123,7 +7030,7 @@
       "pages": [
         37
       ],
-      "sourceOrder": 231,
+      "sourceOrder": 266,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:231:37:66"
@@ -6149,7 +7056,7 @@
       "pages": [
         37
       ],
-      "sourceOrder": 232,
+      "sourceOrder": 267,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:232:37:67"
@@ -6175,7 +7082,7 @@
       "pages": [
         37
       ],
-      "sourceOrder": 233,
+      "sourceOrder": 268,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:233:37:68"
@@ -6201,7 +7108,7 @@
       "pages": [
         37
       ],
-      "sourceOrder": 234,
+      "sourceOrder": 269,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:234:37:69"
@@ -6227,7 +7134,7 @@
       "pages": [
         37
       ],
-      "sourceOrder": 235,
+      "sourceOrder": 270,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:235:37:70"
@@ -6253,7 +7160,7 @@
       "pages": [
         38
       ],
-      "sourceOrder": 236,
+      "sourceOrder": 271,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:236:38:71"
@@ -6279,7 +7186,7 @@
       "pages": [
         38
       ],
-      "sourceOrder": 237,
+      "sourceOrder": 272,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:237:38:72"
@@ -6305,7 +7212,7 @@
       "pages": [
         38
       ],
-      "sourceOrder": 238,
+      "sourceOrder": 273,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:238:38:73"
@@ -6331,7 +7238,7 @@
       "pages": [
         38
       ],
-      "sourceOrder": 239,
+      "sourceOrder": 274,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:239:38:74"
@@ -6357,7 +7264,7 @@
       "pages": [
         38
       ],
-      "sourceOrder": 240,
+      "sourceOrder": 275,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:240:38:75"
@@ -6383,7 +7290,7 @@
       "pages": [
         38
       ],
-      "sourceOrder": 241,
+      "sourceOrder": 276,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:241:38:76"
@@ -6409,7 +7316,7 @@
       "pages": [
         38
       ],
-      "sourceOrder": 242,
+      "sourceOrder": 277,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:242:38:77"
@@ -6435,7 +7342,7 @@
       "pages": [
         38
       ],
-      "sourceOrder": 243,
+      "sourceOrder": 278,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:243:38:78"
@@ -6461,7 +7368,7 @@
       "pages": [
         38
       ],
-      "sourceOrder": 244,
+      "sourceOrder": 279,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:244:38:79"
@@ -6487,7 +7394,7 @@
       "pages": [
         39
       ],
-      "sourceOrder": 245,
+      "sourceOrder": 280,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:245:39:80"
@@ -6513,7 +7420,7 @@
       "pages": [
         39
       ],
-      "sourceOrder": 246,
+      "sourceOrder": 281,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:246:39:81"
@@ -6539,7 +7446,7 @@
       "pages": [
         39
       ],
-      "sourceOrder": 247,
+      "sourceOrder": 282,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:247:39:82"
@@ -6565,7 +7472,7 @@
       "pages": [
         39
       ],
-      "sourceOrder": 248,
+      "sourceOrder": 283,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:248:39:83"
@@ -6591,7 +7498,7 @@
       "pages": [
         39
       ],
-      "sourceOrder": 249,
+      "sourceOrder": 284,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:249:39:84"
@@ -6617,7 +7524,7 @@
       "pages": [
         39
       ],
-      "sourceOrder": 250,
+      "sourceOrder": 285,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:250:39:85"
@@ -6643,7 +7550,7 @@
       "pages": [
         39
       ],
-      "sourceOrder": 251,
+      "sourceOrder": 286,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:251:39:86"
@@ -6669,7 +7576,7 @@
       "pages": [
         39
       ],
-      "sourceOrder": 252,
+      "sourceOrder": 287,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:252:39:87"
@@ -6695,7 +7602,7 @@
       "pages": [
         39
       ],
-      "sourceOrder": 253,
+      "sourceOrder": 288,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:253:39:88"
@@ -6721,7 +7628,7 @@
       "pages": [
         40
       ],
-      "sourceOrder": 254,
+      "sourceOrder": 289,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:254:40:الثالثة"
@@ -6747,7 +7654,7 @@
       "pages": [
         41
       ],
-      "sourceOrder": 255,
+      "sourceOrder": 290,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:255:41:الرابعة"
@@ -6773,7 +7680,7 @@
       "pages": [
         41
       ],
-      "sourceOrder": 256,
+      "sourceOrder": 291,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:256:41:الخامسة"
@@ -6799,7 +7706,7 @@
       "pages": [
         41
       ],
-      "sourceOrder": 257,
+      "sourceOrder": 292,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:257:41:السادسة"
@@ -6825,7 +7732,7 @@
       "pages": [
         41
       ],
-      "sourceOrder": 258,
+      "sourceOrder": 293,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:258:41:1"
@@ -6851,7 +7758,7 @@
       "pages": [
         41
       ],
-      "sourceOrder": 259,
+      "sourceOrder": 294,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:259:41:2"
@@ -6877,7 +7784,7 @@
       "pages": [
         42
       ],
-      "sourceOrder": 260,
+      "sourceOrder": 295,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:260:42:3"
@@ -6903,7 +7810,7 @@
       "pages": [
         42
       ],
-      "sourceOrder": 261,
+      "sourceOrder": 296,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:261:42:4"
@@ -6929,7 +7836,7 @@
       "pages": [
         42
       ],
-      "sourceOrder": 262,
+      "sourceOrder": 297,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:262:42:5"
@@ -6955,7 +7862,7 @@
       "pages": [
         42
       ],
-      "sourceOrder": 263,
+      "sourceOrder": 298,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:263:42:6"
@@ -6981,7 +7888,7 @@
       "pages": [
         42
       ],
-      "sourceOrder": 264,
+      "sourceOrder": 299,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:264:42:7"
@@ -7007,7 +7914,7 @@
       "pages": [
         42
       ],
-      "sourceOrder": 265,
+      "sourceOrder": 300,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:265:42:8"
@@ -7033,7 +7940,7 @@
       "pages": [
         43
       ],
-      "sourceOrder": 266,
+      "sourceOrder": 301,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:266:43:9"
@@ -7059,7 +7966,7 @@
       "pages": [
         44
       ],
-      "sourceOrder": 267,
+      "sourceOrder": 302,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:267:44:10"
@@ -7085,7 +7992,7 @@
       "pages": [
         44
       ],
-      "sourceOrder": 268,
+      "sourceOrder": 303,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:268:44:11"
@@ -7111,7 +8018,7 @@
       "pages": [
         44
       ],
-      "sourceOrder": 269,
+      "sourceOrder": 304,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:269:44:12"
@@ -7137,7 +8044,7 @@
       "pages": [
         44
       ],
-      "sourceOrder": 270,
+      "sourceOrder": 305,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:270:44:13"
@@ -7163,7 +8070,7 @@
       "pages": [
         45
       ],
-      "sourceOrder": 271,
+      "sourceOrder": 306,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:271:45:14"
@@ -7189,7 +8096,7 @@
       "pages": [
         45
       ],
-      "sourceOrder": 272,
+      "sourceOrder": 307,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:272:45:15"
@@ -7215,7 +8122,7 @@
       "pages": [
         46
       ],
-      "sourceOrder": 273,
+      "sourceOrder": 308,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:273:46:16"
@@ -7241,7 +8148,7 @@
       "pages": [
         46
       ],
-      "sourceOrder": 274,
+      "sourceOrder": 309,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:274:46:17"
@@ -7267,7 +8174,7 @@
       "pages": [
         46
       ],
-      "sourceOrder": 275,
+      "sourceOrder": 310,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:275:46:18"
@@ -7293,7 +8200,7 @@
       "pages": [
         46
       ],
-      "sourceOrder": 276,
+      "sourceOrder": 311,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:276:46:19"
@@ -7319,7 +8226,7 @@
       "pages": [
         46
       ],
-      "sourceOrder": 277,
+      "sourceOrder": 312,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:277:46:20"
@@ -7345,7 +8252,7 @@
       "pages": [
         47
       ],
-      "sourceOrder": 278,
+      "sourceOrder": 313,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:278:47:21"
@@ -7371,7 +8278,7 @@
       "pages": [
         47
       ],
-      "sourceOrder": 279,
+      "sourceOrder": 314,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:279:47:22"
@@ -7397,7 +8304,7 @@
       "pages": [
         47
       ],
-      "sourceOrder": 280,
+      "sourceOrder": 315,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:280:47:23"
@@ -7423,7 +8330,7 @@
       "pages": [
         47
       ],
-      "sourceOrder": 281,
+      "sourceOrder": 316,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:281:47:24"
@@ -7449,7 +8356,7 @@
       "pages": [
         47
       ],
-      "sourceOrder": 282,
+      "sourceOrder": 317,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:282:47:25"
@@ -7475,7 +8382,7 @@
       "pages": [
         48
       ],
-      "sourceOrder": 283,
+      "sourceOrder": 318,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:283:48:26"
@@ -7501,7 +8408,7 @@
       "pages": [
         48
       ],
-      "sourceOrder": 284,
+      "sourceOrder": 319,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:284:48:27"
@@ -7527,7 +8434,7 @@
       "pages": [
         48
       ],
-      "sourceOrder": 285,
+      "sourceOrder": 320,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:285:48:28"
@@ -7553,7 +8460,7 @@
       "pages": [
         48
       ],
-      "sourceOrder": 286,
+      "sourceOrder": 321,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:286:48:29"
@@ -7579,7 +8486,7 @@
       "pages": [
         48
       ],
-      "sourceOrder": 287,
+      "sourceOrder": 322,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:287:48:30"
@@ -7605,7 +8512,7 @@
       "pages": [
         48
       ],
-      "sourceOrder": 288,
+      "sourceOrder": 323,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:288:48:31"
@@ -7631,7 +8538,7 @@
       "pages": [
         48
       ],
-      "sourceOrder": 289,
+      "sourceOrder": 324,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:289:48:32"
@@ -7657,7 +8564,7 @@
       "pages": [
         49
       ],
-      "sourceOrder": 290,
+      "sourceOrder": 325,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:290:49:33"
@@ -7683,7 +8590,7 @@
       "pages": [
         49
       ],
-      "sourceOrder": 291,
+      "sourceOrder": 326,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:291:49:34"
@@ -7709,7 +8616,7 @@
       "pages": [
         49
       ],
-      "sourceOrder": 292,
+      "sourceOrder": 327,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:292:49:35"
@@ -7735,7 +8642,7 @@
       "pages": [
         49
       ],
-      "sourceOrder": 293,
+      "sourceOrder": 328,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:293:49:36"
@@ -7761,7 +8668,7 @@
       "pages": [
         49
       ],
-      "sourceOrder": 294,
+      "sourceOrder": 329,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:294:49:37"
@@ -7787,7 +8694,7 @@
       "pages": [
         50
       ],
-      "sourceOrder": 295,
+      "sourceOrder": 330,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:295:50:38"
@@ -7813,7 +8720,7 @@
       "pages": [
         50
       ],
-      "sourceOrder": 296,
+      "sourceOrder": 331,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:296:50:39"
@@ -7839,7 +8746,7 @@
       "pages": [
         50
       ],
-      "sourceOrder": 297,
+      "sourceOrder": 332,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:297:50:40"
@@ -7865,7 +8772,7 @@
       "pages": [
         50
       ],
-      "sourceOrder": 298,
+      "sourceOrder": 333,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:298:50:41"
@@ -7891,7 +8798,7 @@
       "pages": [
         50
       ],
-      "sourceOrder": 299,
+      "sourceOrder": 334,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:299:50:42"
@@ -7917,7 +8824,7 @@
       "pages": [
         50
       ],
-      "sourceOrder": 300,
+      "sourceOrder": 335,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:300:50:43"
@@ -7943,7 +8850,7 @@
       "pages": [
         50
       ],
-      "sourceOrder": 301,
+      "sourceOrder": 336,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:301:50:44"
@@ -7969,7 +8876,7 @@
       "pages": [
         51
       ],
-      "sourceOrder": 302,
+      "sourceOrder": 337,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:302:51:45"
@@ -7995,7 +8902,7 @@
       "pages": [
         51
       ],
-      "sourceOrder": 303,
+      "sourceOrder": 338,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:303:51:46"
@@ -8004,6 +8911,34 @@
       "recoveryRecordCount": 0,
       "needsReview": false,
       "reviewReasons": []
+    },
+    {
+      "instrumentId": "litigation-law-1-2000",
+      "lawName": "personal_affairs",
+      "lawNumber": "1",
+      "year": "2000",
+      "articleNumber": "47",
+      "articleNumberNormalized": 47,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 47:\nللنيابة العامة ان تصرح للنايب عن عديم الاهلية او ناقصها او عن الغايب بالصرف من الاموال السايلة لاي من هولاء دون الرجوع الي المحكمة بما لا يجوز زيادته الي ثلاث الاف جنيه بقرار من المحامي العام المختص وذلك لمرة واحدة كل ستة اشهر.",
+      "textForEmbedding": "مادة 47:\nللنيابة العامة ان تصرح للنايب عن عديم الاهلية او ناقصها او عن الغايب بالصرف من الاموال السايلة لاي من هولاء دون الرجوع الي المحكمة بما لا يجوز زيادته الي ثلاث الاف جنيه بقرار من المحامي العام المختص وذلك لمرة واحدة كل ستة اشهر.",
+      "pageStart": 51,
+      "pageEnd": 51,
+      "pages": [
+        51
+      ],
+      "sourceOrder": 339,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:1-2000:article-47:page-51"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
     },
     {
       "instrumentId": "litigation-law-1-2000",
@@ -8021,7 +8956,7 @@
       "pages": [
         51
       ],
-      "sourceOrder": 304,
+      "sourceOrder": 340,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:304:51:48"
@@ -8047,7 +8982,7 @@
       "pages": [
         51
       ],
-      "sourceOrder": 305,
+      "sourceOrder": 341,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:305:51:49"
@@ -8073,7 +9008,7 @@
       "pages": [
         51
       ],
-      "sourceOrder": 306,
+      "sourceOrder": 342,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:306:51:50"
@@ -8099,7 +9034,7 @@
       "pages": [
         51
       ],
-      "sourceOrder": 307,
+      "sourceOrder": 343,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:307:51:51"
@@ -8125,7 +9060,7 @@
       "pages": [
         52
       ],
-      "sourceOrder": 308,
+      "sourceOrder": 344,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:308:52:52"
@@ -8151,7 +9086,7 @@
       "pages": [
         52
       ],
-      "sourceOrder": 309,
+      "sourceOrder": 345,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:309:52:53"
@@ -8177,7 +9112,7 @@
       "pages": [
         52
       ],
-      "sourceOrder": 310,
+      "sourceOrder": 346,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:310:52:54"
@@ -8203,7 +9138,7 @@
       "pages": [
         52
       ],
-      "sourceOrder": 311,
+      "sourceOrder": 347,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:311:52:55"
@@ -8229,7 +9164,7 @@
       "pages": [
         52
       ],
-      "sourceOrder": 312,
+      "sourceOrder": 348,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:312:52:56"
@@ -8255,7 +9190,7 @@
       "pages": [
         52
       ],
-      "sourceOrder": 313,
+      "sourceOrder": 349,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:313:52:57"
@@ -8281,7 +9216,7 @@
       "pages": [
         52
       ],
-      "sourceOrder": 314,
+      "sourceOrder": 350,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:314:52:58"
@@ -8307,7 +9242,7 @@
       "pages": [
         53
       ],
-      "sourceOrder": 315,
+      "sourceOrder": 351,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:315:53:59"
@@ -8333,7 +9268,7 @@
       "pages": [
         53
       ],
-      "sourceOrder": 316,
+      "sourceOrder": 352,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:316:53:60"
@@ -8359,7 +9294,7 @@
       "pages": [
         53
       ],
-      "sourceOrder": 317,
+      "sourceOrder": 353,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:317:53:61"
@@ -8385,7 +9320,7 @@
       "pages": [
         53
       ],
-      "sourceOrder": 318,
+      "sourceOrder": 354,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:318:53:62"
@@ -8411,7 +9346,7 @@
       "pages": [
         53
       ],
-      "sourceOrder": 319,
+      "sourceOrder": 355,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:319:53:63"
@@ -8437,7 +9372,7 @@
       "pages": [
         53
       ],
-      "sourceOrder": 320,
+      "sourceOrder": 356,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:320:53:64"
@@ -8463,7 +9398,7 @@
       "pages": [
         54
       ],
-      "sourceOrder": 321,
+      "sourceOrder": 357,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:321:54:65"
@@ -8489,7 +9424,7 @@
       "pages": [
         54
       ],
-      "sourceOrder": 322,
+      "sourceOrder": 358,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:322:54:66"
@@ -8515,7 +9450,7 @@
       "pages": [
         54
       ],
-      "sourceOrder": 323,
+      "sourceOrder": 359,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:323:54:67"
@@ -8541,7 +9476,7 @@
       "pages": [
         54
       ],
-      "sourceOrder": 324,
+      "sourceOrder": 360,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:324:54:68"
@@ -8567,7 +9502,7 @@
       "pages": [
         54
       ],
-      "sourceOrder": 325,
+      "sourceOrder": 361,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:325:54:69"
@@ -8593,7 +9528,7 @@
       "pages": [
         54
       ],
-      "sourceOrder": 326,
+      "sourceOrder": 362,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:326:54:70"
@@ -8619,7 +9554,7 @@
       "pages": [
         54
       ],
-      "sourceOrder": 327,
+      "sourceOrder": 363,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:327:54:71"
@@ -8645,7 +9580,7 @@
       "pages": [
         54
       ],
-      "sourceOrder": 328,
+      "sourceOrder": 364,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:328:54:72"
@@ -8671,7 +9606,7 @@
       "pages": [
         54
       ],
-      "sourceOrder": 329,
+      "sourceOrder": 365,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:329:54:73"
@@ -8697,7 +9632,7 @@
       "pages": [
         55
       ],
-      "sourceOrder": 330,
+      "sourceOrder": 366,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:330:55:74"
@@ -8723,7 +9658,7 @@
       "pages": [
         55
       ],
-      "sourceOrder": 331,
+      "sourceOrder": 367,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:331:55:75"
@@ -8749,7 +9684,7 @@
       "pages": [
         55
       ],
-      "sourceOrder": 332,
+      "sourceOrder": 368,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:332:55:76",
@@ -8776,7 +9711,7 @@
       "pages": [
         55
       ],
-      "sourceOrder": 334,
+      "sourceOrder": 370,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:334:55:77"
@@ -8802,7 +9737,7 @@
       "pages": [
         55
       ],
-      "sourceOrder": 335,
+      "sourceOrder": 371,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:335:55:78"
@@ -8828,7 +9763,7 @@
       "pages": [
         55
       ],
-      "sourceOrder": 336,
+      "sourceOrder": 372,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:336:55:79"
@@ -8854,7 +9789,7 @@
       "pages": [
         56
       ],
-      "sourceOrder": 337,
+      "sourceOrder": 373,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:337:56:1"
@@ -8880,7 +9815,7 @@
       "pages": [
         56
       ],
-      "sourceOrder": 338,
+      "sourceOrder": 374,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:338:56:2"
@@ -8906,7 +9841,7 @@
       "pages": [
         56
       ],
-      "sourceOrder": 339,
+      "sourceOrder": 375,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:339:56:3"
@@ -8932,7 +9867,7 @@
       "pages": [
         56
       ],
-      "sourceOrder": 340,
+      "sourceOrder": 376,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:340:56:4"
@@ -8958,7 +9893,7 @@
       "pages": [
         56
       ],
-      "sourceOrder": 341,
+      "sourceOrder": 377,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:341:56:5"
@@ -8984,7 +9919,7 @@
       "pages": [
         57
       ],
-      "sourceOrder": 342,
+      "sourceOrder": 378,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:342:57:4"
@@ -9010,7 +9945,7 @@
       "pages": [
         57
       ],
-      "sourceOrder": 343,
+      "sourceOrder": 379,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:343:57:5"
@@ -9036,7 +9971,7 @@
       "pages": [
         57
       ],
-      "sourceOrder": 344,
+      "sourceOrder": 380,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:344:57:6"
@@ -9062,7 +9997,7 @@
       "pages": [
         57
       ],
-      "sourceOrder": 345,
+      "sourceOrder": 381,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:345:57:7"
@@ -9088,7 +10023,7 @@
       "pages": [
         57
       ],
-      "sourceOrder": 346,
+      "sourceOrder": 382,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:346:57:8"
@@ -9114,7 +10049,7 @@
       "pages": [
         57
       ],
-      "sourceOrder": 347,
+      "sourceOrder": 383,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:347:57:9"
@@ -9140,7 +10075,7 @@
       "pages": [
         57
       ],
-      "sourceOrder": 348,
+      "sourceOrder": 384,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:348:57:10"
@@ -9166,7 +10101,7 @@
       "pages": [
         57
       ],
-      "sourceOrder": 349,
+      "sourceOrder": 385,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:349:57:11"
@@ -9192,7 +10127,7 @@
       "pages": [
         58
       ],
-      "sourceOrder": 350,
+      "sourceOrder": 386,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:350:58:1"
@@ -9218,7 +10153,7 @@
       "pages": [
         58
       ],
-      "sourceOrder": 351,
+      "sourceOrder": 387,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:351:58:2"
@@ -9244,7 +10179,7 @@
       "pages": [
         58
       ],
-      "sourceOrder": 352,
+      "sourceOrder": 388,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:352:58:1"
@@ -9270,7 +10205,7 @@
       "pages": [
         59
       ],
-      "sourceOrder": 353,
+      "sourceOrder": 389,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:353:59:2"
@@ -9296,7 +10231,7 @@
       "pages": [
         59
       ],
-      "sourceOrder": 354,
+      "sourceOrder": 390,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:354:59:3"
@@ -9322,7 +10257,7 @@
       "pages": [
         59
       ],
-      "sourceOrder": 355,
+      "sourceOrder": 391,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:355:59:4"
@@ -9348,7 +10283,7 @@
       "pages": [
         59
       ],
-      "sourceOrder": 356,
+      "sourceOrder": 392,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:356:59:5"
@@ -9374,7 +10309,7 @@
       "pages": [
         59
       ],
-      "sourceOrder": 357,
+      "sourceOrder": 393,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:357:59:6"
@@ -9400,7 +10335,7 @@
       "pages": [
         59
       ],
-      "sourceOrder": 358,
+      "sourceOrder": 394,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:358:59:7"
@@ -9426,7 +10361,7 @@
       "pages": [
         59
       ],
-      "sourceOrder": 359,
+      "sourceOrder": 395,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:359:59:8"
@@ -9452,7 +10387,7 @@
       "pages": [
         59
       ],
-      "sourceOrder": 360,
+      "sourceOrder": 396,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:360:59:9"
@@ -9478,7 +10413,7 @@
       "pages": [
         60
       ],
-      "sourceOrder": 361,
+      "sourceOrder": 397,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:361:60:1"
@@ -9504,7 +10439,7 @@
       "pages": [
         60
       ],
-      "sourceOrder": 362,
+      "sourceOrder": 398,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:362:60:2"
@@ -9530,7 +10465,7 @@
       "pages": [
         60
       ],
-      "sourceOrder": 363,
+      "sourceOrder": 399,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:363:60:3"
@@ -9556,7 +10491,7 @@
       "pages": [
         60
       ],
-      "sourceOrder": 364,
+      "sourceOrder": 400,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:364:60:4"
@@ -9582,7 +10517,7 @@
       "pages": [
         60
       ],
-      "sourceOrder": 365,
+      "sourceOrder": 401,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:365:60:5"
@@ -9608,7 +10543,7 @@
       "pages": [
         60
       ],
-      "sourceOrder": 366,
+      "sourceOrder": 402,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:366:60:6"
@@ -9634,7 +10569,7 @@
       "pages": [
         60
       ],
-      "sourceOrder": 367,
+      "sourceOrder": 403,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:367:60:7"
@@ -9660,7 +10595,7 @@
       "pages": [
         61
       ],
-      "sourceOrder": 368,
+      "sourceOrder": 404,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:368:61:8"
@@ -9669,6 +10604,34 @@
       "recoveryRecordCount": 0,
       "needsReview": false,
       "reviewReasons": []
+    },
+    {
+      "instrumentId": "ministerial-decision-1088-2000",
+      "lawName": "personal_affairs",
+      "lawNumber": "1088",
+      "year": "2000",
+      "articleNumber": "9",
+      "articleNumberNormalized": 9,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 9:\nيرفق بمحضر الجرد مذكرة من الخبير تتضمن - بحسب الاحوال - نوع واوصاف واوزان وعيار الاشياء والاموال التي عهد بها اليه وقيمة كل منها، ويثبت مضمون ما اشتملت عليه المذكرة في المحضر.",
+      "textForEmbedding": "مادة 9:\nيرفق بمحضر الجرد مذكرة من الخبير تتضمن - بحسب الاحوال - نوع واوصاف واوزان وعيار الاشياء والاموال التي عهد بها اليه وقيمة كل منها، ويثبت مضمون ما اشتملت عليه المذكرة في المحضر.",
+      "pageStart": 61,
+      "pageEnd": 61,
+      "pages": [
+        61
+      ],
+      "sourceOrder": 405,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:1088-2000:article-9:page-61"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
     },
     {
       "instrumentId": "ministerial-decision-1088-2000",
@@ -9686,7 +10649,7 @@
       "pages": [
         61
       ],
-      "sourceOrder": 369,
+      "sourceOrder": 406,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:369:61:10"
@@ -9712,7 +10675,7 @@
       "pages": [
         61
       ],
-      "sourceOrder": 370,
+      "sourceOrder": 407,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:370:61:11"
@@ -9738,7 +10701,7 @@
       "pages": [
         61
       ],
-      "sourceOrder": 371,
+      "sourceOrder": 408,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:371:61:12"
@@ -9764,7 +10727,7 @@
       "pages": [
         61
       ],
-      "sourceOrder": 372,
+      "sourceOrder": 409,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:372:61:13"
@@ -9790,7 +10753,7 @@
       "pages": [
         61
       ],
-      "sourceOrder": 373,
+      "sourceOrder": 410,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:373:61:14"
@@ -9816,7 +10779,7 @@
       "pages": [
         61
       ],
-      "sourceOrder": 374,
+      "sourceOrder": 411,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:374:61:15"
@@ -9842,7 +10805,7 @@
       "pages": [
         61
       ],
-      "sourceOrder": 375,
+      "sourceOrder": 412,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:375:61:16"
@@ -9868,7 +10831,7 @@
       "pages": [
         61
       ],
-      "sourceOrder": 376,
+      "sourceOrder": 413,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:376:61:17"
@@ -9894,7 +10857,7 @@
       "pages": [
         61
       ],
-      "sourceOrder": 377,
+      "sourceOrder": 414,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:377:61:18"
@@ -9920,7 +10883,7 @@
       "pages": [
         62
       ],
-      "sourceOrder": 378,
+      "sourceOrder": 415,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:378:62:19"
@@ -9946,7 +10909,7 @@
       "pages": [
         62
       ],
-      "sourceOrder": 379,
+      "sourceOrder": 416,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:379:62:20"
@@ -9972,7 +10935,7 @@
       "pages": [
         62
       ],
-      "sourceOrder": 380,
+      "sourceOrder": 417,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:380:62:21"
@@ -9998,7 +10961,7 @@
       "pages": [
         62
       ],
-      "sourceOrder": 381,
+      "sourceOrder": 418,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:381:62:22"
@@ -10024,7 +10987,7 @@
       "pages": [
         62
       ],
-      "sourceOrder": 382,
+      "sourceOrder": 419,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:382:62:23"
@@ -10042,23 +11005,253 @@
       "articleNumber": "1",
       "articleNumberNormalized": 1,
       "articleSuffix": null,
-      "chapter": "الباب الخامس",
-      "text": "مادة 1 :\nينشا بمقر كل محكمة مكتب للاخصاييين الاجتماعيين يخضع للاشراف المباشر لرييسها .\n5- بحث الحالة من حيث محل الاقامة واوصافة والمستوي المعيشي والبيية المحيطة .\n6- بحث المستوي الثقافي والعلمي لابناء اطراف النزاع ، ودور التعليم الملحقين بها والصف الدراسي ومستوي التحصيل ، وذلك من خلال الرجوع الي المختصين بها وعن طريق الحديث المباشر معهم دون توجيه مكاتبات في هذا الخصوص .\n7- ان كان الابناء ملتحقين بعمل من يجب : يثبت في التقرير نوع هذا العمل ووظيفته وما اذا كانت ذاته كانت الصحية الصحيحة والعقلية من حيث المبدا تتفق وطبيعة العمل من عدمه والدوافع للالتحاق بهذا العمل بهذه الاعمال .\n8- ان كان احد افراد الخصومة مصابا بمرض مزمن او عاهة جسدية او عقلية تعين علي الاختصاصي اثبات ذلك في تقريره ، وما اذا كان يتلقي علاجا من عدمه .\nوعلي الاخصايي ان يضمن تقريره كافة ما يتيح للمحكمة الوقوف علي الواقع الفعلي لحياة اطراف الخصومة وابنايهم .وان يدعم ذلك بالمستندات المودعة في الملف مثل التصوير الفوتوغرافي للمسكن بعد الحصول علي اذن المقيمين به والمنطقة التي يقع بها ، وكافة ما يعتبر يصدق عن الواقع الفعلي .",
-      "textForEmbedding": "مادة 1 :\nينشا بمقر كل محكمة مكتب للاخصاييين الاجتماعيين يخضع للاشراف المباشر لرييسها .\n5- بحث الحالة من حيث محل الاقامة واوصافة والمستوي المعيشي والبيية المحيطة .\n6- بحث المستوي الثقافي والعلمي لابناء اطراف النزاع ، ودور التعليم الملحقين بها والصف الدراسي ومستوي التحصيل ، وذلك من خلال الرجوع الي المختصين بها وعن طريق الحديث المباشر معهم دون توجيه مكاتبات في هذا الخصوص .\n7- ان كان الابناء ملتحقين بعمل من يجب : يثبت في التقرير نوع هذا العمل ووظيفته وما اذا كانت ذاته كانت الصحية الصحيحة والعقلية من حيث المبدا تتفق وطبيعة العمل من عدمه والدوافع للالتحاق بهذا العمل بهذه الاعمال .\n8- ان كان احد افراد الخصومة مصابا بمرض مزمن او عاهة جسدية او عقلية تعين علي الاختصاصي اثبات ذلك في تقريره ، وما اذا كان يتلقي علاجا من عدمه .\nوعلي الاخصايي ان يضمن تقريره كافة ما يتيح للمحكمة الوقوف علي الواقع الفعلي لحياة اطراف الخصومة وابنايهم .وان يدعم ذلك بالمستندات المودعة في الملف مثل التصوير الفوتوغرافي للمسكن بعد الحصول علي اذن المقيمين به والمنطقة التي يقع بها ، وكافة ما يعتبر يصدق عن الواقع الفعلي .",
+      "chapter": null,
+      "text": "مادة 1:\nينشا بمقر كل محكمة مكتب للاخصاييين الاجتماعيين يخضع للاشراف المباشر لرييسها.\n\nولرييس المحكمة الابتدايية انشاء مكاتب فرعية بمقار المحاكم الجزيية التابعة له ويسند الاشراف علي اعمالها لقاضي المحكمة الجزيية.",
+      "textForEmbedding": "مادة 1:\nينشا بمقر كل محكمة مكتب للاخصاييين الاجتماعيين يخضع للاشراف المباشر لرييسها.\n\nولرييس المحكمة الابتدايية انشاء مكاتب فرعية بمقار المحاكم الجزيية التابعة له ويسند الاشراف علي اعمالها لقاضي المحكمة الجزيية.",
       "pageStart": 62,
-      "pageEnd": 62,
+      "pageEnd": 63,
       "pages": [
-        62
+        62,
+        63
       ],
-      "sourceOrder": 383,
-      "source": "vision_ocr",
+      "sourceOrder": 420,
+      "source": "vision_ocr_recovery",
       "sourceRecordIds": [
-        "qwen:383:62:1"
+        "personal:pdf-vision:1089-2000:article-1:page-62",
+        "personal:pdf-vision:1089-2000:article-1:page-63"
       ],
-      "qwenRecordCount": 1,
-      "recoveryRecordCount": 0,
-      "needsReview": false,
-      "reviewReasons": []
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 2,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "ministerial-decision-1089-2000",
+      "lawName": "personal_affairs",
+      "lawNumber": "1089",
+      "year": "2000",
+      "articleNumber": "2",
+      "articleNumberNormalized": 2,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 2:\nيعد سجل بكل محكمة انشي بمقرها مكتب لاخصاييين الاجتماعيين لقيد الماموريات التي تعهد بها المحكمة لهم.\nوتقيد المامورية في السجل بارقام مسلسلة مع بداية كل عام قضايي. وتتضمن بيانات السجل ما يلي:\nرقم الدعوي، اسماء المدعين عليهم ومحال اقامتهم، تاريخ قرار المحكمة، وملخص لمضمون القرار، اسم الاخصايي الاجتماعي المنتدب، تاريخ استلام المامورية وتوقيعه بالاستلام، وتاريخ ايداع التقرير وعدد اوراقه وتوقيع مقدمه.",
+      "textForEmbedding": "مادة 2:\nيعد سجل بكل محكمة انشي بمقرها مكتب لاخصاييين الاجتماعيين لقيد الماموريات التي تعهد بها المحكمة لهم.\nوتقيد المامورية في السجل بارقام مسلسلة مع بداية كل عام قضايي. وتتضمن بيانات السجل ما يلي:\nرقم الدعوي، اسماء المدعين عليهم ومحال اقامتهم، تاريخ قرار المحكمة، وملخص لمضمون القرار، اسم الاخصايي الاجتماعي المنتدب، تاريخ استلام المامورية وتوقيعه بالاستلام، وتاريخ ايداع التقرير وعدد اوراقه وتوقيع مقدمه.",
+      "pageStart": 63,
+      "pageEnd": 63,
+      "pages": [
+        63
+      ],
+      "sourceOrder": 422,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:1089-2000:article-2:page-63"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "ministerial-decision-1089-2000",
+      "lawName": "personal_affairs",
+      "lawNumber": "1089",
+      "year": "2000",
+      "articleNumber": "3",
+      "articleNumberNormalized": 3,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 3:\nيقوم رييس المحكمة الابتدايية او من يعهد اليه من قضاتها بمراجعة القيد في السجل المبين بالمادة السابقة شهريا للوقوف علي حسن سير العمل بمكتب الاخصاييين الاجتماعيين، ووضع القواعد اللازمة لضبط العمل به.\nولرييس المحكمة الابتدايية - عند اللزوم - ان يرفع مذكرة مسببة لوزير العدل باقتراح رفع اسم من يثبت عدم صلاحيته لاداء العمل من الاخصاييين الاجتماعيين.",
+      "textForEmbedding": "مادة 3:\nيقوم رييس المحكمة الابتدايية او من يعهد اليه من قضاتها بمراجعة القيد في السجل المبين بالمادة السابقة شهريا للوقوف علي حسن سير العمل بمكتب الاخصاييين الاجتماعيين، ووضع القواعد اللازمة لضبط العمل به.\nولرييس المحكمة الابتدايية - عند اللزوم - ان يرفع مذكرة مسببة لوزير العدل باقتراح رفع اسم من يثبت عدم صلاحيته لاداء العمل من الاخصاييين الاجتماعيين.",
+      "pageStart": 63,
+      "pageEnd": 63,
+      "pages": [
+        63
+      ],
+      "sourceOrder": 423,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:1089-2000:article-3:page-63"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "ministerial-decision-1089-2000",
+      "lawName": "personal_affairs",
+      "lawNumber": "1089",
+      "year": "2000",
+      "articleNumber": "4",
+      "articleNumberNormalized": 4,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 4:\nيعهد الي كل من المبينة اسماوهم بالكشوف المرافقة لقرار وزير العدل باصدار قوايم الاخصاييين الاجتماعيين بالعمل كاخصاييين اجتماعيين بدواير المحاكم الابتدايية المبين فريق اسم كل منهم.",
+      "textForEmbedding": "مادة 4:\nيعهد الي كل من المبينة اسماوهم بالكشوف المرافقة لقرار وزير العدل باصدار قوايم الاخصاييين الاجتماعيين بالعمل كاخصاييين اجتماعيين بدواير المحاكم الابتدايية المبين فريق اسم كل منهم.",
+      "pageStart": 63,
+      "pageEnd": 63,
+      "pages": [
+        63
+      ],
+      "sourceOrder": 424,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:1089-2000:article-4:page-63"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "ministerial-decision-1089-2000",
+      "lawName": "personal_affairs",
+      "lawNumber": "1089",
+      "year": "2000",
+      "articleNumber": "5",
+      "articleNumberNormalized": 5,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 5:\nتعهد المحكمة بمامورية للاخصايي الاجتماعي حسب دوره في الترتيب الوارد بالكشف الخاص بها، وللمحكمة ان تعهد بالمامورية لاخصايي بعينه دون التزام بهذا الترتيب اذا رات ذلك لاسباب تقدرها.",
+      "textForEmbedding": "مادة 5:\nتعهد المحكمة بمامورية للاخصايي الاجتماعي حسب دوره في الترتيب الوارد بالكشف الخاص بها، وللمحكمة ان تعهد بالمامورية لاخصايي بعينه دون التزام بهذا الترتيب اذا رات ذلك لاسباب تقدرها.",
+      "pageStart": 63,
+      "pageEnd": 63,
+      "pages": [
+        63
+      ],
+      "sourceOrder": 425,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:1089-2000:article-5:page-63"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "ministerial-decision-1089-2000",
+      "lawName": "personal_affairs",
+      "lawNumber": "1089",
+      "year": "2000",
+      "articleNumber": "6",
+      "articleNumberNormalized": 6,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 6:\nيتعين علي الاخصايي الاجتماعي التواجد بالمكتب المشار اليه في المادة الاولي من هذا القرار خلال الايام التي يحددها رييس المحكمة الابتدايية، وبصفة خاصة في الايام التي تنظر خلالها جلسات الاحوال الشخصية واليوم التالي لها، لاستلام الاخطارات الخاصة بالماموريات التي تامر بها المحكمة. علي ان يكون التواجد بمقار المحاكم الجزيية خلال تلك الايام لاستلام اخطارات الماموريات او ايداع التقارير بحسب الاحوال.",
+      "textForEmbedding": "مادة 6:\nيتعين علي الاخصايي الاجتماعي التواجد بالمكتب المشار اليه في المادة الاولي من هذا القرار خلال الايام التي يحددها رييس المحكمة الابتدايية، وبصفة خاصة في الايام التي تنظر خلالها جلسات الاحوال الشخصية واليوم التالي لها، لاستلام الاخطارات الخاصة بالماموريات التي تامر بها المحكمة. علي ان يكون التواجد بمقار المحاكم الجزيية خلال تلك الايام لاستلام اخطارات الماموريات او ايداع التقارير بحسب الاحوال.",
+      "pageStart": 63,
+      "pageEnd": 63,
+      "pages": [
+        63
+      ],
+      "sourceOrder": 426,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:1089-2000:article-6:page-63"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "ministerial-decision-1089-2000",
+      "lawName": "personal_affairs",
+      "lawNumber": "1089",
+      "year": "2000",
+      "articleNumber": "7",
+      "articleNumberNormalized": 7,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 7:\nيجب علي امين سير الدايرة اثبات اسم الاخصايي الاجتماعي الذي عهد اليه بمامورية علي غلاف ملف الدعوي، ويوقع الاخصايي الاجتماعي في السجل المبين في المادة الثانية من هذا القرار بما يفيد اطلاعه علي ملف الدعوي وتاريخ ذلك.",
+      "textForEmbedding": "مادة 7:\nيجب علي امين سير الدايرة اثبات اسم الاخصايي الاجتماعي الذي عهد اليه بمامورية علي غلاف ملف الدعوي، ويوقع الاخصايي الاجتماعي في السجل المبين في المادة الثانية من هذا القرار بما يفيد اطلاعه علي ملف الدعوي وتاريخ ذلك.",
+      "pageStart": 63,
+      "pageEnd": 63,
+      "pages": [
+        63
+      ],
+      "sourceOrder": 427,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:1089-2000:article-7:page-63"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "ministerial-decision-1089-2000",
+      "lawName": "personal_affairs",
+      "lawNumber": "1089",
+      "year": "2000",
+      "articleNumber": "8",
+      "articleNumberNormalized": 8,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 8:\nيجب علي الاخصايي الاجتماعي المبادرة بمباشرة المامورية المكلف بها فور توقيعه علي السجل المبين بالمادة الثانية من هذا القرار، وان يودع تقريره عنها في موعد غايته عشرة ايام.",
+      "textForEmbedding": "مادة 8:\nيجب علي الاخصايي الاجتماعي المبادرة بمباشرة المامورية المكلف بها فور توقيعه علي السجل المبين بالمادة الثانية من هذا القرار، وان يودع تقريره عنها في موعد غايته عشرة ايام.",
+      "pageStart": 63,
+      "pageEnd": 63,
+      "pages": [
+        63
+      ],
+      "sourceOrder": 428,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:1089-2000:article-8:page-63"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "ministerial-decision-1089-2000",
+      "lawName": "personal_affairs",
+      "lawNumber": "1089",
+      "year": "2000",
+      "articleNumber": "9",
+      "articleNumberNormalized": 9,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 9:\nعلي الاخصايي الاجتماعي ان يثبت في تقريره كافة الاجراءات التي اتخذها في سبيل مباشرة المامورية، وملخص للحالة او المسالة المعروضة عليه، وكافة ما تكشف له من خلال البحث، وخاصة ما يتعلق بالامور الاتية:\n1- رقم الدعوي واسماء اطراف الخصومة ورقم قيد المامورية في السجل وتاريخ استلامه لها.\n2- الحالة الاجتماعية لاطراف الخصومة، وجنسياتهم وديانتهم وعمل كل منهم.\n3- الحالة الاقتصادية لاطراف الخصومة.\n4- المستوي الثقافي والعلمي لاطراف الخصومة.\n\n5- بحث الحالة من حيث محل الاقامة واوصافه والمستوي المعيشي والبيية المحيطة.\n6- بحث المستوي الثقافي والعلمي لابناء اطراف النزاع، ودور التعليم الملحقين بها والصف الدراسي ومستوي التحصيل، وذلك من خلال الرجوع الي المختصين بها وعن طريق الحديث المباشر دون توجيه مكاتبات في هذا الخصوص.\n7- ان كان الابناء ملتحقين بعمل يجب ان يثبت في التقرير نوع هذا العمل وطبيعته وما اذا كانت حالتهم الصحية والعقلية من حيث المبدا تتفق وطبيعة العمل من عدمه والدوافع لالتحاق الابناء بهذه الاعمال.\n8- ان كان احد افراد الخصومة مريضا بمرض مزمن او عاهة جسدية او عقلية تعين علي الاخصايي اثبات ذلك في تقريره، وما اذا كان يتلقي علاجا من عدمه.\nوعلي الاخصايي ان يضمن تقريره كافة ما يتيح للمحكمة الوقوف علي الواقع الفعلي لحياة اطراف الخصومة وابنايهم، وان يدعم ذلك بالمستندات المويدة قدر الامكان بما في ذلك التصوير الفوتوغرافي للمسكن بعد الحصول علي اذن المقيمين به والمنطقة التي يقع بها، وكافة ما يعبر بصدق عن الواقع الفعلي.",
+      "textForEmbedding": "مادة 9:\nعلي الاخصايي الاجتماعي ان يثبت في تقريره كافة الاجراءات التي اتخذها في سبيل مباشرة المامورية، وملخص للحالة او المسالة المعروضة عليه، وكافة ما تكشف له من خلال البحث، وخاصة ما يتعلق بالامور الاتية:\n1- رقم الدعوي واسماء اطراف الخصومة ورقم قيد المامورية في السجل وتاريخ استلامه لها.\n2- الحالة الاجتماعية لاطراف الخصومة، وجنسياتهم وديانتهم وعمل كل منهم.\n3- الحالة الاقتصادية لاطراف الخصومة.\n4- المستوي الثقافي والعلمي لاطراف الخصومة.\n\n5- بحث الحالة من حيث محل الاقامة واوصافه والمستوي المعيشي والبيية المحيطة.\n6- بحث المستوي الثقافي والعلمي لابناء اطراف النزاع، ودور التعليم الملحقين بها والصف الدراسي ومستوي التحصيل، وذلك من خلال الرجوع الي المختصين بها وعن طريق الحديث المباشر دون توجيه مكاتبات في هذا الخصوص.\n7- ان كان الابناء ملتحقين بعمل يجب ان يثبت في التقرير نوع هذا العمل وطبيعته وما اذا كانت حالتهم الصحية والعقلية من حيث المبدا تتفق وطبيعة العمل من عدمه والدوافع لالتحاق الابناء بهذه الاعمال.\n8- ان كان احد افراد الخصومة مريضا بمرض مزمن او عاهة جسدية او عقلية تعين علي الاخصايي اثبات ذلك في تقريره، وما اذا كان يتلقي علاجا من عدمه.\nوعلي الاخصايي ان يضمن تقريره كافة ما يتيح للمحكمة الوقوف علي الواقع الفعلي لحياة اطراف الخصومة وابنايهم، وان يدعم ذلك بالمستندات المويدة قدر الامكان بما في ذلك التصوير الفوتوغرافي للمسكن بعد الحصول علي اذن المقيمين به والمنطقة التي يقع بها، وكافة ما يعبر بصدق عن الواقع الفعلي.",
+      "pageStart": 63,
+      "pageEnd": 64,
+      "pages": [
+        63,
+        64
+      ],
+      "sourceOrder": 429,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:1089-2000:article-9:page-63",
+        "personal:pdf-vision:1089-2000:article-9:page-64"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 2,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
     },
     {
       "instrumentId": "ministerial-decision-1089-2000",
@@ -10076,7 +11269,7 @@
       "pages": [
         64
       ],
-      "sourceOrder": 384,
+      "sourceOrder": 431,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:384:64:10"
@@ -10102,7 +11295,7 @@
       "pages": [
         64
       ],
-      "sourceOrder": 385,
+      "sourceOrder": 432,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:385:64:11"
@@ -10128,7 +11321,7 @@
       "pages": [
         64
       ],
-      "sourceOrder": 386,
+      "sourceOrder": 433,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:386:64:12"
@@ -10154,7 +11347,7 @@
       "pages": [
         65
       ],
-      "sourceOrder": 387,
+      "sourceOrder": 434,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:387:65:1"
@@ -10180,7 +11373,7 @@
       "pages": [
         65
       ],
-      "sourceOrder": 388,
+      "sourceOrder": 435,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:388:65:2"
@@ -10206,7 +11399,7 @@
       "pages": [
         66
       ],
-      "sourceOrder": 389,
+      "sourceOrder": 436,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:389:66:3"
@@ -10222,118 +11415,325 @@
     "articleAnchorCount": 410,
     "qwenRecordCount": 390,
     "pdfOnlyArticleCount": 0,
-    "missingArticleNumbers": [
-      {
-        "instrumentId": "personal-law-25-1920",
-        "articleNumbers": [
-          "1",
-          "7",
-          "12"
-        ]
-      },
-      {
-        "instrumentId": "guardianship-person-decree-118-1952",
-        "articleNumbers": [
-          "8",
-          "9",
-          "10",
-          "11",
-          "12",
-          "13"
-        ]
-      },
-      {
-        "instrumentId": "guardianship-property-decree-119-1952",
-        "articleNumbers": [
-          "8",
-          "9",
-          "10",
-          "11",
-          "12",
-          "13",
-          "15",
-          "16",
-          "18",
-          "19",
-          "20",
-          "21",
-          "29",
-          "30",
-          "31",
-          "32",
-          "33",
-          "34",
-          "35",
-          "36",
-          "37",
-          "38",
-          "39"
-        ]
-      },
-      {
-        "instrumentId": "litigation-law-1-2000",
-        "articleNumbers": [
-          "47"
-        ]
-      },
-      {
-        "instrumentId": "ministerial-decision-1088-2000",
-        "articleNumbers": [
-          "9"
-        ]
-      },
-      {
-        "instrumentId": "ministerial-decision-1089-2000",
-        "articleNumbers": [
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9"
-        ]
-      }
-    ],
-    "suspiciousArticleCount": 0
+    "pdfRecoveredArticleCount": 0,
+    "missingArticleNumbers": [],
+    "suspiciousArticleCount": 45
   },
   "validation": {
     "issues": [
       {
         "severity": "warning",
-        "code": "MISSING_ARTICLES",
-        "message": "Missing expected article numbers: 1, 7, 12",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "1",
         "instrumentId": "personal-law-25-1920"
       },
       {
         "severity": "warning",
-        "code": "MISSING_ARTICLES",
-        "message": "Missing expected article numbers: 8, 9, 10, 11, 12, 13",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "7",
+        "instrumentId": "personal-law-25-1920"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "12",
+        "instrumentId": "personal-law-25-1920"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "7",
         "instrumentId": "guardianship-person-decree-118-1952"
       },
       {
         "severity": "warning",
-        "code": "MISSING_ARTICLES",
-        "message": "Missing expected article numbers: 8, 9, 10, 11, 12, 13, 15, 16, 18, 19, 20, 21, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "8",
+        "instrumentId": "guardianship-person-decree-118-1952"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "9",
+        "instrumentId": "guardianship-person-decree-118-1952"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "10",
+        "instrumentId": "guardianship-person-decree-118-1952"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "11",
+        "instrumentId": "guardianship-person-decree-118-1952"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "12",
+        "instrumentId": "guardianship-person-decree-118-1952"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "13",
+        "instrumentId": "guardianship-person-decree-118-1952"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "8",
         "instrumentId": "guardianship-property-decree-119-1952"
       },
       {
         "severity": "warning",
-        "code": "MISSING_ARTICLES",
-        "message": "Missing expected article numbers: 47",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "9",
+        "instrumentId": "guardianship-property-decree-119-1952"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "10",
+        "instrumentId": "guardianship-property-decree-119-1952"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "11",
+        "instrumentId": "guardianship-property-decree-119-1952"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "12",
+        "instrumentId": "guardianship-property-decree-119-1952"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "13",
+        "instrumentId": "guardianship-property-decree-119-1952"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "15",
+        "instrumentId": "guardianship-property-decree-119-1952"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "16",
+        "instrumentId": "guardianship-property-decree-119-1952"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "18",
+        "instrumentId": "guardianship-property-decree-119-1952"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "19",
+        "instrumentId": "guardianship-property-decree-119-1952"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "20",
+        "instrumentId": "guardianship-property-decree-119-1952"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "21",
+        "instrumentId": "guardianship-property-decree-119-1952"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "28",
+        "instrumentId": "guardianship-property-decree-119-1952"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "29",
+        "instrumentId": "guardianship-property-decree-119-1952"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "30",
+        "instrumentId": "guardianship-property-decree-119-1952"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "31",
+        "instrumentId": "guardianship-property-decree-119-1952"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "32",
+        "instrumentId": "guardianship-property-decree-119-1952"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "33",
+        "instrumentId": "guardianship-property-decree-119-1952"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "34",
+        "instrumentId": "guardianship-property-decree-119-1952"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "35",
+        "instrumentId": "guardianship-property-decree-119-1952"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "36",
+        "instrumentId": "guardianship-property-decree-119-1952"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "37",
+        "instrumentId": "guardianship-property-decree-119-1952"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "38",
+        "instrumentId": "guardianship-property-decree-119-1952"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "39",
+        "instrumentId": "guardianship-property-decree-119-1952"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "47",
         "instrumentId": "litigation-law-1-2000"
       },
       {
         "severity": "warning",
-        "code": "MISSING_ARTICLES",
-        "message": "Missing expected article numbers: 9",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "9",
         "instrumentId": "ministerial-decision-1088-2000"
       },
       {
         "severity": "warning",
-        "code": "MISSING_ARTICLES",
-        "message": "Missing expected article numbers: 2, 3, 4, 5, 6, 7, 8, 9",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "1",
+        "instrumentId": "ministerial-decision-1089-2000"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "2",
+        "instrumentId": "ministerial-decision-1089-2000"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "3",
+        "instrumentId": "ministerial-decision-1089-2000"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "4",
+        "instrumentId": "ministerial-decision-1089-2000"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "5",
+        "instrumentId": "ministerial-decision-1089-2000"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "6",
+        "instrumentId": "ministerial-decision-1089-2000"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "7",
+        "instrumentId": "ministerial-decision-1089-2000"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "8",
+        "instrumentId": "ministerial-decision-1089-2000"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "9",
         "instrumentId": "ministerial-decision-1089-2000"
       },
       {
@@ -10423,13 +11823,13 @@
     ],
     "summary": {
       "errors": 0,
-      "warnings": 6,
+      "warnings": 45,
       "infos": 12,
-      "articleCount": 384,
+      "articleCount": 426,
       "qwenRecordCount": 390,
-      "recoveryRecordCount": 0,
+      "recoveryRecordCount": 50,
       "suspiciousMergeCount": 0,
-      "missingArticleNumberCount": 42
+      "missingArticleNumberCount": 0
     }
   }
 }

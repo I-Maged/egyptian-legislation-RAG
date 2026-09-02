@@ -1,12 +1,13 @@
 {
   "metadata": {
-    "parserVersion": "3.1.0",
+    "parserVersion": "3.3.0",
     "inputFile": "personal_affair_law_qwen_output.json",
     "pdfFile": "personal-src.pdf",
-    "generatedAt": "2026-09-01T22:01:24.914Z",
+    "generatedAt": "2026-09-02T20:23:36.350Z",
     "recordCountOriginal": 390,
-    "recordCountRecovery": 0,
-    "recordCountMerged": 390,
+    "recordCountRecovery": 50,
+    "recordCountMerged": 440,
+    "pdfRecoveryArticleCount": 0,
     "instrumentId": "inheritance-application-law-35-1944",
     "mode": "qwen+pdf"
   },
@@ -49,7 +50,7 @@
       "pages": [
         15
       ],
-      "sourceOrder": 92,
+      "sourceOrder": 96,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:92:15:1"
@@ -75,7 +76,7 @@
       "pages": [
         15
       ],
-      "sourceOrder": 93,
+      "sourceOrder": 97,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:93:15:2"
@@ -91,20 +92,21 @@
     "articleAnchorCount": 410,
     "qwenRecordCount": 390,
     "pdfOnlyArticleCount": 0,
+    "pdfRecoveredArticleCount": 0,
     "missingArticleNumbers": [],
-    "suspiciousArticleCount": 0
+    "suspiciousArticleCount": 45
   },
   "validation": {
     "issues": [],
     "summary": {
       "errors": 0,
-      "warnings": 6,
+      "warnings": 45,
       "infos": 12,
-      "articleCount": 384,
+      "articleCount": 426,
       "qwenRecordCount": 390,
-      "recoveryRecordCount": 0,
+      "recoveryRecordCount": 50,
       "suspiciousMergeCount": 0,
-      "missingArticleNumberCount": 42
+      "missingArticleNumberCount": 0
     }
   }
 }

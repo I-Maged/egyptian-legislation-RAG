@@ -450,32 +450,45 @@ export function mergeRecoveryRecords(
   if (!recovery.length) return [...qwen];
   const merged = [...qwen];
   for (const rec of recovery) {
-    if (
-      merged.some(
-        (x) =>
-          x.page_number === rec.page_number &&
-          canonicalArticleNumber(x.article_number) ===
-            canonicalArticleNumber(rec.article_number),
-      )
-    )
+    const existingIndex = merged.findIndex(
+      (x) =>
+        x.page_number === rec.page_number &&
+        canonicalArticleNumber(x.article_number) ===
+          canonicalArticleNumber(rec.article_number),
+    );
+
+    if (existingIndex >= 0) {
+      // Explicit recovery OCR is authoritative for a targeted page/article
+      // position. This lets recovery repair a corrupted Qwen record without
+      // changing the rest of the original stream.
+      merged[existingIndex] = rec;
       continue;
-    let insertAt = merged.findIndex((x) => x.page_number > rec.page_number);
-    if (insertAt < 0) insertAt = merged.length;
-    else {
-      const samePageStart = insertAt;
-      while (
-        insertAt < merged.length &&
-        merged[insertAt]!.page_number === rec.page_number
-      )
-        insertAt++;
-      const targetNumber = numericArticleNumber(rec.article_number);
-      if (targetNumber !== null) {
-        for (let i = samePageStart; i < insertAt; i++) {
-          const n = numericArticleNumber(merged[i]!.article_number);
-          if (n !== null && n > targetNumber) {
-            insertAt = i;
-            break;
-          }
+    }
+
+    // Find the beginning of the target page, not the first record after it.
+    // Recovery records commonly belong in the middle of a page that already
+    // contains Qwen records (e.g. Article 1 before Article 2). Starting at the
+    // first later page would append the recovery record to the end of the page
+    // and break article contiguity / identity transitions.
+    let pageStart = merged.findIndex((x) => x.page_number >= rec.page_number);
+    if (pageStart < 0) pageStart = merged.length;
+
+    let pageEnd = pageStart;
+    while (
+      pageEnd < merged.length &&
+      merged[pageEnd]!.page_number === rec.page_number
+    ) {
+      pageEnd++;
+    }
+
+    let insertAt = pageEnd;
+    const targetNumber = numericArticleNumber(rec.article_number);
+    if (targetNumber !== null) {
+      for (let i = pageStart; i < pageEnd; i++) {
+        const n = numericArticleNumber(merged[i]!.article_number);
+        if (n !== null && n > targetNumber) {
+          insertAt = i;
+          break;
         }
       }
     }

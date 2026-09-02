@@ -1,12 +1,13 @@
 {
   "metadata": {
-    "parserVersion": "3.1.0",
+    "parserVersion": "3.3.0",
     "inputFile": "personal_affair_law_qwen_output.json",
     "pdfFile": "personal-src.pdf",
-    "generatedAt": "2026-09-01T22:01:24.914Z",
+    "generatedAt": "2026-09-02T20:23:36.350Z",
     "recordCountOriginal": 390,
-    "recordCountRecovery": 0,
-    "recordCountMerged": 390,
+    "recordCountRecovery": 50,
+    "recordCountMerged": 440,
+    "pdfRecoveryArticleCount": 0,
     "instrumentId": "personal-decree-25-1929",
     "mode": "qwen+pdf"
   },
@@ -49,7 +50,7 @@
       "pages": [
         3
       ],
-      "sourceOrder": 10,
+      "sourceOrder": 14,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:10:3:1"
@@ -75,7 +76,7 @@
       "pages": [
         3
       ],
-      "sourceOrder": 11,
+      "sourceOrder": 15,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:11:3:2"
@@ -101,7 +102,7 @@
       "pages": [
         3
       ],
-      "sourceOrder": 12,
+      "sourceOrder": 16,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:12:3:3"
@@ -127,7 +128,7 @@
       "pages": [
         3
       ],
-      "sourceOrder": 13,
+      "sourceOrder": 17,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:13:3:4"
@@ -153,7 +154,7 @@
       "pages": [
         3
       ],
-      "sourceOrder": 14,
+      "sourceOrder": 18,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:14:3:5",
@@ -180,7 +181,7 @@
       "pages": [
         4
       ],
-      "sourceOrder": 16,
+      "sourceOrder": 20,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:16:4:6"
@@ -206,7 +207,7 @@
       "pages": [
         4
       ],
-      "sourceOrder": 17,
+      "sourceOrder": 21,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:17:4:7"
@@ -232,7 +233,7 @@
       "pages": [
         4
       ],
-      "sourceOrder": 18,
+      "sourceOrder": 22,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:18:4:8"
@@ -258,7 +259,7 @@
       "pages": [
         4
       ],
-      "sourceOrder": 19,
+      "sourceOrder": 23,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:19:4:9"
@@ -284,7 +285,7 @@
       "pages": [
         4
       ],
-      "sourceOrder": 20,
+      "sourceOrder": 24,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:20:4:10"
@@ -311,7 +312,7 @@
         4,
         5
       ],
-      "sourceOrder": 21,
+      "sourceOrder": 25,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:21:4:11",
@@ -339,7 +340,7 @@
       "pages": [
         5
       ],
-      "sourceOrder": 24,
+      "sourceOrder": 28,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:24:5:12"
@@ -365,7 +366,7 @@
       "pages": [
         5
       ],
-      "sourceOrder": 25,
+      "sourceOrder": 29,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:25:5:13"
@@ -391,7 +392,7 @@
       "pages": [
         5
       ],
-      "sourceOrder": 26,
+      "sourceOrder": 30,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:26:5:14"
@@ -417,7 +418,7 @@
       "pages": [
         5
       ],
-      "sourceOrder": 27,
+      "sourceOrder": 31,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:27:5:15"
@@ -443,7 +444,7 @@
       "pages": [
         5
       ],
-      "sourceOrder": 28,
+      "sourceOrder": 32,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:28:5:16"
@@ -469,7 +470,7 @@
       "pages": [
         6
       ],
-      "sourceOrder": 29,
+      "sourceOrder": 33,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:29:6:17"
@@ -495,7 +496,7 @@
       "pages": [
         6
       ],
-      "sourceOrder": 30,
+      "sourceOrder": 34,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:30:6:18"
@@ -521,7 +522,7 @@
       "pages": [
         6
       ],
-      "sourceOrder": 31,
+      "sourceOrder": 35,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:31:6:17"
@@ -547,7 +548,7 @@
       "pages": [
         6
       ],
-      "sourceOrder": 32,
+      "sourceOrder": 36,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:32:6:18",
@@ -574,7 +575,7 @@
       "pages": [
         6
       ],
-      "sourceOrder": 34,
+      "sourceOrder": 38,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:34:6:19"
@@ -600,7 +601,7 @@
       "pages": [
         7
       ],
-      "sourceOrder": 35,
+      "sourceOrder": 39,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:35:7:20"
@@ -626,7 +627,7 @@
       "pages": [
         7
       ],
-      "sourceOrder": 36,
+      "sourceOrder": 40,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:36:7:21"
@@ -652,7 +653,7 @@
       "pages": [
         7
       ],
-      "sourceOrder": 37,
+      "sourceOrder": 41,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:37:7:22"
@@ -678,7 +679,7 @@
       "pages": [
         8
       ],
-      "sourceOrder": 38,
+      "sourceOrder": 42,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:38:8:23",
@@ -705,7 +706,7 @@
       "pages": [
         8
       ],
-      "sourceOrder": 40,
+      "sourceOrder": 44,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:40:8:24"
@@ -731,7 +732,7 @@
       "pages": [
         8
       ],
-      "sourceOrder": 41,
+      "sourceOrder": 45,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:41:8:25"
@@ -747,8 +748,9 @@
     "articleAnchorCount": 410,
     "qwenRecordCount": 390,
     "pdfOnlyArticleCount": 0,
+    "pdfRecoveredArticleCount": 0,
     "missingArticleNumbers": [],
-    "suspiciousArticleCount": 0
+    "suspiciousArticleCount": 45
   },
   "validation": {
     "issues": [
@@ -769,13 +771,13 @@
     ],
     "summary": {
       "errors": 0,
-      "warnings": 6,
+      "warnings": 45,
       "infos": 12,
-      "articleCount": 384,
+      "articleCount": 426,
       "qwenRecordCount": 390,
-      "recoveryRecordCount": 0,
+      "recoveryRecordCount": 50,
       "suspiciousMergeCount": 0,
-      "missingArticleNumberCount": 42
+      "missingArticleNumberCount": 0
     }
   }
 }

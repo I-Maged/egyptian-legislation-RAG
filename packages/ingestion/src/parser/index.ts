@@ -193,7 +193,7 @@ async function main() {
   const missing = issues.filter((x) => x.code === "MISSING_ARTICLES");
   const result: ParserOutput = {
     metadata: {
-      parserVersion: "3.2.0",
+      parserVersion: "3.3.0",
       inputFile: args.qwen ? path.basename(args.qwen) : null,
       pdfFile: path.basename(args.pdf),
       generatedAt: new Date().toISOString(),

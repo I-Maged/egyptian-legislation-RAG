@@ -1,12 +1,13 @@
 {
   "metadata": {
-    "parserVersion": "3.1.0",
+    "parserVersion": "3.3.0",
     "inputFile": "personal_affair_law_qwen_output.json",
     "pdfFile": "personal-src.pdf",
-    "generatedAt": "2026-09-01T22:01:24.914Z",
+    "generatedAt": "2026-09-02T20:23:36.350Z",
     "recordCountOriginal": 390,
-    "recordCountRecovery": 0,
-    "recordCountMerged": 390,
+    "recordCountRecovery": 50,
+    "recordCountMerged": 440,
+    "pdfRecoveryArticleCount": 0,
     "instrumentId": "guardianship-property-decree-119-1952",
     "mode": "qwen+pdf"
   },
@@ -49,7 +50,7 @@
       "pages": [
         30
       ],
-      "sourceOrder": 186,
+      "sourceOrder": 197,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:186:30:1"
@@ -75,7 +76,7 @@
       "pages": [
         30
       ],
-      "sourceOrder": 187,
+      "sourceOrder": 198,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:187:30:2"
@@ -101,7 +102,7 @@
       "pages": [
         30
       ],
-      "sourceOrder": 188,
+      "sourceOrder": 199,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:188:30:3"
@@ -127,7 +128,7 @@
       "pages": [
         30
       ],
-      "sourceOrder": 189,
+      "sourceOrder": 200,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:189:30:1"
@@ -153,7 +154,7 @@
       "pages": [
         30
       ],
-      "sourceOrder": 190,
+      "sourceOrder": 201,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:190:30:2"
@@ -179,7 +180,7 @@
       "pages": [
         30
       ],
-      "sourceOrder": 191,
+      "sourceOrder": 202,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:191:30:3"
@@ -205,7 +206,7 @@
       "pages": [
         30
       ],
-      "sourceOrder": 192,
+      "sourceOrder": 203,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:192:30:4"
@@ -231,7 +232,7 @@
       "pages": [
         30
       ],
-      "sourceOrder": 193,
+      "sourceOrder": 204,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:193:30:5"
@@ -257,7 +258,7 @@
       "pages": [
         30
       ],
-      "sourceOrder": 194,
+      "sourceOrder": 205,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:194:30:6"
@@ -283,7 +284,7 @@
       "pages": [
         30
       ],
-      "sourceOrder": 195,
+      "sourceOrder": 206,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:195:30:7"
@@ -292,6 +293,174 @@
       "recoveryRecordCount": 0,
       "needsReview": false,
       "reviewReasons": []
+    },
+    {
+      "instrumentId": "guardianship-property-decree-119-1952",
+      "lawName": "guardianship",
+      "lawNumber": "119",
+      "year": "1952",
+      "articleNumber": "8",
+      "articleNumberNormalized": 8,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 8:\nاذا كان مورث القاصر قد اوصي بان لا يتصرف وليه في المال المورث فلا يجوز للولي ان يتصرف فيه الا باذن المحكمة وتحت اشرافها.",
+      "textForEmbedding": "مادة 8:\nاذا كان مورث القاصر قد اوصي بان لا يتصرف وليه في المال المورث فلا يجوز للولي ان يتصرف فيه الا باذن المحكمة وتحت اشرافها.",
+      "pageStart": 31,
+      "pageEnd": 31,
+      "pages": [
+        31
+      ],
+      "sourceOrder": 207,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:119-1952:article-8:page-31"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "guardianship-property-decree-119-1952",
+      "lawName": "guardianship",
+      "lawNumber": "119",
+      "year": "1952",
+      "articleNumber": "9",
+      "articleNumberNormalized": 9,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 9:\nلا يجوز للولي اقراض مال الصغير ولا اقتراضه الا باذن المحكمة.",
+      "textForEmbedding": "مادة 9:\nلا يجوز للولي اقراض مال الصغير ولا اقتراضه الا باذن المحكمة.",
+      "pageStart": 31,
+      "pageEnd": 31,
+      "pages": [
+        31
+      ],
+      "sourceOrder": 208,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:119-1952:article-9:page-31"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "guardianship-property-decree-119-1952",
+      "lawName": "guardianship",
+      "lawNumber": "119",
+      "year": "1952",
+      "articleNumber": "10",
+      "articleNumberNormalized": 10,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 10:\nلا يجوز للولي بغير اذن المحكمة تاجير عقار القاصر لمدة تمتد الي ما بعد سن الرشد بسنة.",
+      "textForEmbedding": "مادة 10:\nلا يجوز للولي بغير اذن المحكمة تاجير عقار القاصر لمدة تمتد الي ما بعد سن الرشد بسنة.",
+      "pageStart": 31,
+      "pageEnd": 31,
+      "pages": [
+        31
+      ],
+      "sourceOrder": 209,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:119-1952:article-10:page-31"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "guardianship-property-decree-119-1952",
+      "lawName": "guardianship",
+      "lawNumber": "119",
+      "year": "1952",
+      "articleNumber": "11",
+      "articleNumberNormalized": 11,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 11:\nلا يجوز للولي ان يستمر في تجارة الت للقاصر الا باذن من المحكمة وفي حدود هذا الاذن.",
+      "textForEmbedding": "مادة 11:\nلا يجوز للولي ان يستمر في تجارة الت للقاصر الا باذن من المحكمة وفي حدود هذا الاذن.",
+      "pageStart": 31,
+      "pageEnd": 31,
+      "pages": [
+        31
+      ],
+      "sourceOrder": 210,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:119-1952:article-11:page-31"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "guardianship-property-decree-119-1952",
+      "lawName": "guardianship",
+      "lawNumber": "119",
+      "year": "1952",
+      "articleNumber": "12",
+      "articleNumberNormalized": 12,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 12:\nلا يجوز للولي ان يقبل هبة او وصية للصغير محملة بالتزامات معينة الا باذن المحكمة.",
+      "textForEmbedding": "مادة 12:\nلا يجوز للولي ان يقبل هبة او وصية للصغير محملة بالتزامات معينة الا باذن المحكمة.",
+      "pageStart": 31,
+      "pageEnd": 31,
+      "pages": [
+        31
+      ],
+      "sourceOrder": 211,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:119-1952:article-12:page-31"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "guardianship-property-decree-119-1952",
+      "lawName": "guardianship",
+      "lawNumber": "119",
+      "year": "1952",
+      "articleNumber": "13",
+      "articleNumberNormalized": 13,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 13:\nلا تسري القيود المنصوص عليها في هذا القانون علي ما ال القاصر من مال بطريق التبرع من ابيه صريحا كان التبرع او مستترا ولا يلزم الاب بتقديم حساب عن هذا المال.",
+      "textForEmbedding": "مادة 13:\nلا تسري القيود المنصوص عليها في هذا القانون علي ما ال القاصر من مال بطريق التبرع من ابيه صريحا كان التبرع او مستترا ولا يلزم الاب بتقديم حساب عن هذا المال.",
+      "pageStart": 31,
+      "pageEnd": 31,
+      "pages": [
+        31
+      ],
+      "sourceOrder": 212,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:119-1952:article-13:page-31"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
     },
     {
       "instrumentId": "guardianship-property-decree-119-1952",
@@ -309,7 +478,7 @@
       "pages": [
         31
       ],
-      "sourceOrder": 196,
+      "sourceOrder": 213,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:196:31:14"
@@ -318,6 +487,62 @@
       "recoveryRecordCount": 0,
       "needsReview": false,
       "reviewReasons": []
+    },
+    {
+      "instrumentId": "guardianship-property-decree-119-1952",
+      "lawName": "guardianship",
+      "lawNumber": "119",
+      "year": "1952",
+      "articleNumber": "15",
+      "articleNumberNormalized": 15,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 15:\nلا يجوز للجد بغير اذن المحكمة التصرف في مال القاصر ولا الصلح عليه ولا التنازل عن التامينات او اضعافها.",
+      "textForEmbedding": "مادة 15:\nلا يجوز للجد بغير اذن المحكمة التصرف في مال القاصر ولا الصلح عليه ولا التنازل عن التامينات او اضعافها.",
+      "pageStart": 31,
+      "pageEnd": 31,
+      "pages": [
+        31
+      ],
+      "sourceOrder": 214,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:119-1952:article-15:page-31"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "guardianship-property-decree-119-1952",
+      "lawName": "guardianship",
+      "lawNumber": "119",
+      "year": "1952",
+      "articleNumber": "16",
+      "articleNumberNormalized": 16,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 16:\nعلي الولي ان يحرر قايمة بما يكون للقاصر من مال او ما يوول اليه وان يودع هذه القايمة قلم كتاب المحكمة التي يقع بدايرتها موطنه في مدي شهرين من بدء الولاية او من ايلولة هذا المال الي الصغير.\nويجوز للمحكمة اعتبار عدم تقديم هذه القايمة او التاخير في تقديمها تعريضا لمال القاصر للخطر.",
+      "textForEmbedding": "مادة 16:\nعلي الولي ان يحرر قايمة بما يكون للقاصر من مال او ما يوول اليه وان يودع هذه القايمة قلم كتاب المحكمة التي يقع بدايرتها موطنه في مدي شهرين من بدء الولاية او من ايلولة هذا المال الي الصغير.\nويجوز للمحكمة اعتبار عدم تقديم هذه القايمة او التاخير في تقديمها تعريضا لمال القاصر للخطر.",
+      "pageStart": 31,
+      "pageEnd": 31,
+      "pages": [
+        31
+      ],
+      "sourceOrder": 215,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:119-1952:article-16:page-31"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
     },
     {
       "instrumentId": "guardianship-property-decree-119-1952",
@@ -335,7 +560,7 @@
       "pages": [
         31
       ],
-      "sourceOrder": 197,
+      "sourceOrder": 216,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:197:31:17"
@@ -344,6 +569,118 @@
       "recoveryRecordCount": 0,
       "needsReview": false,
       "reviewReasons": []
+    },
+    {
+      "instrumentId": "guardianship-property-decree-119-1952",
+      "lawName": "guardianship",
+      "lawNumber": "119",
+      "year": "1952",
+      "articleNumber": "18",
+      "articleNumberNormalized": 18,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 18:\nتنتهي الولاية ببلوغ القاصر احدي وعشرين سنة ما لم تحكم المحكمة قبل بلوغه هذه السن باستمرار الولاية عليه.",
+      "textForEmbedding": "مادة 18:\nتنتهي الولاية ببلوغ القاصر احدي وعشرين سنة ما لم تحكم المحكمة قبل بلوغه هذه السن باستمرار الولاية عليه.",
+      "pageStart": 31,
+      "pageEnd": 31,
+      "pages": [
+        31
+      ],
+      "sourceOrder": 217,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:119-1952:article-18:page-31"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "guardianship-property-decree-119-1952",
+      "lawName": "guardianship",
+      "lawNumber": "119",
+      "year": "1952",
+      "articleNumber": "19",
+      "articleNumberNormalized": 19,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 19:\nاذا انتهت الولاية علي شخص فلا تعود الا اذا قام به سبب من اسباب الحجر.",
+      "textForEmbedding": "مادة 19:\nاذا انتهت الولاية علي شخص فلا تعود الا اذا قام به سبب من اسباب الحجر.",
+      "pageStart": 31,
+      "pageEnd": 31,
+      "pages": [
+        31
+      ],
+      "sourceOrder": 218,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:119-1952:article-19:page-31"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "guardianship-property-decree-119-1952",
+      "lawName": "guardianship",
+      "lawNumber": "119",
+      "year": "1952",
+      "articleNumber": "20",
+      "articleNumberNormalized": 20,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 20:\nاذا اصبحت اموال القاصر في خطر بسبب سوء تصرف الولي او لاي سبب اخر فللمحكمة ان تسلب ولايته او تحد منها.",
+      "textForEmbedding": "مادة 20:\nاذا اصبحت اموال القاصر في خطر بسبب سوء تصرف الولي او لاي سبب اخر فللمحكمة ان تسلب ولايته او تحد منها.",
+      "pageStart": 31,
+      "pageEnd": 31,
+      "pages": [
+        31
+      ],
+      "sourceOrder": 219,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:119-1952:article-20:page-31"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "guardianship-property-decree-119-1952",
+      "lawName": "guardianship",
+      "lawNumber": "119",
+      "year": "1952",
+      "articleNumber": "21",
+      "articleNumberNormalized": 21,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 21:\nتحكم المحكمة بوقف الولاية اذا اعتبر الولي غايبا او اعتقل تنفيذا لحكم بعقوبة جناية او بالحبس مدة تزيد علي سنة.",
+      "textForEmbedding": "مادة 21:\nتحكم المحكمة بوقف الولاية اذا اعتبر الولي غايبا او اعتقل تنفيذا لحكم بعقوبة جناية او بالحبس مدة تزيد علي سنة.",
+      "pageStart": 31,
+      "pageEnd": 31,
+      "pages": [
+        31
+      ],
+      "sourceOrder": 220,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:119-1952:article-21:page-31"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
     },
     {
       "instrumentId": "guardianship-property-decree-119-1952",
@@ -361,7 +698,7 @@
       "pages": [
         31
       ],
-      "sourceOrder": 198,
+      "sourceOrder": 221,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:198:31:22"
@@ -387,7 +724,7 @@
       "pages": [
         32
       ],
-      "sourceOrder": 199,
+      "sourceOrder": 222,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:199:32:23"
@@ -413,7 +750,7 @@
       "pages": [
         32
       ],
-      "sourceOrder": 200,
+      "sourceOrder": 223,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:200:32:24"
@@ -439,7 +776,7 @@
       "pages": [
         32
       ],
-      "sourceOrder": 201,
+      "sourceOrder": 224,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:201:32:25"
@@ -465,7 +802,7 @@
       "pages": [
         32
       ],
-      "sourceOrder": 202,
+      "sourceOrder": 225,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:202:32:26"
@@ -491,7 +828,7 @@
       "pages": [
         32
       ],
-      "sourceOrder": 203,
+      "sourceOrder": 226,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:203:32:27"
@@ -509,23 +846,335 @@
       "articleNumber": "28",
       "articleNumberNormalized": 28,
       "articleSuffix": null,
-      "chapter": "الفصل الثاني في الوصية",
-      "text": "مادة 28 :\nيجوز للاب ان يكون وصيا مختارا لولده القاصر او للحمل المستكين ويجوز ذلك للمتبرع في حالة المنصوص عليه\nفي المادة 3 .\nويشترط ان يثبت الاختيار بورقة رسميه او عرفية مصدق علي توقيع الاب او المتبرع فيها او المكتوب بخطة وموقعة\nبامضايه .\nاولا . جميع التصرفات التي من شانها نق حق من الحقوق العينية العقارية او الاصليه او التبعيه او نقله او تغييره او زواله وكذلك جميع تصرفات المقررة لحق من الحقوق المذكورة .\nثانيا . التصرف في المنقولات او الحقوق الشخصية او الاوراق المالية فيما عدما يدخل في اعمال الادارة .\nثالثا . الصلح والتحكيم فيما قل عن ماية جنيه مما يتصل باعمال الادارة .\nرابعا . حوالة الحقوق والديون وبدل الحواله .\nخامسا . استثمار الاموال وتصفيتها.\nسادسا . اقراض المال واقراضه .\nسابعا . ايجار عقار القاصر لمدة اثر من ثلاث سنوات في الاراضي الزراعية ولمدة اكثر من سنة في المباني .\nثامنا . ايجار القاصر لمدة تمدد الي ما ما بعد بلوغه سن الرشد لاكثر من سنة .\nتاسعا . قبول التبرعات المقترنة بشروط او رفضها .\nعاشرا . الانفاق من مال القاصر علي من تجب عليه نفقتهم الا اذا كانت النفقة مقضيا بها وبحكم واجب النفاذ .\nحادي عشر . اقواء الاحتياطيات بالالتزامات التي تكون علي التركة او علي القاصر .\nثاني عشر . رفع الدعاوي الي ما يكون في تاخير رفعه ضرر بالغ بالقاصر او ضياع حق له .\nثالث عشر . التنازل عن الحقوق والدعاوي وفقو الاحكام القابلة للطعون العادية والعادية والتنازل عن هذه الطعون بعد رفعا ورفع الطعون غير العادية في الاحكام .\nرابع عشر . التنازل عن التامينات وضماناتها .\nخامس عشر : ايجار الوسل اموال القاصر لنفسه او لزوجه او لاحد اقاربه الي الدرجة الرابعة او لمن يكون الوصي نايبا عنه .\nسادس عشر . ما يصرف من تربيخ القاصر .\nسابع عشر . تعليق القاصر اذا احتاج للنفقه والانفاق اللازم لمباشرة القاصر مهنة معينة .",
-      "textForEmbedding": "مادة 28 :\nيجوز للاب ان يكون وصيا مختارا لولده القاصر او للحمل المستكين ويجوز ذلك للمتبرع في حالة المنصوص عليه\nفي المادة 3 .\nويشترط ان يثبت الاختيار بورقة رسميه او عرفية مصدق علي توقيع الاب او المتبرع فيها او المكتوب بخطة وموقعة\nبامضايه .\nاولا . جميع التصرفات التي من شانها نق حق من الحقوق العينية العقارية او الاصليه او التبعيه او نقله او تغييره او زواله وكذلك جميع تصرفات المقررة لحق من الحقوق المذكورة .\nثانيا . التصرف في المنقولات او الحقوق الشخصية او الاوراق المالية فيما عدما يدخل في اعمال الادارة .\nثالثا . الصلح والتحكيم فيما قل عن ماية جنيه مما يتصل باعمال الادارة .\nرابعا . حوالة الحقوق والديون وبدل الحواله .\nخامسا . استثمار الاموال وتصفيتها.\nسادسا . اقراض المال واقراضه .\nسابعا . ايجار عقار القاصر لمدة اثر من ثلاث سنوات في الاراضي الزراعية ولمدة اكثر من سنة في المباني .\nثامنا . ايجار القاصر لمدة تمدد الي ما ما بعد بلوغه سن الرشد لاكثر من سنة .\nتاسعا . قبول التبرعات المقترنة بشروط او رفضها .\nعاشرا . الانفاق من مال القاصر علي من تجب عليه نفقتهم الا اذا كانت النفقة مقضيا بها وبحكم واجب النفاذ .\nحادي عشر . اقواء الاحتياطيات بالالتزامات التي تكون علي التركة او علي القاصر .\nثاني عشر . رفع الدعاوي الي ما يكون في تاخير رفعه ضرر بالغ بالقاصر او ضياع حق له .\nثالث عشر . التنازل عن الحقوق والدعاوي وفقو الاحكام القابلة للطعون العادية والعادية والتنازل عن هذه الطعون بعد رفعا ورفع الطعون غير العادية في الاحكام .\nرابع عشر . التنازل عن التامينات وضماناتها .\nخامس عشر : ايجار الوسل اموال القاصر لنفسه او لزوجه او لاحد اقاربه الي الدرجة الرابعة او لمن يكون الوصي نايبا عنه .\nسادس عشر . ما يصرف من تربيخ القاصر .\nسابع عشر . تعليق القاصر اذا احتاج للنفقه والانفاق اللازم لمباشرة القاصر مهنة معينة .",
+      "chapter": null,
+      "text": "مادة 28:\nيجوز للاب ان يكون وصيا مختارا لولده القاصر او للحمل المستكن ويجوز ذلك للمتبرع في الحالة المنصوص عليها في المادة 3.\nويشترط ان يثبت الاختيار بورقة رسمية او عرفية مصدق علي توقيع الاب او المتبرع فيها او المكتوبة بخطه وموقعة بامضايه.\n\nويجوز للاب والمتبرع بطريق الوصية في اي وقت ان يعدلا عن اختيارهما وتعرض الوصاية علي المحكمة لتثبيتها.",
+      "textForEmbedding": "مادة 28:\nيجوز للاب ان يكون وصيا مختارا لولده القاصر او للحمل المستكن ويجوز ذلك للمتبرع في الحالة المنصوص عليها في المادة 3.\nويشترط ان يثبت الاختيار بورقة رسمية او عرفية مصدق علي توقيع الاب او المتبرع فيها او المكتوبة بخطه وموقعة بامضايه.\n\nويجوز للاب والمتبرع بطريق الوصية في اي وقت ان يعدلا عن اختيارهما وتعرض الوصاية علي المحكمة لتثبيتها.",
       "pageStart": 32,
-      "pageEnd": 32,
+      "pageEnd": 33,
       "pages": [
-        32
+        32,
+        33
       ],
-      "sourceOrder": 204,
-      "source": "vision_ocr",
+      "sourceOrder": 227,
+      "source": "vision_ocr_recovery",
       "sourceRecordIds": [
-        "qwen:204:32:28"
+        "personal:pdf-vision:119-1952:article-28:page-32",
+        "personal:pdf-vision:119-1952:article-28:page-33"
       ],
-      "qwenRecordCount": 1,
-      "recoveryRecordCount": 0,
-      "needsReview": false,
-      "reviewReasons": []
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 2,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "guardianship-property-decree-119-1952",
+      "lawName": "guardianship",
+      "lawNumber": "119",
+      "year": "1952",
+      "articleNumber": "29",
+      "articleNumberNormalized": 29,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 29:\nاذا لم يكن للقاصر او للحمل المستكن وصي مختار تعين المحكمة وصيا ويبقي الحمل المستكن وصيا علي المولود ما لم تعين المحكمة غيره.",
+      "textForEmbedding": "مادة 29:\nاذا لم يكن للقاصر او للحمل المستكن وصي مختار تعين المحكمة وصيا ويبقي الحمل المستكن وصيا علي المولود ما لم تعين المحكمة غيره.",
+      "pageStart": 33,
+      "pageEnd": 33,
+      "pages": [
+        33
+      ],
+      "sourceOrder": 229,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:119-1952:article-29:page-33"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "guardianship-property-decree-119-1952",
+      "lawName": "guardianship",
+      "lawNumber": "119",
+      "year": "1952",
+      "articleNumber": "30",
+      "articleNumberNormalized": 30,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 30:\nيجوز عند الضرورة تعيين اكثر من وصي واحد وفي هذه الحالة لا يجوز لاحدهم الانفراد الا اذا كانت المحكمة قد بينت اختصاصا لكل منهم في قرار تعيينه او في قرار لاحق، ومع ذلك لكل من الاوصياء اتخاذ الاجراءات الضرورية او المستعجلة او المتمخضة لنفع القاصر.\nوعند الاختلاف بين الاوصياء يرفع الامر الي المحكمة لتامر بما يتبع.",
+      "textForEmbedding": "مادة 30:\nيجوز عند الضرورة تعيين اكثر من وصي واحد وفي هذه الحالة لا يجوز لاحدهم الانفراد الا اذا كانت المحكمة قد بينت اختصاصا لكل منهم في قرار تعيينه او في قرار لاحق، ومع ذلك لكل من الاوصياء اتخاذ الاجراءات الضرورية او المستعجلة او المتمخضة لنفع القاصر.\nوعند الاختلاف بين الاوصياء يرفع الامر الي المحكمة لتامر بما يتبع.",
+      "pageStart": 33,
+      "pageEnd": 33,
+      "pages": [
+        33
+      ],
+      "sourceOrder": 230,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:119-1952:article-30:page-33"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "guardianship-property-decree-119-1952",
+      "lawName": "guardianship",
+      "lawNumber": "119",
+      "year": "1952",
+      "articleNumber": "31",
+      "articleNumberNormalized": 31,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 31:\nا - اذا تعرضت مصلحة القاصر مع مصلحة الولي او مصلحة قاصر اخر مشمول بولايته.\nب - اذا تعارضت مصلحة القاصر مع مصلحة الولي او زوجته او احد اصوله او فروعه مع من يملكه الوصي.\nج - ابرام عقد من عقود المعارضة او تعديله او فسخه او ابطاله او الغاوه بين القاصر وبين الوصي او احد من المذكورين في البند.\nد - اذا ال الي القاصر مال بطريق التبرع وشرط المتبرع الا يتولي الولي ادارة المال.\nه - اذا استلزمت الظروف دراية خاصة لاداء بعض الاعمال.\nو - اذا كان الولي غير اهل لمباشرة حق من حقوق الولاية.",
+      "textForEmbedding": "مادة 31:\nا - اذا تعرضت مصلحة القاصر مع مصلحة الولي او مصلحة قاصر اخر مشمول بولايته.\nب - اذا تعارضت مصلحة القاصر مع مصلحة الولي او زوجته او احد اصوله او فروعه مع من يملكه الوصي.\nج - ابرام عقد من عقود المعارضة او تعديله او فسخه او ابطاله او الغاوه بين القاصر وبين الوصي او احد من المذكورين في البند.\nد - اذا ال الي القاصر مال بطريق التبرع وشرط المتبرع الا يتولي الولي ادارة المال.\nه - اذا استلزمت الظروف دراية خاصة لاداء بعض الاعمال.\nو - اذا كان الولي غير اهل لمباشرة حق من حقوق الولاية.",
+      "pageStart": 33,
+      "pageEnd": 33,
+      "pages": [
+        33
+      ],
+      "sourceOrder": 231,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:119-1952:article-31:page-33"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "guardianship-property-decree-119-1952",
+      "lawName": "guardianship",
+      "lawNumber": "119",
+      "year": "1952",
+      "articleNumber": "32",
+      "articleNumberNormalized": 32,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 32:\nتقيم المحكمة وصيا موقتا اذا حكم بوقف الولاية ولم يكن القاصر ولي اخر وكذلك اذا وقف الوصي او حالت ظروف موقتة دون ادايه لواجباته.",
+      "textForEmbedding": "مادة 32:\nتقيم المحكمة وصيا موقتا اذا حكم بوقف الولاية ولم يكن القاصر ولي اخر وكذلك اذا وقف الوصي او حالت ظروف موقتة دون ادايه لواجباته.",
+      "pageStart": 33,
+      "pageEnd": 33,
+      "pages": [
+        33
+      ],
+      "sourceOrder": 232,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:119-1952:article-32:page-33"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "guardianship-property-decree-119-1952",
+      "lawName": "guardianship",
+      "lawNumber": "119",
+      "year": "1952",
+      "articleNumber": "33",
+      "articleNumberNormalized": 33,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 33:\nيجوز للمحكمة ان تقيم وصي خصومة ولو لم يكن للقاصر مال.",
+      "textForEmbedding": "مادة 33:\nيجوز للمحكمة ان تقيم وصي خصومة ولو لم يكن للقاصر مال.",
+      "pageStart": 33,
+      "pageEnd": 33,
+      "pages": [
+        33
+      ],
+      "sourceOrder": 233,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:119-1952:article-33:page-33"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "guardianship-property-decree-119-1952",
+      "lawName": "guardianship",
+      "lawNumber": "119",
+      "year": "1952",
+      "articleNumber": "34",
+      "articleNumberNormalized": 34,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 34:\nتسري علي الوصي الخاص والوصي الموقت ووصي الخصومة احكام الوصاية الواردة في هذا القانون مع مراعاة ما تقتضيه طبيعة مهمة كل منهم.",
+      "textForEmbedding": "مادة 34:\nتسري علي الوصي الخاص والوصي الموقت ووصي الخصومة احكام الوصاية الواردة في هذا القانون مع مراعاة ما تقتضيه طبيعة مهمة كل منهم.",
+      "pageStart": 33,
+      "pageEnd": 33,
+      "pages": [
+        33
+      ],
+      "sourceOrder": 234,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:119-1952:article-34:page-33"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "guardianship-property-decree-119-1952",
+      "lawName": "guardianship",
+      "lawNumber": "119",
+      "year": "1952",
+      "articleNumber": "35",
+      "articleNumberNormalized": 35,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 35:\nتنتهي مهمة الوصي الخاص والوصي الموقت بانتهاء العمل الذي اقيم لمباشرته او المدة التي اقتضت بها تعيينه.",
+      "textForEmbedding": "مادة 35:\nتنتهي مهمة الوصي الخاص والوصي الموقت بانتهاء العمل الذي اقيم لمباشرته او المدة التي اقتضت بها تعيينه.",
+      "pageStart": 33,
+      "pageEnd": 33,
+      "pages": [
+        33
+      ],
+      "sourceOrder": 235,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:119-1952:article-35:page-33"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "guardianship-property-decree-119-1952",
+      "lawName": "guardianship",
+      "lawNumber": "119",
+      "year": "1952",
+      "articleNumber": "36",
+      "articleNumberNormalized": 36,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 36:\nيتسلم الوصي اموال القاصر ويقوم علي رعايتها وعليه ان يبذل في ذلك من العناية ما يطلب من الوكيل الماجور وفقا لاحكام القانون المدني.",
+      "textForEmbedding": "مادة 36:\nيتسلم الوصي اموال القاصر ويقوم علي رعايتها وعليه ان يبذل في ذلك من العناية ما يطلب من الوكيل الماجور وفقا لاحكام القانون المدني.",
+      "pageStart": 33,
+      "pageEnd": 33,
+      "pages": [
+        33
+      ],
+      "sourceOrder": 236,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:119-1952:article-36:page-33"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "guardianship-property-decree-119-1952",
+      "lawName": "guardianship",
+      "lawNumber": "119",
+      "year": "1952",
+      "articleNumber": "37",
+      "articleNumberNormalized": 37,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 37:\nللمحكمة ان تلزم الوصي بتقديم تامينات بالقيمة التي تراها وتكون مصروفات تقديم هذه التامينات علي حساب القاصر.",
+      "textForEmbedding": "مادة 37:\nللمحكمة ان تلزم الوصي بتقديم تامينات بالقيمة التي تراها وتكون مصروفات تقديم هذه التامينات علي حساب القاصر.",
+      "pageStart": 33,
+      "pageEnd": 33,
+      "pages": [
+        33
+      ],
+      "sourceOrder": 237,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:119-1952:article-37:page-33"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "guardianship-property-decree-119-1952",
+      "lawName": "guardianship",
+      "lawNumber": "119",
+      "year": "1952",
+      "articleNumber": "38",
+      "articleNumberNormalized": 38,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 38:\nلا يجوز للوصي التبرع بمال القاصر الا لاداء واجب انساني او عايلي او باذن من المحكمة.",
+      "textForEmbedding": "مادة 38:\nلا يجوز للوصي التبرع بمال القاصر الا لاداء واجب انساني او عايلي او باذن من المحكمة.",
+      "pageStart": 33,
+      "pageEnd": 33,
+      "pages": [
+        33
+      ],
+      "sourceOrder": 238,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:119-1952:article-38:page-33"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
+    },
+    {
+      "instrumentId": "guardianship-property-decree-119-1952",
+      "lawName": "guardianship",
+      "lawNumber": "119",
+      "year": "1952",
+      "articleNumber": "39",
+      "articleNumberNormalized": 39,
+      "articleSuffix": null,
+      "chapter": null,
+      "text": "مادة 39:\nلا يجوز للوصي مباشرة التصرفات الاتية الا باذن من المحكمة:\nاولا: جميع التصرفات التي من شانها انشاء حق من الحقوق العينية العقارية الاصلية او التبعية او نقله او تغييره او زواله، وكذلك جميع التصرفات المقررة لحق من الحقوق المذكورة.\nثانيا: التصرف في المنقولات او الحقوق الشخصية او الاوراق المالية فيما عدا ما يدخل في اعمال الادارة.\nثالثا: الصلح والتحكيم الا فيما قل عن ماية جنيه مما يتصل باعمال الادارة.\nرابعا: حوالة الحقوق والديون وقبول الحوالة.\nخامسا: استثمار الاموال وتصفيتها.\nسادسا: اقتراض المال واقراضه.\nسابعا: ايجار عقار القاصر لمدة اكثر من ثلاث سنوات في الاراضي الزراعية ولمدة اكثر من سنة في المباني.\nثامنا: ايجار عقار القاصر لمدة تمتد الي ما بعد بلوغه سن الرشد لاكثر من سنة.\nتاسعا: قبول التبرعات المقترنة بشرط او رفضها.\nعاشرا: الانفاق من مال القاصر علي من تجب عليه نفقتهم الا اذا كانت النفقة مقضيا بها بحكم واجب النفاذ.\nحادي عشر: الوفاء الاختياري بالالتزامات التي تكون علي التركة او علي القاصر.\nثاني عشر: رفع الدعاوي الا ما يكون في تاخير رفعه ضرر بالقاصر او ضياع حق له.\nثالث عشر: التنازل عن الحقوق والدعاوي وقبول الاحكام القابلة للطعون العادية والتنازل عن هذه الطعون بعد رفعها ورفع الطعون غير العادية في الاحكام.\nرابع عشر: التنازل عن التامينات واضعافها.\nخامس عشر: ايجار الوصي اموال القاصر لنفسه او لزوجه او لاحد اقاربهما الي الدرجة الرابعة او لمن يكون الوصي نايبا عنه.\nسادس عشر: ما يصرف في تزويج القاصر.\nسابع عشر: تعليم القاصر اذا احتاج للنفقة والانفاق اللازم لمباشرة القاصر مهنة معينة.",
+      "textForEmbedding": "مادة 39:\nلا يجوز للوصي مباشرة التصرفات الاتية الا باذن من المحكمة:\nاولا: جميع التصرفات التي من شانها انشاء حق من الحقوق العينية العقارية الاصلية او التبعية او نقله او تغييره او زواله، وكذلك جميع التصرفات المقررة لحق من الحقوق المذكورة.\nثانيا: التصرف في المنقولات او الحقوق الشخصية او الاوراق المالية فيما عدا ما يدخل في اعمال الادارة.\nثالثا: الصلح والتحكيم الا فيما قل عن ماية جنيه مما يتصل باعمال الادارة.\nرابعا: حوالة الحقوق والديون وقبول الحوالة.\nخامسا: استثمار الاموال وتصفيتها.\nسادسا: اقتراض المال واقراضه.\nسابعا: ايجار عقار القاصر لمدة اكثر من ثلاث سنوات في الاراضي الزراعية ولمدة اكثر من سنة في المباني.\nثامنا: ايجار عقار القاصر لمدة تمتد الي ما بعد بلوغه سن الرشد لاكثر من سنة.\nتاسعا: قبول التبرعات المقترنة بشرط او رفضها.\nعاشرا: الانفاق من مال القاصر علي من تجب عليه نفقتهم الا اذا كانت النفقة مقضيا بها بحكم واجب النفاذ.\nحادي عشر: الوفاء الاختياري بالالتزامات التي تكون علي التركة او علي القاصر.\nثاني عشر: رفع الدعاوي الا ما يكون في تاخير رفعه ضرر بالقاصر او ضياع حق له.\nثالث عشر: التنازل عن الحقوق والدعاوي وقبول الاحكام القابلة للطعون العادية والتنازل عن هذه الطعون بعد رفعها ورفع الطعون غير العادية في الاحكام.\nرابع عشر: التنازل عن التامينات واضعافها.\nخامس عشر: ايجار الوصي اموال القاصر لنفسه او لزوجه او لاحد اقاربهما الي الدرجة الرابعة او لمن يكون الوصي نايبا عنه.\nسادس عشر: ما يصرف في تزويج القاصر.\nسابع عشر: تعليم القاصر اذا احتاج للنفقة والانفاق اللازم لمباشرة القاصر مهنة معينة.",
+      "pageStart": 34,
+      "pageEnd": 34,
+      "pages": [
+        34
+      ],
+      "sourceOrder": 239,
+      "source": "vision_ocr_recovery",
+      "sourceRecordIds": [
+        "personal:pdf-vision:119-1952:article-39:page-34"
+      ],
+      "qwenRecordCount": 0,
+      "recoveryRecordCount": 1,
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
     },
     {
       "instrumentId": "guardianship-property-decree-119-1952",
@@ -543,7 +1192,7 @@
       "pages": [
         34
       ],
-      "sourceOrder": 205,
+      "sourceOrder": 240,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:205:34:40"
@@ -569,7 +1218,7 @@
       "pages": [
         34
       ],
-      "sourceOrder": 206,
+      "sourceOrder": 241,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:206:34:41"
@@ -595,7 +1244,7 @@
       "pages": [
         34
       ],
-      "sourceOrder": 207,
+      "sourceOrder": 242,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:207:34:42"
@@ -621,7 +1270,7 @@
       "pages": [
         34
       ],
-      "sourceOrder": 208,
+      "sourceOrder": 243,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:208:34:43"
@@ -647,7 +1296,7 @@
       "pages": [
         35
       ],
-      "sourceOrder": 209,
+      "sourceOrder": 244,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:209:35:44"
@@ -673,7 +1322,7 @@
       "pages": [
         35
       ],
-      "sourceOrder": 210,
+      "sourceOrder": 245,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:210:35:45"
@@ -699,7 +1348,7 @@
       "pages": [
         35
       ],
-      "sourceOrder": 211,
+      "sourceOrder": 246,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:211:35:46"
@@ -725,7 +1374,7 @@
       "pages": [
         35
       ],
-      "sourceOrder": 212,
+      "sourceOrder": 247,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:212:35:47"
@@ -751,7 +1400,7 @@
       "pages": [
         35
       ],
-      "sourceOrder": 213,
+      "sourceOrder": 248,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:213:35:48"
@@ -777,7 +1426,7 @@
       "pages": [
         35
       ],
-      "sourceOrder": 214,
+      "sourceOrder": 249,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:214:35:49"
@@ -803,7 +1452,7 @@
       "pages": [
         35
       ],
-      "sourceOrder": 215,
+      "sourceOrder": 250,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:215:35:50"
@@ -829,7 +1478,7 @@
       "pages": [
         35
       ],
-      "sourceOrder": 216,
+      "sourceOrder": 251,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:216:35:51"
@@ -855,7 +1504,7 @@
       "pages": [
         36
       ],
-      "sourceOrder": 217,
+      "sourceOrder": 252,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:217:36:52"
@@ -881,7 +1530,7 @@
       "pages": [
         36
       ],
-      "sourceOrder": 218,
+      "sourceOrder": 253,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:218:36:53"
@@ -907,7 +1556,7 @@
       "pages": [
         36
       ],
-      "sourceOrder": 219,
+      "sourceOrder": 254,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:219:36:54"
@@ -933,7 +1582,7 @@
       "pages": [
         36
       ],
-      "sourceOrder": 220,
+      "sourceOrder": 255,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:220:36:55"
@@ -959,7 +1608,7 @@
       "pages": [
         36
       ],
-      "sourceOrder": 221,
+      "sourceOrder": 256,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:221:36:56"
@@ -985,7 +1634,7 @@
       "pages": [
         36
       ],
-      "sourceOrder": 222,
+      "sourceOrder": 257,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:222:36:57"
@@ -1011,7 +1660,7 @@
       "pages": [
         36
       ],
-      "sourceOrder": 223,
+      "sourceOrder": 258,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:223:36:58"
@@ -1037,7 +1686,7 @@
       "pages": [
         36
       ],
-      "sourceOrder": 224,
+      "sourceOrder": 259,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:224:36:59"
@@ -1063,7 +1712,7 @@
       "pages": [
         36
       ],
-      "sourceOrder": 225,
+      "sourceOrder": 260,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:225:36:60"
@@ -1089,7 +1738,7 @@
       "pages": [
         36
       ],
-      "sourceOrder": 226,
+      "sourceOrder": 261,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:226:36:61"
@@ -1115,7 +1764,7 @@
       "pages": [
         37
       ],
-      "sourceOrder": 227,
+      "sourceOrder": 262,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:227:37:62"
@@ -1141,7 +1790,7 @@
       "pages": [
         37
       ],
-      "sourceOrder": 228,
+      "sourceOrder": 263,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:228:37:63"
@@ -1167,7 +1816,7 @@
       "pages": [
         37
       ],
-      "sourceOrder": 229,
+      "sourceOrder": 264,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:229:37:64"
@@ -1193,7 +1842,7 @@
       "pages": [
         37
       ],
-      "sourceOrder": 230,
+      "sourceOrder": 265,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:230:37:65"
@@ -1219,7 +1868,7 @@
       "pages": [
         37
       ],
-      "sourceOrder": 231,
+      "sourceOrder": 266,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:231:37:66"
@@ -1245,7 +1894,7 @@
       "pages": [
         37
       ],
-      "sourceOrder": 232,
+      "sourceOrder": 267,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:232:37:67"
@@ -1271,7 +1920,7 @@
       "pages": [
         37
       ],
-      "sourceOrder": 233,
+      "sourceOrder": 268,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:233:37:68"
@@ -1297,7 +1946,7 @@
       "pages": [
         37
       ],
-      "sourceOrder": 234,
+      "sourceOrder": 269,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:234:37:69"
@@ -1323,7 +1972,7 @@
       "pages": [
         37
       ],
-      "sourceOrder": 235,
+      "sourceOrder": 270,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:235:37:70"
@@ -1349,7 +1998,7 @@
       "pages": [
         38
       ],
-      "sourceOrder": 236,
+      "sourceOrder": 271,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:236:38:71"
@@ -1375,7 +2024,7 @@
       "pages": [
         38
       ],
-      "sourceOrder": 237,
+      "sourceOrder": 272,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:237:38:72"
@@ -1401,7 +2050,7 @@
       "pages": [
         38
       ],
-      "sourceOrder": 238,
+      "sourceOrder": 273,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:238:38:73"
@@ -1427,7 +2076,7 @@
       "pages": [
         38
       ],
-      "sourceOrder": 239,
+      "sourceOrder": 274,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:239:38:74"
@@ -1453,7 +2102,7 @@
       "pages": [
         38
       ],
-      "sourceOrder": 240,
+      "sourceOrder": 275,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:240:38:75"
@@ -1479,7 +2128,7 @@
       "pages": [
         38
       ],
-      "sourceOrder": 241,
+      "sourceOrder": 276,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:241:38:76"
@@ -1505,7 +2154,7 @@
       "pages": [
         38
       ],
-      "sourceOrder": 242,
+      "sourceOrder": 277,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:242:38:77"
@@ -1531,7 +2180,7 @@
       "pages": [
         38
       ],
-      "sourceOrder": 243,
+      "sourceOrder": 278,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:243:38:78"
@@ -1557,7 +2206,7 @@
       "pages": [
         38
       ],
-      "sourceOrder": 244,
+      "sourceOrder": 279,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:244:38:79"
@@ -1583,7 +2232,7 @@
       "pages": [
         39
       ],
-      "sourceOrder": 245,
+      "sourceOrder": 280,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:245:39:80"
@@ -1609,7 +2258,7 @@
       "pages": [
         39
       ],
-      "sourceOrder": 246,
+      "sourceOrder": 281,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:246:39:81"
@@ -1635,7 +2284,7 @@
       "pages": [
         39
       ],
-      "sourceOrder": 247,
+      "sourceOrder": 282,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:247:39:82"
@@ -1661,7 +2310,7 @@
       "pages": [
         39
       ],
-      "sourceOrder": 248,
+      "sourceOrder": 283,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:248:39:83"
@@ -1687,7 +2336,7 @@
       "pages": [
         39
       ],
-      "sourceOrder": 249,
+      "sourceOrder": 284,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:249:39:84"
@@ -1713,7 +2362,7 @@
       "pages": [
         39
       ],
-      "sourceOrder": 250,
+      "sourceOrder": 285,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:250:39:85"
@@ -1739,7 +2388,7 @@
       "pages": [
         39
       ],
-      "sourceOrder": 251,
+      "sourceOrder": 286,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:251:39:86"
@@ -1765,7 +2414,7 @@
       "pages": [
         39
       ],
-      "sourceOrder": 252,
+      "sourceOrder": 287,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:252:39:87"
@@ -1791,7 +2440,7 @@
       "pages": [
         39
       ],
-      "sourceOrder": 253,
+      "sourceOrder": 288,
       "source": "vision_ocr",
       "sourceRecordIds": [
         "qwen:253:39:88"
@@ -1807,44 +2456,178 @@
     "articleAnchorCount": 410,
     "qwenRecordCount": 390,
     "pdfOnlyArticleCount": 0,
-    "missingArticleNumbers": [
-      {
-        "instrumentId": "guardianship-property-decree-119-1952",
-        "articleNumbers": [
-          "8",
-          "9",
-          "10",
-          "11",
-          "12",
-          "13",
-          "15",
-          "16",
-          "18",
-          "19",
-          "20",
-          "21",
-          "29",
-          "30",
-          "31",
-          "32",
-          "33",
-          "34",
-          "35",
-          "36",
-          "37",
-          "38",
-          "39"
-        ]
-      }
-    ],
-    "suspiciousArticleCount": 0
+    "pdfRecoveredArticleCount": 0,
+    "missingArticleNumbers": [],
+    "suspiciousArticleCount": 45
   },
   "validation": {
     "issues": [
       {
         "severity": "warning",
-        "code": "MISSING_ARTICLES",
-        "message": "Missing expected article numbers: 8, 9, 10, 11, 12, 13, 15, 16, 18, 19, 20, 21, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "8",
+        "instrumentId": "guardianship-property-decree-119-1952"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "9",
+        "instrumentId": "guardianship-property-decree-119-1952"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "10",
+        "instrumentId": "guardianship-property-decree-119-1952"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "11",
+        "instrumentId": "guardianship-property-decree-119-1952"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "12",
+        "instrumentId": "guardianship-property-decree-119-1952"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "13",
+        "instrumentId": "guardianship-property-decree-119-1952"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "15",
+        "instrumentId": "guardianship-property-decree-119-1952"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "16",
+        "instrumentId": "guardianship-property-decree-119-1952"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "18",
+        "instrumentId": "guardianship-property-decree-119-1952"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "19",
+        "instrumentId": "guardianship-property-decree-119-1952"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "20",
+        "instrumentId": "guardianship-property-decree-119-1952"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "21",
+        "instrumentId": "guardianship-property-decree-119-1952"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "28",
+        "instrumentId": "guardianship-property-decree-119-1952"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "29",
+        "instrumentId": "guardianship-property-decree-119-1952"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "30",
+        "instrumentId": "guardianship-property-decree-119-1952"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "31",
+        "instrumentId": "guardianship-property-decree-119-1952"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "32",
+        "instrumentId": "guardianship-property-decree-119-1952"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "33",
+        "instrumentId": "guardianship-property-decree-119-1952"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "34",
+        "instrumentId": "guardianship-property-decree-119-1952"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "35",
+        "instrumentId": "guardianship-property-decree-119-1952"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "36",
+        "instrumentId": "guardianship-property-decree-119-1952"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "37",
+        "instrumentId": "guardianship-property-decree-119-1952"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "38",
+        "instrumentId": "guardianship-property-decree-119-1952"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "39",
         "instrumentId": "guardianship-property-decree-119-1952"
       },
       {
@@ -1871,13 +2654,13 @@
     ],
     "summary": {
       "errors": 0,
-      "warnings": 6,
+      "warnings": 45,
       "infos": 12,
-      "articleCount": 384,
+      "articleCount": 426,
       "qwenRecordCount": 390,
-      "recoveryRecordCount": 0,
+      "recoveryRecordCount": 50,
       "suspiciousMergeCount": 0,
-      "missingArticleNumberCount": 42
+      "missingArticleNumberCount": 0
     }
   }
 }
