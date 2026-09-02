@@ -112,3 +112,9 @@ npm run test:parser
 ```
 
 The dedicated ingestion Vitest config limits the run to `packages/ingestion/src/parser` and uses the Node environment. This avoids loading the web test project and avoids Vitest DEV/watch mode.
+
+### Financial Law targeted recovery
+
+Financial Law 6/2022 uses the safely-adapted V2/V2.3 corpus as its base because the available legacy extraction contains 75 one-to-one ordered articles (2-78). The parser now permits an explicit `--recovery` OCR stream to supplement that adapted corpus. This is intentionally separate from automatic PDF text recovery: the Financial PDF text layer is not trusted for automatic article extraction.
+
+Use `input/financial_law_recovered_articles.json` as the checked-in recovery stream for Articles 1, 36 and 47. The records are page-scoped and Article 1 is represented by two contiguous records so the final article retains pages 1-2. Recovered records remain provenance-visible and should be reviewed before indexing.

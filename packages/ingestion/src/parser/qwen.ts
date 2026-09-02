@@ -551,8 +551,15 @@ export function buildArticlesFromQwen(
         .length,
       recoveryRecordCount: current.filter((r) => r.sourceType !== "vision_ocr")
         .length,
-      needsReview: reasons.length > 0,
-      reviewReasons: reasons,
+      needsReview:
+        reasons.length > 0 ||
+        current.some((r) => r.sourceType === "vision_ocr_recovery"),
+      reviewReasons: current.some((r) => r.sourceType === "vision_ocr_recovery")
+        ? [
+            ...reasons,
+            "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+          ]
+        : reasons,
     });
     current = [];
   };

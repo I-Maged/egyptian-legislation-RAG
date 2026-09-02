@@ -97,11 +97,6 @@ async function main() {
       inputKind = parsed.kind === "legacy-adapted" ? "legacy-adapted" : "qwen";
 
       if (parsed.articles) {
-        if (args.recovery) {
-          throw new Error(
-            "--recovery cannot be combined with a legacy Parser V2/V2.3 input. Use the original Qwen JSON when recovery records are required.",
-          );
-        }
         articles = parsed.articles;
         addIssue(extraIssues, {
           severity: "warning",
@@ -109,6 +104,41 @@ async function main() {
           message:
             "Parser V2/V2.3 output was detected and safely adapted because this profile has a single instrument with unique, ordered article numbers. Article text was preserved; no article-boundary reconstruction was attempted.",
         });
+
+        // A safe single-instrument legacy file can still be supplemented with
+        // explicit recovery OCR records. We do not reconstruct legacy article
+        // boundaries; we only build the supplied recovery stream and append
+        // articles that are absent from the adapted legacy corpus.
+        if (args.recovery) {
+          if (!fs.existsSync(args.recovery))
+            throw new Error(`Recovery JSON not found: ${args.recovery}`);
+          const recovery = parseRecoveryFile(
+            args.recovery,
+            parsed.originalCount,
+          );
+          recoveryCount = recovery.length;
+          const identities = reassignIdentities(recovery, profile);
+          const recoveredArticles = buildArticlesFromQwen(
+            recovery,
+            profile,
+            identities,
+          );
+          const existingKeys = new Set(
+            articles.map((a) => `${a.instrumentId}|${a.articleNumber}`),
+          );
+          const newArticles = recoveredArticles.filter(
+            (a) => !existingKeys.has(`${a.instrumentId}|${a.articleNumber}`),
+          );
+          articles = [...articles, ...newArticles].sort(
+            (a, b) =>
+              a.pageStart - b.pageStart || a.sourceOrder - b.sourceOrder,
+          );
+          addIssue(extraIssues, {
+            severity: "warning",
+            code: "LEGACY_RECOVERY_ADDED",
+            message: `Added ${newArticles.length} article(s) from the explicit recovery OCR stream to the safely adapted legacy corpus.`,
+          });
+        }
       } else {
         let records = parsed.records;
 
