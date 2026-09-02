@@ -13,6 +13,7 @@ import type {
   ParsedArticle,
   PdfPage,
 } from "./types.js";
+import { expectedArticleNumbers } from "./validate.js";
 
 const ORDINALS: Record<string, number> = {
   الأولى: 1,
@@ -141,7 +142,7 @@ export function findArticleAnchors(pages: PdfPage[]): ArticleAnchor[] {
   return anchors;
 }
 
-function assignAnchorIdentities(
+export function assignAnchorIdentities(
   anchors: ArticleAnchor[],
   profile: LawProfile,
 ): Map<number, LawIdentity> {
@@ -195,6 +196,175 @@ function assignAnchorIdentities(
   return result;
 }
 
+function articleTextFromAnchors(
+  pages: PdfPage[],
+  anchor: ArticleAnchor,
+  next: ArticleAnchor | undefined,
+  maxEndPage: number = pages.length,
+): { text: string; endPage: number } {
+  const endPage = Math.min(next?.pageNumber ?? maxEndPage, maxEndPage);
+  const selected: string[] = [];
+  for (const page of pages) {
+    if (page.pageNumber < anchor.pageNumber || page.pageNumber > endPage)
+      continue;
+    const from =
+      page.pageNumber === anchor.pageNumber ? anchor.lineIndex + 1 : 0;
+    const to =
+      next && page.pageNumber === endPage ? next.lineIndex : page.lines.length;
+    selected.push(...page.lines.slice(from, to));
+  }
+  return { text: selected.join("\n").trim(), endPage };
+}
+
+function makePdfArticle(
+  pages: PdfPage[],
+  identity: LawIdentity,
+  anchor: ArticleAnchor,
+  next: ArticleAnchor | undefined,
+  sourceOrder: number,
+  recoveryReason: string,
+  maxEndPage?: number,
+): ParsedArticle | null {
+  const { text, endPage } = articleTextFromAnchors(
+    pages,
+    anchor,
+    next,
+    maxEndPage,
+  );
+  if (!text) return null;
+  const articleNumber = canonicalArticleNumber(anchor.articleNumber);
+  const id = `pdf:${anchor.pageNumber}:${anchor.ordinalOnPage}:${sourceOrder}`;
+  return {
+    instrumentId: identity.id,
+    lawName: identity.lawName,
+    lawNumber: identity.lawNumber || null,
+    year: identity.year || null,
+    articleNumber,
+    articleNumberNormalized: /^\d+$/.test(articleNumber)
+      ? Number(articleNumber)
+      : null,
+    articleSuffix: anchor.suffix,
+    chapter: null,
+    text,
+    textForEmbedding: normalizeForEmbedding(text),
+    pageStart: anchor.pageNumber,
+    pageEnd: endPage,
+    pages: Array.from(
+      { length: endPage - anchor.pageNumber + 1 },
+      (_, k) => anchor.pageNumber + k,
+    ),
+    sourceOrder,
+    source: "pdf_text_recovery",
+    sourceRecordIds: [id],
+    qwenRecordCount: 0,
+    recoveryRecordCount: 1,
+    needsReview: true,
+    reviewReasons: [recoveryReason],
+  };
+}
+
+export interface PdfRecoveryResult {
+  articles: ParsedArticle[];
+  skipped: Array<{
+    instrumentId: string;
+    articleNumber: string;
+    reason: string;
+  }>;
+}
+
+/**
+ * Profile-aware recovery for article numbers missing from the authoritative Qwen stream.
+ * Recovery is deliberately conservative: a profile must opt in, the expected article
+ * must have exactly one matching PDF anchor when required, and the extracted article
+ * text must be non-empty. No recovery is attempted from the PDF text layer for profiles
+ * that have disabled PDF recovery (e.g. Financial and the Personal Affairs compilation).
+ */
+export function recoverMissingArticlesFromPdf(
+  pages: PdfPage[],
+  profile: LawProfile,
+  anchors: ArticleAnchor[],
+  existingArticles: ParsedArticle[],
+): PdfRecoveryResult {
+  const policy = profile.pdfRecovery;
+  if (!policy?.enabled) return { articles: [], skipped: [] };
+
+  const anchorIdentities = assignAnchorIdentities(anchors, profile);
+  const existing = new Set(
+    existingArticles.map((a) => `${a.instrumentId}|${a.articleNumber}`),
+  );
+  const recovered: ParsedArticle[] = [];
+  const skipped: PdfRecoveryResult["skipped"] = [];
+
+  for (const identity of profile.identities) {
+    const expected = expectedArticleNumbers(identity);
+    for (const number of expected) {
+      const articleNumber = String(number);
+      const key = `${identity.id}|${articleNumber}`;
+      if (existing.has(key)) continue;
+
+      const candidates = anchors
+        .map((anchor, index) => ({
+          anchor,
+          index,
+          assigned: anchorIdentities.get(index),
+        }))
+        .filter(
+          (x) =>
+            x.assigned?.id === identity.id &&
+            canonicalArticleNumber(x.anchor.articleNumber) === articleNumber,
+        );
+
+      if (policy.requireUniqueAnchor && candidates.length !== 1) {
+        skipped.push({
+          instrumentId: identity.id,
+          articleNumber,
+          reason:
+            candidates.length === 0
+              ? "No matching PDF article anchor was detected."
+              : `Found ${candidates.length} matching PDF anchors; refusing ambiguous recovery.`,
+        });
+        continue;
+      }
+      if (!candidates.length) continue;
+
+      const candidate = candidates[0]!;
+      // Do not let recovery text cross an instrument boundary. This matters for
+      // multi-instrument profiles even though PDF recovery is currently enabled
+      // only for Labour.
+      const next = anchors.slice(candidate.index + 1).find((anchor, offset) => {
+        const index = candidate.index + 1 + offset;
+        return (
+          anchorIdentities.get(index)?.id === identity.id &&
+          anchor.pageNumber <= identity.endPage
+        );
+      });
+      const article = makePdfArticle(
+        pages,
+        identity,
+        candidate.anchor,
+        next,
+        candidate.index,
+        `Profile-aware PDF recovery for missing article ${articleNumber}; verify OCR fidelity before indexing.`,
+        identity.endPage,
+      );
+      if (!article) {
+        skipped.push({
+          instrumentId: identity.id,
+          articleNumber,
+          reason:
+            "The PDF anchor exists, but the extracted article text is empty.",
+        });
+        continue;
+      }
+      article.needsReview = policy.requiresReview;
+      recovered.push(article);
+      existing.add(key);
+    }
+  }
+
+  return { articles: recovered, skipped };
+}
+
 export function buildArticlesFromPdf(
   pages: PdfPage[],
   profile: LawProfile,
@@ -204,53 +374,17 @@ export function buildArticlesFromPdf(
   const out: ParsedArticle[] = [];
   for (let i = 0; i < anchors.length; i++) {
     const anchor = anchors[i]!;
-    const next = anchors[i + 1];
     const identity = identities.get(i) ?? profile.defaultIdentity;
-    const endPage = next?.pageNumber ?? pages.length;
-    const selected: string[] = [];
-    for (const page of pages) {
-      if (page.pageNumber < anchor.pageNumber || page.pageNumber > endPage)
-        continue;
-      const from =
-        page.pageNumber === anchor.pageNumber ? anchor.lineIndex + 1 : 0;
-      const to =
-        next && page.pageNumber === endPage
-          ? next.lineIndex
-          : page.lines.length;
-      selected.push(...page.lines.slice(from, to));
-    }
-    const text = selected.join("\n").trim();
-    if (!text) continue;
-    const id = `pdf:${anchor.pageNumber}:${anchor.ordinalOnPage}:${i}`;
-    out.push({
-      instrumentId: identity.id,
-      lawName: identity.lawName,
-      lawNumber: identity.lawNumber || null,
-      year: identity.year || null,
-      articleNumber: canonicalArticleNumber(anchor.articleNumber),
-      articleNumberNormalized: /^\d+$/.test(anchor.articleNumber)
-        ? Number(anchor.articleNumber)
-        : null,
-      articleSuffix: anchor.suffix,
-      chapter: null,
-      text,
-      textForEmbedding: normalizeForEmbedding(text),
-      pageStart: anchor.pageNumber,
-      pageEnd: endPage,
-      pages: Array.from(
-        { length: endPage - anchor.pageNumber + 1 },
-        (_, k) => anchor.pageNumber + k,
-      ),
-      sourceOrder: i,
-      source: "pdf_text_recovery",
-      sourceRecordIds: [id],
-      qwenRecordCount: 0,
-      recoveryRecordCount: 1,
-      needsReview: true,
-      reviewReasons: [
-        "PDF-only extraction; verify OCR fidelity before indexing.",
-      ],
-    });
+    const article = makePdfArticle(
+      pages,
+      identity,
+      anchor,
+      anchors[i + 1],
+      i,
+      "PDF-only extraction; verify OCR fidelity before indexing.",
+      identity.endPage,
+    );
+    if (article) out.push(article);
   }
   return out;
 }

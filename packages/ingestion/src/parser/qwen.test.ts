@@ -47,20 +47,22 @@ describe("Qwen article reconstruction", () => {
     const result = buildArticlesFromQwen(records, PERSONAL_PROFILE, identities);
     expect(result).toHaveLength(3);
     expect(result[0]!.articleNumber).toBe("5");
-    expect(result[0]!.text).toContain("جزء أول");
+    // normalizeArabicText intentionally normalizes أ -> ا.
+    expect(result[0]!.text).toContain("جزء اول");
+    expect(result[0]!.text).toContain("جزء ثان");
     expect(result[2]!.articleNumber).toBe("5");
+    expect(result[2]!.text).toBe("مادة 5 في سياق اخر");
   });
 
   it("keeps repeated article numbers in separate personal-law instruments", () => {
     const records = [
       record(0, 3, "13"),
-      record(1, 3, "1"),
-      record(2, 8, "25"),
-      record(3, 8, "1"),
-      record(4, 15, "48"),
-      record(5, 15, "1"),
-      record(6, 15, "2"),
-      record(7, 15, "1"),
+      record(1, 3, "1", "نص 1 من القانون 1929 - جزء أول"),
+      record(2, 4, "1", "نص 1 من القانون 1929 - جزء ثان"),
+      record(3, 8, "1", "نص 1 من قانون المواريث"),
+      record(4, 9, "1", "تكملة مادة 1 من قانون المواريث"),
+      record(5, 15, "1", "نص 1 من قانون 35 لسنة 1944"),
+      record(6, 15, "1", "نص 1 من قانون الوصية"),
     ];
     const identities = new Map<number, any>();
     identities.set(0, PERSONAL_PROFILE.identities[0]);
@@ -69,9 +71,15 @@ describe("Qwen article reconstruction", () => {
     identities.set(3, PERSONAL_PROFILE.identities[2]);
     identities.set(4, PERSONAL_PROFILE.identities[2]);
     identities.set(5, PERSONAL_PROFILE.identities[3]);
-    identities.set(6, PERSONAL_PROFILE.identities[3]);
-    identities.set(7, PERSONAL_PROFILE.identities[4]);
+    identities.set(6, PERSONAL_PROFILE.identities[4]);
+
     const result = buildArticlesFromQwen(records, PERSONAL_PROFILE, identities);
+
+    // Records 1+2 and 3+4 are contiguous fragments of the same article in
+    // their respective instruments, so each pair must merge. The repeated
+    // article number "1" across instruments must never merge across identity
+    // boundaries.
+    expect(result).toHaveLength(5);
     expect(result.map((x) => x.instrumentId)).toEqual([
       "personal-law-25-1920",
       "personal-decree-25-1929",
@@ -79,6 +87,16 @@ describe("Qwen article reconstruction", () => {
       "inheritance-application-law-35-1944",
       "wills-law-71-1946",
     ]);
+    expect(result.map((x) => x.articleNumber)).toEqual([
+      "13",
+      "1",
+      "1",
+      "1",
+      "1",
+    ]);
+    expect(result[1]!.text).toContain("جزء اول");
+    expect(result[1]!.text).toContain("جزء ثان");
+    expect(result[2]!.text).toContain("تكملة مادة 1 من قانون المواريث");
   });
 
   it("detects Parser V2/V2.3 output instead of silently producing zero records", () => {

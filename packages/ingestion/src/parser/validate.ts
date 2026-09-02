@@ -5,7 +5,7 @@ import type {
   ValidationIssue,
 } from "./types.js";
 
-function expectedRange(identity: LawIdentity): number[] {
+export function expectedArticleNumbers(identity: LawIdentity): number[] {
   const ranges: Record<string, number[]> = {
     "labour-law-14-2025": Array.from({ length: 298 }, (_, i) => i + 1),
     "financial-law-6-2022": Array.from({ length: 78 }, (_, i) => i + 1),
@@ -88,7 +88,9 @@ export function validateArticles(
         .filter((x) => /^\d+$/.test(x))
         .map(Number),
     );
-    const missing = expectedRange(identity).filter((n) => !actual.has(n));
+    const missing = expectedArticleNumbers(identity).filter(
+      (n) => !actual.has(n),
+    );
     if (missing.length)
       issues.push({
         severity: "warning",

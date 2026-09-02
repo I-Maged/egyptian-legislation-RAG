@@ -4,6 +4,7 @@ import {
   buildArticlesFromPdf,
   findArticleAnchors,
   readPdfPages,
+  recoverMissingArticlesFromPdf,
 } from "./pdf.js";
 import { getProfile } from "./profiles.js";
 import {
@@ -74,6 +75,7 @@ async function main() {
   let inputKind: "qwen" | "legacy-adapted" | "legacy-raw" | "pdf-only" =
     "pdf-only";
   const extraIssues: ValidationIssue[] = [];
+  let pdfRecoveryCount = 0;
 
   if (args.qwen) {
     if (!fs.existsSync(args.qwen))
@@ -120,6 +122,34 @@ async function main() {
 
         const identities = reassignIdentities(records, profile);
         articles = buildArticlesFromQwen(records, profile, identities);
+
+        const pdfRecovery = recoverMissingArticlesFromPdf(
+          pages,
+          profile,
+          anchors,
+          articles,
+        );
+        pdfRecoveryCount = pdfRecovery.articles.length;
+        if (pdfRecovery.articles.length) {
+          articles = [...articles, ...pdfRecovery.articles].sort(
+            (a, b) =>
+              a.pageStart - b.pageStart || a.sourceOrder - b.sourceOrder,
+          );
+          addIssue(extraIssues, {
+            severity: "warning",
+            code: "PDF_ARTICLES_RECOVERED",
+            message: `Recovered ${pdfRecovery.articles.length} missing article(s) from the PDF text layer using the ${profile.id} recovery policy. Each recovered article is marked for review before indexing.`,
+          });
+        }
+        for (const skipped of pdfRecovery.skipped) {
+          addIssue(extraIssues, {
+            severity: "info",
+            code: "PDF_RECOVERY_SKIPPED",
+            message: `PDF recovery skipped ${skipped.instrumentId} Article ${skipped.articleNumber}: ${skipped.reason}`,
+            articleNumber: skipped.articleNumber,
+            instrumentId: skipped.instrumentId,
+          });
+        }
       }
     }
   } else {
@@ -133,13 +163,14 @@ async function main() {
   const missing = issues.filter((x) => x.code === "MISSING_ARTICLES");
   const result: ParserOutput = {
     metadata: {
-      parserVersion: "3.1.0",
+      parserVersion: "3.2.0",
       inputFile: args.qwen ? path.basename(args.qwen) : null,
       pdfFile: path.basename(args.pdf),
       generatedAt: new Date().toISOString(),
       recordCountOriginal: originalCount,
       recordCountRecovery: recoveryCount,
       recordCountMerged: originalCount + recoveryCount,
+      pdfRecoveryArticleCount: pdfRecoveryCount,
       instrumentId:
         profile.identities.length === 1 ? profile.identities[0]!.id : null,
       mode: args.qwen ? "qwen+pdf" : "pdf-only",
@@ -159,6 +190,7 @@ async function main() {
       articleAnchorCount: anchors.length,
       qwenRecordCount: originalCount,
       pdfOnlyArticleCount: args.qwen ? 0 : articles.length,
+      pdfRecoveredArticleCount: pdfRecoveryCount,
       missingArticleNumbers: missing.map((x) => ({
         instrumentId: x.instrumentId!,
         articleNumbers: x.message
@@ -230,7 +262,7 @@ async function main() {
   }
 
   console.log(
-    `Parser V3\nProfile: ${profile.displayName}\nInput mode: ${inputKind}\nPDF pages: ${pages.length}\nPDF article anchors: ${anchors.length}\nQwen records: ${originalCount}\nRecovery records: ${recoveryCount}\nArticles: ${articles.length}\nErrors: ${result.validation.summary.errors}\nWarnings: ${result.validation.summary.warnings}\nOutput: ${args.output}`,
+    `Parser V3\nProfile: ${profile.displayName}\nInput mode: ${inputKind}\nPDF pages: ${pages.length}\nPDF article anchors: ${anchors.length}\nQwen records: ${originalCount}\nRecovery records: ${recoveryCount}\nPDF recovered articles: ${pdfRecoveryCount}\nArticles: ${articles.length}\nErrors: ${result.validation.summary.errors}\nWarnings: ${result.validation.summary.warnings}\nOutput: ${args.output}`,
   );
   for (const x of result.coverage.missingArticleNumbers)
     console.log(`Missing [${x.instrumentId}]: ${x.articleNumbers.join(", ")}`);

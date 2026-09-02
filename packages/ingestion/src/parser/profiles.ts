@@ -44,6 +44,11 @@ export const LABOUR_PROFILE: LawProfile = {
     2,
     112,
   ),
+  pdfRecovery: {
+    enabled: true,
+    requireUniqueAnchor: true,
+    requiresReview: true,
+  },
   identities: [
     identity(
       "labour-law-14-2025",
@@ -72,6 +77,11 @@ export const FINANCIAL_PROFILE: LawProfile = {
     1,
     10,
   ),
+  pdfRecovery: {
+    enabled: false,
+    requireUniqueAnchor: true,
+    requiresReview: true,
+  },
   identities: [
     identity(
       "financial-law-6-2022",
@@ -101,6 +111,11 @@ export const PERSONAL_PROFILE: LawProfile = {
     1,
     66,
   ),
+  pdfRecovery: {
+    enabled: false,
+    requireUniqueAnchor: true,
+    requiresReview: true,
+  },
   identities: [
     identity(
       "personal-law-25-1920",

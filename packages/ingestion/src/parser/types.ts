@@ -33,12 +33,21 @@ export interface LawIdentity {
   };
 }
 
+export interface PdfRecoveryPolicy {
+  enabled: boolean;
+  /** Only recover an article when exactly one matching PDF anchor exists. */
+  requireUniqueAnchor: boolean;
+  /** PDF recovery remains reviewable even when the extraction is known to be usable. */
+  requiresReview: boolean;
+}
+
 export interface LawProfile {
   id: string;
   displayName: string;
   sourceFilePattern: RegExp;
   defaultIdentity: LawIdentity;
   identities: LawIdentity[];
+  pdfRecovery?: PdfRecoveryPolicy;
 }
 
 export interface PdfPage {
@@ -97,6 +106,7 @@ export interface ParserOutput {
     recordCountOriginal: number;
     recordCountRecovery: number;
     recordCountMerged: number;
+    pdfRecoveryArticleCount?: number;
     instrumentId: string | null;
     mode: "qwen+pdf" | "pdf-only";
   };
@@ -112,6 +122,7 @@ export interface ParserOutput {
     articleAnchorCount: number;
     qwenRecordCount: number;
     pdfOnlyArticleCount: number;
+    pdfRecoveredArticleCount?: number;
     missingArticleNumbers: Array<{
       instrumentId: string;
       articleNumbers: string[];
