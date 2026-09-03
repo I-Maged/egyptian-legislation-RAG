@@ -1,5 +1,3 @@
-import type { CanonicalCorpus } from "./types";
-
 import { canonicalizeLabourLaw } from "./labour-law";
 import { canonicalizeFinancialLaw } from "./financial-law";
 

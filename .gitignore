@@ -9,6 +9,8 @@ apps/web/.next
 apps/web/.next/
 /out/
 .opencode/
+.venv/
+
 /.pnp
 .pnp.*
 .yarn/*

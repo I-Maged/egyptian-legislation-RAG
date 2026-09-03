@@ -157,10 +157,6 @@ function canSafelyAdaptLegacyArticles(
 ): boolean {
   if (profile.identities.length !== 1 || articles.length === 0) return false;
 
-  // V2/V2.3 output is safe to carry forward only when it already represents
-  // one article object per legal article. This intentionally rejects the old
-  // Personal Affairs output, where repeated article numbers from different
-  // instruments were globally merged.
   const numbers = articles.map((a) => canonicalArticleNumber(a.articleNumber));
   if (numbers.some((n) => !/^\d+$/.test(n))) return false;
   if (new Set(numbers).size !== numbers.length) return false;

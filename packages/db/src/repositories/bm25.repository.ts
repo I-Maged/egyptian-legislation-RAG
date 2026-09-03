@@ -189,10 +189,3 @@ export async function searchBm25(
     `,
   );
 }
-
-// const generalResults = await searchBm25({
-//   query: "ما مدة الاحتفاظ بملف العامل بعد انتهاء علاقة العمل؟",
-//   topK: 92,
-// });
-
-// console.log("General Search Results:", generalResults);

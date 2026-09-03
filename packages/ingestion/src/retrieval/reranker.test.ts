@@ -1,11 +1,9 @@
 import { describe, expect, it } from "vitest";
 
-import type { CanonicalCorpus, LawChunk } from "@egyptian-law/core";
+import type { LawChunk } from "@egyptian-law/core";
 import { RerankCandidate } from "./reranker";
 
 import { BaselineReranker, type RerankOptions } from "./reranker";
-
-// import type { HybridRetrievalResult } from "./hybrid-retriever";
 
 function createChunk(id: string, text: string): LawChunk {
   return {

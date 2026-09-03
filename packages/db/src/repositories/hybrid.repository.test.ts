@@ -4,11 +4,6 @@ import { searchHybrid } from "./hybrid.repository";
 
 describe("hybrid repository", () => {
   it("combines vector and lexical retrieval", async () => {
-    // Temporary deterministic test vector.
-    //
-    // Replace this with a real query embedding generated
-    // by the embedding provider when the query-embedding
-    // integration is added.
     const queryEmbedding = Array.from({ length: 1024 }, (_, index) =>
       index === 0 ? 1 : 0,
     );
@@ -59,15 +54,4 @@ describe("hybrid repository", () => {
       }),
     ).rejects.toThrow(/topK/i);
   });
-
-  // it("rejects zero retrieval weights", async () => {
-  //   await expect(
-  //     searchHybrid({
-  //       query: "عقد العمل",
-  //       queryEmbedding: Array(1024).fill(0),
-  //       vectorWeight: 0,
-  //       bm25Weight: 0,
-  //     }),
-  //   ).rejects.toThrow(/weight/i);
-  // });
 });

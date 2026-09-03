@@ -35,9 +35,7 @@ export interface LawIdentity {
 
 export interface PdfRecoveryPolicy {
   enabled: boolean;
-  /** Only recover an article when exactly one matching PDF anchor exists. */
   requireUniqueAnchor: boolean;
-  /** PDF recovery remains reviewable even when the extraction is known to be usable. */
   requiresReview: boolean;
 }
 

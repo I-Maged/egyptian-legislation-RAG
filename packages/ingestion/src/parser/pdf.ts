@@ -328,9 +328,7 @@ export function recoverMissingArticlesFromPdf(
       if (!candidates.length) continue;
 
       const candidate = candidates[0]!;
-      // Do not let recovery text cross an instrument boundary. This matters for
-      // multi-instrument profiles even though PDF recovery is currently enabled
-      // only for Labour.
+
       const next = anchors.slice(candidate.index + 1).find((anchor, offset) => {
         const index = candidate.index + 1 + offset;
         return (

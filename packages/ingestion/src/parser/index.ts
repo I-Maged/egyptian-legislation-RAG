@@ -105,10 +105,6 @@ async function main() {
             "Parser V2/V2.3 output was detected and safely adapted because this profile has a single instrument with unique, ordered article numbers. Article text was preserved; no article-boundary reconstruction was attempted.",
         });
 
-        // A safe single-instrument legacy file can still be supplemented with
-        // explicit recovery OCR records. We do not reconstruct legacy article
-        // boundaries; we only build the supplied recovery stream and append
-        // articles that are absent from the adapted legacy corpus.
         if (args.recovery) {
           if (!fs.existsSync(args.recovery))
             throw new Error(`Recovery JSON not found: ${args.recovery}`);
