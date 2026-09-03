@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "parserVersion": "3.2.0",
+    "parserVersion": "3.3.0",
     "inputFile": "financial_law_v2_3.json",
     "pdfFile": "financial-src.pdf",
-    "generatedAt": "2026-09-02T16:45:28.255Z",
+    "generatedAt": "2026-09-03T10:24:47.529Z",
     "recordCountOriginal": 75,
     "recordCountRecovery": 4,
     "recordCountMerged": 79,

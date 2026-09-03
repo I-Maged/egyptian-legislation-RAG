@@ -90,9 +90,9 @@ function mergeArticles(
     /*
      * Expand provenance.
      */
-    pageStart: minNullable(first.pageStart, next.pageStart),
+    pageStart: Math.min(first.pageStart ?? Number.POSITIVE_INFINITY, next.pageStart ?? Number.POSITIVE_INFINITY),
 
-    pageEnd: maxNullable(first.pageEnd, next.pageEnd),
+    pageEnd: Math.max(first.pageEnd ?? 0, next.pageEnd ?? 0),
 
     ...(pages.length > 0 && { pages }),
 
@@ -128,24 +128,3 @@ function unique<T>(values: T[]): T[] {
   return [...new Set(values)];
 }
 
-function minNullable(
-  a: number | null | undefined,
-  b: number | null | undefined,
-): number | null {
-  const values = [a, b].filter(
-    (value): value is number => typeof value === "number",
-  );
-
-  return values.length === 0 ? null : Math.min(...values);
-}
-
-function maxNullable(
-  a: number | null | undefined,
-  b: number | null | undefined,
-): number | null {
-  const values = [a, b].filter(
-    (value): value is number => typeof value === "number",
-  );
-
-  return values.length === 0 ? null : Math.max(...values);
-}

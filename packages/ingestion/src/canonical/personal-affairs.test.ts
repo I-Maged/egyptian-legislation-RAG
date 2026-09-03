@@ -5,7 +5,7 @@ import { validateCanonicalCorpus } from "@egyptian-law/core";
 import { canonicalizePersonalAffairsLaw } from "./personal-affairs";
 
 describe("canonicalizePersonalAffairsLaw", () => {
-  const baseArticle = {
+  const baseArticle: import("./personal-affairs").PersonalAffairsParserArticle = {
     instrumentId: "personal_affair_law-25-1929",
     lawName: "personal_affair_law",
     lawNumber: "25",

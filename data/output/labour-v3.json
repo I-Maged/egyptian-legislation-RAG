@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "parserVersion": "3.2.0",
+    "parserVersion": "3.3.0",
     "inputFile": "labour_law_qwen_output.json",
     "pdfFile": "labour-src.pdf",
-    "generatedAt": "2026-09-02T15:51:06.496Z",
+    "generatedAt": "2026-09-03T10:19:44.862Z",
     "recordCountOriginal": 293,
     "recordCountRecovery": 3,
     "recordCountMerged": 296,
@@ -4895,8 +4895,10 @@
       ],
       "qwenRecordCount": 0,
       "recoveryRecordCount": 1,
-      "needsReview": false,
-      "reviewReasons": []
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
     },
     {
       "instrumentId": "labour-law-14-2025",
@@ -4921,8 +4923,10 @@
       ],
       "qwenRecordCount": 0,
       "recoveryRecordCount": 1,
-      "needsReview": false,
-      "reviewReasons": []
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
     },
     {
       "instrumentId": "labour-law-14-2025",
@@ -4947,8 +4951,10 @@
       ],
       "qwenRecordCount": 0,
       "recoveryRecordCount": 1,
-      "needsReview": false,
-      "reviewReasons": []
+      "needsReview": true,
+      "reviewReasons": [
+        "Article includes explicit recovery OCR input; verify OCR fidelity before indexing."
+      ]
     },
     {
       "instrumentId": "labour-law-14-2025",
@@ -7792,7 +7798,7 @@
     "pdfOnlyArticleCount": 0,
     "pdfRecoveredArticleCount": 2,
     "missingArticleNumbers": [],
-    "suspiciousArticleCount": 3
+    "suspiciousArticleCount": 6
   },
   "validation": {
     "issues": [
@@ -7828,11 +7834,32 @@
         "message": "Profile-aware PDF recovery for missing article 122; verify OCR fidelity before indexing.",
         "articleNumber": "122",
         "instrumentId": "labour-law-14-2025"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "187",
+        "instrumentId": "labour-law-14-2025"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "188",
+        "instrumentId": "labour-law-14-2025"
+      },
+      {
+        "severity": "warning",
+        "code": "SUSPICIOUS_ARTICLE",
+        "message": "Article includes explicit recovery OCR input; verify OCR fidelity before indexing.",
+        "articleNumber": "189",
+        "instrumentId": "labour-law-14-2025"
       }
     ],
     "summary": {
       "errors": 0,
-      "warnings": 5,
+      "warnings": 8,
       "infos": 0,
       "articleCount": 298,
       "qwenRecordCount": 293,

@@ -28,18 +28,28 @@ Labour Law with the existing recovery OCR report:
 ```bash
 npm run parse:law -- --profile labour \
   --pdf ./data/pdf/labour-src.pdf \
-  --qwen ./path/to/labour_law_qwen_output.json \
-  --recovery ./path/to/labour_law_recovered_pages.report.json \
-  --output ./output/labour-v3.json
+  --qwen ./data/input/labour_law_qwen_output.json \
+  --recovery ./data/input/labour_law_recovered_pages.report.json \
+  --output ./data/output/labour-v3.json
 ```
 
 Financial Law:
 
 ```bash
 npm run parse:law -- --profile financial \
-  --pdf <financial-pdf> \
-  --qwen <financial_qwen_output.json> \
-  --output ./output/financial-v3.json
+  --pdf ./data/pdf/financial-src.pdf \
+  --qwen ./data/input/financial_law_v2_3.json \
+  --output ./data/output/financial-v3.json
+```
+
+Financial Law with the existing recovery OCR report:
+
+```bash
+npm run parse:law -- --profile financial \
+  --pdf ./data/pdf/financial-src.pdf \
+  --qwen ./data/input/financial_law_v2_3.json \
+  --recovery ./data/input/financial_law_recovered_articles.json \
+  --output ./data/output/financial-v3.json
 ```
 
 Personal Affairs compilation:
@@ -50,6 +60,17 @@ npm run parse:law -- --profile personal \
   --qwen <personal_affair_law_qwen_output.json> \
   --output ./output/personal-bundle-v3.json \
   --split-output-dir ./output/personal-v3
+```
+
+Personal Affairs Law compilation with the existing recovery OCR report:
+
+```bash
+npm run parse:law -- --profile personal \
+  --pdf ./data/pdf/personal-src.pdf \
+  --qwen ./data/input/personal_affair_law_qwen_output.json \
+  --recovery ./data/input/personal_affair_law_recovered_articles.json \
+  --output ./data/output/personal-bundle-v3.json \
+  --split-output-dir ./data/output/personal-v3
 ```
 
 ## V2/V2.3 compatibility

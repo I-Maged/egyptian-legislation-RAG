@@ -8,7 +8,7 @@ import { validateCanonicalCorpus } from "@egyptian-law/core";
 
 import type { ParserV23LawChunk } from "../canonical/labour-law";
 
-interface LabourV23Output {
+interface LabourV3Output {
   articles: ParserV23LawChunk[];
 }
 
@@ -17,10 +17,10 @@ describe("Labour Law canonical corpus integrity", () => {
     const ROOT_DIR = resolve(
       fileURLToPath(new URL("../../../../", import.meta.url)),
     );
-    const rawPath = resolve(ROOT_DIR, "data/raw/labour-v2.3.json");
+    const rawPath = resolve(ROOT_DIR, "data/output/labour-v3.json");
     const canonicalPath = resolve(
       ROOT_DIR,
-      "data/canonical/labour-law-148-2019.json",
+      "data/canonical/labour-law-14-2025.json",
     );
 
     const [rawJson, canonicalJson] = await Promise.all([
@@ -28,14 +28,14 @@ describe("Labour Law canonical corpus integrity", () => {
       readFile(canonicalPath, "utf8"),
     ]);
 
-    const raw = JSON.parse(rawJson) as LabourV23Output;
+    const raw = JSON.parse(rawJson) as LabourV3Output;
     const canonical = JSON.parse(canonicalJson) as unknown;
     const corpus = validateCanonicalCorpus(canonical);
 
     /*
      * 1. Corpus size & document identity
      */
-    expect(raw.articles.length).toBe(293);
+    expect(raw.articles.length).toBe(298);
     expect(corpus.chunks.length).toBe(raw.articles.length);
 
     const firstArticle = raw.articles[0]!;
@@ -49,8 +49,10 @@ describe("Labour Law canonical corpus integrity", () => {
      * 2. Schema and metadata integrity
      */
     expect(corpus.schema_version).toBe("1.0");
-    expect(corpus.document.metadata.parser_version).toBe("parser-v2.3");
-    expect(corpus.document.metadata.normalization_version).toBe("parser-v2.3");
+    expect(corpus.document.metadata.parser_version).toBe("parser-v3.3.0");
+    expect(corpus.document.metadata.normalization_version).toBe(
+      "parser-v3.3.0",
+    );
 
     /*
      * 3. Uniqueness of Chunk IDs
@@ -61,28 +63,36 @@ describe("Labour Law canonical corpus integrity", () => {
     /*
      * 4. Verify parser -> canonical content preservation
      */
-    expect(corpus.chunks).toMatchObject(
-      raw.articles.map((source) => ({
-        law_name: source.lawName,
-        law_number: source.lawNumber,
-        year: source.year,
-        article_number: source.articleNumber,
 
-        hierarchy: [
-          {
-            type: "chapter",
-            label: source.chapter,
-            title: null,
-          },
-        ],
-        text: source.text,
-        text_for_embedding: source.textForEmbedding,
-        provenance: {
-          page_start:
-            source.pageStart && source.pageStart > 0 ? source.pageStart : null,
-        },
-      })),
-    );
+    for (let i = 0; i < raw.articles.length; i++) {
+      const source = raw.articles[i]!;
+      const chunk = corpus.chunks[i]!;
+
+      expect(chunk.law_name).toBe(source.lawName);
+      expect(chunk.law_number).toBe(source.lawNumber);
+      expect(chunk.year).toBe(source.year);
+      expect(chunk.article_number).toBe(source.articleNumber);
+
+      const expectedHierarchy =
+        source.chapter !== null && source.chapter.trim().length > 0
+          ? [
+              {
+                type: "chapter",
+                label: source.chapter,
+                title: null,
+              },
+            ]
+          : [];
+
+      expect(chunk.hierarchy).toEqual(expectedHierarchy);
+
+      expect(chunk.text).toBe(source.text);
+      expect(chunk.text_for_embedding).toBe(source.textForEmbedding);
+
+      expect(chunk.provenance.page_start).toBe(
+        source.pageStart && source.pageStart > 0 ? source.pageStart : null,
+      );
+    }
 
     /*
      * 5. Consolidated Chunk Invariant Validations
@@ -110,8 +120,8 @@ describe("Labour Law canonical corpus integrity", () => {
         );
       }
 
-      expect(chunk.metadata.parser_version).toBe("parser-v2.3");
-      expect(chunk.metadata.normalization_version).toBe("parser-v2.3");
+      expect(chunk.metadata.parser_version).toBe("parser-v3.3.0");
+      expect(chunk.metadata.normalization_version).toBe("parser-v3.3.0");
     }
   });
 });

@@ -25,7 +25,9 @@
     "check:embeddings:personal": "tsx src/commands/check-personal-embeddings.ts",
     "canonicalize:law": "tsx src/commands/canonicalize.ts",
     "check:canonical": "tsx src/commands/check-canonical.ts",
-    "import:db": "tsx src/commands/import-corpus.ts"
+    "import:db": "tsx src/commands/import-corpus.ts",
+    "canonicalize:all": "tsx src/commands/canonicalize-all.ts",
+    "check:canonical:all": "tsx src/commands/check-canonical-all.ts"
   },
   "dependencies": {
     "@egyptian-law/core": "*",

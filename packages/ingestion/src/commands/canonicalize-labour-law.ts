@@ -14,11 +14,8 @@ import { writeCanonicalCorpusJson } from "../corpus/write-json";
 const ROOT_DIR = resolve(
   fileURLToPath(new URL("../../../../", import.meta.url)),
 );
-const INPUT_PATH = resolve(ROOT_DIR, "data/raw/personal_affair_law_v2_3.json");
-const OUTPUT_PATH = resolve(
-  ROOT_DIR,
-  "data/canonical/personal-affairs-law-25-1929.json",
-);
+const INPUT_PATH = resolve(ROOT_DIR, "data/output/labour-v3.json");
+const OUTPUT_PATH = resolve(ROOT_DIR, "data/canonical/labour-law-14-2025.json");
 
 async function main(): Promise<void> {
   console.log(`Reading parser output: ${INPUT_PATH}`);
